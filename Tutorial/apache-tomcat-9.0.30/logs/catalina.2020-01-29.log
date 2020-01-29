@@ -97,3 +97,11 @@
 29-Jan-2020 10:26:19.617 INFOS [http-nio-8080-exec-4] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryClient.xml]
 29-Jan-2020 10:26:19.621 AVERTISSEMENT [http-nio-8080-exec-4] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/A1-LibraryClient] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryClient.xml] a été ignoré
 29-Jan-2020 10:26:19.647 INFOS [http-nio-8080-exec-4] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryClient.xml] a pris [30] ms
+29-Jan-2020 10:31:59.791 INFOS [main] org.apache.catalina.core.StandardServer.await Une commande d'arrêt valide a été reçue sur le port d'arrêt, arrêt de l'instance du serveur
+29-Jan-2020 10:31:59.791 INFOS [main] org.apache.coyote.AbstractProtocol.pause Le gestionnaire de protocole ["http-nio-8080"] est mis en pause
+29-Jan-2020 10:31:59.803 INFOS [main] org.apache.coyote.AbstractProtocol.pause Le gestionnaire de protocole ["ajp-nio-8009"] est mis en pause
+29-Jan-2020 10:31:59.810 INFOS [main] org.apache.catalina.core.StandardService.stopInternal Arrêt du service [Catalina]
+29-Jan-2020 10:31:59.836 INFOS [main] org.apache.coyote.AbstractProtocol.stop Arrêt du gestionnaire de protocole ["http-nio-8080"]
+29-Jan-2020 10:31:59.839 INFOS [main] org.apache.coyote.AbstractProtocol.stop Arrêt du gestionnaire de protocole ["ajp-nio-8009"]
+29-Jan-2020 10:31:59.840 INFOS [main] org.apache.coyote.AbstractProtocol.destroy Destruction du gestionnaire de protocole ["http-nio-8080"]
+29-Jan-2020 10:31:59.842 INFOS [main] org.apache.coyote.AbstractProtocol.destroy Destruction du gestionnaire de protocole ["ajp-nio-8009"]
