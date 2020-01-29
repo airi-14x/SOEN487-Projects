@@ -29,31 +29,43 @@ public class LibrarySystem {
         // !! Need to check if Servlet Context exists
         //if (getServletContext() == null ) return null;
 
-        // !! Need to load the map of Books first time around!
-        // **Method**
         return books;
     }
 
-    public int addBook(Book book) {
+    public String addBook(Book book) {
         int bookID = bookMapKey.incrementAndGet();
         book.setId(bookID);
         books.put(bookID, book);
-        return book.getId();
+        return "Created book with " + book.getId();
     }
 
     public Book getBook(int id) {
-        // Find book with id!
-        // Should check existance of id!!! To avoid null pointer errors.
-        Book currentBook = books.get(id);
+        Book currentBook = books.get(id); // NULL if doesn't exist
         return currentBook;
     }
 
-    public int updateBook(Book book) {
-        return book.getId();
+    public String updateBook(Book book) {
+
+        if (books.get(book.getId()) == null) {
+            return "Book cannot be updated";
+        } else {
+            books.put(book.getId(), book); // Replace with current book object
+            return "Updated book";
+        }
     }
 
     public String removeBook(int id) {
-        return "Book with " + id + " has been removed";
+        books.remove(id); // NULL if doesn't exist
+        if (books.get(id) == null) {
+            return "Book with " + id + " has been removed.";
+        } else {
+            return "Book cannot be removed!";
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "LibrarySystem{" + "books=" + books + ", bookMapKey=" + bookMapKey + '}';
     }
 
 }
