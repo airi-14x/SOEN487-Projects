@@ -22,7 +22,7 @@ import javax.ws.rs.core.MediaType;
  *
  * @author jasminelatendresse
  */
-@Path("LibraryRestService")
+@Path("/LibraryRestService")
 public class LibraryRestServiceResource {
 
     private ConcurrentHashMap<Integer, Book> books;
