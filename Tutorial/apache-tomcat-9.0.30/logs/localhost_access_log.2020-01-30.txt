@@ -74,3 +74,15 @@
 0:0:0:0:0:0:0:1 - - [30/Jan/2020:13:03:47 -0500] "OPTIONS /HelloWorldJersey/rest/hello?timestamp=1580407427810 HTTP/1.1" 200 949
 0:0:0:0:0:0:0:1 - - [30/Jan/2020:13:03:50 -0500] "GET /HelloWorldJersey/rest/hello?timestamp=1580407430617 HTTP/1.1" 200 81
 0:0:0:0:0:0:0:1 - - [30/Jan/2020:13:03:50 -0500] "OPTIONS /HelloWorldJersey/rest/hello?timestamp=1580407430617 HTTP/1.1" 200 949
+0:0:0:0:0:0:0:1 - - [30/Jan/2020:13:04:45 -0500] "GET /HelloWorldJersey/rest/hello?timestamp=1580407485000 HTTP/1.1" 200 49
+0:0:0:0:0:0:0:1 - - [30/Jan/2020:13:04:45 -0500] "OPTIONS /HelloWorldJersey/rest/hello?timestamp=1580407485000 HTTP/1.1" 200 949
+0:0:0:0:0:0:0:1 - - [30/Jan/2020:13:04:47 -0500] "GET /HelloWorldJersey/images/table/table_titlebar_gradient.gif HTTP/1.1" 404 700
+0:0:0:0:0:0:0:1 - - [30/Jan/2020:13:04:47 -0500] "GET /HelloWorldJersey/images/table2/column_gradient.png HTTP/1.1" 404 693
+0:0:0:0:0:0:0:1 - - [30/Jan/2020:13:04:57 -0500] "GET /HelloWorldJersey/rest/hello?timestamp=1580407497612 HTTP/1.1" 200 81
+0:0:0:0:0:0:0:1 - - [30/Jan/2020:13:04:57 -0500] "OPTIONS /HelloWorldJersey/rest/hello?timestamp=1580407497612 HTTP/1.1" 200 949
+127.0.0.1 - - [30/Jan/2020:13:07:38 -0500] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - airi14x [30/Jan/2020:13:07:38 -0500] "GET /manager/text/ HTTP/1.1" 200 41
+127.0.0.1 - - [30/Jan/2020:13:07:38 -0500] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - airi14x [30/Jan/2020:13:07:38 -0500] "GET /manager/text/ HTTP/1.1" 200 41
+127.0.0.1 - - [30/Jan/2020:13:07:38 -0500] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - airi14x [30/Jan/2020:13:07:38 -0500] "GET /manager/text/ HTTP/1.1" 200 41

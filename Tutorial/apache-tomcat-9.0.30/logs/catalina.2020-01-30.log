@@ -47,3 +47,11 @@
 30-Jan-2020 12:55:17.630 INFOS [http-nio-8080-exec-1] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
 30-Jan-2020 12:55:19.056 INFOS [http-nio-8080-exec-1] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/HelloWorldJersey.xml] a pris [7 642] ms
 30-Jan-2020 12:55:19.119 INFOS [http-nio-8080-exec-2] org.apache.catalina.util.LifecycleBase.start La méthode start() a été appelée sur le composant [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/HelloWorldJersey]] après que start() ait déjà été appelé, le deuxième appel sera ignoré
+30-Jan-2020 13:07:38.854 INFOS [main] org.apache.catalina.core.StandardServer.await Une commande d'arrêt valide a été reçue sur le port d'arrêt, arrêt de l'instance du serveur
+30-Jan-2020 13:07:38.855 INFOS [main] org.apache.coyote.AbstractProtocol.pause Le gestionnaire de protocole ["http-nio-8080"] est mis en pause
+30-Jan-2020 13:07:38.860 INFOS [main] org.apache.coyote.AbstractProtocol.pause Le gestionnaire de protocole ["ajp-nio-8009"] est mis en pause
+30-Jan-2020 13:07:38.867 INFOS [main] org.apache.catalina.core.StandardService.stopInternal Arrêt du service [Catalina]
+30-Jan-2020 13:07:38.918 INFOS [main] org.apache.coyote.AbstractProtocol.stop Arrêt du gestionnaire de protocole ["http-nio-8080"]
+30-Jan-2020 13:07:38.931 INFOS [main] org.apache.coyote.AbstractProtocol.stop Arrêt du gestionnaire de protocole ["ajp-nio-8009"]
+30-Jan-2020 13:07:38.935 INFOS [main] org.apache.coyote.AbstractProtocol.destroy Destruction du gestionnaire de protocole ["http-nio-8080"]
+30-Jan-2020 13:07:38.938 INFOS [main] org.apache.coyote.AbstractProtocol.destroy Destruction du gestionnaire de protocole ["ajp-nio-8009"]
