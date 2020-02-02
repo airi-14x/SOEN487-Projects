@@ -3,10 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package libraryserviceclient;
+package libraryclient;
 
 import javax.ws.rs.ClientErrorException;
-import javax.ws.rs.client.Client;
 import javax.ws.rs.client.WebTarget;
 
 /**
@@ -14,21 +13,21 @@ import javax.ws.rs.client.WebTarget;
  * [/greeting]<br>
  * USAGE:
  * <pre>
- *        client client = new client();
+ *        Client client = new Client();
  *        Object response = client.XXX(...);
  *        // do whatever with response
  *        client.close();
  * </pre>
  *
- * @author Airi
+ * @author jasminelatendresse
  */
-public class client {
+public class Client {
 
     private WebTarget webTarget;
-    private Client client;
-    private static final String BASE_URI = "http://localhost:8080/A1-LibraryService/resources";
+    private javax.ws.rs.client.Client client;
+    private static final String BASE_URI = "http://localhost:8080//resources";
 
-    public client() {
+    public Client() {
         client = javax.ws.rs.client.ClientBuilder.newClient();
         webTarget = client.target(BASE_URI).path("greeting");
     }
