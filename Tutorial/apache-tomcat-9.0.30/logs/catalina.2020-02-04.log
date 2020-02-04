@@ -788,3 +788,954 @@
 04-Feb-2020 12:18:25.093 INFOS [http-nio-8080-exec-21] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
 04-Feb-2020 12:18:25.517 INFOS [http-nio-8080-exec-21] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
 04-Feb-2020 12:18:26.040 INFOS [http-nio-8080-exec-21] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 13:26:07.799 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version du serveur:        Apache Tomcat/9.0.30
+04-Feb-2020 13:26:07.807 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Serveur compilé:       Dec 7 2019 16:42:04 UTC
+04-Feb-2020 13:26:07.810 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version du serveur:      9.0.30.0
+04-Feb-2020 13:26:07.816 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Nom de l'OS:           Mac OS X
+04-Feb-2020 13:26:07.817 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version de l'OS:        10.15.3
+04-Feb-2020 13:26:07.817 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+04-Feb-2020 13:26:07.818 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Répertoire de Java:     /Library/Java/JavaVirtualMachines/jdk1.8.0_141.jdk/Contents/Home/jre
+04-Feb-2020 13:26:07.818 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version de la JVM:           1.8.0_141-b15
+04-Feb-2020 13:26:07.819 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Fournisseur de la JVM:            Oracle Corporation
+04-Feb-2020 13:26:07.819 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30
+04-Feb-2020 13:26:07.819 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30
+04-Feb-2020 13:26:07.822 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Djava.util.logging.config.file=/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/logging.properties
+04-Feb-2020 13:26:07.822 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+04-Feb-2020 13:26:07.822 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Dhttp.nonProxyHosts=localhost|127.0.0.1|Airis-MBP
+04-Feb-2020 13:26:07.822 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Djdk.tls.ephemeralDHKeySize=2048
+04-Feb-2020 13:26:07.822 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+04-Feb-2020 13:26:07.822 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+04-Feb-2020 13:26:07.823 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Dignore.endorsed.dirs=
+04-Feb-2020 13:26:07.823 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Dcatalina.base=/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30
+04-Feb-2020 13:26:07.823 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Dcatalina.home=/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30
+04-Feb-2020 13:26:07.823 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Djava.io.tmpdir=/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/temp
+04-Feb-2020 13:26:07.823 INFOS [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent La librairie Apache Tomcat Native basée sur APR qui permet des performances optimales dans les environnements de production n'a pas été trouvée sur le java.library.path: [/Users/Airi/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+04-Feb-2020 13:26:09.327 INFOS [main] org.apache.coyote.AbstractProtocol.init Initialisation du gestionnaire de protocole ["http-nio-8080"]
+04-Feb-2020 13:26:09.542 INFOS [main] org.apache.coyote.AbstractProtocol.init Initialisation du gestionnaire de protocole ["ajp-nio-8009"]
+04-Feb-2020 13:26:09.548 INFOS [main] org.apache.catalina.startup.Catalina.load L'initialisation du serveur a pris [2 960] millisecondes
+04-Feb-2020 13:26:09.717 INFOS [main] org.apache.catalina.core.StandardService.startInternal Démarrage du service [Catalina]
+04-Feb-2020 13:26:09.720 INFOS [main] org.apache.catalina.core.StandardEngine.startInternal Démarrage du moteur de Servlets: [Apache Tomcat/9.0.30]
+04-Feb-2020 13:26:09.755 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryServiceTest.xml]
+04-Feb-2020 13:26:09.894 AVERTISSEMENT [main] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/A1-LibraryServiceTest] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryServiceTest.xml] a été ignoré
+04-Feb-2020 13:26:10.012 GRAVE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Erreur lors du déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryServiceTest.xml]
+	java.lang.IllegalStateException: Erreur lors du démarrage du conteneur fils
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:720)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:690)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:705)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:631)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1831)
+		at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:112)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:526)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:425)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1576)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:309)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:423)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:366)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:936)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:633)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:343)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:474)
+	Caused by: org.apache.catalina.LifecycleException: Echec de démarrage du composant [org.apache.catalina.webresources.StandardRoot@1b26f7b2]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4800)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4935)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:717)
+		... 37 more
+	Caused by: java.lang.IllegalArgumentException: L'ensemble de ressources principal [/Users/Airi/Documents/SOEN487-Projects/Assignment1/A1-LibraryServiceTest/build/web] est invalide
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:752)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:709)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 41 more
+04-Feb-2020 13:26:10.018 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryServiceTest.xml] a pris [262] ms
+04-Feb-2020 13:26:10.018 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/HelloWorldJersey.xml]
+04-Feb-2020 13:26:10.023 AVERTISSEMENT [main] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/HelloWorldJersey] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/HelloWorldJersey.xml] a été ignoré
+04-Feb-2020 13:26:16.357 INFOS [main] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 13:26:17.782 INFOS [main] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 13:26:19.202 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/HelloWorldJersey.xml] a pris [9 184] ms
+04-Feb-2020 13:26:19.203 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/HelloWorld1.xml]
+04-Feb-2020 13:26:19.205 AVERTISSEMENT [main] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/HelloWorld1] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/HelloWorld1.xml] a été ignoré
+04-Feb-2020 13:26:19.254 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/HelloWorld1.xml] a pris [50] ms
+04-Feb-2020 13:26:19.255 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryService.xml]
+04-Feb-2020 13:26:19.258 AVERTISSEMENT [main] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/A1-LibraryService] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryService.xml] a été ignoré
+04-Feb-2020 13:26:22.433 INFOS [main] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 13:26:22.474 INFOS [main] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 13:26:23.677 INFOS [main] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 13:26:24.986 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryService.xml] a pris [5 732] ms
+04-Feb-2020 13:26:24.987 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryClient.xml]
+04-Feb-2020 13:26:24.990 AVERTISSEMENT [main] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/A1-LibraryClient] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryClient.xml] a été ignoré
+04-Feb-2020 13:26:25.002 GRAVE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Erreur lors du déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryClient.xml]
+	java.lang.IllegalStateException: Erreur lors du démarrage du conteneur fils
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:720)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:690)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:705)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:631)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1831)
+		at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:112)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:526)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:425)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1576)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:309)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:423)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:366)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:936)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:633)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:343)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:474)
+	Caused by: org.apache.catalina.LifecycleException: Echec de démarrage du composant [org.apache.catalina.webresources.StandardRoot@7a63c618]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4800)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4935)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:717)
+		... 37 more
+	Caused by: java.lang.IllegalArgumentException: L'ensemble de ressources principal [/Users/Airi/Documents/SOEN487-Projects/Assignment1/A1-LibraryClient/build/web] est invalide
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:752)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:709)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 41 more
+04-Feb-2020 13:26:25.014 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryClient.xml] a pris [26] ms
+04-Feb-2020 13:26:25.015 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/docs]
+04-Feb-2020 13:26:25.061 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/docs] de l'application web s'est terminé en [46] ms
+04-Feb-2020 13:26:25.063 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/manager]
+04-Feb-2020 13:26:25.158 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/manager] de l'application web s'est terminé en [95] ms
+04-Feb-2020 13:26:25.160 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/examples]
+04-Feb-2020 13:26:25.826 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/examples] de l'application web s'est terminé en [665] ms
+04-Feb-2020 13:26:25.829 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/host-manager]
+04-Feb-2020 13:26:25.867 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/host-manager] de l'application web s'est terminé en [40] ms
+04-Feb-2020 13:26:25.875 INFOS [main] org.apache.coyote.AbstractProtocol.start Démarrage du gestionnaire de protocole ["http-nio-8080"]
+04-Feb-2020 13:26:25.888 INFOS [main] org.apache.coyote.AbstractProtocol.start Démarrage du gestionnaire de protocole ["ajp-nio-8009"]
+04-Feb-2020 13:26:25.892 INFOS [main] org.apache.catalina.startup.Catalina.start Le démarrage du serveur a pris [16 343] millisecondes
+04-Feb-2020 13:26:26.381 INFOS [http-nio-8080-exec-1] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 13:26:29.534 INFOS [http-nio-8080-exec-1] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 13:26:29.555 INFOS [http-nio-8080-exec-1] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 13:26:30.647 INFOS [http-nio-8080-exec-1] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 13:26:31.475 INFOS [http-nio-8080-exec-1] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 13:32:23.167 INFOS [http-nio-8080-exec-12] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 13:32:26.776 INFOS [http-nio-8080-exec-12] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 13:32:26.813 INFOS [http-nio-8080-exec-12] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 13:32:27.573 INFOS [http-nio-8080-exec-12] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 13:32:28.134 INFOS [http-nio-8080-exec-12] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 13:33:16.310 INFOS [http-nio-8080-exec-14] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 13:33:19.703 INFOS [http-nio-8080-exec-14] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 13:33:19.748 INFOS [http-nio-8080-exec-14] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 13:33:20.632 INFOS [http-nio-8080-exec-14] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 13:33:21.421 GRAVE [http-nio-8080-exec-14] org.glassfish.jersey.internal.Errors.logErrors Following issues have been detected: 
+WARNING: A sub-resource model, public javax.ws.rs.core.Response a1.libraryservice.LibraryService.addBook(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String), can not have an entity parameter. Try to move the parameter to the corresponding resource method.
+WARNING: A sub-resource model, public javax.ws.rs.core.Response a1.libraryservice.LibraryService.addBook(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String), can not have an entity parameter. Try to move the parameter to the corresponding resource method.
+WARNING: A sub-resource model, public javax.ws.rs.core.Response a1.libraryservice.LibraryService.addBook(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String), can not have an entity parameter. Try to move the parameter to the corresponding resource method.
+WARNING: A sub-resource model, public javax.ws.rs.core.Response a1.libraryservice.LibraryService.addBook(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String), can not have an entity parameter. Try to move the parameter to the corresponding resource method.
+WARNING: A sub-resource model, public javax.ws.rs.core.Response a1.libraryservice.LibraryService.addBook(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String), can not have an entity parameter. Try to move the parameter to the corresponding resource method.
+
+04-Feb-2020 13:33:21.428 INFOS [http-nio-8080-exec-14] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 13:33:33.010 INFOS [main] org.apache.catalina.core.StandardServer.await Une commande d'arrêt valide a été reçue sur le port d'arrêt, arrêt de l'instance du serveur
+04-Feb-2020 13:33:33.010 INFOS [main] org.apache.coyote.AbstractProtocol.pause Le gestionnaire de protocole ["http-nio-8080"] est mis en pause
+04-Feb-2020 13:33:33.021 INFOS [main] org.apache.coyote.AbstractProtocol.pause Le gestionnaire de protocole ["ajp-nio-8009"] est mis en pause
+04-Feb-2020 13:33:33.028 INFOS [main] org.apache.catalina.core.StandardService.stopInternal Arrêt du service [Catalina]
+04-Feb-2020 13:33:33.050 INFOS [main] org.apache.coyote.AbstractProtocol.stop Arrêt du gestionnaire de protocole ["http-nio-8080"]
+04-Feb-2020 13:33:33.051 INFOS [main] org.apache.coyote.AbstractProtocol.stop Arrêt du gestionnaire de protocole ["ajp-nio-8009"]
+04-Feb-2020 13:33:33.053 INFOS [main] org.apache.coyote.AbstractProtocol.destroy Destruction du gestionnaire de protocole ["http-nio-8080"]
+04-Feb-2020 13:33:33.053 INFOS [main] org.apache.coyote.AbstractProtocol.destroy Destruction du gestionnaire de protocole ["ajp-nio-8009"]
+04-Feb-2020 13:35:31.186 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version du serveur:        Apache Tomcat/9.0.30
+04-Feb-2020 13:35:31.195 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Serveur compilé:       Dec 7 2019 16:42:04 UTC
+04-Feb-2020 13:35:31.195 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version du serveur:      9.0.30.0
+04-Feb-2020 13:35:31.195 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Nom de l'OS:           Mac OS X
+04-Feb-2020 13:35:31.195 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version de l'OS:        10.15.3
+04-Feb-2020 13:35:31.196 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+04-Feb-2020 13:35:31.196 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Répertoire de Java:     /Library/Java/JavaVirtualMachines/jdk1.8.0_141.jdk/Contents/Home/jre
+04-Feb-2020 13:35:31.197 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version de la JVM:           1.8.0_141-b15
+04-Feb-2020 13:35:31.197 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Fournisseur de la JVM:            Oracle Corporation
+04-Feb-2020 13:35:31.197 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30
+04-Feb-2020 13:35:31.198 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30
+04-Feb-2020 13:35:31.240 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Djava.util.logging.config.file=/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/logging.properties
+04-Feb-2020 13:35:31.240 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+04-Feb-2020 13:35:31.241 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Dhttp.nonProxyHosts=localhost|127.0.0.1|Airis-MBP
+04-Feb-2020 13:35:31.241 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Djdk.tls.ephemeralDHKeySize=2048
+04-Feb-2020 13:35:31.241 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+04-Feb-2020 13:35:31.241 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+04-Feb-2020 13:35:31.241 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Dignore.endorsed.dirs=
+04-Feb-2020 13:35:31.243 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Dcatalina.base=/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30
+04-Feb-2020 13:35:31.250 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Dcatalina.home=/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30
+04-Feb-2020 13:35:31.251 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Djava.io.tmpdir=/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/temp
+04-Feb-2020 13:35:31.251 INFOS [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent La librairie Apache Tomcat Native basée sur APR qui permet des performances optimales dans les environnements de production n'a pas été trouvée sur le java.library.path: [/Users/Airi/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+04-Feb-2020 13:35:33.077 INFOS [main] org.apache.coyote.AbstractProtocol.init Initialisation du gestionnaire de protocole ["http-nio-8080"]
+04-Feb-2020 13:35:33.365 INFOS [main] org.apache.coyote.AbstractProtocol.init Initialisation du gestionnaire de protocole ["ajp-nio-8009"]
+04-Feb-2020 13:35:33.373 INFOS [main] org.apache.catalina.startup.Catalina.load L'initialisation du serveur a pris [3 245] millisecondes
+04-Feb-2020 13:35:33.468 INFOS [main] org.apache.catalina.core.StandardService.startInternal Démarrage du service [Catalina]
+04-Feb-2020 13:35:33.469 INFOS [main] org.apache.catalina.core.StandardEngine.startInternal Démarrage du moteur de Servlets: [Apache Tomcat/9.0.30]
+04-Feb-2020 13:35:33.601 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryServiceTest.xml]
+04-Feb-2020 13:35:33.658 AVERTISSEMENT [main] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/A1-LibraryServiceTest] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryServiceTest.xml] a été ignoré
+04-Feb-2020 13:35:33.868 GRAVE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Erreur lors du déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryServiceTest.xml]
+	java.lang.IllegalStateException: Erreur lors du démarrage du conteneur fils
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:720)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:690)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:705)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:631)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1831)
+		at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:112)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:526)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:425)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1576)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:309)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:423)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:366)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:936)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:633)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:343)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:474)
+	Caused by: org.apache.catalina.LifecycleException: Echec de démarrage du composant [org.apache.catalina.webresources.StandardRoot@1b26f7b2]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4800)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4935)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:717)
+		... 37 more
+	Caused by: java.lang.IllegalArgumentException: L'ensemble de ressources principal [/Users/Airi/Documents/SOEN487-Projects/Assignment1/A1-LibraryServiceTest/build/web] est invalide
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:752)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:709)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 41 more
+04-Feb-2020 13:35:33.874 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryServiceTest.xml] a pris [274] ms
+04-Feb-2020 13:35:33.875 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/HelloWorldJersey.xml]
+04-Feb-2020 13:35:33.880 AVERTISSEMENT [main] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/HelloWorldJersey] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/HelloWorldJersey.xml] a été ignoré
+04-Feb-2020 13:35:42.254 INFOS [main] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 13:35:44.782 INFOS [main] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 13:35:47.118 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/HelloWorldJersey.xml] a pris [13 243] ms
+04-Feb-2020 13:35:47.119 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/HelloWorld1.xml]
+04-Feb-2020 13:35:47.120 AVERTISSEMENT [main] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/HelloWorld1] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/HelloWorld1.xml] a été ignoré
+04-Feb-2020 13:35:47.262 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/HelloWorld1.xml] a pris [142] ms
+04-Feb-2020 13:35:47.263 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryService.xml]
+04-Feb-2020 13:35:47.276 AVERTISSEMENT [main] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/A1-LibraryService] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryService.xml] a été ignoré
+04-Feb-2020 13:35:52.766 INFOS [main] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 13:35:52.865 INFOS [main] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 13:35:55.508 INFOS [main] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 13:35:57.422 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryService.xml] a pris [10 159] ms
+04-Feb-2020 13:35:57.423 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryClient.xml]
+04-Feb-2020 13:35:57.435 AVERTISSEMENT [main] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/A1-LibraryClient] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryClient.xml] a été ignoré
+04-Feb-2020 13:35:57.443 GRAVE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Erreur lors du déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryClient.xml]
+	java.lang.IllegalStateException: Erreur lors du démarrage du conteneur fils
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:720)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:690)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:705)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:631)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1831)
+		at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:112)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:526)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:425)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1576)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:309)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:423)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:366)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:936)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:633)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:343)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:474)
+	Caused by: org.apache.catalina.LifecycleException: Echec de démarrage du composant [org.apache.catalina.webresources.StandardRoot@378446f9]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4800)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4935)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:717)
+		... 37 more
+	Caused by: java.lang.IllegalArgumentException: L'ensemble de ressources principal [/Users/Airi/Documents/SOEN487-Projects/Assignment1/A1-LibraryClient/build/web] est invalide
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:752)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:709)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 41 more
+04-Feb-2020 13:35:57.452 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryClient.xml] a pris [29] ms
+04-Feb-2020 13:35:57.454 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/docs]
+04-Feb-2020 13:35:57.496 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/docs] de l'application web s'est terminé en [43] ms
+04-Feb-2020 13:35:57.497 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/manager]
+04-Feb-2020 13:35:57.574 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/manager] de l'application web s'est terminé en [78] ms
+04-Feb-2020 13:35:57.574 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/examples]
+04-Feb-2020 13:35:58.082 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/examples] de l'application web s'est terminé en [507] ms
+04-Feb-2020 13:35:58.082 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/host-manager]
+04-Feb-2020 13:35:58.114 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/host-manager] de l'application web s'est terminé en [30] ms
+04-Feb-2020 13:35:58.124 INFOS [main] org.apache.coyote.AbstractProtocol.start Démarrage du gestionnaire de protocole ["http-nio-8080"]
+04-Feb-2020 13:35:58.137 INFOS [main] org.apache.coyote.AbstractProtocol.start Démarrage du gestionnaire de protocole ["ajp-nio-8009"]
+04-Feb-2020 13:35:58.141 INFOS [main] org.apache.catalina.startup.Catalina.start Le démarrage du serveur a pris [24 767] millisecondes
+04-Feb-2020 13:36:09.582 INFOS [http-nio-8080-exec-6] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/A1-LibraryService]
+04-Feb-2020 13:36:09.624 INFOS [http-nio-8080-exec-8] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryService.xml]
+04-Feb-2020 13:36:09.628 AVERTISSEMENT [http-nio-8080-exec-8] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/A1-LibraryService] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryService.xml] a été ignoré
+04-Feb-2020 13:36:12.333 INFOS [http-nio-8080-exec-8] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 13:36:12.427 INFOS [http-nio-8080-exec-8] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 13:36:13.685 INFOS [http-nio-8080-exec-8] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 13:36:14.575 INFOS [http-nio-8080-exec-8] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryService.xml] a pris [4 949] ms
+04-Feb-2020 13:36:59.912 INFOS [main] org.apache.catalina.core.StandardServer.await Une commande d'arrêt valide a été reçue sur le port d'arrêt, arrêt de l'instance du serveur
+04-Feb-2020 13:36:59.913 INFOS [main] org.apache.coyote.AbstractProtocol.pause Le gestionnaire de protocole ["http-nio-8080"] est mis en pause
+04-Feb-2020 13:36:59.923 INFOS [main] org.apache.coyote.AbstractProtocol.pause Le gestionnaire de protocole ["ajp-nio-8009"] est mis en pause
+04-Feb-2020 13:36:59.931 INFOS [main] org.apache.catalina.core.StandardService.stopInternal Arrêt du service [Catalina]
+04-Feb-2020 13:36:59.963 INFOS [main] org.apache.coyote.AbstractProtocol.stop Arrêt du gestionnaire de protocole ["http-nio-8080"]
+04-Feb-2020 13:36:59.965 INFOS [main] org.apache.coyote.AbstractProtocol.stop Arrêt du gestionnaire de protocole ["ajp-nio-8009"]
+04-Feb-2020 13:36:59.967 INFOS [main] org.apache.coyote.AbstractProtocol.destroy Destruction du gestionnaire de protocole ["http-nio-8080"]
+04-Feb-2020 13:36:59.969 INFOS [main] org.apache.coyote.AbstractProtocol.destroy Destruction du gestionnaire de protocole ["ajp-nio-8009"]
+04-Feb-2020 13:40:09.697 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version du serveur:        Apache Tomcat/9.0.30
+04-Feb-2020 13:40:09.704 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Serveur compilé:       Dec 7 2019 16:42:04 UTC
+04-Feb-2020 13:40:09.704 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version du serveur:      9.0.30.0
+04-Feb-2020 13:40:09.705 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Nom de l'OS:           Mac OS X
+04-Feb-2020 13:40:09.705 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version de l'OS:        10.15.3
+04-Feb-2020 13:40:09.705 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+04-Feb-2020 13:40:09.706 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Répertoire de Java:     /Library/Java/JavaVirtualMachines/jdk1.8.0_141.jdk/Contents/Home/jre
+04-Feb-2020 13:40:09.706 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version de la JVM:           1.8.0_141-b15
+04-Feb-2020 13:40:09.706 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Fournisseur de la JVM:            Oracle Corporation
+04-Feb-2020 13:40:09.707 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30
+04-Feb-2020 13:40:09.707 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30
+04-Feb-2020 13:40:09.719 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Djava.util.logging.config.file=/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/logging.properties
+04-Feb-2020 13:40:09.720 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+04-Feb-2020 13:40:09.721 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Dhttp.nonProxyHosts=localhost|127.0.0.1|Airis-MBP
+04-Feb-2020 13:40:09.721 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Djdk.tls.ephemeralDHKeySize=2048
+04-Feb-2020 13:40:09.721 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+04-Feb-2020 13:40:09.721 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+04-Feb-2020 13:40:09.721 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Dignore.endorsed.dirs=
+04-Feb-2020 13:40:09.722 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Dcatalina.base=/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30
+04-Feb-2020 13:40:09.722 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Dcatalina.home=/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30
+04-Feb-2020 13:40:09.722 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Djava.io.tmpdir=/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/temp
+04-Feb-2020 13:40:09.722 INFOS [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent La librairie Apache Tomcat Native basée sur APR qui permet des performances optimales dans les environnements de production n'a pas été trouvée sur le java.library.path: [/Users/Airi/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+04-Feb-2020 13:40:10.937 INFOS [main] org.apache.coyote.AbstractProtocol.init Initialisation du gestionnaire de protocole ["http-nio-8080"]
+04-Feb-2020 13:40:11.149 INFOS [main] org.apache.coyote.AbstractProtocol.init Initialisation du gestionnaire de protocole ["ajp-nio-8009"]
+04-Feb-2020 13:40:11.161 INFOS [main] org.apache.catalina.startup.Catalina.load L'initialisation du serveur a pris [2 487] millisecondes
+04-Feb-2020 13:40:11.300 INFOS [main] org.apache.catalina.core.StandardService.startInternal Démarrage du service [Catalina]
+04-Feb-2020 13:40:11.303 INFOS [main] org.apache.catalina.core.StandardEngine.startInternal Démarrage du moteur de Servlets: [Apache Tomcat/9.0.30]
+04-Feb-2020 13:40:11.356 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryServiceTest.xml]
+04-Feb-2020 13:40:11.455 AVERTISSEMENT [main] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/A1-LibraryServiceTest] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryServiceTest.xml] a été ignoré
+04-Feb-2020 13:40:11.575 GRAVE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Erreur lors du déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryServiceTest.xml]
+	java.lang.IllegalStateException: Erreur lors du démarrage du conteneur fils
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:720)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:690)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:705)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:631)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1831)
+		at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:112)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:526)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:425)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1576)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:309)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:423)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:366)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:936)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:633)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:343)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:474)
+	Caused by: org.apache.catalina.LifecycleException: Echec de démarrage du composant [org.apache.catalina.webresources.StandardRoot@491cc5c9]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4800)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4935)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:717)
+		... 37 more
+	Caused by: java.lang.IllegalArgumentException: L'ensemble de ressources principal [/Users/Airi/Documents/SOEN487-Projects/Assignment1/A1-LibraryServiceTest/build/web] est invalide
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:752)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:709)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 41 more
+04-Feb-2020 13:40:11.579 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryServiceTest.xml] a pris [222] ms
+04-Feb-2020 13:40:11.580 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/HelloWorldJersey.xml]
+04-Feb-2020 13:40:11.581 AVERTISSEMENT [main] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/HelloWorldJersey] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/HelloWorldJersey.xml] a été ignoré
+04-Feb-2020 13:40:17.178 INFOS [main] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 13:40:18.574 INFOS [main] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 13:40:20.302 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/HelloWorldJersey.xml] a pris [8 722] ms
+04-Feb-2020 13:40:20.303 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/HelloWorld1.xml]
+04-Feb-2020 13:40:20.305 AVERTISSEMENT [main] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/HelloWorld1] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/HelloWorld1.xml] a été ignoré
+04-Feb-2020 13:40:20.442 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/HelloWorld1.xml] a pris [139] ms
+04-Feb-2020 13:40:20.443 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryService.xml]
+04-Feb-2020 13:40:20.450 AVERTISSEMENT [main] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/A1-LibraryService] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryService.xml] a été ignoré
+04-Feb-2020 13:40:23.490 INFOS [main] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 13:40:23.544 INFOS [main] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 13:40:24.598 INFOS [main] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 13:40:25.366 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryService.xml] a pris [4 923] ms
+04-Feb-2020 13:40:25.368 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryClient.xml]
+04-Feb-2020 13:40:25.372 AVERTISSEMENT [main] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/A1-LibraryClient] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryClient.xml] a été ignoré
+04-Feb-2020 13:40:25.379 GRAVE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Erreur lors du déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryClient.xml]
+	java.lang.IllegalStateException: Erreur lors du démarrage du conteneur fils
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:720)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:690)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:705)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:631)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1831)
+		at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:112)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:526)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:425)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1576)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:309)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:423)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:366)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:936)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:633)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:343)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:474)
+	Caused by: org.apache.catalina.LifecycleException: Echec de démarrage du composant [org.apache.catalina.webresources.StandardRoot@378446f9]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4800)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4935)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:717)
+		... 37 more
+	Caused by: java.lang.IllegalArgumentException: L'ensemble de ressources principal [/Users/Airi/Documents/SOEN487-Projects/Assignment1/A1-LibraryClient/build/web] est invalide
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:752)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:709)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 41 more
+04-Feb-2020 13:40:25.381 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryClient.xml] a pris [13] ms
+04-Feb-2020 13:40:25.382 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/docs]
+04-Feb-2020 13:40:25.419 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/docs] de l'application web s'est terminé en [36] ms
+04-Feb-2020 13:40:25.420 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/manager]
+04-Feb-2020 13:40:25.565 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/manager] de l'application web s'est terminé en [146] ms
+04-Feb-2020 13:40:25.567 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/examples]
+04-Feb-2020 13:40:26.189 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/examples] de l'application web s'est terminé en [622] ms
+04-Feb-2020 13:40:26.190 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/host-manager]
+04-Feb-2020 13:40:26.229 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/host-manager] de l'application web s'est terminé en [39] ms
+04-Feb-2020 13:40:26.260 INFOS [main] org.apache.coyote.AbstractProtocol.start Démarrage du gestionnaire de protocole ["http-nio-8080"]
+04-Feb-2020 13:40:26.310 INFOS [main] org.apache.coyote.AbstractProtocol.start Démarrage du gestionnaire de protocole ["ajp-nio-8009"]
+04-Feb-2020 13:40:26.318 INFOS [main] org.apache.catalina.startup.Catalina.start Le démarrage du serveur a pris [15 156] millisecondes
+04-Feb-2020 13:40:26.905 INFOS [http-nio-8080-exec-1] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 13:40:29.613 INFOS [http-nio-8080-exec-1] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 13:40:29.657 INFOS [http-nio-8080-exec-1] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 13:40:30.722 INFOS [http-nio-8080-exec-1] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 13:40:31.908 INFOS [http-nio-8080-exec-1] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 13:43:59.986 INFOS [http-nio-8080-exec-17] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 13:44:04.215 INFOS [http-nio-8080-exec-17] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 13:44:04.232 INFOS [http-nio-8080-exec-17] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 13:44:04.926 INFOS [http-nio-8080-exec-17] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 13:44:05.623 INFOS [http-nio-8080-exec-17] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 13:45:00.853 INFOS [http-nio-8080-exec-20] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 13:45:03.367 INFOS [http-nio-8080-exec-20] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 13:45:03.390 INFOS [http-nio-8080-exec-20] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 13:45:03.859 INFOS [http-nio-8080-exec-20] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 13:45:04.441 INFOS [http-nio-8080-exec-20] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 13:46:59.327 INFOS [main] org.apache.catalina.core.StandardServer.await Une commande d'arrêt valide a été reçue sur le port d'arrêt, arrêt de l'instance du serveur
+04-Feb-2020 13:46:59.327 INFOS [main] org.apache.coyote.AbstractProtocol.pause Le gestionnaire de protocole ["http-nio-8080"] est mis en pause
+04-Feb-2020 13:46:59.338 INFOS [main] org.apache.coyote.AbstractProtocol.pause Le gestionnaire de protocole ["ajp-nio-8009"] est mis en pause
+04-Feb-2020 13:46:59.344 INFOS [main] org.apache.catalina.core.StandardService.stopInternal Arrêt du service [Catalina]
+04-Feb-2020 13:46:59.367 INFOS [main] org.apache.coyote.AbstractProtocol.stop Arrêt du gestionnaire de protocole ["http-nio-8080"]
+04-Feb-2020 13:46:59.380 INFOS [main] org.apache.coyote.AbstractProtocol.stop Arrêt du gestionnaire de protocole ["ajp-nio-8009"]
+04-Feb-2020 13:46:59.387 INFOS [main] org.apache.coyote.AbstractProtocol.destroy Destruction du gestionnaire de protocole ["http-nio-8080"]
+04-Feb-2020 13:46:59.388 INFOS [main] org.apache.coyote.AbstractProtocol.destroy Destruction du gestionnaire de protocole ["ajp-nio-8009"]
+04-Feb-2020 15:00:20.217 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version du serveur:        Apache Tomcat/9.0.30
+04-Feb-2020 15:00:20.228 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Serveur compilé:       Dec 7 2019 16:42:04 UTC
+04-Feb-2020 15:00:20.228 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version du serveur:      9.0.30.0
+04-Feb-2020 15:00:20.229 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Nom de l'OS:           Mac OS X
+04-Feb-2020 15:00:20.229 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version de l'OS:        10.15.3
+04-Feb-2020 15:00:20.230 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+04-Feb-2020 15:00:20.230 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Répertoire de Java:     /Library/Java/JavaVirtualMachines/jdk1.8.0_141.jdk/Contents/Home/jre
+04-Feb-2020 15:00:20.231 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version de la JVM:           1.8.0_141-b15
+04-Feb-2020 15:00:20.231 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Fournisseur de la JVM:            Oracle Corporation
+04-Feb-2020 15:00:20.233 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30
+04-Feb-2020 15:00:20.233 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30
+04-Feb-2020 15:00:20.256 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Djava.util.logging.config.file=/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/logging.properties
+04-Feb-2020 15:00:20.256 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+04-Feb-2020 15:00:20.257 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Dhttp.nonProxyHosts=localhost|127.0.0.1|Airis-MBP
+04-Feb-2020 15:00:20.258 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Djdk.tls.ephemeralDHKeySize=2048
+04-Feb-2020 15:00:20.258 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+04-Feb-2020 15:00:20.258 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+04-Feb-2020 15:00:20.259 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Dignore.endorsed.dirs=
+04-Feb-2020 15:00:20.259 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Dcatalina.base=/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30
+04-Feb-2020 15:00:20.259 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Dcatalina.home=/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30
+04-Feb-2020 15:00:20.259 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Djava.io.tmpdir=/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/temp
+04-Feb-2020 15:00:20.260 INFOS [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent La librairie Apache Tomcat Native basée sur APR qui permet des performances optimales dans les environnements de production n'a pas été trouvée sur le java.library.path: [/Users/Airi/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+04-Feb-2020 15:00:22.091 INFOS [main] org.apache.coyote.AbstractProtocol.init Initialisation du gestionnaire de protocole ["http-nio-8080"]
+04-Feb-2020 15:00:22.266 INFOS [main] org.apache.coyote.AbstractProtocol.init Initialisation du gestionnaire de protocole ["ajp-nio-8009"]
+04-Feb-2020 15:00:22.275 INFOS [main] org.apache.catalina.startup.Catalina.load L'initialisation du serveur a pris [3 226] millisecondes
+04-Feb-2020 15:00:22.459 INFOS [main] org.apache.catalina.core.StandardService.startInternal Démarrage du service [Catalina]
+04-Feb-2020 15:00:22.460 INFOS [main] org.apache.catalina.core.StandardEngine.startInternal Démarrage du moteur de Servlets: [Apache Tomcat/9.0.30]
+04-Feb-2020 15:00:22.494 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryServiceTest.xml]
+04-Feb-2020 15:00:22.603 AVERTISSEMENT [main] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/A1-LibraryServiceTest] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryServiceTest.xml] a été ignoré
+04-Feb-2020 15:00:22.915 GRAVE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Erreur lors du déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryServiceTest.xml]
+	java.lang.IllegalStateException: Erreur lors du démarrage du conteneur fils
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:720)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:690)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:705)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:631)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1831)
+		at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:112)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:526)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:425)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1576)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:309)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:423)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:366)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:936)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:633)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:343)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:474)
+	Caused by: org.apache.catalina.LifecycleException: Echec de démarrage du composant [org.apache.catalina.webresources.StandardRoot@491cc5c9]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4800)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4935)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:717)
+		... 37 more
+	Caused by: java.lang.IllegalArgumentException: L'ensemble de ressources principal [/Users/Airi/Documents/SOEN487-Projects/Assignment1/A1-LibraryServiceTest/build/web] est invalide
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:752)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:709)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 41 more
+04-Feb-2020 15:00:22.925 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryServiceTest.xml] a pris [430] ms
+04-Feb-2020 15:00:22.925 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/HelloWorldJersey.xml]
+04-Feb-2020 15:00:22.937 AVERTISSEMENT [main] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/HelloWorldJersey] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/HelloWorldJersey.xml] a été ignoré
+04-Feb-2020 15:00:31.655 INFOS [main] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:00:33.763 INFOS [main] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:00:35.627 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/HelloWorldJersey.xml] a pris [12 702] ms
+04-Feb-2020 15:00:35.628 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/HelloWorld1.xml]
+04-Feb-2020 15:00:35.629 AVERTISSEMENT [main] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/HelloWorld1] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/HelloWorld1.xml] a été ignoré
+04-Feb-2020 15:00:35.840 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/HelloWorld1.xml] a pris [211] ms
+04-Feb-2020 15:00:35.840 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryService.xml]
+04-Feb-2020 15:00:35.843 AVERTISSEMENT [main] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/A1-LibraryService] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryService.xml] a été ignoré
+04-Feb-2020 15:00:39.794 INFOS [main] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:00:39.839 INFOS [main] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:00:41.286 INFOS [main] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:00:42.802 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryService.xml] a pris [6 962] ms
+04-Feb-2020 15:00:42.803 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryClient.xml]
+04-Feb-2020 15:00:42.808 AVERTISSEMENT [main] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/A1-LibraryClient] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryClient.xml] a été ignoré
+04-Feb-2020 15:00:42.827 GRAVE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Erreur lors du déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryClient.xml]
+	java.lang.IllegalStateException: Erreur lors du démarrage du conteneur fils
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:720)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:690)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:705)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:631)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1831)
+		at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:112)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:526)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:425)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1576)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:309)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:423)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:366)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:936)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:633)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:343)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:474)
+	Caused by: org.apache.catalina.LifecycleException: Echec de démarrage du composant [org.apache.catalina.webresources.StandardRoot@57e273e0]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4800)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4935)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:717)
+		... 37 more
+	Caused by: java.lang.IllegalArgumentException: L'ensemble de ressources principal [/Users/Airi/Documents/SOEN487-Projects/Assignment1/A1-LibraryClient/build/web] est invalide
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:752)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:709)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 41 more
+04-Feb-2020 15:00:42.833 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryClient.xml] a pris [29] ms
+04-Feb-2020 15:00:42.842 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/docs]
+04-Feb-2020 15:00:42.993 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/docs] de l'application web s'est terminé en [151] ms
+04-Feb-2020 15:00:42.993 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/manager]
+04-Feb-2020 15:00:43.119 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/manager] de l'application web s'est terminé en [125] ms
+04-Feb-2020 15:00:43.128 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/examples]
+04-Feb-2020 15:00:43.818 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/examples] de l'application web s'est terminé en [691] ms
+04-Feb-2020 15:00:43.819 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/host-manager]
+04-Feb-2020 15:00:43.961 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/host-manager] de l'application web s'est terminé en [142] ms
+04-Feb-2020 15:00:43.978 INFOS [main] org.apache.coyote.AbstractProtocol.start Démarrage du gestionnaire de protocole ["http-nio-8080"]
+04-Feb-2020 15:00:44.027 INFOS [main] org.apache.coyote.AbstractProtocol.start Démarrage du gestionnaire de protocole ["ajp-nio-8009"]
+04-Feb-2020 15:00:44.031 INFOS [main] org.apache.catalina.startup.Catalina.start Le démarrage du serveur a pris [21 754] millisecondes
+04-Feb-2020 15:00:44.467 INFOS [http-nio-8080-exec-7] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:00:47.318 INFOS [http-nio-8080-exec-7] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:00:47.394 INFOS [http-nio-8080-exec-7] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:00:48.231 INFOS [http-nio-8080-exec-7] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:00:48.980 INFOS [http-nio-8080-exec-7] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 15:02:59.946 INFOS [http-nio-8080-exec-20] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:03:02.177 INFOS [http-nio-8080-exec-20] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:03:02.211 INFOS [http-nio-8080-exec-20] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:03:02.941 INFOS [http-nio-8080-exec-20] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:03:03.620 INFOS [http-nio-8080-exec-20] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 15:03:03.675 INFOS [http-nio-8080-exec-21] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:03:06.896 INFOS [http-nio-8080-exec-21] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:03:06.915 INFOS [http-nio-8080-exec-21] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:03:07.422 INFOS [http-nio-8080-exec-21] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:03:08.044 INFOS [http-nio-8080-exec-21] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 15:09:24.405 INFOS [http-nio-8080-exec-25] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:09:28.906 INFOS [http-nio-8080-exec-25] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:09:28.922 INFOS [http-nio-8080-exec-25] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:09:29.596 INFOS [http-nio-8080-exec-25] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:09:30.795 INFOS [http-nio-8080-exec-25] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 15:09:30.840 INFOS [http-nio-8080-exec-26] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:09:32.947 INFOS [http-nio-8080-exec-26] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:09:32.957 INFOS [http-nio-8080-exec-26] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:09:33.359 INFOS [http-nio-8080-exec-26] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:09:33.796 INFOS [http-nio-8080-exec-26] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 15:09:53.983 INFOS [http-nio-8080-exec-28] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:09:56.514 INFOS [http-nio-8080-exec-28] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:09:56.532 INFOS [http-nio-8080-exec-28] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:09:57.059 INFOS [http-nio-8080-exec-28] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:09:57.796 INFOS [http-nio-8080-exec-28] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 15:16:34.582 INFOS [http-nio-8080-exec-43] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:16:39.143 INFOS [http-nio-8080-exec-43] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:16:39.170 INFOS [http-nio-8080-exec-43] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:16:40.211 INFOS [http-nio-8080-exec-43] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:16:41.433 INFOS [http-nio-8080-exec-43] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 15:20:18.357 INFOS [http-nio-8080-exec-48] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:20:21.397 INFOS [http-nio-8080-exec-48] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:20:21.414 INFOS [http-nio-8080-exec-48] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:20:22.207 INFOS [http-nio-8080-exec-48] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:20:23.052 INFOS [http-nio-8080-exec-48] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 15:21:40.046 INFOS [http-nio-8080-exec-56] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:21:43.211 INFOS [http-nio-8080-exec-56] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:21:43.227 INFOS [http-nio-8080-exec-56] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:21:43.819 INFOS [http-nio-8080-exec-56] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:21:44.904 INFOS [http-nio-8080-exec-56] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 15:22:05.350 INFOS [http-nio-8080-exec-47] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:22:08.496 INFOS [http-nio-8080-exec-47] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:22:08.515 INFOS [http-nio-8080-exec-47] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:22:09.242 INFOS [http-nio-8080-exec-47] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:22:10.265 INFOS [http-nio-8080-exec-47] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 15:23:45.708 INFOS [http-nio-8080-exec-53] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:23:49.906 INFOS [http-nio-8080-exec-53] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:23:49.923 INFOS [http-nio-8080-exec-53] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:23:50.917 INFOS [http-nio-8080-exec-53] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:23:51.973 INFOS [http-nio-8080-exec-53] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 15:23:52.157 INFOS [http-nio-8080-exec-53] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:23:54.823 INFOS [http-nio-8080-exec-53] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:23:54.847 INFOS [http-nio-8080-exec-53] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:23:56.631 INFOS [http-nio-8080-exec-53] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:23:58.457 INFOS [http-nio-8080-exec-53] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 15:24:36.608 INFOS [http-nio-8080-exec-61] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:24:38.436 INFOS [http-nio-8080-exec-61] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:24:38.449 INFOS [http-nio-8080-exec-61] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:24:38.986 INFOS [http-nio-8080-exec-61] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:24:39.946 INFOS [http-nio-8080-exec-61] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 15:24:39.960 INFOS [http-nio-8080-exec-66] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:24:42.959 INFOS [http-nio-8080-exec-66] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:24:42.973 INFOS [http-nio-8080-exec-66] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:24:43.641 INFOS [http-nio-8080-exec-66] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:24:44.230 INFOS [http-nio-8080-exec-66] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 15:27:08.011 AVERTISSEMENT [http-nio-8080-exec-73] org.glassfish.jersey.internal.Errors.logErrors The following warnings have been detected: WARNING: Cannot new create registration for component type class org.glassfish.jersey.servlet.WebComponent$WebComponentBinder: Existing previous registration found for the type.
+
+04-Feb-2020 15:27:13.882 AVERTISSEMENT [http-nio-8080-exec-72] org.glassfish.jersey.internal.Errors.logErrors The following warnings have been detected: WARNING: Cannot new create registration for component type class org.glassfish.jersey.servlet.WebComponent$WebComponentBinder: Existing previous registration found for the type.
+
+04-Feb-2020 15:27:35.667 INFOS [http-nio-8080-exec-73] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/A1-LibraryService]
+04-Feb-2020 15:28:00.739 INFOS [http-nio-8080-exec-80] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryService.xml]
+04-Feb-2020 15:28:00.741 AVERTISSEMENT [http-nio-8080-exec-80] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/A1-LibraryService] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryService.xml] a été ignoré
+04-Feb-2020 15:28:03.643 INFOS [http-nio-8080-exec-80] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:28:03.660 INFOS [http-nio-8080-exec-80] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:28:04.447 INFOS [http-nio-8080-exec-80] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:28:05.630 INFOS [http-nio-8080-exec-80] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryService.xml] a pris [4 891] ms
+04-Feb-2020 15:28:05.645 INFOS [http-nio-8080-exec-74] org.apache.catalina.util.LifecycleBase.start La méthode start() a été appelée sur le composant [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/A1-LibraryService]] après que start() ait déjà été appelé, le deuxième appel sera ignoré
+04-Feb-2020 15:31:48.360 INFOS [http-nio-8080-exec-79] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:31:51.704 INFOS [http-nio-8080-exec-79] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:31:51.728 INFOS [http-nio-8080-exec-79] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:31:52.537 INFOS [http-nio-8080-exec-79] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:31:53.211 INFOS [http-nio-8080-exec-79] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 15:32:47.465 INFOS [http-nio-8080-exec-80] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:32:49.412 INFOS [http-nio-8080-exec-80] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:32:49.422 INFOS [http-nio-8080-exec-80] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:32:49.943 INFOS [http-nio-8080-exec-80] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:32:50.533 INFOS [http-nio-8080-exec-80] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 15:33:42.662 INFOS [http-nio-8080-exec-81] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:33:46.891 INFOS [http-nio-8080-exec-81] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:33:46.922 INFOS [http-nio-8080-exec-81] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:33:48.051 INFOS [http-nio-8080-exec-81] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:33:49.614 INFOS [http-nio-8080-exec-81] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 15:35:16.648 INFOS [http-nio-8080-exec-87] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:35:18.812 INFOS [http-nio-8080-exec-87] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:35:18.824 INFOS [http-nio-8080-exec-87] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:35:19.664 INFOS [http-nio-8080-exec-87] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:35:20.925 INFOS [http-nio-8080-exec-87] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 15:35:47.423 INFOS [http-nio-8080-exec-92] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:35:49.188 INFOS [http-nio-8080-exec-92] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:35:49.200 INFOS [http-nio-8080-exec-92] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:35:49.730 INFOS [http-nio-8080-exec-92] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:35:50.330 INFOS [http-nio-8080-exec-92] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 15:36:04.918 INFOS [http-nio-8080-exec-83] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:36:07.244 INFOS [http-nio-8080-exec-83] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:36:07.257 INFOS [http-nio-8080-exec-83] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:36:07.995 INFOS [http-nio-8080-exec-83] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:36:09.046 INFOS [http-nio-8080-exec-83] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 15:36:11.595 INFOS [http-nio-8080-exec-99] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:36:14.034 INFOS [http-nio-8080-exec-99] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:36:14.069 INFOS [http-nio-8080-exec-99] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:36:14.837 INFOS [http-nio-8080-exec-99] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:36:15.886 INFOS [http-nio-8080-exec-99] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 15:36:19.507 INFOS [http-nio-8080-exec-96] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:36:22.457 INFOS [http-nio-8080-exec-96] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:36:22.476 INFOS [http-nio-8080-exec-96] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:36:23.148 INFOS [http-nio-8080-exec-96] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:36:24.359 INFOS [http-nio-8080-exec-96] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 15:36:31.292 INFOS [http-nio-8080-exec-94] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:36:34.106 INFOS [http-nio-8080-exec-94] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:36:34.124 INFOS [http-nio-8080-exec-94] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:36:34.905 INFOS [http-nio-8080-exec-94] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:36:36.026 INFOS [http-nio-8080-exec-94] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 15:36:37.703 INFOS [http-nio-8080-exec-88] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:36:39.908 INFOS [http-nio-8080-exec-88] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:36:39.933 INFOS [http-nio-8080-exec-88] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:36:40.884 INFOS [http-nio-8080-exec-88] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:36:41.643 INFOS [http-nio-8080-exec-88] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 15:36:55.569 INFOS [http-nio-8080-exec-107] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:36:58.144 INFOS [http-nio-8080-exec-107] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:36:58.154 INFOS [http-nio-8080-exec-107] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:36:58.687 INFOS [http-nio-8080-exec-107] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:36:59.625 INFOS [http-nio-8080-exec-107] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 15:37:07.455 INFOS [http-nio-8080-exec-109] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:37:10.391 INFOS [http-nio-8080-exec-109] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:37:10.421 INFOS [http-nio-8080-exec-109] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:37:11.325 INFOS [http-nio-8080-exec-109] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:37:12.299 INFOS [http-nio-8080-exec-109] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 15:37:41.455 INFOS [http-nio-8080-exec-106] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:37:43.565 INFOS [http-nio-8080-exec-106] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:37:43.587 INFOS [http-nio-8080-exec-106] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:37:44.648 INFOS [http-nio-8080-exec-106] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:37:46.007 INFOS [http-nio-8080-exec-106] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 15:37:49.822 INFOS [http-nio-8080-exec-93] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:37:52.300 INFOS [http-nio-8080-exec-93] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:37:52.319 INFOS [http-nio-8080-exec-93] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:37:53.337 INFOS [http-nio-8080-exec-93] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:37:54.157 INFOS [http-nio-8080-exec-93] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 15:37:55.404 INFOS [http-nio-8080-exec-113] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:37:58.058 INFOS [http-nio-8080-exec-113] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:37:58.085 INFOS [http-nio-8080-exec-113] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:37:59.884 INFOS [http-nio-8080-exec-113] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:38:01.081 INFOS [http-nio-8080-exec-113] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 15:38:01.178 INFOS [http-nio-8080-exec-114] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:38:03.030 INFOS [http-nio-8080-exec-114] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:38:03.041 INFOS [http-nio-8080-exec-114] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:38:03.378 INFOS [http-nio-8080-exec-114] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:38:03.788 INFOS [http-nio-8080-exec-114] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 15:38:20.757 INFOS [http-nio-8080-exec-109] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:38:22.228 INFOS [http-nio-8080-exec-109] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:38:22.240 INFOS [http-nio-8080-exec-109] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:38:22.744 INFOS [http-nio-8080-exec-109] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:38:23.830 INFOS [http-nio-8080-exec-109] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 15:38:23.848 INFOS [http-nio-8080-exec-120] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:38:26.402 INFOS [http-nio-8080-exec-120] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:38:26.417 INFOS [http-nio-8080-exec-120] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:38:26.974 INFOS [http-nio-8080-exec-120] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:38:27.458 INFOS [http-nio-8080-exec-120] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 15:39:09.221 INFOS [http-nio-8080-exec-126] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:39:11.515 INFOS [http-nio-8080-exec-126] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:39:11.532 INFOS [http-nio-8080-exec-126] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:39:12.118 INFOS [http-nio-8080-exec-126] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:39:12.701 INFOS [http-nio-8080-exec-126] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 15:39:23.130 INFOS [http-nio-8080-exec-132] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:39:25.268 INFOS [http-nio-8080-exec-132] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:39:25.286 INFOS [http-nio-8080-exec-132] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:39:26.283 INFOS [http-nio-8080-exec-132] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:39:27.375 INFOS [http-nio-8080-exec-132] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 15:39:42.599 INFOS [http-nio-8080-exec-123] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:39:44.735 INFOS [http-nio-8080-exec-123] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:39:44.757 INFOS [http-nio-8080-exec-123] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:39:45.338 INFOS [http-nio-8080-exec-123] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:39:45.979 INFOS [http-nio-8080-exec-123] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 15:42:57.708 INFOS [http-nio-8080-exec-142] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:43:00.775 INFOS [http-nio-8080-exec-142] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:43:00.787 INFOS [http-nio-8080-exec-142] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:43:01.505 INFOS [http-nio-8080-exec-142] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:43:02.368 INFOS [http-nio-8080-exec-142] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 15:43:05.667 INFOS [http-nio-8080-exec-145] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:43:08.185 INFOS [http-nio-8080-exec-145] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:43:08.207 INFOS [http-nio-8080-exec-145] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:43:08.981 INFOS [http-nio-8080-exec-145] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:43:10.069 INFOS [http-nio-8080-exec-145] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 15:43:22.980 INFOS [http-nio-8080-exec-138] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:43:25.002 INFOS [http-nio-8080-exec-138] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:43:25.023 INFOS [http-nio-8080-exec-138] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:43:25.713 INFOS [http-nio-8080-exec-138] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:43:26.434 INFOS [http-nio-8080-exec-138] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 15:43:39.406 INFOS [http-nio-8080-exec-141] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:43:41.684 INFOS [http-nio-8080-exec-141] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:43:41.696 INFOS [http-nio-8080-exec-141] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:43:42.344 INFOS [http-nio-8080-exec-141] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:43:43.032 INFOS [http-nio-8080-exec-141] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 15:50:16.073 INFOS [http-nio-8080-exec-157] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:50:19.678 INFOS [http-nio-8080-exec-157] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:50:19.706 INFOS [http-nio-8080-exec-157] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:50:20.515 INFOS [http-nio-8080-exec-157] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:50:21.140 INFOS [http-nio-8080-exec-157] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 15:51:37.659 INFOS [http-nio-8080-exec-155] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:51:39.998 INFOS [http-nio-8080-exec-155] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:51:40.011 INFOS [http-nio-8080-exec-155] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:51:40.831 INFOS [http-nio-8080-exec-155] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:51:41.649 INFOS [http-nio-8080-exec-155] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 15:52:08.546 INFOS [http-nio-8080-exec-169] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:52:10.968 INFOS [http-nio-8080-exec-169] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:52:10.999 INFOS [http-nio-8080-exec-169] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:52:11.982 INFOS [http-nio-8080-exec-169] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:52:12.950 INFOS [http-nio-8080-exec-169] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+04-Feb-2020 15:52:25.901 INFOS [http-nio-8080-exec-173] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A1-LibraryService] a démarré
+04-Feb-2020 15:52:27.524 INFOS [http-nio-8080-exec-173] org.glassfish.jersey.servlet.init.JerseyServletContainerInitializer.addServletWithApplication Registering the Jersey servlet application, named libraryservice.ApplicationConfig, at the servlet mapping /webresources/*, with the Application class of the same name.
+04-Feb-2020 15:52:27.536 INFOS [http-nio-8080-exec-173] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+04-Feb-2020 15:52:28.052 INFOS [http-nio-8080-exec-173] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
+04-Feb-2020 15:52:28.731 INFOS [http-nio-8080-exec-173] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé

@@ -5,6 +5,7 @@
  */
 package a1.main;
 
+import a1.librarycore.Book;
 import a1.librarysystem.LibrarySystem;
 
 /**
@@ -16,5 +17,8 @@ public class Main {
          LibrarySystem librarySystem = new LibrarySystem();
       String output = librarySystem.getBook(Integer.parseInt("4"));
       System.out.println(output);
+      //Book book = new Book("abc","Hello World", "1213", "sss", "ddd");
+      librarySystem.addBook("abc","Hello World", "1213", "sss", "ddd");
+      librarySystem.displayBooks();
      }
 }
