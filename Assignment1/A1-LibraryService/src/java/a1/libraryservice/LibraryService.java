@@ -10,6 +10,7 @@ package a1.libraryservice;
  * @author Airi
  */
 
+import a1.librarysystem.LibrarySystem;
 import javax.ws.rs.GET;  
 import javax.ws.rs.Path;  
 import javax.ws.rs.PathParam;
@@ -34,6 +35,8 @@ public class LibraryService {
   @Path("/book/{id}")  
   public Response getBook(@PathParam("id") String id){
       String output = "Library Service ID: " + id;
+      LibrarySystem librarySystem = new LibrarySystem();
+      output = librarySystem.getBook(Integer.parseInt(id));
       
       return Response.status(200).entity(output).build();
   }

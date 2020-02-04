@@ -14,12 +14,12 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @author Airi
  */
 public class LibrarySystem {
-     private ConcurrentHashMap<Integer, Book> books;
+    private ConcurrentHashMap<Integer, Book> books;
     //private ServletContext context;
     private AtomicInteger bookMapKey;
     
     public LibrarySystem(){
-        
+        books = new ConcurrentHashMap<Integer, Book>();
     }
     
     public ConcurrentHashMap<Integer, Book> getMap() {
@@ -36,10 +36,15 @@ public class LibrarySystem {
         return "Created book with " + book.getId();
     }
 
-    public Book getBook(int id) {
-        Book currentBook = books.get(id); // NULL if doesn't exist
-        System.out.println("Currently in LibrarySystem GETBOOK()");
-        return currentBook;
+    public String getBook(int id) {
+        if (books.containsKey(id)){
+            Book currentBook = books.get(id);
+            return currentBook.toString();
+        }
+        else{
+            return "Book doesn't exist";
+        }
+
     }
 
     public String updateBook(Book book) {
