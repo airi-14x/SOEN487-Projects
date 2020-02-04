@@ -18,6 +18,10 @@ public class LibrarySystem {
     //private ServletContext context;
     private AtomicInteger bookMapKey;
     
+    public LibrarySystem(){
+        
+    }
+    
     public ConcurrentHashMap<Integer, Book> getMap() {
         // !! Need to check if Servlet Context exists
         //if (getServletContext() == null ) return null;
@@ -34,6 +38,7 @@ public class LibrarySystem {
 
     public Book getBook(int id) {
         Book currentBook = books.get(id); // NULL if doesn't exist
+        System.out.println("Currently in LibrarySystem GETBOOK()");
         return currentBook;
     }
 
