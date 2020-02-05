@@ -6,11 +6,14 @@
 package a1.librarycore;
 
 import java.io.Serializable;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
  * @author jasminelatendresse
  */
+
+@XmlRootElement
 public class Book implements Serializable {
 
     //Need to find a way to generate unique ID when creating a new book (maybe similar to previous assignment)

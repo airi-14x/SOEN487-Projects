@@ -14,6 +14,7 @@ import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
@@ -46,6 +47,7 @@ public class LibraryRESTService {
   
   @POST
   @Produces(MediaType.TEXT_PLAIN)
+  //@Path("/book")
   @Path("/book/add")
   public Response addBook(@FormParam("title") String title,
           @FormParam("description") String description,
@@ -54,19 +56,22 @@ public class LibraryRESTService {
           @FormParam("publisher") String publisher){
       LibrarySystem librarySystem = new LibrarySystem();
       String output = librarySystem.addBook(title, description, isbn, author, publisher);
-      
       return Response.status(200).entity(output).build();
+      //String output = "Current Book has title: " + title + " description: " + description +
+      //        " isbn: " + isbn + " author: " + author + " publisher: " + publisher;
+      //return Response.status(200).entity(output).build();
   }
   
   @PUT
   @Produces(MediaType.TEXT_PLAIN)
+  //@Path("/book")
   @Path("/book/update/")
-  public Response updateBook(@FormParam("id") int id,
-          @FormParam("title") String title,
-          @FormParam("description") String description,
-          @FormParam("isbn") String isbn, 
-          @FormParam("author") String author,
-          @FormParam("publisher") String publisher){
+  public Response updateBook(@QueryParam("id") int id,
+          @QueryParam("title") String title,
+          @QueryParam("description") String description,
+          @QueryParam("isbn") String isbn, 
+          @QueryParam("author") String author,
+          @QueryParam("publisher") String publisher){
       LibrarySystem librarySystem = new LibrarySystem();
       String output = librarySystem.updateBook(id,title, description, isbn, author, publisher);
       return Response.status(200).entity(output).build();
@@ -74,8 +79,9 @@ public class LibraryRESTService {
   
   @DELETE
   @Produces(MediaType.TEXT_PLAIN)
+  //@Path("/book")
   @Path("/book/delete/{id}")
-  public Response deleteBook(@PathParam("id") int id){
+  public Response deleteBook(@QueryParam("id") int id){
       LibrarySystem librarySystem = new LibrarySystem();
       String output = librarySystem.removeBook(id);
       return Response.status(200).entity(output).build();
