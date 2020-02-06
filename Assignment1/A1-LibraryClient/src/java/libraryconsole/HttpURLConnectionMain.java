@@ -23,7 +23,7 @@ import javax.xml.bind.Unmarshaller;
  *
  * @author Airi
  */
-public class MainTesting {
+public class HttpURLConnectionMain {
     public static void main(String[] args) throws JAXBException {
         try {
             URL url = new URL("http://localhost:8080/A1-LibraryService/webresources/LibraryRESTService/books");
@@ -47,9 +47,9 @@ public class MainTesting {
             //System.out.println(book.toString());
             
         } catch (MalformedURLException ex) {
-            Logger.getLogger(MainTesting.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(HttpURLConnectionMain.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
-            Logger.getLogger(MainTesting.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(HttpURLConnectionMain.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 }

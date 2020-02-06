@@ -39,8 +39,8 @@ public class LibraryClient {
         return resource.request(javax.ws.rs.core.MediaType.TEXT_XML).get(String.class);
     }
 
-    public Response deleteBook(String id) throws ClientErrorException {
-        return webTarget.path(java.text.MessageFormat.format("book/delete/{0}", new Object[]{id})).request().delete(Response.class);
+    public Response deleteBook() throws ClientErrorException {
+        return webTarget.path("book/delete").request().delete(Response.class);
     }
 
     public <T> T getBook(Class<T> responseType, String id) throws ClientErrorException {
@@ -67,6 +67,11 @@ public class LibraryClient {
     public Response addBook() throws ClientErrorException {
         return webTarget.path("book/add").request().post(null, Response.class);
     }
+
+    /*
+    public Response addBookForm() throws ClientErrorException {
+        return webTarget.path("book").request().post(null, Response.class);
+    }*/
 
     public String sayPlainTextHello() throws ClientErrorException {
         WebTarget resource = webTarget;
