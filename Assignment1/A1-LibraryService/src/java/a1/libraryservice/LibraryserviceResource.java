@@ -10,6 +10,7 @@ import javax.ws.rs.core.UriInfo;
 import javax.ws.rs.Produces;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.PUT;
 import javax.ws.rs.core.MediaType;
@@ -49,5 +50,11 @@ public class LibraryserviceResource {
     @PUT
     @Consumes(MediaType.TEXT_PLAIN)
     public void putText(String content) {
+    }
+    
+    @POST
+    @Consumes("application/x-www-form-urlencoded")
+    public void postTest(String content) {
+        
     }
 }
