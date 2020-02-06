@@ -14,8 +14,8 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @author Airi
  */
 public class LibrarySystem {
-    private static ConcurrentHashMap<Integer, Book> books;
-    private static AtomicInteger bookMapKey;
+    private static ConcurrentHashMap<Integer, Book> books = new ConcurrentHashMap<Integer, Book>();
+    private static AtomicInteger bookMapKey = new AtomicInteger();
     private static LibrarySystem instance = null;
     
     // Cannot be private
@@ -26,8 +26,8 @@ public class LibrarySystem {
         if (instance == null){
             instance = new LibrarySystem();
             System.out.println("Created an instance of LibrarySystem");
-            books = new ConcurrentHashMap<Integer, Book>();
-            bookMapKey = new AtomicInteger();
+            //books = new ConcurrentHashMap<Integer, Book>();
+            //bookMapKey = new AtomicInteger();
         }
         return instance;
     }
@@ -64,6 +64,7 @@ public class LibrarySystem {
 
     public synchronized String updateBook(int id, String title, String description, String isbn, String author, String publisher) {
         Book book = new Book(title, description, isbn, author, publisher);
+        book.setId(id);
         if (books.get(id) == null) {
             return "Book cannot be updated";
         } else {

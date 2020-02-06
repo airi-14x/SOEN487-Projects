@@ -65,12 +65,13 @@ public class LibraryClient {
     }
 
     public Response addBook() throws ClientErrorException {
-        return webTarget.path("book").request().post(null, Response.class);
-    }
-
-    public Response addBookForm() throws ClientErrorException {
         return webTarget.path("book/add").request().post(null, Response.class);
     }
+
+    /*
+    public Response addBookForm() throws ClientErrorException {
+        return webTarget.path("book").request().post(null, Response.class);
+    }*/
 
     public String sayPlainTextHello() throws ClientErrorException {
         WebTarget resource = webTarget;

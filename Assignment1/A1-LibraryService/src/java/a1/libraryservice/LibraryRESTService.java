@@ -47,12 +47,12 @@ public class LibraryRESTService {
         return Response.status(200).entity(output).build();
     }
 
-    // POSTMAN: http://localhost:8080/A1-LibraryService/webresources/LibraryRESTService/book?title=hello&description=2e2&isbn=23232&publisher=ff
+    // POSTMAN: http://localhost:8080/A1-LibraryService/webresources/LibraryRESTService/book/add?title=hello&description=2e2&isbn=23232&author=me&publisher=ff
     @POST
     @Produces(MediaType.TEXT_PLAIN)
     //@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    @Path("/book")
-    //@Path("/book/add")
+    //@Path("/book")
+    @Path("/book/add")
     public Response addBook(@QueryParam("title") String title,
             @QueryParam("description") String description,
             @QueryParam("isbn") String isbn,
@@ -62,13 +62,14 @@ public class LibraryRESTService {
         return Response.status(200).entity(output).build();
     }
     
+    /*
     // Form Version --> To switch to Query Version when it's functional //
     // Add Book via: http://localhost:8080/A1-LibraryService/
     @POST
     @Produces(MediaType.TEXT_PLAIN)
     //@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    //@Path("/book")
-    @Path("/book/add")
+    @Path("/book")
+    //@Path("/book/add")
     public Response addBookForm(@FormParam("title") String title,
             @FormParam("description") String description,
             @FormParam("isbn") String isbn,
@@ -76,10 +77,10 @@ public class LibraryRESTService {
             @FormParam("publisher") String publisher) {
         String output = librarySystem.addBook(title, description, isbn, author, publisher);
         return Response.status(200).entity(output).build();
-    }
+    }*/
     
 
-    // POSTMAN: http://localhost:8080/A1-LibraryService/webresources/LibraryRESTService/book/update?id=1&title=hello2&description=2e2&isbn=23232&publisher=ff
+    // POSTMAN: http://localhost:8080/A1-LibraryService/webresources/LibraryRESTService/book/update?id=2&title=hello2&description=2e2&isbn=23232&author=me&publisher=ff
     @PUT
     @Produces(MediaType.TEXT_PLAIN)
     //@Path("/book")
@@ -94,6 +95,7 @@ public class LibraryRESTService {
         return Response.status(200).entity(output).build();
     }
 
+    // POSTMAN: http://localhost:8080/A1-LibraryService/webresources/LibraryRESTService/book/delete?id=1
     @DELETE
     @Produces(MediaType.TEXT_PLAIN)
     //@Path("/book")
