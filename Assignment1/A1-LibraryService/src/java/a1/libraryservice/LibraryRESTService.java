@@ -27,6 +27,8 @@ import javax.ws.rs.core.Response;
 public class LibraryRESTService {
 
     LibrarySystem librarySystem = LibrarySystem.getInstance();
+    
+    // POSTMAN: http://localhost:8080/A1-LibraryService/webresources/LibraryRESTService/books
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     @Path("/books")
@@ -35,6 +37,7 @@ public class LibraryRESTService {
         return Response.status(200).entity(output).build();
     }
 
+    // POSTMAN: http://localhost:8080/A1-LibraryService/webresources/LibraryRESTService/book/1
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     @Path("/book/{id}")
@@ -44,34 +47,49 @@ public class LibraryRESTService {
         return Response.status(200).entity(output).build();
     }
 
+    // POSTMAN: http://localhost:8080/A1-LibraryService/webresources/LibraryRESTService/book?title=hello&description=2e2&isbn=23232&publisher=ff
+    @POST
+    @Produces(MediaType.TEXT_PLAIN)
+    //@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    @Path("/book")
+    //@Path("/book/add")
+    public Response addBook(@QueryParam("title") String title,
+            @QueryParam("description") String description,
+            @QueryParam("isbn") String isbn,
+            @QueryParam("author") String author,
+            @QueryParam("publisher") String publisher) {
+        String output = librarySystem.addBook(title, description, isbn, author, publisher);
+        return Response.status(200).entity(output).build();
+    }
+    
+    // Form Version --> To switch to Query Version when it's functional //
+    // Add Book via: http://localhost:8080/A1-LibraryService/
     @POST
     @Produces(MediaType.TEXT_PLAIN)
     //@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     //@Path("/book")
     @Path("/book/add")
-    public Response addBook(@FormParam("title") String title,
+    public Response addBookForm(@FormParam("title") String title,
             @FormParam("description") String description,
             @FormParam("isbn") String isbn,
             @FormParam("author") String author,
             @FormParam("publisher") String publisher) {
         String output = librarySystem.addBook(title, description, isbn, author, publisher);
         return Response.status(200).entity(output).build();
-        //String output = "Current Book has title: " + title + " description: " + description +
-        //        " isbn: " + isbn + " author: " + author + " publisher: " + publisher;
-        //return Response.status(200).entity(output).build();
     }
+    
 
+    // POSTMAN: http://localhost:8080/A1-LibraryService/webresources/LibraryRESTService/book/update?id=1&title=hello2&description=2e2&isbn=23232&publisher=ff
     @PUT
     @Produces(MediaType.TEXT_PLAIN)
     //@Path("/book")
-    @Path("/book/update/")
+    @Path("/book/update")
     public Response updateBook(@QueryParam("id") int id,
             @QueryParam("title") String title,
             @QueryParam("description") String description,
             @QueryParam("isbn") String isbn,
             @QueryParam("author") String author,
             @QueryParam("publisher") String publisher) {
-        //LibrarySystem librarySystem = new LibrarySystem();
         String output = librarySystem.updateBook(id, title, description, isbn, author, publisher);
         return Response.status(200).entity(output).build();
     }
@@ -79,7 +97,7 @@ public class LibraryRESTService {
     @DELETE
     @Produces(MediaType.TEXT_PLAIN)
     //@Path("/book")
-    @Path("/book/delete/{id}")
+    @Path("/book/delete")
     public Response deleteBook(@QueryParam("id") int id) {
         String output = librarySystem.removeBook(id);
         return Response.status(200).entity(output).build();
