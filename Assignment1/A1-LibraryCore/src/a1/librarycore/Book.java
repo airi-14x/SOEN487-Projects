@@ -16,9 +16,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class Book implements Serializable {
 
-    //Need to find a way to generate unique ID when creating a new book (maybe similar to previous assignment)
-    //Airi: ID just needs to be set here. Unique ID can be done via Library System where the id is generated with
-    //      Automatic Integer and ConcurrentHashMap. Then set.
     private int id;
     private String title;
     private String description;

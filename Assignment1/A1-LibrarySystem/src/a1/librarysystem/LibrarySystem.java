@@ -14,28 +14,34 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @author Airi
  */
 public class LibrarySystem {
-    private ConcurrentHashMap<Integer, Book> books;
-    //private ServletContext context;
-    private AtomicInteger bookMapKey;
+    private static ConcurrentHashMap<Integer, Book> books;
+    private static AtomicInteger bookMapKey;
+    private static LibrarySystem instance = null;
     
+    // Cannot be private
     public LibrarySystem(){
-        books = new ConcurrentHashMap<Integer, Book>();
-        bookMapKey = new AtomicInteger();
+    }
+    
+    public static synchronized LibrarySystem getInstance(){
+        if (instance == null){
+            instance = new LibrarySystem();
+            System.out.println("Created an instance of LibrarySystem");
+            books = new ConcurrentHashMap<Integer, Book>();
+            bookMapKey = new AtomicInteger();
+        }
+        return instance;
     }
     
     public ConcurrentHashMap<Integer, Book> getMap() {
-        // !! Need to check if Servlet Context exists
-        //if (getServletContext() == null ) return null;
-        //System.out.println(books.toString());
         return books;
     }
     
-    public String displayBooks(){
+    public synchronized String displayBooks(){
        String currentBooks = books.toString();
        return currentBooks;
     }
 
-    public String addBook(String title, String description, String isbn, String author, String publisher) {
+    public synchronized String addBook(String title, String description, String isbn, String author, String publisher) {
         Book book = new Book(title, description, isbn, author, publisher);
         int bookID = bookMapKey.incrementAndGet();
         book.setId(bookID);
@@ -44,7 +50,7 @@ public class LibrarySystem {
         return "You just created this book: " + bookInfo;
     }
 
-    public String getBook(int id) {
+    public synchronized String getBook(int id) {
         if (books.containsKey(id)){
             Book currentBook = books.get(id);
             String bookInfo = currentBook.toString();
@@ -56,7 +62,7 @@ public class LibrarySystem {
 
     }
 
-    public String updateBook(int id, String title, String description, String isbn, String author, String publisher) {
+    public synchronized String updateBook(int id, String title, String description, String isbn, String author, String publisher) {
         Book book = new Book(title, description, isbn, author, publisher);
         if (books.get(id) == null) {
             return "Book cannot be updated";
@@ -66,7 +72,7 @@ public class LibrarySystem {
         }
     }
 
-    public String removeBook(int id) {
+    public synchronized String removeBook(int id) {
         books.remove(id); // NULL if doesn't exist
         if (books.get(id) == null) {
             return "Book with " + id + " has been removed.";

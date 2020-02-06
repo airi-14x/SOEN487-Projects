@@ -15,11 +15,14 @@ import a1.librarysystem.LibrarySystem;
 public class Main {
 
     public static void main(String args[]) {
-        LibrarySystem librarySystem = new LibrarySystem();
+        //LibrarySystem librarySystem1 = new LibrarySystem();
+        LibrarySystem librarySystem = LibrarySystem.getInstance();
         //String output = librarySystem.getBook(Integer.parseInt("4"));
         //System.out.println(output);
         //Book book = new Book("abc","Hello World", "1213", "sss", "ddd");
         librarySystem.addBook("abc", "Hello World", "1213", "sss", "ddd");
+        System.out.println(librarySystem.displayBooks());
+        librarySystem.removeBook(1);
         System.out.println(librarySystem.displayBooks());
         System.out.println(librarySystem.getBook(1).toString());
     }

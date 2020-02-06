@@ -26,11 +26,11 @@ import javax.ws.rs.core.Response;
 @Path("/LibraryRESTService")
 public class LibraryRESTService {
 
+    LibrarySystem librarySystem = LibrarySystem.getInstance();
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     @Path("/books")
     public Response listBooks() {
-        LibrarySystem librarySystem = new LibrarySystem();
         String output = librarySystem.displayBooks();
         return Response.status(200).entity(output).build();
     }
@@ -39,9 +39,7 @@ public class LibraryRESTService {
     @Produces(MediaType.TEXT_PLAIN)
     @Path("/book/{id}")
     public Response getBook(@PathParam("id") int id) {
-        String output = "Library Service ID: " + id;
-        LibrarySystem librarySystem = new LibrarySystem();
-        output = librarySystem.getBook(id);
+        String output = librarySystem.getBook(id);
 
         return Response.status(200).entity(output).build();
     }
@@ -56,7 +54,6 @@ public class LibraryRESTService {
             @FormParam("isbn") String isbn,
             @FormParam("author") String author,
             @FormParam("publisher") String publisher) {
-        LibrarySystem librarySystem = new LibrarySystem();
         String output = librarySystem.addBook(title, description, isbn, author, publisher);
         return Response.status(200).entity(output).build();
         //String output = "Current Book has title: " + title + " description: " + description +
@@ -74,7 +71,7 @@ public class LibraryRESTService {
             @QueryParam("isbn") String isbn,
             @QueryParam("author") String author,
             @QueryParam("publisher") String publisher) {
-        LibrarySystem librarySystem = new LibrarySystem();
+        //LibrarySystem librarySystem = new LibrarySystem();
         String output = librarySystem.updateBook(id, title, description, isbn, author, publisher);
         return Response.status(200).entity(output).build();
     }
@@ -84,7 +81,6 @@ public class LibraryRESTService {
     //@Path("/book")
     @Path("/book/delete/{id}")
     public Response deleteBook(@QueryParam("id") int id) {
-        LibrarySystem librarySystem = new LibrarySystem();
         String output = librarySystem.removeBook(id);
         return Response.status(200).entity(output).build();
     }
