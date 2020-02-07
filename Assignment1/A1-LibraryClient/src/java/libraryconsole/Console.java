@@ -63,7 +63,7 @@ public class Console {
                     }
                     break;
                 case 4:
-                    System.out.print("Enter title:");
+                    System.out.print("Enter a title:");
                     title = scan.next();
                     System.out.print("Enter a description:");
                     description = scan.next();
@@ -97,15 +97,20 @@ public class Console {
                     break;
                 case 6:
                     System.out.print("Enter the id of the book you want to delete:");
-                    id = scan.nextInt();
-                    client.deleteBook(id);
+                    try{
+                       id = scan.nextInt(); 
+                       client.deleteBook(id);
+                    }
+                    catch(InputMismatchException e) {
+                        System.out.println("Invalid input - Please enter an integer");
+                    }
                     break;
                 case 7:
                     System.out.println("Exiting Library Console App.");
                     System.exit(0);
                     break;
                 default:
-                    System.out.println("Invalid input - Option not found");
+                    System.out.println("Option not found - please try again");
                     break;
             }
 
