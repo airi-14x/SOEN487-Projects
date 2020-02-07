@@ -41,6 +41,7 @@ public class Console {
            
             switch (userOption) {
                 case 1:
+                    displayHelpMenu();
                     break;
                 case 2:
                     System.out.println("List of all current books:");
@@ -49,7 +50,8 @@ public class Console {
                 case 3:
                     System.out.print("Enter the id of the book you want to display:");
                     id = scan.nextInt();
-                    client.getBook(String.class, id);
+                    System.out.println(client.getBook(String.class, id));
+                    break;
                 case 4:
                     System.out.print("Enter title:");
                     title = scan.next();
@@ -62,6 +64,7 @@ public class Console {
                     System.out.print("Enter publisher:");
                     publisher = scan.next();
                     client.addBook(title, description, isbn, author, publisher);
+                    break;
                 case 5:
                     System.out.print("Enter the id of the book you want to update:");
                     id = scan.nextInt();
@@ -76,10 +79,12 @@ public class Console {
                     System.out.print("Enter publisher:");
                     publisher = scan.next();
                     client.updateBook(id, title, description, isbn, author, publisher);
+                    break;
                 case 6:
                     System.out.print("Enter the id of the book you want to delete:");
                     id = scan.nextInt();
                     client.deleteBook(id);
+                    break;
                 case 7:
                     System.out.println("Exiting Library Console App.");
                     System.exit(0);

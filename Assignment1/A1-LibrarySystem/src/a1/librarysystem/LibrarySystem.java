@@ -21,8 +21,8 @@ public class LibrarySystem {
     // Cannot be private
     public LibrarySystem(){
         System.out.println("Created an instance of LibrarySystem");
-        books = new ConcurrentHashMap<>();
-        bookMapKey = new AtomicInteger();
+        //books = new ConcurrentHashMap<>();
+        //bookMapKey = new AtomicInteger();
     }
     
     /*public static synchronized LibrarySystem getInstance(){
@@ -41,6 +41,9 @@ public class LibrarySystem {
     
     public synchronized String displayBooks(){
        String currentBooks = books.toString();
+       if(books.isEmpty()) {
+           return("No books to display");
+       }
        return currentBooks;
     }
 
