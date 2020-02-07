@@ -26,7 +26,7 @@ import javax.ws.rs.core.Response;
 @Path("/LibraryRESTService")
 public class LibraryRESTService {
 
-    LibrarySystem librarySystem = LibrarySystem.getInstance();
+    LibrarySystem librarySystem = new LibrarySystem();
     
     // POSTMAN: http://localhost:8080/A1-LibraryService/webresources/LibraryRESTService/books
     @GET
@@ -43,7 +43,7 @@ public class LibraryRESTService {
     @Path("/book/{id}")
     public Response getBook(@PathParam("id") int id) {
         String output = librarySystem.getBook(id);
-
+        
         return Response.status(200).entity(output).build();
     }
 

@@ -20,17 +20,20 @@ public class LibrarySystem {
     
     // Cannot be private
     public LibrarySystem(){
+        System.out.println("Created an instance of LibrarySystem");
+        books = new ConcurrentHashMap<>();
+        bookMapKey = new AtomicInteger();
     }
     
-    public static synchronized LibrarySystem getInstance(){
+    /*public static synchronized LibrarySystem getInstance(){
         if (instance == null){
             instance = new LibrarySystem();
             System.out.println("Created an instance of LibrarySystem");
-            //books = new ConcurrentHashMap<Integer, Book>();
-            //bookMapKey = new AtomicInteger();
+            books = new ConcurrentHashMap<>();
+            bookMapKey = new AtomicInteger();
         }
         return instance;
-    }
+    }*/
     
     public ConcurrentHashMap<Integer, Book> getMap() {
         return books;
@@ -41,6 +44,7 @@ public class LibrarySystem {
        return currentBooks;
     }
 
+    //POST
     public synchronized String addBook(String title, String description, String isbn, String author, String publisher) {
         Book book = new Book(title, description, isbn, author, publisher);
         int bookID = bookMapKey.incrementAndGet();
@@ -50,6 +54,7 @@ public class LibrarySystem {
         return "You just created this book: " + bookInfo;
     }
 
+    //GET
     public synchronized String getBook(int id) {
         if (books.containsKey(id)){
             Book currentBook = books.get(id);
@@ -62,6 +67,7 @@ public class LibrarySystem {
 
     }
 
+    //PUT
     public synchronized String updateBook(int id, String title, String description, String isbn, String author, String publisher) {
         Book book = new Book(title, description, isbn, author, publisher);
         book.setId(id);
@@ -73,6 +79,7 @@ public class LibrarySystem {
         }
     }
 
+    //DELETE
     public synchronized String removeBook(int id) {
         books.remove(id); // NULL if doesn't exist
         if (books.get(id) == null) {

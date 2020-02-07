@@ -39,13 +39,14 @@ public class LibraryClient {
         return resource.request(javax.ws.rs.core.MediaType.TEXT_XML).get(String.class);
     }
 
-    public Response deleteBook() throws ClientErrorException {
+    public Response deleteBook(int id) throws ClientErrorException {
+        webTarget.queryParam("id", id);
         return webTarget.path("book/delete").request().delete(Response.class);
     }
 
-    public <T> T getBook(Class<T> responseType, String id) throws ClientErrorException {
+    public <T> T getBook(Class<T> responseType, int id) throws ClientErrorException {
         WebTarget resource = webTarget;
-        resource = resource.path(java.text.MessageFormat.format("book/{0}", new Object[]{id}));
+        resource = resource.path(java.text.MessageFormat.format("book/{0}", id));
         return resource.request(javax.ws.rs.core.MediaType.TEXT_PLAIN).get(responseType);
     }
 
@@ -55,7 +56,13 @@ public class LibraryClient {
         return resource.request(javax.ws.rs.core.MediaType.TEXT_PLAIN).get(responseType);
     }
 
-    public Response updateBook() throws ClientErrorException {
+    public Response updateBook(int id, String title, String description, String isbn, String author, String publisher) throws ClientErrorException {
+        webTarget.queryParam("id", id);
+        webTarget.queryParam("title", title);
+        webTarget.queryParam("description", description);
+        webTarget.queryParam("isbn", isbn);
+        webTarget.queryParam("author", author);
+        webTarget.queryParam("publisher", publisher);
         return webTarget.path("book/update").request().put(null, Response.class);
     }
 
@@ -64,7 +71,12 @@ public class LibraryClient {
         return resource.request(javax.ws.rs.core.MediaType.TEXT_HTML).get(String.class);
     }
 
-    public Response addBook() throws ClientErrorException {
+    public Response addBook(String title, String description, String isbn, String author, String publisher) throws ClientErrorException {
+        webTarget.queryParam("title", title);
+        webTarget.queryParam("description", description);
+        webTarget.queryParam("isbn", isbn);
+        webTarget.queryParam("author", author);
+        webTarget.queryParam("publisher", publisher);
         return webTarget.path("book/add").request().post(null, Response.class);
     }
 
