@@ -1,6 +1,7 @@
 package libraryconsole;
 
 import a1.librarycore.Book;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 import javax.ws.rs.core.Response;
 import libraryclient.LibraryClient;
@@ -37,7 +38,14 @@ public class Console {
         while (true) {
             displayOptions();
             Scanner scan = new Scanner(System.in);
-            int userOption = scan.nextInt();
+            int userOption = 0;
+            
+            try {
+                userOption = scan.nextInt();
+            }
+            catch (InputMismatchException e) {
+                System.out.println("Invalid input - Please enter a number");
+            }
            
             switch (userOption) {
                 case 1:
@@ -90,6 +98,7 @@ public class Console {
                     System.exit(0);
                     break;
                 default:
+                    System.out.println("Invalid input - Option not found");
                     break;
             }
 
