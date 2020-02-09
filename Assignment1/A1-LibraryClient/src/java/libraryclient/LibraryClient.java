@@ -7,6 +7,7 @@ package libraryclient;
 
 import javax.ws.rs.ClientErrorException;
 import javax.ws.rs.client.Client;
+import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.Response;
 
@@ -63,8 +64,9 @@ public class LibraryClient {
         //webTarget.queryParam("isbn", isbn);
         //webTarget.queryParam("author", author);
         //webTarget.queryParam("publisher", publisher);
-        webTarget = webTarget.queryParam("title", title).queryParam("description", description).queryParam("isbn", isbn).queryParam("author", author).queryParam("publisher", publisher);
-        return webTarget.path("book/update").request().put(null, Response.class);
+        Entity<?> empty = Entity.text("");
+        webTarget = webTarget.queryParam("id", id).queryParam("title", title).queryParam("description", description).queryParam("isbn", isbn).queryParam("author", author).queryParam("publisher", publisher);
+        return webTarget.path("book/update").request().put(empty, Response.class);
         //return webTarget.queryParam("title", title).queryParam("description", description).queryParam("isbn", isbn).queryParam("author", author).queryParam("publisher", publisher).path("book/update").request().put(null, Response.class);
     }
 

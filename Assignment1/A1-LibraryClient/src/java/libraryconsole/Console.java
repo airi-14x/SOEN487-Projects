@@ -91,8 +91,8 @@ public class Console {
                         author = scan.next();
                         System.out.print("Enter publisher:");
                         publisher = scan.next();
-                        client.updateBook(id, title, description, isbn, author, publisher);
-                        System.out.println(client.getBook(String.class, id));
+                        System.out.println(client.updateBook(id, title, description, isbn, author, publisher));
+                        //System.out.println(client.getBook(String.class, id));
                     } catch (InputMismatchException e) {
                         System.out.println("Invalid input - Please enter an integer");
                     }
