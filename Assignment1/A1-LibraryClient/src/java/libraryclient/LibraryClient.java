@@ -7,6 +7,7 @@ package libraryclient;
 
 import javax.ws.rs.ClientErrorException;
 import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.Form;
@@ -35,7 +36,7 @@ public class LibraryClient {
     private static final String BASE_URI = "http://localhost:8080/A1-LibraryService/webresources";
 
     public LibraryClient() {
-        client = javax.ws.rs.client.ClientBuilder.newClient();
+        client = ClientBuilder.newClient();
         webTarget = client.target(BASE_URI).path("LibraryRESTService");
     }
 
@@ -69,6 +70,18 @@ public class LibraryClient {
         return webTarget.path("book/update").request().put(null, Response.class);
     }
 
+    //updateBook with MultivaluedMap
+    /*public Response updateBook(int id, String title, String description, String isbn, String author, String publisher) {
+        MultivaluedMap<String, String> queryParams = new MultivaluedHashMap<>();
+        queryParams.add("id", Integer.toString(id));
+        queryParams.add("title", title);
+        queryParams.add("description", description);
+        queryParams.add("isbn", isbn);
+        queryParams.add("athor", author);
+        queryParams.add("publisher", publisher);
+        return webTarget.path("book/update").request().put(Entity.form(queryParams));
+    }*/
+
     public String sayHtmlHello() throws ClientErrorException {
         WebTarget resource = webTarget;
         return resource.request(MediaType.TEXT_HTML).get(String.class);
@@ -80,9 +93,10 @@ public class LibraryClient {
         webTarget.queryParam("isbn", isbn);
         webTarget.queryParam("author", author);
         webTarget.queryParam("publisher", publisher);
-        return webTarget.path("book/add").request().post(null, Response.class);
+        return webTarget.path("book/add").request(MediaType.APPLICATION_FORM_URLENCODED).post(null, Response.class);
     }
-    
+
+    // addBook with MultivaluedMap
     /*public Response addBook(String title, String description, String isbn, String author, String publisher) throws ClientErrorException {
         MultivaluedMap<String, String> queryParams = new MultivaluedHashMap<>();
         queryParams.add("title", title);
@@ -93,11 +107,10 @@ public class LibraryClient {
         return webTarget.path("book/add").request(MediaType.APPLICATION_FORM_URLENCODED).accept(MediaType.TEXT_PLAIN).post(Entity.form(queryParams));
     }*/
 
-    /*
+ /*
     public Response addBookForm() throws ClientErrorException {
         return webTarget.path("book").request().post(null, Response.class);
     }*/
-
     public String sayPlainTextHello() throws ClientErrorException {
         WebTarget resource = webTarget;
         return resource.request(MediaType.TEXT_PLAIN).get(String.class);
@@ -106,5 +119,5 @@ public class LibraryClient {
     public void close() {
         client.close();
     }
-    
+
 }
