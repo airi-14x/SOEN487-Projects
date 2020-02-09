@@ -39,6 +39,7 @@ public class Console {
             displayOptions();
             Scanner scan = new Scanner(System.in);
             int userOption = 0;
+            boolean isNumber = false;
             
             id = 0;
             title = "";
@@ -49,8 +50,10 @@ public class Console {
 
             try {
                 userOption = scan.nextInt();
+                isNumber = true;
                 System.out.println("-------------------------------------------");
             } catch (InputMismatchException e) {
+                
                 System.out.println("Invalid input - Please enter a number");
             }
 
@@ -121,7 +124,9 @@ public class Console {
                     System.exit(0);
                     break;
                 default:
-                    System.out.println("Option not found - please try again");
+                    if(isNumber) {
+                       System.out.println("Option not found - please try again"); 
+                    }
                     break;
             }
 
