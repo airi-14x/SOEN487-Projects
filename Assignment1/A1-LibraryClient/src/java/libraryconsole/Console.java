@@ -1,9 +1,7 @@
 package libraryconsole;
 
-import a1.librarycore.Book;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import javax.ws.rs.core.Response;
 import libraryclient.LibraryClient;
 
 /*
@@ -63,7 +61,6 @@ public class Console {
                     break;
                 case 2:
                     System.out.println("List of all current books:");
-                    //System.out.println(client.listBooks(Response.class));
                     System.out.println(client.listBooks(String.class));
                     break;
                 case 3:
@@ -104,7 +101,6 @@ public class Console {
                         System.out.print("Enter publisher:");
                         publisher = scan.next();
                         client.updateBook(id, title, description, isbn, author, publisher);
-                        //System.out.println(client.getBook(String.class, id));
                     } catch (InputMismatchException e) {
                         System.out.println("Invalid input - Please enter an integer");
                     }

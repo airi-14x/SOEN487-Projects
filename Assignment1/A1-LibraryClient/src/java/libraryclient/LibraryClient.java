@@ -10,10 +10,7 @@ import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.WebTarget;
-import javax.ws.rs.core.Form;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.MultivaluedHashMap;
-import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.core.Response;
 
 /**
@@ -46,7 +43,6 @@ public class LibraryClient {
     }
 
     public Response deleteBook(int id) throws ClientErrorException {
-        //webTarget.queryParam("id", id);
         webTarget = client.target(BASE_URI).path("LibraryRESTService");
         return webTarget.queryParam("id", id).path("book/delete").request().delete(Response.class);
     }
@@ -66,7 +62,6 @@ public class LibraryClient {
         Entity<?> empty = Entity.text("");
         webTarget = webTarget.queryParam("id", id).queryParam("title", title).queryParam("description", description).queryParam("isbn", isbn).queryParam("author", author).queryParam("publisher", publisher);
         return webTarget.path("book/update").request().put(empty, Response.class);
-        //return webTarget.queryParam("title", title).queryParam("description", description).queryParam("isbn", isbn).queryParam("author", author).queryParam("publisher", publisher).path("book/update").request().put(null, Response.class);
     }
 
     public String sayHtmlHello() throws ClientErrorException {
@@ -79,10 +74,6 @@ public class LibraryClient {
         return webTarget.queryParam("title", title).queryParam("description", description).queryParam("isbn", isbn).queryParam("author", author).queryParam("publisher", publisher).path("book/add").request().post(null, Response.class);
     }
 
- /*
-    public Response addBookForm() throws ClientErrorException {
-        return webTarget.path("book").request().post(null, Response.class);
-    }*/
     public String sayPlainTextHello() throws ClientErrorException {
         WebTarget resource = webTarget;
         return resource.request(MediaType.TEXT_PLAIN).get(String.class);
