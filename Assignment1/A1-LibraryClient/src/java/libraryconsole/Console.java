@@ -26,6 +26,7 @@ public class Console {
         System.out.println(" =========================================");
         System.out.println("|   Welcome to the Library Console App    |");
         System.out.println(" =========================================");
+        System.out.println("");
 
         int id = -1;
         String title;
@@ -38,9 +39,17 @@ public class Console {
             displayOptions();
             Scanner scan = new Scanner(System.in);
             int userOption = 0;
+            
+            id = 0;
+            title = "";
+            description = "";
+            isbn = "";
+            author = "";
+            publisher = "";
 
             try {
                 userOption = scan.nextInt();
+                System.out.println("-------------------------------------------");
             } catch (InputMismatchException e) {
                 System.out.println("Invalid input - Please enter a number");
             }
@@ -91,7 +100,7 @@ public class Console {
                         author = scan.next();
                         System.out.print("Enter publisher:");
                         publisher = scan.next();
-                        System.out.println(client.updateBook(id, title, description, isbn, author, publisher));
+                        client.updateBook(id, title, description, isbn, author, publisher);
                         //System.out.println(client.getBook(String.class, id));
                     } catch (InputMismatchException e) {
                         System.out.println("Invalid input - Please enter an integer");
@@ -120,7 +129,9 @@ public class Console {
     }
 
     private static void displayOptions() {
+        System.out.println("==========================================");
         System.out.println("Please choose from the following options: ");
+        System.out.println("==========================================");
         System.out.println("1: Help / About");
         System.out.println("2: List current books");
         System.out.println("3: Display book");
@@ -128,6 +139,8 @@ public class Console {
         System.out.println("5: Update Book");
         System.out.println("6: Delete Book");
         System.out.println("7: Quit");
+        System.out.println("");
+        System.out.print("Enter a number: ");
     }
 
     private static void displayHelpMenu() {
