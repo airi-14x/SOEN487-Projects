@@ -47,6 +47,7 @@ public class LibraryClient {
 
     public Response deleteBook(int id) throws ClientErrorException {
         //webTarget.queryParam("id", id);
+        webTarget = client.target(BASE_URI).path("LibraryRESTService");
         return webTarget.queryParam("id", id).path("book/delete").request().delete(Response.class);
     }
 
@@ -67,6 +68,7 @@ public class LibraryClient {
         //webTarget.queryParam("isbn", isbn);
         //webTarget.queryParam("author", author);
         //webTarget.queryParam("publisher", publisher);
+        webTarget = client.target(BASE_URI).path("LibraryRESTService");
         Entity<?> empty = Entity.text("");
         webTarget = webTarget.queryParam("id", id).queryParam("title", title).queryParam("description", description).queryParam("isbn", isbn).queryParam("author", author).queryParam("publisher", publisher);
         return webTarget.path("book/update").request().put(empty, Response.class);
@@ -91,7 +93,12 @@ public class LibraryClient {
     }
 
     public Response addBook(String title, String description, String isbn, String author, String publisher) throws ClientErrorException {
-
+        //webTarget = webTarget.queryParam("title", title).queryParam("description", description).queryParam("isbn", isbn).queryParam("author", author).queryParam("publisher", publisher);
+        //webTarget.queryParam("description", description);
+        //webTarget.queryParam("isbn", isbn);
+        //webTarget.queryParam("author", author);
+        //webTarget.queryParam("publisher", publisher);
+        webTarget = client.target(BASE_URI).path("LibraryRESTService");
         return webTarget.queryParam("title", title).queryParam("description", description).queryParam("isbn", isbn).queryParam("author", author).queryParam("publisher", publisher).path("book/add").request().post(null, Response.class);
     }
 
