@@ -26,6 +26,7 @@ public class Console {
         System.out.println(" =========================================");
         System.out.println("|   Welcome to the Library Console App    |");
         System.out.println(" =========================================");
+        System.out.println("");
 
         int id = -1;
         String title;
@@ -39,10 +40,18 @@ public class Console {
             displayOptions();
             Scanner scan = new Scanner(System.in);
             int userOption = 0;
+            
+            id = 0;
+            title = "";
+            description = "";
+            isbn = "";
+            author = "";
+            publisher = "";
 
             try {
                 userOption = scan.nextInt();
                 isAnumber = true;
+                System.out.println("-------------------------------------------");
             } catch (InputMismatchException e) {
                 if(!isAnumber) {
                     System.out.println("Invalid input - Please enter a number");
@@ -55,7 +64,8 @@ public class Console {
                     break;
                 case 2:
                     System.out.println("List of all current books:");
-                    client.listBooks(Response.class);
+                    //System.out.println(client.listBooks(Response.class));
+                    System.out.println(client.listBooks(String.class));
                     break;
                 case 3:
                     System.out.print("Enter the id of the book you want to display:");
@@ -77,7 +87,8 @@ public class Console {
                     author = scan.next();
                     System.out.print("Enter publisher:");
                     publisher = scan.next();
-                    client.addBook(title, description, isbn, author, publisher);
+                    System.out.println(client.addBook(title, description, isbn, author, publisher));
+                    
                     break;
                 case 5:
                     System.out.print("Enter the id of the book you want to update:");
@@ -94,7 +105,7 @@ public class Console {
                         System.out.print("Enter publisher:");
                         publisher = scan.next();
                         client.updateBook(id, title, description, isbn, author, publisher);
-                        System.out.println(client.getBook(String.class, id));
+                        //System.out.println(client.getBook(String.class, id));
                     } catch (InputMismatchException e) {
                         System.out.println("Invalid input - Please enter an integer");
                     }
@@ -124,7 +135,9 @@ public class Console {
     }
 
     private static void displayOptions() {
+        System.out.println("==========================================");
         System.out.println("Please choose from the following options: ");
+        System.out.println("==========================================");
         System.out.println("1: Help / About");
         System.out.println("2: List current books");
         System.out.println("3: Display book");
@@ -132,6 +145,8 @@ public class Console {
         System.out.println("5: Update Book");
         System.out.println("6: Delete Book");
         System.out.println("7: Quit");
+        System.out.println("");
+        System.out.print("Enter a number: ");
     }
 
     private static void displayHelpMenu() {

@@ -49,6 +49,7 @@ public class LibraryRESTService {
     // POSTMAN: http://localhost:8080/A1-LibraryService/webresources/LibraryRESTService/book/add?title=hello&description=2e2&isbn=23232&author=me&publisher=ff
     @POST
     @Produces(MediaType.TEXT_PLAIN)
+    //@Consumes(MediaType.TEXT_PLAIN)
     //@Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     //@Path("/book")
     @Path("/book/add")
