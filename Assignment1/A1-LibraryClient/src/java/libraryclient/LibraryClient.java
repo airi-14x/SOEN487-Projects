@@ -7,6 +7,7 @@ package libraryclient;
 
 import javax.ws.rs.ClientErrorException;
 import javax.ws.rs.client.Client;
+import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.Response;
 
@@ -40,8 +41,8 @@ public class LibraryClient {
     }
 
     public Response deleteBook(int id) throws ClientErrorException {
-        webTarget.queryParam("id", id);
-        return webTarget.path("book/delete").request().delete(Response.class);
+        //webTarget.queryParam("id", id);
+        return webTarget.queryParam("id", id).path("book/delete").request().delete(Response.class);
     }
 
     public <T> T getBook(Class<T> responseType, int id) throws ClientErrorException {
@@ -57,13 +58,16 @@ public class LibraryClient {
     }
 
     public Response updateBook(int id, String title, String description, String isbn, String author, String publisher) throws ClientErrorException {
-        webTarget.queryParam("id", id);
-        webTarget.queryParam("title", title);
-        webTarget.queryParam("description", description);
-        webTarget.queryParam("isbn", isbn);
-        webTarget.queryParam("author", author);
-        webTarget.queryParam("publisher", publisher);
-        return webTarget.path("book/update").request().put(null, Response.class);
+        //webTarget.queryParam("id", id);
+        //webTarget.queryParam("title", title);
+        //webTarget.queryParam("description", description);
+        //webTarget.queryParam("isbn", isbn);
+        //webTarget.queryParam("author", author);
+        //webTarget.queryParam("publisher", publisher);
+        Entity<?> empty = Entity.text("");
+        webTarget = webTarget.queryParam("id", id).queryParam("title", title).queryParam("description", description).queryParam("isbn", isbn).queryParam("author", author).queryParam("publisher", publisher);
+        return webTarget.path("book/update").request().put(empty, Response.class);
+        //return webTarget.queryParam("title", title).queryParam("description", description).queryParam("isbn", isbn).queryParam("author", author).queryParam("publisher", publisher).path("book/update").request().put(null, Response.class);
     }
 
     public String sayHtmlHello() throws ClientErrorException {
@@ -72,12 +76,12 @@ public class LibraryClient {
     }
 
     public Response addBook(String title, String description, String isbn, String author, String publisher) throws ClientErrorException {
-        webTarget.queryParam("title", title);
-        webTarget.queryParam("description", description);
-        webTarget.queryParam("isbn", isbn);
-        webTarget.queryParam("author", author);
-        webTarget.queryParam("publisher", publisher);
-        return webTarget.path("book/add").request().post(null, Response.class);
+        //webTarget = webTarget.queryParam("title", title).queryParam("description", description).queryParam("isbn", isbn).queryParam("author", author).queryParam("publisher", publisher);
+        //webTarget.queryParam("description", description);
+        //webTarget.queryParam("isbn", isbn);
+        //webTarget.queryParam("author", author);
+        //webTarget.queryParam("publisher", publisher);
+        return webTarget.queryParam("title", title).queryParam("description", description).queryParam("isbn", isbn).queryParam("author", author).queryParam("publisher", publisher).path("book/add").request().post(null, Response.class);
     }
 
     /*
