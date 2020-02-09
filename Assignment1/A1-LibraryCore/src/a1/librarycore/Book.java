@@ -6,16 +6,16 @@
 package a1.librarycore;
 
 import java.io.Serializable;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
  * @author jasminelatendresse
  */
+
+@XmlRootElement
 public class Book implements Serializable {
 
-    //Need to find a way to generate unique ID when creating a new book (maybe similar to previous assignment)
-    //Airi: ID just needs to be set here. Unique ID can be done via Library System where the id is generated with
-    //      Automatic Integer and ConcurrentHashMap. Then set.
     private int id;
     private String title;
     private String description;
@@ -23,6 +23,10 @@ public class Book implements Serializable {
     private String author;
     private String publisher;
 
+    public Book(){
+        
+    }
+    
     public Book(String title, String description, String isbn, String author, String publisher) {
         this.title = title;
         this.description = description;
