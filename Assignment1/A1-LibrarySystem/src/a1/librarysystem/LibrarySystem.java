@@ -73,10 +73,11 @@ public class LibrarySystem {
     //DELETE
     public synchronized String removeBook(int id) {
         books.remove(id); // NULL if doesn't exist
-        if (books.get(id) == null) {
-            return "Book with " + id + " has been removed.";
-        } else {
+        if (books.get(id) != null) {
             return "Book cannot be removed!";
+            
+        } else {
+            return "Book with " + id + " has been removed.";
         }
     }
 

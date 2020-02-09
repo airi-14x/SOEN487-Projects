@@ -55,7 +55,7 @@ public class Book implements Serializable {
         return isbn;
     }
 
-    public void setIdbn(String isbn) {
+    public void setIsbn(String isbn) {
         this.isbn = isbn;
     }
 
