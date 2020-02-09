@@ -16,24 +16,12 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class LibrarySystem {
     private static ConcurrentHashMap<Integer, Book> books = new ConcurrentHashMap<Integer, Book>();
     private static AtomicInteger bookMapKey = new AtomicInteger();
-    //private static LibrarySystem instance = null;
     
     // Cannot be private
     public LibrarySystem(){
         System.out.println("Created an instance of LibrarySystem");
-        //books = new ConcurrentHashMap<>();
-        //bookMapKey = new AtomicInteger();
     }
-    
-    /*public static synchronized LibrarySystem getInstance(){
-        if (instance == null){
-            instance = new LibrarySystem();
-            System.out.println("Created an instance of LibrarySystem");
-            books = new ConcurrentHashMap<>();
-            bookMapKey = new AtomicInteger();
-        }
-        return instance;
-    }*/
+
     
     public ConcurrentHashMap<Integer, Book> getMap() {
         return books;

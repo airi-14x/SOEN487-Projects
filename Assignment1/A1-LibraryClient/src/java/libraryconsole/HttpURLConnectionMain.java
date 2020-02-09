@@ -5,19 +5,15 @@
  */
 package libraryconsole;
 
-import a1.librarycore.Book;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.StringReader;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
-import javax.xml.bind.Unmarshaller;
 
 /**
  *
@@ -39,12 +35,6 @@ public class HttpURLConnectionMain {
             String apiOutput = br.readLine();
             System.out.println(apiOutput);
             conn.disconnect();
-            
-            //JAXBContext jaxbContext = JAXBContext.newInstance(Book.class);
-            //Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-            //Book book = (Book) jaxbUnmarshaller.unmarshal(new StringReader(apiOutput));
-            
-            //System.out.println(book.toString());
             
         } catch (MalformedURLException ex) {
             Logger.getLogger(HttpURLConnectionMain.class.getName()).log(Level.SEVERE, null, ex);
