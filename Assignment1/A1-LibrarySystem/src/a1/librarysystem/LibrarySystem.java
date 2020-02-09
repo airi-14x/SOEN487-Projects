@@ -16,7 +16,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class LibrarySystem {
     private static ConcurrentHashMap<Integer, Book> books = new ConcurrentHashMap<Integer, Book>();
     private static AtomicInteger bookMapKey = new AtomicInteger();
-    private static LibrarySystem instance = null;
+    //private static LibrarySystem instance = null;
     
     // Cannot be private
     public LibrarySystem(){

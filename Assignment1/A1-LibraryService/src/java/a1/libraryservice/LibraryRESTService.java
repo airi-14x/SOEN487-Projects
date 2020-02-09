@@ -16,6 +16,7 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.core.Response;
 
 /**
@@ -42,7 +43,6 @@ public class LibraryRESTService {
     @Path("/book/{id}")
     public Response getBook(@PathParam("id") int id) {
         String output = librarySystem.getBook(id);
-        
         return Response.status(200).entity(output).build();
     }
 
@@ -91,6 +91,18 @@ public class LibraryRESTService {
             @QueryParam("isbn") String isbn,
             @QueryParam("author") String author,
             @QueryParam("publisher") String publisher) {
+        String output = librarySystem.updateBook(id, title, description, isbn, author, publisher);
+        return Response.status(200).entity(output).build();
+    }
+    
+    // updateBook with multivaluedMap
+    public Response updateBook(MultivaluedMap<String, String> params) {
+        int id = Integer.parseInt(params.get("id").toString());
+        String title = params.get("title").toString();
+        String description = params.get("description").toString();
+        String isbn = params.get("isbn").toString();
+        String author = params.get("author").toString();
+        String publisher = params.get("publisher").toString();
         String output = librarySystem.updateBook(id, title, description, isbn, author, publisher);
         return Response.status(200).entity(output).build();
     }
