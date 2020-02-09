@@ -33,6 +33,7 @@ public class Console {
         String isbn;
         String author;
         String publisher;
+        boolean isAnumber = false;
 
         while (true) {
             displayOptions();
@@ -41,8 +42,11 @@ public class Console {
 
             try {
                 userOption = scan.nextInt();
+                isAnumber = true;
             } catch (InputMismatchException e) {
-                System.out.println("Invalid input - Please enter a number");
+                if(!isAnumber) {
+                    System.out.println("Invalid input - Please enter a number");
+                }
             }
 
             switch (userOption) {
@@ -110,8 +114,10 @@ public class Console {
                     System.exit(0);
                     break;
                 default:
-                    System.out.println("Option not found - please try again");
-                    break;
+                    if(isAnumber) {
+                        System.out.println("Option not found");
+                    }
+                    break;    
             }
 
         }
