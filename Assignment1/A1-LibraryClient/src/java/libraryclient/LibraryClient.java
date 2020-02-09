@@ -41,7 +41,7 @@ public class LibraryClient {
 
     public String sayXMLHello() throws ClientErrorException {
         WebTarget resource = webTarget;
-        return resource.request(javax.ws.rs.core.MediaType.TEXT_XML).get(String.class);
+        return resource.request(MediaType.TEXT_XML).get(String.class);
     }
 
     public Response deleteBook(int id) throws ClientErrorException {
@@ -50,15 +50,13 @@ public class LibraryClient {
     }
 
     public <T> T getBook(Class<T> responseType, int id) throws ClientErrorException {
-        WebTarget resource = webTarget;
-        resource = resource.path(java.text.MessageFormat.format("book/{0}", id));
-        return resource.request(javax.ws.rs.core.MediaType.TEXT_PLAIN).get(responseType);
+        return webTarget.path("book/" + id).request(MediaType.TEXT_PLAIN).get(responseType);
     }
 
     public <T> T listBooks(Class<T> responseType) throws ClientErrorException {
         WebTarget resource = webTarget;
         resource = resource.path("books");
-        return resource.request(javax.ws.rs.core.MediaType.TEXT_PLAIN).get(responseType);
+        return resource.request(MediaType.TEXT_PLAIN).get(responseType);
     }
 
     public Response updateBook(int id, String title, String description, String isbn, String author, String publisher) throws ClientErrorException {
@@ -73,7 +71,7 @@ public class LibraryClient {
 
     public String sayHtmlHello() throws ClientErrorException {
         WebTarget resource = webTarget;
-        return resource.request(javax.ws.rs.core.MediaType.TEXT_HTML).get(String.class);
+        return resource.request(MediaType.TEXT_HTML).get(String.class);
     }
 
     public Response addBook(String title, String description, String isbn, String author, String publisher) throws ClientErrorException {
@@ -102,7 +100,7 @@ public class LibraryClient {
 
     public String sayPlainTextHello() throws ClientErrorException {
         WebTarget resource = webTarget;
-        return resource.request(javax.ws.rs.core.MediaType.TEXT_PLAIN).get(String.class);
+        return resource.request(MediaType.TEXT_PLAIN).get(String.class);
     }
 
     public void close() {
