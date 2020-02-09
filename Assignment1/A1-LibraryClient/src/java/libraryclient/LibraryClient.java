@@ -62,12 +62,6 @@ public class LibraryClient {
     }
 
     public Response updateBook(int id, String title, String description, String isbn, String author, String publisher) throws ClientErrorException {
-        //webTarget.queryParam("id", id);
-        //webTarget.queryParam("title", title);
-        //webTarget.queryParam("description", description);
-        //webTarget.queryParam("isbn", isbn);
-        //webTarget.queryParam("author", author);
-        //webTarget.queryParam("publisher", publisher);
         webTarget = client.target(BASE_URI).path("LibraryRESTService");
         Entity<?> empty = Entity.text("");
         webTarget = webTarget.queryParam("id", id).queryParam("title", title).queryParam("description", description).queryParam("isbn", isbn).queryParam("author", author).queryParam("publisher", publisher);
@@ -75,43 +69,15 @@ public class LibraryClient {
         //return webTarget.queryParam("title", title).queryParam("description", description).queryParam("isbn", isbn).queryParam("author", author).queryParam("publisher", publisher).path("book/update").request().put(null, Response.class);
     }
 
-    //updateBook with MultivaluedMap
-    /*public Response updateBook(int id, String title, String description, String isbn, String author, String publisher) {
-        MultivaluedMap<String, String> queryParams = new MultivaluedHashMap<>();
-        queryParams.add("id", Integer.toString(id));
-        queryParams.add("title", title);
-        queryParams.add("description", description);
-        queryParams.add("isbn", isbn);
-        queryParams.add("athor", author);
-        queryParams.add("publisher", publisher);
-        return webTarget.path("book/update").request().put(Entity.form(queryParams));
-    }*/
-
     public String sayHtmlHello() throws ClientErrorException {
         WebTarget resource = webTarget;
         return resource.request(MediaType.TEXT_HTML).get(String.class);
     }
 
     public Response addBook(String title, String description, String isbn, String author, String publisher) throws ClientErrorException {
-        //webTarget = webTarget.queryParam("title", title).queryParam("description", description).queryParam("isbn", isbn).queryParam("author", author).queryParam("publisher", publisher);
-        //webTarget.queryParam("description", description);
-        //webTarget.queryParam("isbn", isbn);
-        //webTarget.queryParam("author", author);
-        //webTarget.queryParam("publisher", publisher);
         webTarget = client.target(BASE_URI).path("LibraryRESTService");
         return webTarget.queryParam("title", title).queryParam("description", description).queryParam("isbn", isbn).queryParam("author", author).queryParam("publisher", publisher).path("book/add").request().post(null, Response.class);
     }
-
-    // addBook with MultivaluedMap
-    /*public Response addBook(String title, String description, String isbn, String author, String publisher) throws ClientErrorException {
-        MultivaluedMap<String, String> queryParams = new MultivaluedHashMap<>();
-        queryParams.add("title", title);
-        queryParams.add("description", description);
-        queryParams.add("isbn", isbn);
-        queryParams.add("athor", author);
-        queryParams.add("publisher", publisher);
-        return webTarget.path("book/add").request(MediaType.APPLICATION_FORM_URLENCODED).accept(MediaType.TEXT_PLAIN).post(Entity.form(queryParams));
-    }*/
 
  /*
     public Response addBookForm() throws ClientErrorException {

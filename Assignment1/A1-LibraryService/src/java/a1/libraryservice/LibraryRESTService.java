@@ -62,22 +62,6 @@ public class LibraryRESTService {
         return Response.status(200).entity(output).build();
     }
     
-    // addBook with MultivaluedMap
-   /* @POST
-    @Produces(MediaType.TEXT_PLAIN)
-    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-    //@Path("/book")
-    @Path("/book/add")
-    public Response addBook(MultivaluedMap<String, String> queryParams) {
-        String title = queryParams.get("title").toString();
-        String description = queryParams.get("description").toString();
-        String isbn = queryParams.get("isbn").toString();
-        String author = queryParams.get("author").toString();
-        String publisher = queryParams.get("publisher").toString();
-        String output = librarySystem.addBook(title, description, isbn, author, publisher);
-        return Response.status(200).entity(output).build();
-    }*/
-    
     /*
     // Form Version --> To switch to Query Version when it's functional //
     // Add Book via: http://localhost:8080/A1-LibraryService/
