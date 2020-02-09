@@ -68,6 +68,9 @@ public class LibraryRESTService {
             @QueryParam("author") String author,
             @QueryParam("publisher") String publisher) {
         String output = librarySystem.updateBook(id, title, description, isbn, author, publisher);
+        if(output.equals("Book cannot be updated!")) {
+            return Response.status(500).entity(output).build();
+         }
         return Response.status(200).entity(output).build();
     }
     
@@ -77,12 +80,12 @@ public class LibraryRESTService {
     @Path("/book/delete")
     public Response deleteBook(@QueryParam("id") int id) {
         String output = librarySystem.removeBook(id);
-        if(output.equals("Book cannot be removed!")) {
-            return Response.status(500).entity(output).build();
-        }
-        else {
+        //if(output.equals("Book cannot be removed!")) {
+        //    return Response.status(500).entity(output).build();
+       // }
+        //else {
             return Response.status(200).entity(output).build();
-        }
+        //}
         
     }
 

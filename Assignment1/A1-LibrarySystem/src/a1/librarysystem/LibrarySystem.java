@@ -62,21 +62,24 @@ public class LibrarySystem {
     public synchronized String updateBook(int id, String title, String description, String isbn, String author, String publisher) {
         Book book = new Book(title, description, isbn, author, publisher);
         book.setId(id);
+        System.out.println("Update id value: " + books.get(id));
+        System.out.println(books.get(id) == null);
         if (books.get(id) == null) {
-            return "Book cannot be updated";
+            return "Book cannot be updated!";
         } else {
             books.put(id, book); // Replace with current book object
-            return "Updated book";
+            return "Updated book with "+ id;
         }
     }
 
     //DELETE
     public synchronized String removeBook(int id) {
-        books.remove(id); // NULL if doesn't exist
-        if (books.get(id) != null) {
+        //System.out.println(books.remove(id)); // NULL if doesn't exist
+        //System.out.println("GET VALUE: " + books.get(id));
+        if (books.get(id) == null) {
             return "Book cannot be removed!";
-            
         } else {
+            books.remove(id);
             return "Book with " + id + " has been removed.";
         }
     }

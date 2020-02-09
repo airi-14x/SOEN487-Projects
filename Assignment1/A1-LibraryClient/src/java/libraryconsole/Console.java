@@ -100,7 +100,13 @@ public class Console {
                         author = scan.next();
                         System.out.print("Enter publisher:");
                         publisher = scan.next();
-                        client.updateBook(id, title, description, isbn, author, publisher);
+                        int statusCode = client.updateBook(id, title, description, isbn, author, publisher).getStatus();
+                        if(statusCode == 500){
+                            System.out.println("Could not update book with id: " + id);
+                        }
+                        else if(statusCode == 200){
+                            System.out.println("Book with id " + id + " was successfully updated.");
+                        }
                     } catch (InputMismatchException e) {
                         System.out.println("Invalid input - Please enter an integer");
                     }
@@ -109,12 +115,14 @@ public class Console {
                     System.out.print("Enter the id of the book you want to delete:");
                     try{
                        id = scan.nextInt(); 
-                       System.out.println(client.deleteBook(id));
-                       if(client.deleteBook(id).getStatus() == 500) {
-                           System.out.println("Could not delete book with id " + id);
+                       int statusCode = client.deleteBook(id).getStatus();
+                       //System.out.println("Current status: " + statusValue);
+                       //System.out.println(statusValue == 200);
+                       if(statusCode == 500) {
+                           System.out.println("Could not delete book with id: " + id);
                        }
-                       else if(client.deleteBook(id).getStatus() == 200) {
-                           System.out.println("Book with id " + id + " successfully deleted.");
+                       else if(statusCode == 200) {
+                           System.out.println("Book with id " + id + " was successfully deleted.");
                        }
                     }
                     catch(InputMismatchException e) {
