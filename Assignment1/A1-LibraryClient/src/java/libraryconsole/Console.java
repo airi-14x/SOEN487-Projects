@@ -51,7 +51,8 @@ public class Console {
                     break;
                 case 2:
                     System.out.println("List of all current books:");
-                    client.listBooks(Response.class);
+                    //System.out.println(client.listBooks(Response.class));
+                    System.out.println(client.listBooks(String.class));
                     break;
                 case 3:
                     System.out.print("Enter the id of the book you want to display:");
@@ -73,7 +74,8 @@ public class Console {
                     author = scan.next();
                     System.out.print("Enter publisher:");
                     publisher = scan.next();
-                    client.addBook(title, description, isbn, author, publisher);
+                    System.out.println(client.addBook(title, description, isbn, author, publisher));
+                    
                     break;
                 case 5:
                     System.out.print("Enter the id of the book you want to update:");
