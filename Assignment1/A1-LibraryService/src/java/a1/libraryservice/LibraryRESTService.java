@@ -6,6 +6,7 @@
 package a1.libraryservice;
 
 import a1.librarysystem.LibrarySystem;
+import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -15,6 +16,7 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.core.Response;
 
 /**
@@ -41,7 +43,6 @@ public class LibraryRESTService {
     @Path("/book/{id}")
     public Response getBook(@PathParam("id") int id) {
         String output = librarySystem.getBook(id);
-        
         return Response.status(200).entity(output).build();
     }
 
@@ -59,6 +60,21 @@ public class LibraryRESTService {
         String output = librarySystem.addBook(title, description, isbn, author, publisher);
         return Response.status(200).entity(output).build();
     }
+    
+   /* @POST
+    @Produces(MediaType.TEXT_PLAIN)
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    //@Path("/book")
+    @Path("/book/add")
+    public Response addBook(MultivaluedMap<String, String> queryParams) {
+        String title = queryParams.get("title").toString();
+        String description = queryParams.get("description").toString();
+        String isbn = queryParams.get("isbn").toString();
+        String author = queryParams.get("author").toString();
+        String publisher = queryParams.get("publisher").toString();
+        String output = librarySystem.addBook(title, description, isbn, author, publisher);
+        return Response.status(200).entity(output).build();
+    }*/
     
     /*
     // Form Version --> To switch to Query Version when it's functional //

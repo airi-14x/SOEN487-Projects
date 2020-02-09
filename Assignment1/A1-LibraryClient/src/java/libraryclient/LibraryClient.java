@@ -7,8 +7,12 @@ package libraryclient;
 
 import javax.ws.rs.ClientErrorException;
 import javax.ws.rs.client.Client;
+import javax.ws.rs.client.Entity;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.Form;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.MultivaluedHashMap;
+import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.core.Response;
 
 /**
@@ -80,6 +84,16 @@ public class LibraryClient {
         webTarget.queryParam("publisher", publisher);
         return webTarget.path("book/add").request().post(null, Response.class);
     }
+    
+    /*public Response addBook(String title, String description, String isbn, String author, String publisher) throws ClientErrorException {
+        MultivaluedMap<String, String> queryParams = new MultivaluedHashMap<>();
+        queryParams.add("title", title);
+        queryParams.add("description", description);
+        queryParams.add("isbn", isbn);
+        queryParams.add("athor", author);
+        queryParams.add("publisher", publisher);
+        return webTarget.path("book/add").request(MediaType.APPLICATION_FORM_URLENCODED).accept(MediaType.TEXT_PLAIN).post(Entity.form(queryParams));
+    }*/
 
     /*
     public Response addBookForm() throws ClientErrorException {
