@@ -34,12 +34,12 @@ public class Console {
         String isbn;
         String author;
         String publisher;
-        boolean isAnumber = false;
 
         while (true) {
             displayOptions();
             Scanner scan = new Scanner(System.in);
             int userOption = 0;
+            boolean isNumber = false;
             
             id = 0;
             title = "";
@@ -50,12 +50,11 @@ public class Console {
 
             try {
                 userOption = scan.nextInt();
-                isAnumber = true;
+                isNumber = true;
                 System.out.println("-------------------------------------------");
             } catch (InputMismatchException e) {
-                if(!isAnumber) {
-                    System.out.println("Invalid input - Please enter a number");
-                }
+                
+                System.out.println("Invalid input - Please enter a number");
             }
 
             switch (userOption) {
@@ -125,10 +124,10 @@ public class Console {
                     System.exit(0);
                     break;
                 default:
-                    if(isAnumber) {
-                        System.out.println("Option not found");
+                    if(isNumber) {
+                       System.out.println("Option not found - please try again"); 
                     }
-                    break;    
+                    break;
             }
 
         }
