@@ -109,7 +109,13 @@ public class Console {
                     System.out.print("Enter the id of the book you want to delete:");
                     try{
                        id = scan.nextInt(); 
-                       client.deleteBook(id);
+                       System.out.println(client.deleteBook(id));
+                       if(client.deleteBook(id).getStatus() == 500) {
+                           System.out.println("Could not delete book with id " + id);
+                       }
+                       else if(client.deleteBook(id).getStatus() == 200) {
+                           System.out.println("Book with id " + id + " successfully deleted.");
+                       }
                     }
                     catch(InputMismatchException e) {
                         System.out.println("Invalid input - Please enter an integer");
