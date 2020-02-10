@@ -6,13 +6,13 @@
 package a1.librarycore;
 
 import java.io.Serializable;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
  * @author jasminelatendresse
  */
-
 @XmlRootElement
 public class Book implements Serializable {
 
@@ -23,10 +23,10 @@ public class Book implements Serializable {
     private String author;
     private String publisher;
 
-    public Book(){
-        
+    public Book() {
+
     }
-    
+
     public Book(String title, String description, String isbn, String author, String publisher) {
         this.title = title;
         this.description = description;
@@ -86,5 +86,37 @@ public class Book implements Serializable {
     @Override
     public String toString() {
         return "Book{" + "id=" + id + ", title=" + title + ", description=" + description + ", isbn=" + isbn + ", author=" + author + ", publisher=" + publisher + '}';
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        if (object == null) {
+            return false;
+        } else if (!(object instanceof Book)) {
+            return false;
+        } else {
+            Book book = (Book) object;
+            if (id == book.getId()
+                    && title.equals(book.getTitle())
+                    && description.equals(book.getDescription())
+                    && isbn.equals(book.getIsbn())
+                    && author.equals(book.getAuthor())
+                    && publisher.equals(book.getPublisher())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 97 * hash + this.id;
+        hash = 97 * hash + Objects.hashCode(this.title);
+        hash = 97 * hash + Objects.hashCode(this.description);
+        hash = 97 * hash + Objects.hashCode(this.isbn);
+        hash = 97 * hash + Objects.hashCode(this.author);
+        hash = 97 * hash + Objects.hashCode(this.publisher);
+        return hash;
     }
 }
