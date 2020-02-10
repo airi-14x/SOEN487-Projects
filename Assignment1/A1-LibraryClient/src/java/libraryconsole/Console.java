@@ -115,15 +115,7 @@ public class Console {
 
                     try{
                        id = scan.nextInt(); 
-                       int statusCode = client.deleteBook(id).getStatus();
-                       System.out.println("Current status: " + statusCode);
-                       System.out.println(statusCode == 200);
-                       if(statusCode == 500) {
-                           System.out.println("Could not delete book with id: " + id);
-                       }
-                       else if(statusCode == 200) {
-                           System.out.println("Book with id " + id + " was successfully deleted.");
-                       }
+                       client.deleteBook(id);
                     }
                     catch(InputMismatchException e) {
 

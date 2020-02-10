@@ -64,7 +64,7 @@ public class LibrarySystem {
         book.setId(id);
         //System.out.println("Update id value: " + books.get(id));
         //System.out.println(books.get(id) == null);
-        if (books.containsKey(id) == false) {
+        if (!books.containsKey(id)) {
             //System.out.println("Here if");
             return "Book cannot be updated!";
         } else {
@@ -76,9 +76,7 @@ public class LibrarySystem {
 
     //DELETE
     public synchronized String removeBook(int id) {
-        //System.out.println(books.remove(id)); // NULL if doesn't exist
-        //System.out.println("GET VALUE: " + books.get(id));
-        if (books.containsKey(id) == false) {
+        if (!books.containsKey(id)) {
             return "Book cannot be removed!";
         } else {
             books.remove(id);
