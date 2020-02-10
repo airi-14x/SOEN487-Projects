@@ -116,8 +116,8 @@ public class Console {
                     try{
                        id = scan.nextInt(); 
                        int statusCode = client.deleteBook(id).getStatus();
-                       //System.out.println("Current status: " + statusValue);
-                       //System.out.println(statusValue == 200);
+                       System.out.println("Current status: " + statusCode);
+                       System.out.println(statusCode == 200);
                        if(statusCode == 500) {
                            System.out.println("Could not delete book with id: " + id);
                        }
@@ -159,6 +159,33 @@ public class Console {
     }
 
     private static void displayHelpMenu() {
+        System.out.println("===========================================");
+        System.out.println("               HELP / ABOUT                ");
+        System.out.println("===========================================");
+        System.out.println("This is a console app that uses the Library");
+        System.out.println("Client to make calls to the REST Service.  "); 
+        System.out.println("A description will be provided for the     ");
+        System.out.println("given options.                             ");
+        System.out.println("");
+        System.out.println("1: Help / About - Displays this menu.      ");
+        System.out.println("");               
+        System.out.println("2: List - Shows the list of the current    ");
+        System.out.println("   books, id and title.                    ");
+        System.out.println("");        
+        System.out.println("3: Display Book - Displays the book info by");
+        System.out.println("   getting the id from the user.           ");
+        System.out.println("");        
+        System.out.println("4: Add Book - Adds a new book to the system");
+        System.out.println("   from the data provided by the user.     ");
+        System.out.println("");
+        System.out.println("5: Update Book - Updates a specific book in");
+        System.out.println("   the system. ID and data is provided by  ");
+        System.out.println("   the user.                               ");
+        System.out.println("");        
+        System.out.println("6: Delete Book - Deletes a specific book in");
+        System.out.println("   the system. ID is provided by the user. ");
+        System.out.println("");         
+        
 
     }
 

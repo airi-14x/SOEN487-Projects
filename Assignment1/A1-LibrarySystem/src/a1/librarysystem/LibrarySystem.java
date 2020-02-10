@@ -62,11 +62,13 @@ public class LibrarySystem {
     public synchronized String updateBook(int id, String title, String description, String isbn, String author, String publisher) {
         Book book = new Book(title, description, isbn, author, publisher);
         book.setId(id);
-        System.out.println("Update id value: " + books.get(id));
-        System.out.println(books.get(id) == null);
-        if (books.get(id) == null) {
+        //System.out.println("Update id value: " + books.get(id));
+        //System.out.println(books.get(id) == null);
+        if (books.containsKey(id) == false) {
+            //System.out.println("Here if");
             return "Book cannot be updated!";
         } else {
+            //System.out.println("Here else");
             books.put(id, book); // Replace with current book object
             return "Updated book with "+ id;
         }
@@ -76,7 +78,7 @@ public class LibrarySystem {
     public synchronized String removeBook(int id) {
         //System.out.println(books.remove(id)); // NULL if doesn't exist
         //System.out.println("GET VALUE: " + books.get(id));
-        if (books.get(id) == null) {
+        if (books.containsKey(id) == false) {
             return "Book cannot be removed!";
         } else {
             books.remove(id);
