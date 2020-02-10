@@ -32,6 +32,7 @@ public class Console {
         String isbn;
         String author;
         String publisher;
+        
 
         while (true) {
             displayOptions();
@@ -45,13 +46,12 @@ public class Console {
             isbn = "";
             author = "";
             publisher = "";
-
+            
             try {
                 userOption = scan.nextInt();
                 isNumber = true;
                 System.out.println("-------------------------------------------");
             } catch (InputMismatchException e) {
-                
                 System.out.println("Invalid input - Please enter a number");
             }
 
@@ -84,7 +84,7 @@ public class Console {
                     System.out.print("Enter publisher:");
                     publisher = scan.next();
                     System.out.println(client.addBook(title, description, isbn, author, publisher));
-                    
+
                     break;
                 case 5:
                     System.out.print("Enter the id of the book you want to update:");
@@ -101,10 +101,9 @@ public class Console {
                         System.out.print("Enter publisher:");
                         publisher = scan.next();
                         int statusCode = client.updateBook(id, title, description, isbn, author, publisher).getStatus();
-                        if(statusCode == 500){
+                        if (statusCode == 500) {
                             System.out.println("Could not update book with id: " + id);
-                        }
-                        else if(statusCode == 200){
+                        } else if (statusCode == 200) {
                             System.out.println("Book with id " + id + " was successfully updated.");
                         }
                     } catch (InputMismatchException e) {
@@ -113,19 +112,17 @@ public class Console {
                     break;
                 case 6:
                     System.out.print("Enter the id of the book you want to delete:");
-                    try{
-                       id = scan.nextInt(); 
-                       int statusCode = client.deleteBook(id).getStatus();
-                       //System.out.println("Current status: " + statusValue);
-                       //System.out.println(statusValue == 200);
-                       if(statusCode == 500) {
-                           System.out.println("Could not delete book with id: " + id);
-                       }
-                       else if(statusCode == 200) {
-                           System.out.println("Book with id " + id + " was successfully deleted.");
-                       }
-                    }
-                    catch(InputMismatchException e) {
+                    try {
+                        id = scan.nextInt();
+                        int statusCode = client.deleteBook(id).getStatus();
+                        //System.out.println("Current status: " + statusValue);
+                        //System.out.println(statusValue == 200);
+                        if (statusCode == 500) {
+                            System.out.println("Could not delete book with id: " + id);
+                        } else if (statusCode == 200) {
+                            System.out.println("Book with id " + id + " was successfully deleted.");
+                        }
+                    } catch (InputMismatchException e) {
                         System.out.println("Invalid input - Please enter an integer");
                     }
                     break;
@@ -134,8 +131,8 @@ public class Console {
                     System.exit(0);
                     break;
                 default:
-                    if(isNumber) {
-                       System.out.println("Option not found - please try again"); 
+                    if (isNumber) {
+                        System.out.println("Option not found - please try again");
                     }
                     break;
             }
@@ -161,5 +158,6 @@ public class Console {
     private static void displayHelpMenu() {
 
     }
+    
 
 }
