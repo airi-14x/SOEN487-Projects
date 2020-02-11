@@ -74,13 +74,12 @@ public class LibrarySystem {
         }
     }
 
-    //DELETE
-    public synchronized String removeBook(int id) {
+    public synchronized void removeBook(int id) throws Exception {
         if (!books.containsKey(id)) {
-            return "Book cannot be removed!";
+            throw new Exception("Book cannot be removed!");
         } else {
             books.remove(id);
-            return "Book with " + id + " has been removed.";
+            
         }
     }
 
