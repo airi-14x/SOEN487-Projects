@@ -42,6 +42,14 @@ public class LibraryRESTService {
     public Response getBook(@PathParam("id") int id) {
         String output = librarySystem.getBook(id);
         return Response.status(200).entity(output).build();
+        /*
+        try{
+            librarySystem.getBook(id);
+            return Response.status(200).entity("Success").build();
+        }
+        catch(Exception e){
+            return Response.status(500).entity("Error").build();
+        }*/
     }
 
     // POSTMAN: http://localhost:8080/A1-LibraryService/webresources/LibraryRESTService/book/add?title=hello&description=2e2&isbn=23232&author=me&publisher=ff
@@ -53,8 +61,17 @@ public class LibraryRESTService {
             @QueryParam("isbn") String isbn,
             @QueryParam("author") String author,
             @QueryParam("publisher") String publisher) {
-        String output = librarySystem.addBook(title, description, isbn, author, publisher);
-        return Response.status(200).entity(output).build();
+        
+        try{
+            librarySystem.addBook(title, description, isbn, author, publisher);
+            return Response.status(200).entity("Success").build();
+        }
+        catch(Exception e){
+            return Response.status(500).entity("Error").build();
+        }
+        
+        //String output = librarySystem.addBook(title, description, isbn, author, publisher);
+        //return Response.status(200).entity(output).build();
     }
 
     // POSTMAN: http://localhost:8080/A1-LibraryService/webresources/LibraryRESTService/book/update?id=2&title=hello2&description=2e2&isbn=23232&author=me&publisher=ff
@@ -67,11 +84,13 @@ public class LibraryRESTService {
             @QueryParam("isbn") String isbn,
             @QueryParam("author") String author,
             @QueryParam("publisher") String publisher) {
-        String output = librarySystem.updateBook(id, title, description, isbn, author, publisher);
-        if(output.equals("Book cannot be updated!")) {
-            return Response.status(500).entity(output).build();
-         }
-        return Response.status(200).entity(output).build();
+        try{
+            librarySystem.updateBook(id, title, description, isbn, author, publisher);
+            return Response.status(200).entity("Success").build();
+        }
+        catch(Exception e){
+            return Response.status(500).entity("Error").build();
+        }
     }
     
     // POSTMAN: http://localhost:8080/A1-LibraryService/webresources/LibraryRESTService/book/delete?id=1
