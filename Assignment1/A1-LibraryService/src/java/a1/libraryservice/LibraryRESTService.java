@@ -82,10 +82,10 @@ public class LibraryRESTService {
     public Response deleteBook(@QueryParam("id") int id) {
         try{
             librarySystem.removeBook(id);
-            return Response.status(200).entity("Book with id " + id + " was removed.").build();
+            return Response.status(200).entity("Success").build();
         }
         catch (Exception e) {
-            return Response.status(500).entity("Book with id " + id + " was not removed; reason: " + e.toString()).build();
+            return Response.status(500).entity("Error").build();
         }
         
     }

@@ -1,10 +1,10 @@
 package libraryconsole;
 
+import java.io.ByteArrayOutputStream;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import javax.ws.rs.core.Response;
 import libraryclient.LibraryClient;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -84,7 +84,7 @@ public class Console {
                     author = scan.next();
                     System.out.print("Enter publisher:");
                     publisher = scan.next();
-                    System.out.println(client.getBook(String.class, id) + " was successfully added");
+                    System.out.println("Book added!");
 
                     break;
                 case 5:
@@ -119,10 +119,10 @@ public class Console {
                        try {
                            Response res = client.deleteBook(id);
                            if(res.getStatus() == 200) {
-                               System.out.println("Book with id " + id + " was removed");
+                               System.out.println("Book with id " + id + " was successfully removed.");
                            }
                            else {
-                                System.out.println("Book could not be removed.");
+                                System.out.println("Book could not be removed");
                            }
                            
                        }
