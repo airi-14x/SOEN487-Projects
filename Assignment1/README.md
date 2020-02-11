@@ -9,7 +9,7 @@ Airi Chow (#40003396)
   using 4 separate projects.
 - Library Core: Contains "Book" class which is used by the other classes.
 - Library System: Uses the Library Core and stores the Book objects. The basic CRUD operations are implemented here.
-- Library Service: A Web App that implements REST methods for the CRUD operations from Library System. Annotations are used to call the appropriate methods(e.g. @GET)
+- Library Service: A Web App that implements REST methods for the CRUD operations from Library System. Annotations are used to call the appropriate methods(e.g. @GET).
 - Library Client: A console app that calls a REST Client that will use the Library Service via WADL.
 
 ### Tasks
@@ -24,4 +24,4 @@ All Projects: JDK 1.8
 - Library Service: JAX-RS 2.0, Jersey 2.5.1(JAX-RS-RI), LibrarySystem.jar, LibraryCore.jar, Tomcat
 - Library Client: JAX-RS 2.0, Jersey 2.5.1(JAX-RS-RI), LibraryCore.jar, Tomcat
 
-** If things fail, clean build Library Service then re-run Library Client's console.** 
+** If things fail, clean build Library Service then re-run Library Client's console.**

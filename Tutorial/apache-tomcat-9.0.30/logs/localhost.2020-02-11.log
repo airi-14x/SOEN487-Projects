@@ -706,3 +706,6 @@
 		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 		at java.lang.Thread.run(Thread.java:748)
+11-Feb-2020 18:56:40.459 INFOS [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
+11-Feb-2020 18:56:40.460 INFOS [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
+11-Feb-2020 18:56:40.463 INFOS [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@3fb917bb')
