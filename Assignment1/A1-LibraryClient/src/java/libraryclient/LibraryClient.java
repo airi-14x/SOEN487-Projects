@@ -48,6 +48,7 @@ public class LibraryClient {
     }
 
     public <T> T getBook(Class<T> responseType, int id) throws ClientErrorException {
+        webTarget = client.target(BASE_URI).path("LibraryRESTService");
         return webTarget.path("book/" + id).request(MediaType.TEXT_PLAIN).get(responseType);
     }
 

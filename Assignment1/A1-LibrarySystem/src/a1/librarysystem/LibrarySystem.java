@@ -16,14 +16,12 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class LibrarySystem {
     private static ConcurrentHashMap<Integer, Book> books = new ConcurrentHashMap<Integer, Book>();
     private static AtomicInteger bookMapKey = new AtomicInteger();
-    private static Book book;
     
     // Cannot be private
     public LibrarySystem(){
         System.out.println("Created an instance of LibrarySystem");
     }
 
-    
     public ConcurrentHashMap<Integer, Book> getMap() {
         return books;
     }
@@ -36,15 +34,6 @@ public class LibrarySystem {
        return currentBooks;
     }
     
-    /*
-    public synchronized void setCurrentBook(Book book){
-        this.book = book;
-    }
-    
-    public synchronized String currentBook(){
-        return book.toString();
-    }*/
-
     //POST
     public synchronized void addBook(String title, String description, String isbn, String author, String publisher) throws Exception {
         Book book = new Book(title, description, isbn, author, publisher);
@@ -54,8 +43,6 @@ public class LibrarySystem {
         if (!books.containsKey(bookID)){
             throw new Exception("Book was not created!");       
         }
-        //String bookInfo = book.toString();
-        //return "You just created this book: " + bookInfo;
     }
 
     //GET
@@ -65,12 +52,9 @@ public class LibrarySystem {
         }
         else{
             Book currentBook = books.get(id);
-            //setCurrentBook(currentBook);
-            //System.out.println(currentBook.toString());
             String bookInfo = currentBook.toString();
             return bookInfo;
         }
-
     }
 
     //PUT
@@ -90,7 +74,6 @@ public class LibrarySystem {
             throw new Exception("Book cannot be removed!");
         } else {
             books.remove(id);
-            
         }
     }
 
