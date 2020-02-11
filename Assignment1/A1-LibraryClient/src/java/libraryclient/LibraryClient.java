@@ -44,7 +44,7 @@ public class LibraryClient {
 
     public Response deleteBook(int id) throws ClientErrorException {
         webTarget = client.target(BASE_URI).path("LibraryRESTService");
-        return webTarget.queryParam("id", id).path("book/delete").request().delete(Response.class);
+        return webTarget.path("book/delete").queryParam("id", id).request().delete(Response.class);
     }
 
     public <T> T getBook(Class<T> responseType, int id) throws ClientErrorException {

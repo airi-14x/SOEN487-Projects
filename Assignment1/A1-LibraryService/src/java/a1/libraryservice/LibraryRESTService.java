@@ -75,12 +75,19 @@ public class LibraryRESTService {
     }
     
     // POSTMAN: http://localhost:8080/A1-LibraryService/webresources/LibraryRESTService/book/delete?id=1
+    // path param
     @DELETE
     @Produces(MediaType.TEXT_PLAIN)
     @Path("/book/delete")
     public Response deleteBook(@QueryParam("id") int id) {
-        String output = librarySystem.removeBook(id);
-        return Response.status(200).entity(output).build();
+        try{
+            librarySystem.removeBook(id);
+            return Response.status(200).entity("Book with id " + id + " was removed.").build();
+        }
+        catch (Exception e) {
+            return Response.status(500).entity("Book with id " + id + " was not removed; reason: " + e.toString()).build();
+        }
+        
     }
 
     @GET

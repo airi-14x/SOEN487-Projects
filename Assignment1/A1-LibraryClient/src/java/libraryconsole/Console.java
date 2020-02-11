@@ -2,6 +2,7 @@ package libraryconsole;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import javax.ws.rs.core.Response;
 import libraryclient.LibraryClient;
 
 /*
@@ -83,7 +84,7 @@ public class Console {
                     author = scan.next();
                     System.out.print("Enter publisher:");
                     publisher = scan.next();
-                    System.out.println(client.addBook(title, description, isbn, author, publisher));
+                    System.out.println(client.getBook(String.class, id) + " was successfully added");
 
                     break;
                 case 5:
@@ -112,10 +113,23 @@ public class Console {
                     break;
                 case 6:
                     System.out.print("Enter the id of the book you want to delete:");
-
+                    
                     try{
-                       id = scan.nextInt(); 
-                       client.deleteBook(id);
+                       id = scan.nextInt();
+                       try {
+                           Response res = client.deleteBook(id);
+                           if(res.getStatus() == 200) {
+                               System.out.println("Book with id " + id + " was removed");
+                           }
+                           else {
+                                System.out.println("Book could not be removed.");
+                           }
+                           
+                       }
+                       catch (Exception e) {
+                          System.out.println(e.toString());
+                       }
+                       
                     }
                     catch(InputMismatchException e) {
 
