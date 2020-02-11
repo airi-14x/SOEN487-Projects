@@ -23,3 +23,5 @@ All Projects: JDK 1.8
 - Library System: LibraryCore.jar
 - Library Service: JAX-RS 2.0, Jersey 2.5.1(JAX-RS-RI), LibrarySystem.jar, LibraryCore.jar, Tomcat
 - Library Client: JAX-RS 2.0, Jersey 2.5.1(JAX-RS-RI), LibraryCore.jar, Tomcat
+
+** If things fail, clean build Library Service then re-run Library Client's console.** 
