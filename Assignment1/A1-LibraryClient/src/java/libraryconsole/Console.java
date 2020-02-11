@@ -1,6 +1,4 @@
 package libraryconsole;
-
-import java.io.ByteArrayOutputStream;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import javax.ws.rs.core.Response;
@@ -69,7 +67,6 @@ public class Console {
                     try {
                         id = scan.nextInt();
                         System.out.println(client.getBook(String.class, id));
-                        //client.getBook(String.class,id);
                     } catch (InputMismatchException e) {
                         System.out.println("Invalid input - Please enter an integer");
                     }
@@ -97,8 +94,6 @@ public class Console {
                     catch (Exception e) {
                         System.out.println(e.toString());
                     }
-                    //client.addBook(title, description, isbn, author, publisher);
-                    //System.out.println("Book added!");
                     break;
                 case 5:
                     System.out.print("Enter the id of the book you want to update:");
