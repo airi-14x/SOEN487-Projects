@@ -16,6 +16,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class LibrarySystem {
     private static ConcurrentHashMap<Integer, Book> books = new ConcurrentHashMap<Integer, Book>();
     private static AtomicInteger bookMapKey = new AtomicInteger();
+    private static Book book;
     
     // Cannot be private
     public LibrarySystem(){
@@ -34,46 +35,56 @@ public class LibrarySystem {
        }
        return currentBooks;
     }
+    
+    /*
+    public synchronized void setCurrentBook(Book book){
+        this.book = book;
+    }
+    
+    public synchronized String currentBook(){
+        return book.toString();
+    }*/
 
     //POST
-    public synchronized String addBook(String title, String description, String isbn, String author, String publisher) {
+    public synchronized void addBook(String title, String description, String isbn, String author, String publisher) throws Exception {
         Book book = new Book(title, description, isbn, author, publisher);
         int bookID = bookMapKey.incrementAndGet();
         book.setId(bookID);
         books.put(bookID, book);
-        String bookInfo = book.toString();
-        return "You just created this book: " + bookInfo;
+        if (!books.containsKey(bookID)){
+            throw new Exception("Book was not created!");       
+        }
+        //String bookInfo = book.toString();
+        //return "You just created this book: " + bookInfo;
     }
 
     //GET
-    public synchronized String getBook(int id) {
-        if (books.containsKey(id)){
-            Book currentBook = books.get(id);
-            String bookInfo = currentBook.toString();
-            return bookInfo;
+    public synchronized String getBook(int id){
+        if (!books.containsKey(id)){
+            return "Book doesn't exist";
         }
         else{
-            return "Book doesn't exist";
+            Book currentBook = books.get(id);
+            //setCurrentBook(currentBook);
+            //System.out.println(currentBook.toString());
+            String bookInfo = currentBook.toString();
+            return bookInfo;
         }
 
     }
 
     //PUT
-    public synchronized String updateBook(int id, String title, String description, String isbn, String author, String publisher) {
+    public synchronized void updateBook(int id, String title, String description, String isbn, String author, String publisher) throws Exception {
         Book book = new Book(title, description, isbn, author, publisher);
         book.setId(id);
-        //System.out.println("Update id value: " + books.get(id));
-        //System.out.println(books.get(id) == null);
         if (!books.containsKey(id)) {
-            //System.out.println("Here if");
-            return "Book cannot be updated!";
+            throw new Exception("Book cannot be updated!");          
         } else {
-            //System.out.println("Here else");
             books.put(id, book); // Replace with current book object
-            return "Updated book with "+ id;
         }
     }
 
+    //DELETE
     public synchronized void removeBook(int id) throws Exception {
         if (!books.containsKey(id)) {
             throw new Exception("Book cannot be removed!");

@@ -69,6 +69,7 @@ public class Console {
                     try {
                         id = scan.nextInt();
                         System.out.println(client.getBook(String.class, id));
+                        //client.getBook(String.class,id);
                     } catch (InputMismatchException e) {
                         System.out.println("Invalid input - Please enter an integer");
                     }
@@ -84,8 +85,20 @@ public class Console {
                     author = scan.next();
                     System.out.print("Enter publisher:");
                     publisher = scan.next();
-                    System.out.println("Book added!");
-
+                    try {
+                        Response res = client.addBook(title, description, isbn, author, publisher);
+                        if(res.getStatus() == 200) {
+                            System.out.println("Book was successfully added.");
+                        }
+                        else{
+                            System.out.println("Couldn't update book");
+                        }
+                    }
+                    catch (Exception e) {
+                        System.out.println(e.toString());
+                    }
+                    //client.addBook(title, description, isbn, author, publisher);
+                    //System.out.println("Book added!");
                     break;
                 case 5:
                     System.out.print("Enter the id of the book you want to update:");
@@ -101,12 +114,20 @@ public class Console {
                         author = scan.next();
                         System.out.print("Enter publisher:");
                         publisher = scan.next();
-                        int statusCode = client.updateBook(id, title, description, isbn, author, publisher).getStatus();
-                        if (statusCode == 500) {
-                            System.out.println("Could not update book with id: " + id);
-                        } else if (statusCode == 200) {
-                            System.out.println("Book with id " + id + " was successfully updated.");
+                        
+                        try{
+                            Response res = client.updateBook(id, title, description, isbn, author, publisher);
+                            if(res.getStatus() == 200) {
+                                System.out.println("Book with id " + id + " was successfully updated.");
+                            } 
+                            else{
+                                System.out.println("Could not update book with id: " + id);
+                            }                            
                         }
+                        catch (Exception e) {
+                            System.out.println(e.toString());
+                       }
+                        
                     } catch (InputMismatchException e) {
                         System.out.println("Invalid input - Please enter an integer");
                     }
@@ -116,23 +137,20 @@ public class Console {
                     
                     try{
                        id = scan.nextInt();
-                       try {
+                       try{
                            Response res = client.deleteBook(id);
                            if(res.getStatus() == 200) {
                                System.out.println("Book with id " + id + " was successfully removed.");
                            }
                            else {
                                 System.out.println("Book could not be removed");
-                           }
-                           
+                           }  
                        }
-                       catch (Exception e) {
-                          System.out.println(e.toString());
+                       catch(Exception e){
+                            System.out.println(e.toString());
                        }
-                       
                     }
-                    catch(InputMismatchException e) {
-
+                    catch(InputMismatchException e){
                         System.out.println("Invalid input - Please enter an integer");
                     }
                     break;
