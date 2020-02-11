@@ -119,10 +119,10 @@ public class Console {
                        try {
                            Response res = client.deleteBook(id);
                            if(res.getStatus() == 200) {
-                               res.getEntity().toString();
+                               System.out.println("Book with id " + id + " was successfully removed.");
                            }
                            else {
-                                System.out.println(res.getEntity().toString());
+                                System.out.println("Book could not be removed");
                            }
                            
                        }
