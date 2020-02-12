@@ -83,11 +83,10 @@ public class LibraryRESTService {
     }
     
     // POSTMAN: http://localhost:8080/A1-LibraryService/webresources/LibraryRESTService/book/delete?id=1
-    // path param
     @DELETE
     @Produces(MediaType.TEXT_PLAIN)
-    @Path("/book/delete")
-    public Response deleteBook(@QueryParam("id") int id) {
+    @Path("/book/delete/{id}")
+    public Response deleteBook(@PathParam("id") int id) {
         try{
             librarySystem.removeBook(id);
             return Response.status(200).entity("Success").build();
