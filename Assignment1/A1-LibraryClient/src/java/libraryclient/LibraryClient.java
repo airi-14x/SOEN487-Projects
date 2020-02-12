@@ -44,7 +44,7 @@ public class LibraryClient {
 
     public Response deleteBook(int id) throws ClientErrorException {
         webTarget = client.target(BASE_URI).path("LibraryRESTService");
-        return webTarget.path("book/delete").queryParam("id", id).request().delete(Response.class);
+        return webTarget.path("book/delete/" + id).request().delete(Response.class);
     }
 
     public <T> T getBook(Class<T> responseType, int id) throws ClientErrorException {
@@ -72,7 +72,7 @@ public class LibraryClient {
 
     public Response addBook(String title, String description, String isbn, String author, String publisher) throws ClientErrorException {
         webTarget = client.target(BASE_URI).path("LibraryRESTService");
-        return webTarget.queryParam("title", title).queryParam("description", description).queryParam("isbn", isbn).queryParam("author", author).queryParam("publisher", publisher).path("book/add").request().post(null, Response.class);
+        return webTarget.path("book/add").queryParam("title", title).queryParam("description", description).queryParam("isbn", isbn).queryParam("author", author).queryParam("publisher", publisher).request().post(null, Response.class);
     }
 
     public String sayPlainTextHello() throws ClientErrorException {

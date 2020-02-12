@@ -88,7 +88,7 @@ public class Console {
                             System.out.println("Book was successfully added.");
                         }
                         else{
-                            System.out.println("Couldn't update book");
+                            System.out.println("Couldn't add book");
                         }
                     }
                     catch (Exception e) {
