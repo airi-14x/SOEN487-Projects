@@ -645,3 +645,9 @@
 127.0.0.1 - - [11/Feb/2020:18:58:16 -0500] "PUT /A1-LibraryService/webresources/LibraryRESTService/book/update?id=1&title=eeee&description=e&isbn=e&author=e&publisher=ee HTTP/1.1" 200 7
 127.0.0.1 - - [11/Feb/2020:18:58:17 -0500] "GET /A1-LibraryService/webresources/LibraryRESTService/books?id=1&title=eeee&description=e&isbn=e&author=e&publisher=ee HTTP/1.1" 200 142
 127.0.0.1 - - [11/Feb/2020:18:58:22 -0500] "DELETE /A1-LibraryService/webresources/LibraryRESTService/book/delete?id=1 HTTP/1.1" 200 7
+127.0.0.1 - - [11/Feb/2020:19:06:13 -0500] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - airi14x [11/Feb/2020:19:06:13 -0500] "GET /manager/text/ HTTP/1.1" 200 41
+127.0.0.1 - - [11/Feb/2020:19:06:13 -0500] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - airi14x [11/Feb/2020:19:06:13 -0500] "GET /manager/text/ HTTP/1.1" 200 41
+127.0.0.1 - - [11/Feb/2020:19:06:13 -0500] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - airi14x [11/Feb/2020:19:06:13 -0500] "GET /manager/text/ HTTP/1.1" 200 41
