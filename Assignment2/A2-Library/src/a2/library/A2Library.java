@@ -15,7 +15,12 @@ public class A2Library {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+       Library library = Library.getInstance();
+       library.dropLibraryTable();
+       library.createLibraryTable();
+       System.out.println("Create Table");
+       
+
     }
     
 }

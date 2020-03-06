@@ -7,6 +7,7 @@ package a2.library;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -21,7 +22,7 @@ public class Library {
     
     // >> Need to: Storing in CONFIG file afterwards....
     // SINGLETON Pattern
-    private static Library libraryInstance;
+    private static Library libraryConnectionInstance;
     private Connection connection = null;
     private Statement statement = null;
     private ResultSet resultSet = null;
@@ -47,11 +48,11 @@ public class Library {
     
     // SINGLETON    
     public static Library getInstance(){
-        if(libraryInstance == null){
-            libraryInstance = new Library();
+        if(libraryConnectionInstance == null){
+            libraryConnectionInstance = new Library();
             System.out.println("Library - Instance has been created!");
         }
-        return libraryInstance;
+        return libraryConnectionInstance;
     }
     
     public Statement createStatement() {
@@ -99,6 +100,49 @@ public class Library {
             }
         } catch (SQLException ex) {
             Logger.getLogger(Library.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+     
+    // Testing DB //
+     
+    public void createLibraryTable(){
+        try {
+            libraryConnectionInstance.executeUpdate("CREATE TABLE `book`(\n"
+                    + "	`id` INT  NOT NULL AUTO_INCREMENT,\n"
+                    + "    `title` VARCHAR(64) DEFAULT NULL,\n"
+                    + "    `description` VARCHAR(256) DEFAULT NULL,\n"
+                    + "    `isbn` VARCHAR(64) DEFAULT NULL UNIQUE,\n"
+                    + "    `author` VARCHAR(64) DEFAULT NULL,\n"
+                    + "    `publisher` VARCHAR(64) DEFAULT NULL,\n"
+                    + "    `call_number` VARCHAR(64) DEFAULT NULL UNIQUE,\n"
+                    + "    PRIMARY KEY(`id`)\n"
+                    + ")AUTO_INCREMENT=1;");
+        } catch (Exception e) {
+
+        }
+    }
+    
+    public void addNewBook(String title, String description, String isbn, String author, String publisher, String callNumber){
+        String query = "INSERT INTO Book(title, description, isbn, author, publisher, call_number) values (?,?,?,?,?,?)";
+        try {
+            PreparedStatement statement = libraryConnectionInstance.getConnectionInstance().prepareStatement(query);
+            statement.setString(1, title);
+            statement.setString(2, description);
+            statement.setString(3, isbn);
+            statement.setString(4, author);
+            statement.setString(5, publisher);
+            statement.setString(6, callNumber);
+            statement.execute();
+        } catch (SQLException ex) {
+            Logger.getLogger(Library.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    public void dropLibraryTable() {
+        try {
+            libraryConnectionInstance.executeUpdate("DROP TABLE book");
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
     
