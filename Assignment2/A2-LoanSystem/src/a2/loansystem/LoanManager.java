@@ -3,16 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package a2.library;
+package a2.loansystem;
 
 /**
  *
  * @author Airi
  */
-public class LibraryException extends Exception{
-
-    public LibraryException(String errorMessage) {
-        System.out.println(errorMessage);
-    }
-       
+public class LoanManager {
+    
 }

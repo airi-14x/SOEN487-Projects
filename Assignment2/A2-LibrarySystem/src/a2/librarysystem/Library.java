@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package a2.library;
+package a2.librarysystem;
 
 import a2.librarycore.Book;
 import java.io.FileInputStream;
