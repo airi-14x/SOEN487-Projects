@@ -5,6 +5,7 @@
  */
 package a2.library;
 
+import a2.librarycore.Book;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -17,7 +18,7 @@ public class A2Library {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args) throws SQLException, LibraryException {
         Library library = Library.getInstance();
         library.dropLibraryTable();
         library.createLibraryTable();
@@ -25,13 +26,18 @@ public class A2Library {
         ResultSet result;
 
         // Adding a book
-        library.addNewBook("Meditations", "Written in Greek, without any intention of publication, by the only Roman emperor",
-                "01404493371", "Marcus Aurelius", "Penguin Classic", "B 583 S74 2012");
-        library.addNewBook("2-Meditations", "Written in Greek, without any intention of publication, by the only Roman emperor",
-                "01404493372", "Marcus Aurelius", "Penguin Classic", "B 583 S74 2021");
+        Book book1 = new Book("Meditations", "Written in Greek, without any intention of publication, by the only Roman emperor",
+                "01404493371", "Marcus Aurelius", "Penguin Classic");
+        String callNumber1 = "B 583 S74 2012";
+        Book book2 = new Book("2-Meditations", "Written in Greek, without any intention of publication, by the only Roman emperor",
+                "01404493372", "Marcus Aurelius", "Penguin Classic");
+        String callNumber2 = "B 583 S74 2021";
+        library.addNewBook(book1,callNumber1);
+        library.addNewBook(book2,callNumber2);
+        
         // Update book
-        library.updateBookInfo(1, "Update-Meditations1", "Written in Greek, without any intention of publication, by the only Roman emperor",
-                "01404493373", "Marcus Aurelius", "Penguin Classic", "B 583 S74 2022");
+        String callNumber3 = "B 583 S74 2022";
+        library.updateBookInfo(1, book1, callNumber3);
 
         // List all Books
         System.out.println("List All:");

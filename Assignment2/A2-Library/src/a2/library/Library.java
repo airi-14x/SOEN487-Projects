@@ -5,6 +5,7 @@
  */
 package a2.library;
 
+import a2.librarycore.Book;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -29,7 +30,7 @@ public class Library {
     private String user = "root";
     private String pass = "root1234";
 
-    private Library() {
+    private Library() throws LibraryException {
         // 1. Get a connection to database
         // !! Create "LibraryRepo" Schema
         try {
@@ -37,7 +38,8 @@ public class Library {
             Class.forName("com.mysql.jdbc.Driver");
             connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/LibraryRepo?serverTimezone=UTC", user, pass);
         } catch (SQLException | ClassNotFoundException ex) {
-            Logger.getLogger(Library.class.getName()).log(Level.SEVERE, null, ex);
+            throw new LibraryException("Error in connecting to database");
+            //Logger.getLogger(Library.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -46,7 +48,7 @@ public class Library {
     }
 
     // SINGLETON    
-    public static Library getInstance() {
+    public static Library getInstance() throws LibraryException {
         if (libraryConnectionInstance == null) {
             libraryConnectionInstance = new Library();
             System.out.println("Library - Instance has been created!");
@@ -54,38 +56,41 @@ public class Library {
         return libraryConnectionInstance;
     }
 
-    public Statement createStatement() {
+    public Statement createStatement() throws LibraryException {
         try {
             // 2. Create a statement
             statement = connection.createStatement();
         } catch (SQLException ex) {
-            Logger.getLogger(Library.class.getName()).log(Level.SEVERE, null, ex);
+            throw new LibraryException("Error in creating query!");
+            //Logger.getLogger(Library.class.getName()).log(Level.SEVERE, null, ex);
         }
         return statement;
     }
 
-    public ResultSet executeQuery(String query) {
+    public ResultSet executeQuery(String query) throws LibraryException {
         try {
             createStatement();
             resultSet = statement.executeQuery(query);
         } catch (SQLException ex) {
-            Logger.getLogger(Library.class.getName()).log(Level.SEVERE, null, ex);
+            throw new LibraryException("Error in executing query!");
+            //Logger.getLogger(Library.class.getName()).log(Level.SEVERE, null, ex);
         }
         return resultSet;
     }
 
-    public int executeUpdate(String query) {
+    public int executeUpdate(String query) throws LibraryException {
         int update = 0;
         try {
             createStatement();
             update = statement.executeUpdate(query);
         } catch (SQLException ex) {
-            Logger.getLogger(Library.class.getName()).log(Level.SEVERE, null, ex);
+            throw new LibraryException("Error in executing update query!");
+            //Logger.getLogger(Library.class.getName()).log(Level.SEVERE, null, ex);
         }
         return update;
     }
 
-    public void cleanup() {
+    public void cleanup() throws LibraryException {
 
         try {
             if (resultSet != null) {
@@ -98,12 +103,13 @@ public class Library {
                 connection.close();
             }
         } catch (SQLException ex) {
-            Logger.getLogger(Library.class.getName()).log(Level.SEVERE, null, ex);
+            throw new LibraryException("Error in cleanup!");
+            //Logger.getLogger(Library.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
     // Testing DB //
-    public void createLibraryTable() {
+    public void createLibraryTable() throws LibraryException {
         try {
             libraryConnectionInstance.executeUpdate("CREATE TABLE `book`(\n"
                     + "	`id` INT  NOT NULL AUTO_INCREMENT,\n"
@@ -115,13 +121,19 @@ public class Library {
                     + "    `call_number` VARCHAR(64) DEFAULT NULL UNIQUE,\n"
                     + "    PRIMARY KEY(`id`)\n"
                     + ")AUTO_INCREMENT=1;");
-        } catch (Exception e) {
-
+        } catch (LibraryException e) {
+            throw new LibraryException("Error in creating table!");
         }
     }
 
     // CREATE
-    public void addNewBook(String title, String description, String isbn, String author, String publisher, String callNumber) {
+    public void addNewBook(Book book, String callNumber) {
+        String title = book.getTitle();
+        String description = book.getDescription();
+        String isbn = book.getIsbn();
+        String author = book.getAuthor();
+        String publisher = book.getPublisher();
+        
         String query = "INSERT INTO Book(title, description, isbn, author, publisher, call_number) values (?,?,?,?,?,?)";
         try {
             PreparedStatement statement = libraryConnectionInstance.getConnectionInstance().prepareStatement(query);
@@ -138,18 +150,24 @@ public class Library {
     }
 
     // READ
-    public ResultSet listAllBooks() {
+    public ResultSet listAllBooks() throws LibraryException {
         ResultSet resultSet = libraryConnectionInstance.executeQuery("SELECT * FROM book");
         return resultSet;
     }
 
-    public ResultSet getBookInfo(int id) {
+    public ResultSet getBookInfo(int id) throws LibraryException {
         ResultSet resultSet = libraryConnectionInstance.executeQuery("SELECT * FROM book WHERE id=" + id);
         return resultSet;
     }
 
     // UPDATE
-    public void updateBookInfo(int id, String title, String description, String isbn, String author, String publisher, String callNumber) {
+    public void updateBookInfo(int id, Book book, String callNumber) throws LibraryException {
+        String title = book.getTitle();
+        String description = book.getDescription();
+        String isbn = book.getIsbn();
+        String author = book.getAuthor();
+        String publisher = book.getPublisher();
+        
         String query = "UPDATE book SET title=?, description=?, isbn=?, author=?, publisher=?, call_number=? WHERE id=" + id;
 
         try {
@@ -163,12 +181,13 @@ public class Library {
 
             statement.executeUpdate();
         } catch (SQLException ex) {
-            Logger.getLogger(Library.class.getName()).log(Level.SEVERE, null, ex);
+            throw new LibraryException("Error in updating table!");
+            //Logger.getLogger(Library.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
     // DELETE
-    public void deleteBook(int id) {
+    public void deleteBook(int id) throws LibraryException {
         libraryConnectionInstance.executeUpdate("DELETE FROM book WHERE id=" + id);
     }
 
