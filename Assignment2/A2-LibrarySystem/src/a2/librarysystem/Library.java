@@ -39,7 +39,7 @@ public class Library {
     private Library() throws LibraryException, FileNotFoundException, IOException {
         // 1. Get a connection to database
         try {
-            InputStream input = new FileInputStream("libraryConfig.properties");
+            InputStream input = new FileInputStream("librarySystemConfig.properties");
             Properties prop = new Properties();
             
             // Load Properties
@@ -49,7 +49,7 @@ public class Library {
             //connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/LibraryRepo?serverTimezone=UTC", user, pass);
             connection = DriverManager.getConnection(prop.getProperty("db.url"), prop.getProperty("db.user"), prop.getProperty("db.password"));
         } catch (SQLException | ClassNotFoundException ex) {
-            throw new LibraryException("Error in connecting to database");
+            throw new LibraryException("Library - Error in connecting to database");
             //Logger.getLogger(Library.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
@@ -72,7 +72,7 @@ public class Library {
             // 2. Create a statement
             statement = connection.createStatement();
         } catch (SQLException ex) {
-            throw new LibraryException("Error in creating query!");
+            throw new LibraryException("Library - Error in creating query!");
         }
         return statement;
     }
@@ -82,7 +82,7 @@ public class Library {
             createStatement();
             resultSet = statement.executeQuery(query);
         } catch (SQLException ex) {
-            throw new LibraryException("Error in executing query!");
+            throw new LibraryException("Library - Error in executing query!");
         }
         return resultSet;
     }
@@ -93,7 +93,7 @@ public class Library {
             createStatement();
             update = statement.executeUpdate(query);
         } catch (SQLException ex) {
-            throw new LibraryException("Error in executing update query!");
+            throw new LibraryException("Library - Error in executing update query!");
         }
         return update;
     }
@@ -111,7 +111,7 @@ public class Library {
                 connection.close();
             }
         } catch (SQLException ex) {
-            throw new LibraryException("Error in cleanup!");
+            throw new LibraryException("Library - Error in cleanup!");
         }
     }
 
@@ -126,15 +126,18 @@ public class Library {
                     + "    `author` VARCHAR(64) DEFAULT NULL,\n"
                     + "    `publisher` VARCHAR(64) DEFAULT NULL,\n"
                     + "    `call_number` VARCHAR(64) DEFAULT NULL UNIQUE,\n"
+                    + "    `member_id` VARCHAR(64) DEFAULT NULL UNIQUE,\n"
+                    + "    `borrowing_date` VARCHAR(64) DEFAULT NULL,\n"
+                    + "    `return_date` VARCHAR(64) DEFAULT NULL,\n"
                     + "    PRIMARY KEY(`id`)\n"
                     + ")AUTO_INCREMENT=1;");
         } catch (LibraryException e) {
-            throw new LibraryException("Error in creating table!");
+            throw new LibraryException("Library - Error in creating table!");
         }
     }
 
     // CREATE
-    public void addNewBook(Book book, String callNumber) {
+    public void addNewBook(Book book, String callNumber) throws LibraryException {
         String title = book.getTitle();
         String description = book.getDescription();
         String isbn = book.getIsbn();
@@ -152,7 +155,8 @@ public class Library {
             statement.setString(6, callNumber);
             statement.execute();
         } catch (SQLException ex) {
-            Logger.getLogger(Library.class.getName()).log(Level.SEVERE, null, ex);
+            throw new LibraryException("Library - Error in adding a book!");
+            //Logger.getLogger(Library.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -188,7 +192,7 @@ public class Library {
 
             statement.executeUpdate();
         } catch (SQLException ex) {
-            throw new LibraryException("Error in updating table!");
+            throw new LibraryException("Library - Error in updating a book!");
         }
     }
 

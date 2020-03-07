@@ -14,10 +14,10 @@ import java.util.Properties;
  *
  * @author Airi
  */
-public class A2LibraryConfig {
+public class A2LibrarySystemConfig {
     
     public static void main(String[] args){
-        try (OutputStream output = new FileOutputStream("libraryConfig.properties")) {
+        try (OutputStream output = new FileOutputStream("librarySystemConfig.properties")) {
 
             Properties prop = new Properties();
 

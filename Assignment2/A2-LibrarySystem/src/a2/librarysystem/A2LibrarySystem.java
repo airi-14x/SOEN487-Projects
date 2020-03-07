@@ -14,7 +14,7 @@ import java.sql.SQLException;
  *
  * @author Airi
  */
-public class A2Library {
+public class A2LibrarySystem {
 
     /**
      * @param args the command line arguments
