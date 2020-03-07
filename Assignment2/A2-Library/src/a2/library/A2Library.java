@@ -6,6 +6,7 @@
 package a2.library;
 
 import a2.librarycore.Book;
+import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -18,7 +19,7 @@ public class A2Library {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws SQLException, LibraryException {
+    public static void main(String[] args) throws SQLException, LibraryException, IOException {
         Library library = Library.getInstance();
         library.dropLibraryTable();
         library.createLibraryTable();

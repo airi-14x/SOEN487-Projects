@@ -6,12 +6,17 @@
 package a2.library;
 
 import a2.librarycore.Book;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -27,16 +32,22 @@ public class Library {
     private Statement statement = null;
     private ResultSet resultSet = null;
 
-    private String user = "root";
-    private String pass = "root1234";
+    //private String user = "root";
+    //private String pass = "root1234";
 
-    private Library() throws LibraryException {
+    // !!! Create a "LibraryRepo" Schema
+    private Library() throws LibraryException, FileNotFoundException, IOException {
         // 1. Get a connection to database
-        // !! Create "LibraryRepo" Schema
         try {
-            // >> Need to: Storing in CONFIG file afterwards....
+            InputStream input = new FileInputStream("libraryConfig.properties");
+            Properties prop = new Properties();
+            
+            // Load Properties
+            prop.load(input);
+            
             Class.forName("com.mysql.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/LibraryRepo?serverTimezone=UTC", user, pass);
+            //connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/LibraryRepo?serverTimezone=UTC", user, pass);
+            connection = DriverManager.getConnection(prop.getProperty("db.url"), prop.getProperty("db.user"), prop.getProperty("db.password"));
         } catch (SQLException | ClassNotFoundException ex) {
             throw new LibraryException("Error in connecting to database");
             //Logger.getLogger(Library.class.getName()).log(Level.SEVERE, null, ex);
@@ -48,7 +59,7 @@ public class Library {
     }
 
     // SINGLETON    
-    public static Library getInstance() throws LibraryException {
+    public static Library getInstance() throws LibraryException, IOException {
         if (libraryConnectionInstance == null) {
             libraryConnectionInstance = new Library();
             System.out.println("Library - Instance has been created!");
@@ -62,7 +73,6 @@ public class Library {
             statement = connection.createStatement();
         } catch (SQLException ex) {
             throw new LibraryException("Error in creating query!");
-            //Logger.getLogger(Library.class.getName()).log(Level.SEVERE, null, ex);
         }
         return statement;
     }
@@ -73,7 +83,6 @@ public class Library {
             resultSet = statement.executeQuery(query);
         } catch (SQLException ex) {
             throw new LibraryException("Error in executing query!");
-            //Logger.getLogger(Library.class.getName()).log(Level.SEVERE, null, ex);
         }
         return resultSet;
     }
@@ -85,7 +94,6 @@ public class Library {
             update = statement.executeUpdate(query);
         } catch (SQLException ex) {
             throw new LibraryException("Error in executing update query!");
-            //Logger.getLogger(Library.class.getName()).log(Level.SEVERE, null, ex);
         }
         return update;
     }
@@ -104,7 +112,6 @@ public class Library {
             }
         } catch (SQLException ex) {
             throw new LibraryException("Error in cleanup!");
-            //Logger.getLogger(Library.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -182,7 +189,6 @@ public class Library {
             statement.executeUpdate();
         } catch (SQLException ex) {
             throw new LibraryException("Error in updating table!");
-            //Logger.getLogger(Library.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
