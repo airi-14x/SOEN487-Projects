@@ -82,7 +82,7 @@ public class A2LibrarySystem {
             System.out.println(result.getString("call_number"));
             System.out.println("---");
         }
-
+        library.cleanup();
     }
 
 }

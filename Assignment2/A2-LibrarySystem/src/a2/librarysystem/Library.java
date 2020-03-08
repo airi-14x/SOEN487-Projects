@@ -163,7 +163,7 @@ public class Library {
     // READ
     public ResultSet listAllBooks() throws LibraryException {
         ResultSet resultSet = libraryConnectionInstance.executeQuery("SELECT * FROM book");
-        return resultSet;
+        return resultSet; // Need to format it into Loans resultSet.getString("title") for example
     }
 
     public ResultSet getBookInfo(int id) throws LibraryException {

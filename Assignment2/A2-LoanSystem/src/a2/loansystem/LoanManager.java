@@ -22,27 +22,116 @@ import java.util.Properties;
  */
 public class LoanManager {
     // Will be using MemberManager
-    
+
     // SINGLETON Pattern
-    private static LoanManager LoanManagerConnectionInstance;
+    private static LoanManager loanManagerConnectionInstance;
     private Connection connection = null;
     private Statement statement = null;
     private ResultSet resultSet = null;
-    
+
+    //private String user = "root";
+    //private String pass = "root1234";
     private LoanManager() throws LoanException, FileNotFoundException, IOException {
         // 1. Get a connection to database
         try {
-            InputStream input = new FileInputStream("librarySystemConfig.properties");
+            InputStream input = new FileInputStream("loanSystemConfig.properties");
             Properties prop = new Properties();
-            
+
             // Load Properties
             prop.load(input);
-            
+
             Class.forName("com.mysql.jdbc.Driver");
             connection = DriverManager.getConnection(prop.getProperty("db.url"), prop.getProperty("db.user"), prop.getProperty("db.password"));
+            //connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/LibraryRepo?serverTimezone=UTC", user, pass);
         } catch (SQLException | ClassNotFoundException ex) {
             throw new LoanException("LoanManager - Error in connecting to database");
-            
+
+        }
+    }
+
+    public Connection getConnectionInstance() {
+        return connection;
+    }
+
+    // SINGLETON    
+    public static LoanManager getInstance() throws LoanException, IOException {
+        if (loanManagerConnectionInstance == null) {
+            loanManagerConnectionInstance = new LoanManager();
+            System.out.println("LoanManager - Instance has been created!");
+        }
+        return loanManagerConnectionInstance;
+    }
+
+    public Statement createStatement() throws LoanException {
+        try {
+            // 2. Create a statement
+            statement = connection.createStatement();
+        } catch (SQLException ex) {
+            throw new LoanException("LoanManager - Error in creating query!");
+        }
+        return statement;
+    }
+
+    public ResultSet executeQuery(String query) throws LoanException {
+        try {
+            createStatement();
+            resultSet = statement.executeQuery(query);
+        } catch (SQLException ex) {
+            throw new LoanException("LoanManager - Error in executing query!");
+        }
+        return resultSet;
+    }
+
+    public int executeUpdate(String query) throws LoanException {
+        int update = 0;
+        try {
+            createStatement();
+            update = statement.executeUpdate(query);
+        } catch (SQLException ex) {
+            throw new LoanException("LoanManager - Error in executing update query!");
+        }
+        return update;
+    }
+
+    public void cleanup() throws LoanException {
+
+        try {
+            if (resultSet != null) {
+                resultSet.close();
+            }
+            if (statement != null) {
+                statement.close();
+            }
+            if (connection != null) {
+                connection.close();
+            }
+        } catch (SQLException ex) {
+            throw new LoanException("LoanManager - Error in cleanup!");
+        }
+    }
+
+    // Testing DB //
+    public void createLoanTable() throws LoanException {
+        try {
+            // NEED TO MODIFY member_id to unique? And remove auto-increment
+            loanManagerConnectionInstance.executeUpdate("CREATE TABLE `loan`(\n"
+                    + "    `title` VARCHAR(64) DEFAULT NULL,\n"
+                    + "    `call_number` VARCHAR(64) DEFAULT NULL UNIQUE,\n"
+                    + "    `member_id` INT NOT NULL AUTO_INCREMENT,\n"
+                    + "    `borrowing_date` VARCHAR(64) DEFAULT NULL,\n"
+                    + "    `return_date` VARCHAR(64) DEFAULT NULL,\n"
+                    + "    PRIMARY KEY(`member_id`)\n"
+                    + ")AUTO_INCREMENT=1;");
+        } catch (LoanException e) {
+            throw new LoanException("LoanManager - Error in creating loan table!");
+        }
+    }
+
+    public void dropLibraryTable() {
+        try {
+            loanManagerConnectionInstance.executeUpdate("DROP TABLE loan");
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }
