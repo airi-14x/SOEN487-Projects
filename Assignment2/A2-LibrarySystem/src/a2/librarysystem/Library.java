@@ -16,6 +16,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -126,9 +127,6 @@ public class Library {
                     + "    `author` VARCHAR(64) DEFAULT NULL,\n"
                     + "    `publisher` VARCHAR(64) DEFAULT NULL,\n"
                     + "    `call_number` VARCHAR(64) DEFAULT NULL UNIQUE,\n"
-                    + "    `member_id` VARCHAR(64) DEFAULT NULL UNIQUE,\n"
-                    + "    `borrowing_date` VARCHAR(64) DEFAULT NULL,\n"
-                    + "    `return_date` VARCHAR(64) DEFAULT NULL,\n"
                     + "    PRIMARY KEY(`id`)\n"
                     + ")AUTO_INCREMENT=1;");
         } catch (LibraryException e) {
@@ -161,9 +159,9 @@ public class Library {
     }
 
     // READ
-    public ResultSet listAllBooks() throws LibraryException {
-        ResultSet resultSet = libraryConnectionInstance.executeQuery("SELECT * FROM book");
-        return resultSet; // Need to format it into Loans resultSet.getString("title") for example
+    public ResultSet listAllBooks() throws LibraryException, SQLException {
+        ResultSet resultSet = libraryConnectionInstance.executeQuery("SELECT * FROM book");        
+        return resultSet;
     }
 
     public ResultSet getBookInfo(int id) throws LibraryException {

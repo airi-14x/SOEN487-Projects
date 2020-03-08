@@ -29,8 +29,6 @@ public class LoanManager {
     private Statement statement = null;
     private ResultSet resultSet = null;
 
-    //private String user = "root";
-    //private String pass = "root1234";
     private LoanManager() throws LoanException, FileNotFoundException, IOException {
         // 1. Get a connection to database
         try {
@@ -127,7 +125,7 @@ public class LoanManager {
         }
     }
 
-    public void dropLibraryTable() {
+    public void dropLoanTable() {
         try {
             loanManagerConnectionInstance.executeUpdate("DROP TABLE loan");
         } catch (Exception e) {
