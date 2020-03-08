@@ -12,17 +12,21 @@ package a2.loancore;
 public class Loan {
     
     private String bookTitle;
-    private String member;
+    private int memberID;
+    private String memberName;
+    private String memberContact;
     private String borrowDate;
     private String returnDate;
 
     public Loan(){
         
     }
-    
-    public Loan(String bookTitle, String member, String borrowDate, String returnDate) {
+
+    public Loan(String bookTitle, int memberID, String memberName, String memberContact, String borrowDate, String returnDate) {
         this.bookTitle = bookTitle;
-        this.member = member;
+        this.memberID = memberID;
+        this.memberName = memberName;
+        this.memberContact = memberContact;
         this.borrowDate = borrowDate;
         this.returnDate = returnDate;
     }
@@ -35,12 +39,28 @@ public class Loan {
         this.bookTitle = bookTitle;
     }
 
-    public String getMember() {
-        return member;
+    public int getMemberID() {
+        return memberID;
     }
 
-    public void setMember(String member) {
-        this.member = member;
+    public void setMemberID(int memberID) {
+        this.memberID = memberID;
+    }
+
+    public String getMemberName() {
+        return memberName;
+    }
+
+    public void setMemberName(String memberName) {
+        this.memberName = memberName;
+    }
+
+    public String getMemberContact() {
+        return memberContact;
+    }
+
+    public void setMemberContact(String memberContact) {
+        this.memberContact = memberContact;
     }
 
     public String getBorrowDate() {
@@ -61,7 +81,9 @@ public class Loan {
 
     @Override
     public String toString() {
-        return "Loan{" + "bookTitle=" + bookTitle + ", member=" + member + ", borrowDate=" + borrowDate + ", returnDate=" + returnDate + '}';
+        return "Loan{" + "bookTitle=" + bookTitle + ", memberID=" + memberID + ", memberName=" + memberName + ", memberContact=" + memberContact + ", borrowDate=" + borrowDate + ", returnDate=" + returnDate + '}';
     }
+   
+    
 
 }
