@@ -11,4 +11,6 @@ package a2.loansystem;
  */
 public class MemberManager {
     
+    
+    
 }
