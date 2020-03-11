@@ -5,6 +5,9 @@
  */
 package a2.loansystem;
 
+import a2.librarycore.Book;
+import a2.loancore.Loan;
+import a2.loancore.Member;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -15,6 +18,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  *
@@ -22,6 +27,54 @@ import java.util.Properties;
  */
 public class MemberManager {
     
+    //private static ConcurrentHashMap<Integer, Book> books = new ConcurrentHashMap<Integer, Book>();
+    //private static AtomicInteger bookMapKey = new AtomicInteger();
+    // Need to create memberID --> UNIQUE
+    
+    private static ConcurrentHashMap<Integer, Member> members = new ConcurrentHashMap<Integer, Member>();
+    private static AtomicInteger memberMapKey = new AtomicInteger(); // Need to create memberID --> UNIQUE
+    
+    private static MemberManager memberManagerConnectionInstance;
+    private MemberManager(){
+        
+    }
+    
+    // SINGLETON    
+    public static MemberManager getInstance() throws LoanException, IOException {
+        if (memberManagerConnectionInstance == null) {
+            memberManagerConnectionInstance = new MemberManager();
+            System.out.println("MemberManager - Instance has been created!");
+        }
+        return memberManagerConnectionInstance;
+    }
+    
+    // GET 
+    // List members
+    public void getMembers(){
+        
+    }
+    public void getMemberInfo(int memberID){
+        // Return: memberID, String name, String contact
+    }
+    
+    
+    // POST
+    public void addMember(){
+        
+    }
+    
+    // UPDATE
+    public void editMember(){
+        
+    }
+    
+    // DELETE
+    public void deleteMember(){
+        
+    }
+    
+    // Database Version --> Implement after getting main memory version to work //
+    /*
     // SINGLETON Pattern
     private static MemberManager memberManagerConnectionInstance;
     private Connection connection = null;
@@ -128,4 +181,5 @@ public class MemberManager {
             e.printStackTrace();
         }
     }
+*/
 }
