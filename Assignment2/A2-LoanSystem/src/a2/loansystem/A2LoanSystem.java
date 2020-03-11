@@ -18,14 +18,14 @@ public class A2LoanSystem {
      */
     public static void main(String[] args) throws LoanException, IOException {
        LoanManager loans = LoanManager.getInstance();
-       loans.dropLoanTable();
-       loans.createLoanTable();
-       loans.cleanup();
+       //loans.dropLoanTable();
+       //loans.createLoanTable();
+       //loans.cleanup();
        
        MemberManager members = MemberManager.getInstance();
-       members.dropMemberTable();
-       members.createMemberTable();
-       members.cleanup();
+       //members.dropMemberTable();
+       //members.createMemberTable();
+       //members.cleanup();
     }
     
     

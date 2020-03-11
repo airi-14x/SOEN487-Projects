@@ -12,22 +12,20 @@ package a2.loancore;
 public class Loan {
     
     private String bookTitle;
-    private int memberID;
-    private String memberName;
-    private String memberContact;
-    private String borrowDate;
+    private Member member;
+    //private int memberID;
+    //private String memberName;
+    //private String memberContact;
+    //private String borrowDate;
     private String returnDate;
 
     public Loan(){
         
     }
 
-    public Loan(String bookTitle, int memberID, String memberName, String memberContact, String borrowDate, String returnDate) {
+    public Loan(String bookTitle, Member member, String returnDate) {
         this.bookTitle = bookTitle;
-        this.memberID = memberID;
-        this.memberName = memberName;
-        this.memberContact = memberContact;
-        this.borrowDate = borrowDate;
+        this.member = member;
         this.returnDate = returnDate;
     }
 
@@ -39,36 +37,12 @@ public class Loan {
         this.bookTitle = bookTitle;
     }
 
-    public int getMemberID() {
-        return memberID;
+    public Member getMember() {
+        return member;
     }
 
-    public void setMemberID(int memberID) {
-        this.memberID = memberID;
-    }
-
-    public String getMemberName() {
-        return memberName;
-    }
-
-    public void setMemberName(String memberName) {
-        this.memberName = memberName;
-    }
-
-    public String getMemberContact() {
-        return memberContact;
-    }
-
-    public void setMemberContact(String memberContact) {
-        this.memberContact = memberContact;
-    }
-
-    public String getBorrowDate() {
-        return borrowDate;
-    }
-
-    public void setBorrowDate(String borrowDate) {
-        this.borrowDate = borrowDate;
+    public void setMember(Member member) {
+        this.member = member;
     }
 
     public String getReturnDate() {
@@ -81,9 +55,9 @@ public class Loan {
 
     @Override
     public String toString() {
-        return "Loan{" + "bookTitle=" + bookTitle + ", memberID=" + memberID + ", memberName=" + memberName + ", memberContact=" + memberContact + ", borrowDate=" + borrowDate + ", returnDate=" + returnDate + '}';
+        return "Loan{" + "bookTitle=" + bookTitle + ", member=" + member + ", returnDate=" + returnDate + '}';
     }
-   
+
     
 
 }
