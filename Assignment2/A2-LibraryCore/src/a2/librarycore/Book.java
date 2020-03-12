@@ -22,17 +22,19 @@ public class Book implements Serializable {
     private String isbn;
     private String author;
     private String publisher;
+    private String callNumber; //Should check for UNIQUENESS
 
     public Book() {
 
     }
 
-    public Book(String title, String description, String isbn, String author, String publisher) {
+    public Book(String title, String description, String isbn, String author, String publisher, String callNumber) {
         this.title = title;
         this.description = description;
         this.isbn = isbn;
         this.author = author;
         this.publisher = publisher;
+        this.callNumber = callNumber;
     }
 
     public String getTitle() {
@@ -83,9 +85,17 @@ public class Book implements Serializable {
         this.id = id;
     }
 
+    public String getCallNumber() {
+        return callNumber;
+    }
+
+    public void setCallNumber(String callNumber) {
+        this.callNumber = callNumber;
+    }
+
     @Override
     public String toString() {
-        return "Book{" + "id=" + id + ", title=" + title + ", description=" + description + ", isbn=" + isbn + ", author=" + author + ", publisher=" + publisher + '}';
+        return "Book{" + "id=" + id + ", title=" + title + ", description=" + description + ", isbn=" + isbn + ", author=" + author + ", publisher=" + publisher + ", callNumber=" + callNumber + '}';
     }
 
     @Override
@@ -101,7 +111,8 @@ public class Book implements Serializable {
                     && description.equals(book.getDescription())
                     && isbn.equals(book.getIsbn())
                     && author.equals(book.getAuthor())
-                    && publisher.equals(book.getPublisher())) {
+                    && publisher.equals(book.getPublisher())
+                    && callNumber.equals(book.getCallNumber())) {
                 return true;
             }
         }

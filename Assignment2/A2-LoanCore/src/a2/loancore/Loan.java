@@ -5,28 +5,40 @@
  */
 package a2.loancore;
 
+import java.io.Serializable;
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  *
  * @author Airi
  */
-public class Loan {
+
+@XmlRootElement
+public class Loan implements Serializable {
     
+    private int loanID;
     private String bookTitle;
     private Member member;
-    //private int memberID;
-    //private String memberName;
-    //private String memberContact;
-    //private String borrowDate;
+    private String borrowDate;
     private String returnDate;
 
     public Loan(){
         
     }
 
-    public Loan(String bookTitle, Member member, String returnDate) {
+    public Loan(String bookTitle, Member member, String borrowDate, String returnDate) {
         this.bookTitle = bookTitle;
         this.member = member;
+        this.borrowDate = borrowDate;
         this.returnDate = returnDate;
+    }
+
+    public int getLoanID() {
+        return loanID;
+    }
+
+    public void setLoanID(int loanID) {
+        this.loanID = loanID;
     }
 
     public String getBookTitle() {
@@ -45,6 +57,14 @@ public class Loan {
         this.member = member;
     }
 
+    public String getBorrowDate() {
+        return borrowDate;
+    }
+
+    public void setBorrowDate(String borrowDate) {
+        this.borrowDate = borrowDate;
+    }
+
     public String getReturnDate() {
         return returnDate;
     }
@@ -57,7 +77,5 @@ public class Loan {
     public String toString() {
         return "Loan{" + "bookTitle=" + bookTitle + ", member=" + member + ", returnDate=" + returnDate + '}';
     }
-
-    
 
 }

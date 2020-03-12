@@ -5,7 +5,10 @@
  */
 package a2.loansystem;
 
+import a2.librarycore.Book;
+import a2.librarysystem.Library;
 import a2.loancore.Loan;
+import a2.loancore.Member;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -17,6 +20,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  *
@@ -25,12 +29,16 @@ import java.util.concurrent.ConcurrentHashMap;
 public class LoanManager {
     
     private static ConcurrentHashMap<Integer, Loan> loans = new ConcurrentHashMap<Integer, Loan>();
-    private static LoanManager loanManagerConnectionInstance;
+    private static AtomicInteger loanMapKey = new AtomicInteger();
+    //private static LoanManager loanManagerConnectionInstance;
+    private static MemberManager memberManager;
+    private static Library library;
     
-    private LoanManager(){
-        
+    public LoanManager(){
+        System.out.println("Created an instance of LoanSystem");
     }
     
+    /*
     // SINGLETON    
     public static LoanManager getInstance() throws LoanException, IOException {
         if (loanManagerConnectionInstance == null) {
@@ -38,25 +46,72 @@ public class LoanManager {
             System.out.println("LoanManager - Instance has been created!");
         }
         return loanManagerConnectionInstance;
-    }
+    }*/
     
     // Borrow a book --> Create loan
-    public void borrowBook(String callNumber, int memberID){
-        
+    public void borrowBook(String callNumber, int memberID, String borrowDate, String returnDate) throws LoanException{
+        ConcurrentHashMap<Integer, Member> memberMap = memberManager.getMembersMap();
+        ConcurrentHashMap<String, Book> callNumberMap = library.getCallNumbersMap();
+        //Get current member with memberID
+        if (!memberMap.contains(memberID)){
+            throw new LoanException("Loan Manager - Member does not exist!");
+        }
+        else{
+            if (!callNumberMap.contains(callNumber)){
+                throw new LoanException("Loan Manager - Book's Call Number does not exist!");
+            }
+            else{
+                Book book = callNumberMap.get(callNumber); // Get Book via callNumber
+                Member member = memberMap.get(memberID);
+                Loan loan = new Loan(book.getTitle(), member, borrowDate, returnDate);
+                int loanID = loanMapKey.incrementAndGet();
+                loan.setLoanID(loanID);
+            }
+            
+        }  
     }
     
     // Edit a Book Loan
-    public void editLoan(Loan loan){
-        
+    public void editBookLoan(int loanID, String bookTitle, Member member, String borrowDate, String returnDate) throws LoanException{
+        if(!loans.contains(loanID))
+        {
+            throw new LoanException("Loan Manager - Loan does not exist!");
+        }
+        else{
+            Loan loan = new Loan(bookTitle, member, borrowDate, returnDate);
+            loans.put(loanID,loan); //Replace previous loan with updated book loan
+        }
     }
     
     // Return Book
-    // Set memberID to null
-    public void returnBook(Loan loan){
+    // Set memberID and all attributes expect book to null
+    public void returnBookLoan(int loanID) throws LoanException{
+        if(!loans.contains(loanID))
+        {
+            throw new LoanException("Loan Manager - Loan does not exist!");
+        }
+        else{
+            Loan loan = loans.get(loanID);
+            // Keep book title there to get Call No.
+            loan.setMember(null);
+            loan.setBorrowDate(null);
+            loan.setReturnDate(null);
+            loans.put(loanID, loan); // Update book loan
+        }
         
     }
     
     // Delete a Book Loan
+    
+    public void deleteBookLoan(int loanID) throws LoanException{
+        if(!loans.contains(loanID))
+        {
+            throw new LoanException("Loan Manager - Loan does not exist!");
+        }
+        else{
+            loans.remove(loanID); // Entirely remove loan from hashmap
+        }
+    }
     
     // Database Version --> To implement after in-memory version //
     /*
