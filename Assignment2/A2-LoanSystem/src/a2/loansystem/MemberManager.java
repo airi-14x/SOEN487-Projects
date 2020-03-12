@@ -78,7 +78,8 @@ public class MemberManager {
     // POST
     public synchronized void addMember(String memberName, String memberContact) throws LoanException {
         int memberID = memberMapKey.incrementAndGet();
-        Member member = new Member(memberID, memberName, memberContact);
+        Member member = new Member(memberName, memberContact);
+        member.setMemberID(memberID);
         members.put(memberID, member);
 
         if (!members.containsKey(memberID)) {
@@ -92,7 +93,8 @@ public class MemberManager {
         if (!members.containsKey(memberID)) {
             throw new LoanException("Member Manager - Member cannot be found. Cannot update!");
         } else {
-            Member member = new Member(memberID, memberName, memberContact);
+            Member member = new Member(memberName, memberContact);
+            member.setMemberID(memberID);
             members.put(memberID, member);
             if (!members.containsKey(memberID)) {
                 throw new LoanException("Member Manager - Was unable to update the member!");

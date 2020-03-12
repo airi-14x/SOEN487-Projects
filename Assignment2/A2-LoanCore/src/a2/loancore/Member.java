@@ -22,8 +22,7 @@ public class Member implements Serializable {
         
     }
     
-    public Member(int memberID, String memberName, String memberContact) {
-        this.memberID = memberID;
+    public Member(String memberName, String memberContact) {
         this.memberName = memberName;
         this.memberContact = memberContact;
     }

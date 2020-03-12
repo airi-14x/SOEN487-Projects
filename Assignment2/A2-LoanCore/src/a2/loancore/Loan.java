@@ -16,18 +16,29 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class Loan implements Serializable {
     
+    private int loanID;
     private String bookTitle;
     private Member member;
+    private String borrowDate;
     private String returnDate;
 
     public Loan(){
         
     }
 
-    public Loan(String bookTitle, Member member, String returnDate) {
+    public Loan(String bookTitle, Member member, String borrowDate, String returnDate) {
         this.bookTitle = bookTitle;
         this.member = member;
+        this.borrowDate = borrowDate;
         this.returnDate = returnDate;
+    }
+
+    public int getLoanID() {
+        return loanID;
+    }
+
+    public void setLoanID(int loanID) {
+        this.loanID = loanID;
     }
 
     public String getBookTitle() {
@@ -44,6 +55,14 @@ public class Loan implements Serializable {
 
     public void setMember(Member member) {
         this.member = member;
+    }
+
+    public String getBorrowDate() {
+        return borrowDate;
+    }
+
+    public void setBorrowDate(String borrowDate) {
+        this.borrowDate = borrowDate;
     }
 
     public String getReturnDate() {
