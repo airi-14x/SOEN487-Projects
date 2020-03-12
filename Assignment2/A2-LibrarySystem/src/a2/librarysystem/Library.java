@@ -18,6 +18,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Properties;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -27,6 +29,96 @@ import java.util.logging.Logger;
  */
 public class Library {
 
+    private static ConcurrentHashMap<Integer, Book> books = new ConcurrentHashMap<Integer, Book>();
+    private static ConcurrentHashMap<String, Book> callNumbers = new ConcurrentHashMap<String, Book>();
+
+    private static AtomicInteger bookMapKey = new AtomicInteger();
+
+    // Cannot be private
+    public Library() {
+        System.out.println("Created an instance of Library");
+    }
+
+    public ConcurrentHashMap<Integer, Book> getBooksMap() {
+        return books;
+    }
+    
+    public ConcurrentHashMap<String, Book> getCallNumbersMap(){
+        return callNumbers;
+    }
+
+    public synchronized String displayBooks() {
+        String currentBooks = books.toString();
+        if (books.isEmpty()) {
+            return ("No books to display");
+        }
+        return currentBooks;
+    }
+
+    //POST
+    public synchronized void addBook(String title, String description, String isbn, String author, String publisher, String callNumber) throws LibraryException {
+        Book book = new Book(title, description, isbn, author, publisher, callNumber);
+        // Check if callNumber exists
+
+        if (callNumbers.containsKey(callNumber)) {
+            throw new LibraryException("Library - Error duplicate call number. Book cannot be created!");
+        } else {
+            int bookID = bookMapKey.incrementAndGet();
+            book.setId(bookID);
+            books.put(bookID, book);
+            if (!books.containsKey(bookID)) {
+                throw new LibraryException("Library - Error in adding a book!");
+            }
+            else{
+                callNumbers.put(callNumber, book); // Add to ConcurrentHashMap
+            }
+        }
+
+    }
+    
+    //GET
+    public synchronized String getBook(int id){
+        if (!books.containsKey(id)){
+            return "Book doesn't exist";
+        }
+        else{
+            Book currentBook = books.get(id);
+            String bookInfo = currentBook.toString();
+            return bookInfo;
+        }
+    }
+    
+    //PUT
+    public synchronized void updateBook(int id, String title, String description, String isbn, String author, String publisher, String callNumber) throws LibraryException {
+        Book book = new Book(title, description, isbn, author, publisher, callNumber);
+        if (callNumbers.containsKey(callNumber)) {
+            throw new LibraryException("Library - Error duplicate call number. Book cannot be updated!");
+        }
+        book.setId(id);
+        if (!books.containsKey(id)) {
+            throw new LibraryException("Library - Error in updating a book!");        
+        } else {
+            String oldCallNumber = books.get(id).getCallNumber();
+            callNumbers.remove(oldCallNumber); // Manually remove oldCallNumber from hashmap
+            books.put(id, book); // Replace with current book object
+            callNumbers.put(callNumber, book); // Update callNumber hashmap
+        }
+    }
+    
+    //DELETE
+    public synchronized void removeBook(int id) throws LibraryException {
+        if (!books.containsKey(id)) {
+            throw new LibraryException("Library - Book cannot be removed!");
+        } else {
+            String callNumber = books.get(id).getCallNumber();
+            System.out.println(callNumber);
+            callNumbers.remove(callNumber);
+            books.remove(id);
+        }
+    }
+    
+
+    /*
     // SINGLETON Pattern
     private static Library libraryConnectionInstance;
     private Connection connection = null;
@@ -206,5 +298,5 @@ public class Library {
             e.printStackTrace();
         }
     }
-
+     */
 }

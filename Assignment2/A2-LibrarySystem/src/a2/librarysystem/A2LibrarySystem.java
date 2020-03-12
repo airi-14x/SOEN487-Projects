@@ -20,6 +20,40 @@ public class A2LibrarySystem {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws SQLException, LibraryException, IOException {
+
+        Library library = new Library();
+        library.addBook("Meditations", "Written in Greek, without any intention of publication, by the only Roman emperor",
+                "01404493371", "Marcus Aurelius", "Penguin Classic", "B 583 S74 2012");
+        System.out.println(library.getBooksMap());
+        System.out.println(library.getCallNumbersMap());
+
+        library.addBook("2-Meditations", "Written in Greek, without any intention of publication, by the only Roman emperor",
+                "01404493372", "Marcus Aurelius", "Penguin Classic","B 583 S74 2021");
+        
+        library.updateBook(1, "Meditations", "Written in Greek, without any intention of publication, by the only Roman emperor",
+                "01404493371", "Marcus Aurelius", "Penguin Classic", "B 583 S74 2014");
+        System.out.println("After Update");
+        System.out.println(library.getBooksMap());
+        System.out.println(library.getCallNumbersMap());
+        
+        System.out.println("Get Book");
+        System.out.println(library.getBook(1));
+        
+        System.out.println("Remove Book");
+        library.removeBook(1);
+        System.out.println(library.getBooksMap());
+        System.out.println(library.getCallNumbersMap());
+        
+        // Error Versions
+        /*
+        System.out.println("Error Version");
+        library.updateBook(2, "Meditations", "Written in Greek, without any intention of publication, by the only Roman emperor",
+                "01404493371", "Marcus Aurelius", "Penguin Classic", "B 583 S74 2012");
+        */
+        
+        
+        // Database Version //
+        /*
         Library library = Library.getInstance();
         library.dropLibraryTable();
         library.createLibraryTable();
@@ -83,6 +117,7 @@ public class A2LibrarySystem {
             System.out.println("---");
         }
         library.cleanup();
+         */
     }
 
 }

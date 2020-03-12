@@ -35,6 +35,7 @@ public class MemberManager {
     private static AtomicInteger memberMapKey = new AtomicInteger(); // Need to create memberID --> UNIQUE
     
     private static MemberManager memberManagerConnectionInstance;
+    
     private MemberManager(){
         
     }
@@ -46,6 +47,10 @@ public class MemberManager {
             System.out.println("MemberManager - Instance has been created!");
         }
         return memberManagerConnectionInstance;
+    }
+    
+    public ConcurrentHashMap<Integer, Member> getMap() {
+        return members;
     }
     
     // GET 
