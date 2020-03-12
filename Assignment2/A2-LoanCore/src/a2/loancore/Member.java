@@ -5,11 +5,15 @@
  */
 package a2.loancore;
 
+import java.io.Serializable;
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  *
  * @author Airi
  */
-public class Member {
+@XmlRootElement
+public class Member implements Serializable {
     private int memberID;
     private String memberName;
     private String memberContact;
@@ -46,6 +50,11 @@ public class Member {
 
     public void setMemberContact(String memberContact) {
         this.memberContact = memberContact;
+    }
+
+    @Override
+    public String toString() {
+        return "Member{" + "memberID=" + memberID + ", memberName=" + memberName + ", memberContact=" + memberContact + '}';
     }
     
     

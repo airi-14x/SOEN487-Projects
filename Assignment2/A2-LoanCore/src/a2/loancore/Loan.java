@@ -5,18 +5,19 @@
  */
 package a2.loancore;
 
+import java.io.Serializable;
+import javax.xml.bind.annotation.XmlRootElement;
+
 /**
  *
  * @author Airi
  */
-public class Loan {
+
+@XmlRootElement
+public class Loan implements Serializable {
     
     private String bookTitle;
     private Member member;
-    //private int memberID;
-    //private String memberName;
-    //private String memberContact;
-    //private String borrowDate;
     private String returnDate;
 
     public Loan(){
@@ -57,7 +58,5 @@ public class Loan {
     public String toString() {
         return "Loan{" + "bookTitle=" + bookTitle + ", member=" + member + ", returnDate=" + returnDate + '}';
     }
-
-    
 
 }

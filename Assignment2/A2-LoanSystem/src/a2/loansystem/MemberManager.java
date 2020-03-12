@@ -26,20 +26,21 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @author Airi
  */
 public class MemberManager {
-    
-    //private static ConcurrentHashMap<Integer, Book> books = new ConcurrentHashMap<Integer, Book>();
-    //private static AtomicInteger bookMapKey = new AtomicInteger();
-    // Need to create memberID --> UNIQUE
-    
+
     private static ConcurrentHashMap<Integer, Member> members = new ConcurrentHashMap<Integer, Member>();
     private static AtomicInteger memberMapKey = new AtomicInteger(); // Need to create memberID --> UNIQUE
-    
-    private static MemberManager memberManagerConnectionInstance;
-    
-    private MemberManager(){
-        
+
+    //private static MemberManager memberManagerConnectionInstance;
+
+    public MemberManager() {
+        System.out.println("Created an instance of MemberSystem");
     }
-    
+
+    public ConcurrentHashMap<Integer, Member> getMembersMap() {
+        return members;
+    }
+
+    /*
     // SINGLETON    
     public static MemberManager getInstance() throws LoanException, IOException {
         if (memberManagerConnectionInstance == null) {
@@ -48,36 +49,67 @@ public class MemberManager {
         }
         return memberManagerConnectionInstance;
     }
-    
-    public ConcurrentHashMap<Integer, Member> getMap() {
-        return members;
-    }
-    
+    */
+
     // GET 
     // List members
-    public void getMembers(){
-        
+    public synchronized String getMembers() {
+        String currentMembers = members.toString();
+        if (members.isEmpty()) {
+            return ("No members to display");
+        }
+        return currentMembers;
+
     }
-    public void getMemberInfo(int memberID){
+
+    // GET
+    public synchronized String getMemberInfo(int memberID){
         // Return: memberID, String name, String contact
+        if (!members.containsKey(memberID)) {
+            return "Member doesn't exist";
+        }
+        
+        Member member = members.get(memberID);
+        String memberInfo = member.toString();
+        return memberInfo;
+
     }
-    
-    
+
     // POST
-    public void addMember(){
-        
+    public synchronized void addMember(String memberName, String memberContact) throws LoanException {
+        int memberID = memberMapKey.incrementAndGet();
+        Member member = new Member(memberID, memberName, memberContact);
+        members.put(memberID, member);
+
+        if (!members.containsKey(memberID)) {
+            throw new LoanException("Member Manager - Error in adding a member!");
+        }
     }
-    
+
     // UPDATE
-    public void editMember(){
-        
+    public synchronized void updateMember(int memberID, String memberName, String memberContact) throws LoanException {
+
+        if (!members.containsKey(memberID)) {
+            throw new LoanException("Member Manager - Member cannot be found. Cannot update!");
+        } else {
+            Member member = new Member(memberID, memberName, memberContact);
+            members.put(memberID, member);
+            if (!members.containsKey(memberID)) {
+                throw new LoanException("Member Manager - Was unable to update the member!");
+            }
+        }
     }
-    
+
     // DELETE
-    public void deleteMember(){
-        
+    public synchronized void deleteMember(int memberID) throws LoanException {
+        if (!members.containsKey(memberID)) {
+            throw new LoanException("Member Manager - Member cannot be found. Cannot delete!");
+        } else {
+            members.remove(memberID);
+        }
+
     }
-    
+
     // Database Version --> Implement after getting main memory version to work //
     /*
     // SINGLETON Pattern
@@ -186,5 +218,5 @@ public class MemberManager {
             e.printStackTrace();
         }
     }
-*/
+     */
 }

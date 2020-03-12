@@ -47,12 +47,26 @@ public class Library {
         return callNumbers;
     }
 
+    // GET
     public synchronized String displayBooks() {
         String currentBooks = books.toString();
         if (books.isEmpty()) {
             return ("No books to display");
         }
         return currentBooks;
+    }
+    
+        
+    //GET
+    public synchronized String getBook(int id){
+        if (!books.containsKey(id)){
+            return "Book doesn't exist";
+        }
+        else{
+            Book currentBook = books.get(id);
+            String bookInfo = currentBook.toString();
+            return bookInfo;
+        }
     }
 
     //POST
@@ -74,18 +88,6 @@ public class Library {
             }
         }
 
-    }
-    
-    //GET
-    public synchronized String getBook(int id){
-        if (!books.containsKey(id)){
-            return "Book doesn't exist";
-        }
-        else{
-            Book currentBook = books.get(id);
-            String bookInfo = currentBook.toString();
-            return bookInfo;
-        }
     }
     
     //PUT
