@@ -38,7 +38,11 @@ public class MemberManager {
     public ConcurrentHashMap<Integer, Member> getMembersMap() {
         return members;
     }
-
+    
+    // For setting memberID manually //
+    public int memberMapKey(){
+        return memberMapKey.get();
+    }
     
     // SINGLETON    
     public static MemberManager getInstance() throws LoanException, IOException {

@@ -8,6 +8,7 @@ package a2.loansystem;
 import a2.librarycore.Book;
 import a2.librarysystem.Library;
 import a2.librarysystem.LibraryException;
+import a2.loancore.Member;
 import java.io.IOException;
 
 /**
@@ -65,6 +66,15 @@ public class A2LoanSystem {
         // --- LoanManager --- //
         LoanManager loans = LoanManager.getInstance();
         loans.borrowBook("B 583 S74 2021", 1, "2020-02-04", "2020-03-04");
+        System.out.println(loans.getLoansMap());
+        Member member1 = new Member("Jo","hello@gmail.com");
+        member1.setMemberID(members.memberMapKey()); // Need to set ID separately
+        loans.editBookLoan(1, "djkfdj", member1, "2020-03-04", "2020-04-03");
+        System.out.println(loans.getLoansMap());
+        loans.returnBookLoan(1);
+        System.out.println(loans.getLoansMap());
+        
+        loans.deleteBookLoan(1);
         System.out.println(loans.getLoansMap());
         
         // Database Version //

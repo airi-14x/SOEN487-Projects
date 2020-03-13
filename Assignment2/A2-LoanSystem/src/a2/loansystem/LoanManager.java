@@ -58,9 +58,9 @@ public class LoanManager {
     // Borrow a book --> Create loan
     public void borrowBook(String callNumber, int memberID, String borrowDate, String returnDate) throws LoanException{
         ConcurrentHashMap<Integer, Member> memberMap = memberManagerConnectionInstance.getMembersMap();
-        System.out.println(memberMap);
+        //System.out.println(memberMap);
         ConcurrentHashMap<String, Book> callNumberMap = libraryConnectionInstance.getCallNumbersMap();
-        System.out.println(callNumberMap);
+        //System.out.println(callNumberMap);
         //Get current member with memberID
         if (!memberMap.containsKey(memberID)){
             throw new LoanException("Loan Manager - Member does not exist!");
