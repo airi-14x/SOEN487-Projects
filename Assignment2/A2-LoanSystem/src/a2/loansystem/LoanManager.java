@@ -7,6 +7,7 @@ package a2.loansystem;
 
 import a2.librarycore.Book;
 import a2.librarysystem.Library;
+import a2.librarysystem.LibraryException;
 import a2.loancore.Loan;
 import a2.loancore.Member;
 import java.io.FileInputStream;
@@ -30,34 +31,43 @@ public class LoanManager {
     
     private static ConcurrentHashMap<Integer, Loan> loans = new ConcurrentHashMap<Integer, Loan>();
     private static AtomicInteger loanMapKey = new AtomicInteger();
-    //private static LoanManager loanManagerConnectionInstance;
-    private static MemberManager memberManager;
-    private static Library library;
+    private static LoanManager loanManagerConnectionInstance;
+    private static MemberManager memberManagerConnectionInstance;
+    private static Library libraryConnectionInstance;
     
-    public LoanManager(){
+    public LoanManager() throws LoanException, IOException, LibraryException{
         System.out.println("Created an instance of LoanSystem");
+        memberManagerConnectionInstance = memberManagerConnectionInstance.getInstance();
+        libraryConnectionInstance = libraryConnectionInstance.getInstance();
     }
     
-    /*
+    
     // SINGLETON    
-    public static LoanManager getInstance() throws LoanException, IOException {
+    public static LoanManager getInstance() throws LoanException, IOException, LibraryException {
         if (loanManagerConnectionInstance == null) {
             loanManagerConnectionInstance = new LoanManager();
             System.out.println("LoanManager - Instance has been created!");
         }
         return loanManagerConnectionInstance;
-    }*/
+    }
+    
+    public ConcurrentHashMap<Integer, Loan> getLoansMap() {
+        return loans;
+    }
     
     // Borrow a book --> Create loan
     public void borrowBook(String callNumber, int memberID, String borrowDate, String returnDate) throws LoanException{
-        ConcurrentHashMap<Integer, Member> memberMap = memberManager.getMembersMap();
-        ConcurrentHashMap<String, Book> callNumberMap = library.getCallNumbersMap();
+        ConcurrentHashMap<Integer, Member> memberMap = memberManagerConnectionInstance.getMembersMap();
+        //System.out.println(memberMap);
+        ConcurrentHashMap<String, Book> callNumberMap = libraryConnectionInstance.getCallNumbersMap();
+        //System.out.println(callNumberMap);
         //Get current member with memberID
-        if (!memberMap.contains(memberID)){
+        if (!memberMap.containsKey(memberID)){
             throw new LoanException("Loan Manager - Member does not exist!");
         }
         else{
-            if (!callNumberMap.contains(callNumber)){
+            if (!callNumberMap.containsKey(callNumber)){
+                System.out.println("here");
                 throw new LoanException("Loan Manager - Book's Call Number does not exist!");
             }
             else{
@@ -66,14 +76,15 @@ public class LoanManager {
                 Loan loan = new Loan(book.getTitle(), member, borrowDate, returnDate);
                 int loanID = loanMapKey.incrementAndGet();
                 loan.setLoanID(loanID);
+                loans.put(loanID, loan);
             }
             
-        }  
+        } 
     }
     
     // Edit a Book Loan
     public void editBookLoan(int loanID, String bookTitle, Member member, String borrowDate, String returnDate) throws LoanException{
-        if(!loans.contains(loanID))
+        if(!loans.containsKey(loanID))
         {
             throw new LoanException("Loan Manager - Loan does not exist!");
         }
@@ -86,7 +97,7 @@ public class LoanManager {
     // Return Book
     // Set memberID and all attributes expect book to null
     public void returnBookLoan(int loanID) throws LoanException{
-        if(!loans.contains(loanID))
+        if(!loans.containsKey(loanID))
         {
             throw new LoanException("Loan Manager - Loan does not exist!");
         }
@@ -104,7 +115,7 @@ public class LoanManager {
     // Delete a Book Loan
     
     public void deleteBookLoan(int loanID) throws LoanException{
-        if(!loans.contains(loanID))
+        if(!loans.containsKey(loanID))
         {
             throw new LoanException("Loan Manager - Loan does not exist!");
         }
