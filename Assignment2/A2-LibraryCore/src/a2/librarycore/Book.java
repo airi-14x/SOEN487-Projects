@@ -16,13 +16,13 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class Book implements Serializable {
 
-    private int id; // TO REMOVE --> Using DB
+    private int id; 
     private String title;
     private String description;
     private String isbn;
     private String author;
     private String publisher;
-    private String callNumber; //Should check for UNIQUENESS
+    private String callNumber;
 
     public Book() {
 

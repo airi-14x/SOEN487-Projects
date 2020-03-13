@@ -44,7 +44,7 @@ public class Library {
     public static Library getInstance() throws LibraryException, IOException {
         if (libraryConnectionInstance == null) {
             libraryConnectionInstance = new Library();
-            System.out.println("MemberManager - Instance has been created!");
+            System.out.println("Library - Instance has been created!");
         }
         return libraryConnectionInstance;
     }
