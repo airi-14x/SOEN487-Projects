@@ -21,7 +21,7 @@ public class A2LibrarySystem {
      */
     public static void main(String[] args) throws SQLException, LibraryException, IOException {
 
-        Library library = new Library();
+        Library library = Library.getInstance();
         Book book = new Book();
         library.addBook("Meditations", "Written in Greek, without any intention of publication, by the only Roman emperor",
                 "01404493371", "Marcus Aurelius", "Penguin Classic", "B 583 S74 2012");

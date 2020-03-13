@@ -31,7 +31,7 @@ public class Library {
 
     private static ConcurrentHashMap<Integer, Book> books = new ConcurrentHashMap<Integer, Book>();
     private static ConcurrentHashMap<String, Book> callNumbers = new ConcurrentHashMap<String, Book>();
-
+    private static Library libraryConnectionInstance; 
     private static AtomicInteger bookMapKey = new AtomicInteger();
 
     // Cannot be private
@@ -39,6 +39,16 @@ public class Library {
         System.out.println("Created an instance of Library");
     }
 
+        
+    // SINGLETON    
+    public static Library getInstance() throws LibraryException, IOException {
+        if (libraryConnectionInstance == null) {
+            libraryConnectionInstance = new Library();
+            System.out.println("MemberManager - Instance has been created!");
+        }
+        return libraryConnectionInstance;
+    }
+    
     public ConcurrentHashMap<Integer, Book> getBooksMap() {
         return books;
     }

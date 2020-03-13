@@ -29,18 +29,17 @@ public class MemberManager {
 
     private static ConcurrentHashMap<Integer, Member> members = new ConcurrentHashMap<Integer, Member>();
     private static AtomicInteger memberMapKey = new AtomicInteger(); // Need to create memberID --> UNIQUE
-
-    //private static MemberManager memberManagerConnectionInstance;
-
+    private static MemberManager memberManagerConnectionInstance; 
+    
     public MemberManager() {
-        System.out.println("Created an instance of MemberSystem");
+        System.out.println("Created an instance of MemberSystem()");
     }
 
     public ConcurrentHashMap<Integer, Member> getMembersMap() {
         return members;
     }
 
-    /*
+    
     // SINGLETON    
     public static MemberManager getInstance() throws LoanException, IOException {
         if (memberManagerConnectionInstance == null) {
@@ -49,7 +48,6 @@ public class MemberManager {
         }
         return memberManagerConnectionInstance;
     }
-    */
 
     // GET 
     // List members
