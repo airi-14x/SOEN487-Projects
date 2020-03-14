@@ -83,18 +83,16 @@ public class LibraryRESTService {
     @Path("/book_json/{id}")
     public Response getBookJSON(@PathParam("id") int id) throws LibraryException {
         Book book = librarySystem.getBookById(id);
-        
         return Response.status(200).entity(book).build();
     }
     
-    //TODO
     //Get book - Produces XML
     @GET
     @Produces(MediaType.APPLICATION_XML)
     @Path("/book_xml/{id}")
-    public Response getBookXML(@PathParam("id") int id) {
-        String output = librarySystem.getBook(id);
-        return Response.status(200).entity(output).build();
+    public Response getBookXML(@PathParam("id") int id) throws LibraryException {
+        Book book = librarySystem.getBookById(id);
+        return Response.status(200).entity(book).build();
     }
     
     //TODO
