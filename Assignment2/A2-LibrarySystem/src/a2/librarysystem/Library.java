@@ -78,6 +78,16 @@ public class Library {
             return bookInfo;
         }
     }
+    
+    //GET
+    public synchronized Book getBookById(int id) throws LibraryException{
+        if (!books.containsKey(id)){
+            throw new LibraryException("Book does not exist.");
+        }
+        else{
+            return books.get(id);
+        }
+    }
 
     //POST
     public synchronized void addBook(String title, String description, String isbn, String author, String publisher, String callNumber) throws LibraryException {

@@ -1,6 +1,8 @@
 package libraryservice;
 
+import a2.librarycore.Book;
 import a2.librarysystem.Library;
+import a2.librarysystem.LibraryException;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.Path;
 import javax.ws.rs.DELETE;
@@ -69,27 +71,27 @@ public class LibraryRESTService {
     //Get book - Produces TEXT_PLAIN
     @GET
     @Produces(MediaType.TEXT_PLAIN)
-    @Path("/book/{id}")
+    @Path("/book_plain/{id}")
     public Response getBookPlain(@PathParam("id") int id) {
         String output = librarySystem.getBook(id);
         return Response.status(200).entity(output).build();
     }
     
-    //TODO
     //Get book - Produces JSON
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    @Path("/book/{id}")
-    public Response getBookJSON(@PathParam("id") int id) {
-        String output = librarySystem.getBook(id);
-        return Response.status(200).entity(output).build();
+    @Path("/book_json/{id}")
+    public Response getBookJSON(@PathParam("id") int id) throws LibraryException {
+        Book book = librarySystem.getBookById(id);
+        
+        return Response.status(200).entity(book).build();
     }
     
     //TODO
     //Get book - Produces XML
     @GET
     @Produces(MediaType.APPLICATION_XML)
-    @Path("/book/{id}")
+    @Path("/book_xml/{id}")
     public Response getBookXML(@PathParam("id") int id) {
         String output = librarySystem.getBook(id);
         return Response.status(200).entity(output).build();
@@ -99,7 +101,7 @@ public class LibraryRESTService {
     //Get book - Produces HTML
     @GET
     @Produces(MediaType.TEXT_HTML)
-    @Path("/book/{id}")
+    @Path("/book_html/{id}")
     public Response getBookHTML(@PathParam("id") int id) {
         String output = librarySystem.getBook(id);
         return Response.status(200).entity(output).build();
@@ -107,7 +109,7 @@ public class LibraryRESTService {
     
     //Add book - Basic data types 
     @POST
-    @Path("/book/add")
+    @Path("/book_basic/add")
     public Response addBookBasic(@QueryParam("title") String title,
             @QueryParam("description") String description,
             @QueryParam("isbn") String isbn,
@@ -127,7 +129,7 @@ public class LibraryRESTService {
     //TODO
     //Add book - Complex data types 
     @POST
-    @Path("/book/add")
+    @Path("/book_complex/add")
     @Consumes(MediaType.APPLICATION_JSON)
     public Response addBookComplex(@QueryParam("title") String title,
             @QueryParam("description") String description,
@@ -148,7 +150,7 @@ public class LibraryRESTService {
     //Update book - Basic data types
     @PUT
     @Produces(MediaType.TEXT_PLAIN)
-    @Path("/book/update")
+    @Path("/book_basic/update")
     public Response updateBook(@QueryParam("id") int id,
             @QueryParam("title") String title,
             @QueryParam("description") String description,
