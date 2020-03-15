@@ -5,17 +5,20 @@
  */
 package a2.loanservice;
 
-import a2.loancore.Loan;
 import a2.loancore.Member;
 import a2.loansystem.LoanException;
-import java.util.concurrent.ConcurrentHashMap;
 import javax.jws.WebService;
 
-@WebService(endpointInterface="a2.loanservice.LoanManager")
-public class LoanManagerImpl implements LoanManager {
+@WebService(endpointInterface="a2.loanservice.LoanServiceLoanManager")
+public class LoanServiceLoanManagerImpl implements LoanServiceLoanManager {
 
     @Override
-    public ConcurrentHashMap<Integer, Loan> getLoansMap() {
+    public String listLoan(String bookTitle) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String listLoan(int memberID) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

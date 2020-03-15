@@ -10,6 +10,7 @@ import a2.librarysystem.Library;
 import a2.librarysystem.LibraryException;
 import a2.loancore.Member;
 import java.io.IOException;
+import java.util.Scanner;
 
 /**
  *
@@ -76,7 +77,14 @@ public class A2LoanSystem {
         
         loans.deleteBookLoan(1);
         System.out.println(loans.getLoansMap());
-        
+        int input = 0;
+        //System.out.println("Stop A2 LoanSystem by entering '1': ");
+        Scanner scan = new Scanner(System.in);
+        while(input != 1)
+        {
+            System.out.println("Stop A2 LoanSystem by entering '1': ");
+            input = scan.nextInt();
+        }
         // Database Version //
         //LoanManager loans = LoanManagerImpl.getInstance();
         //loans.dropLoanTable();

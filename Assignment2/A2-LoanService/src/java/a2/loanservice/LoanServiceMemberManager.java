@@ -18,7 +18,7 @@ import javax.jws.soap.SOAPBinding.Style;
 
 @WebService
 @SOAPBinding(style = Style.RPC)
-public interface MemberManager {
+public interface LoanServiceMemberManager {
     @WebMethod public String getMembers();
     @WebMethod public String getMemberInfo(int memberID);
     @WebMethod public void addMember(String memberName, String memberContact) throws LoanException;

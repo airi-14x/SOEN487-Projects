@@ -4,11 +4,11 @@
     <service name="HelloWorld">
       <implementation-class>helloWorld.HelloWorld</implementation-class>
     </service>
-    <service name="LoanManagerImpl">
-      <implementation-class>a2.loanservice.LoanManagerImpl</implementation-class>
+    <service name="LoanServiceLoanManagerImpl">
+      <implementation-class>a2.loanservice.LoanServiceLoanManagerImpl</implementation-class>
     </service>
-    <service name="MemberManagerImpl">
-      <implementation-class>a2.loanservice.MemberManagerImpl</implementation-class>
+    <service name="LoanServiceMemberManagerImpl">
+      <implementation-class>a2.loanservice.LoanServiceMemberManagerImpl</implementation-class>
     </service>
   </services>
   <clients>
@@ -45,6 +45,42 @@
         <wsimport-option>
           <wsimport-option-name>package</wsimport-option-name>
           <wsimport-option-value>helloWorldClient</wsimport-option-value>
+        </wsimport-option>
+      </wsimport-options>
+    </client>
+    <client name="LoanServiceMemberManagerImpl">
+      <wsdl-url>http://localhost:8080/A2-LoanService/LoanServiceMemberManagerImpl?wsdl</wsdl-url>
+      <local-wsdl-file>localhost_8080/A2-LoanService/LoanServiceMemberManagerImpl.wsdl</local-wsdl-file>
+      <package-name forceReplace="true">a2.loanservice.client</package-name>
+      <catalog-file>catalog.xml</catalog-file>
+      <wsimport-options>
+        <wsimport-option>
+          <wsimport-option-name>extension</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>verbose</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>fork</wsimport-option-name>
+          <wsimport-option-value>false</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>wsdlLocation</wsimport-option-name>
+          <wsimport-option-value>http://localhost:8080/A2-LoanService/LoanServiceMemberManagerImpl?wsdl</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xnocompile</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>xendorsed</wsimport-option-name>
+          <wsimport-option-value>true</wsimport-option-value>
+        </wsimport-option>
+        <wsimport-option>
+          <wsimport-option-name>package</wsimport-option-name>
+          <wsimport-option-value>a2.loanservice.client</wsimport-option-value>
         </wsimport-option>
       </wsimport-options>
     </client>

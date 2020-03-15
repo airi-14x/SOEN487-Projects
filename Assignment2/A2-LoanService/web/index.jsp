@@ -28,5 +28,49 @@
     }
     %>
     <%-- end web service invocation --%><hr/>
+    
+    
+    <%-- start web service invocation --%><hr/>
+    <%
+    try {
+	a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
+	a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+	// TODO process result here
+	java.lang.String result = port.getMembers();
+	out.println("Result = "+result);
+    } catch (Exception ex) {
+	// TODO handle custom exceptions here
+    }
+    %>
+    <%-- end web service invocation --%><hr/>
+    
+    <%-- start web service invocation --%><hr/>
+    <%
+    try {
+	a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
+	a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+	 // TODO initialize WS operation arguments here
+	java.lang.String arg0 = "hello";
+	java.lang.String arg1 = "dskj";
+	port.addMember(arg0, arg1);
+    } catch (Exception ex) {
+	// TODO handle custom exceptions here
+    }
+    %>
+    <%-- end web service invocation --%><hr/>
+        <%-- start web service invocation --%><hr/>
+    <%
+    try {
+	a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
+	a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+	// TODO process result here
+	java.lang.String result = port.getMembers();
+	out.println("Result = "+result);
+    } catch (Exception ex) {
+	// TODO handle custom exceptions here
+    }
+    %>
+    <%-- end web service invocation --%><hr/>
+    
     </body>
 </html>
