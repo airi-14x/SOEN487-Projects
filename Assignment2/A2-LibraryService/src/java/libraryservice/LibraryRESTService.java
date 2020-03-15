@@ -7,6 +7,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import javax.ws.rs.Consumes;
@@ -43,7 +44,7 @@ public class LibraryRESTService {
         String output = librarySystem.displayBooks();
         return Response.status(200).entity(output).build();
     }
-    
+
     //TODO
     //List books - Produces JSON
     @GET
@@ -56,31 +57,36 @@ public class LibraryRESTService {
         String output = objectMapper.writeValueAsString(bookList);
         return Response.status(200).entity(output).build();
     }
-    
+
     //TODO - Make root element appear as Book
     //List books - Produces XML
     @GET
     @Produces(MediaType.APPLICATION_XML)
     @Path("/books_xml")
     public Response listBooksXML() throws JsonProcessingException, LibraryException {
-        librarySystem.addBook("hi1","hi3","hi4","h5i","hi5","h3sia");
-        librarySystem.addBook("hi42","h4i2","h4i2","hi42","hi32","hi4d2s");
         ConcurrentHashMap bookMap = librarySystem.getBooksMap();
         XmlMapper objectMapper = new XmlMapper();
         String output = objectMapper.writeValueAsString(bookMap.values());
         return Response.status(200).entity(output).build();
     }
-    
-    //TODO
+
     //List books - Produces HTML
     @GET
     @Produces(MediaType.TEXT_HTML)
     @Path("/books_html")
-    public Response listBooksHTML() {
-        String output = librarySystem.displayBooks();
-        return Response.status(200).entity(output).build();
+    public Response listBooksHTML() throws LibraryException {
+        ConcurrentHashMap bookMap = librarySystem.getBooksMap();
+        List<String> bookList = new ArrayList(bookMap.values());
+        StringBuilder output = new StringBuilder();
+        output.append("<html><body><table><h1>List of all books</h1>");
+        for (Iterator iter = bookList.iterator(); iter.hasNext();) {
+            output.append("<tr><td>" + iter.next() + "</td></tr>");
+        }
+       output.append("</table></body></html>");
+        
+        return Response.status(200).entity(output.toString()).build();
     }
-    
+
     //Get book - Produces TEXT_PLAIN
     @GET
     @Produces(MediaType.TEXT_PLAIN)
@@ -89,7 +95,7 @@ public class LibraryRESTService {
         String output = librarySystem.getBook(id);
         return Response.status(200).entity(output).build();
     }
-    
+
     //Get book - Produces JSON
     @GET
     @Produces(MediaType.APPLICATION_JSON)
@@ -98,7 +104,7 @@ public class LibraryRESTService {
         Book book = librarySystem.getBookById(id);
         return Response.status(200).entity(book).build();
     }
-    
+
     //Get book - Produces XML
     @GET
     @Produces(MediaType.APPLICATION_XML)
@@ -107,27 +113,27 @@ public class LibraryRESTService {
         Book book = librarySystem.getBookById(id);
         return Response.status(200).entity(book).build();
     }
-    
+
     //Get book - Produces HTML
     @GET
     @Produces(MediaType.TEXT_HTML)
     @Path("/book_html/{id}")
     public Response getBookHTML(@PathParam("id") int id) throws LibraryException {
         Book book = librarySystem.getBookById(id);
-        String output =  "<html> " + "<title>" + "Library System" + "</title>"
-        + "<body>"
+        String output = "<html> " + "<title>" + "Library System" + "</title>"
+                + "<body>"
                 + "<h1>" + "Book information:" + "</h1>"
-                + "<div>" 
+                + "<div>"
                 + "Title: " + book.getTitle() + "<br/>"
                 + "Description: " + book.getDescription() + "<br/>"
                 + "Isbn: " + book.getIsbn() + "<br/>"
                 + "Author: " + book.getAuthor() + "<br/>"
                 + "Publisher: " + book.getPublisher() + "<br/>"
                 + "Call Number: " + book.getCallNumber() + "<br/>"
-        + "</body>" + "</html> ";
+                + "</body>" + "</html> ";
         return Response.status(200).entity(output).build();
     }
-    
+
     //Add book - Basic data types 
     @POST
     @Path("/book_basic/add")
@@ -137,14 +143,13 @@ public class LibraryRESTService {
             @QueryParam("author") String author,
             @QueryParam("publisher") String publisher,
             @QueryParam("callNumber") String callNumber) {
-        try{
+        try {
             librarySystem.addBook(title, description, isbn, author, publisher, callNumber);
             return Response.status(200).entity("Success").build();
-        }
-        catch(Exception e){
+        } catch (Exception e) {
             return Response.status(500).entity("Error").build();
         }
-        
+
     }
 
     //TODO
@@ -158,16 +163,15 @@ public class LibraryRESTService {
             @QueryParam("author") String author,
             @QueryParam("publisher") String publisher,
             @QueryParam("callNumber") String callNumber) {
-        try{
+        try {
             librarySystem.addBook(title, description, isbn, author, publisher, callNumber);
             return Response.status(200).entity("Success").build();
-        }
-        catch(Exception e){
+        } catch (Exception e) {
             return Response.status(500).entity("Error").build();
         }
-        
+
     }
-    
+
     //Update book - Basic data types
     @PUT
     @Produces(MediaType.TEXT_PLAIN)
@@ -179,23 +183,17 @@ public class LibraryRESTService {
             @QueryParam("author") String author,
             @QueryParam("publisher") String publisher,
             @QueryParam("callNumber") String callNumber) {
-        try{
+        try {
             librarySystem.updateBook(id, title, description, isbn, author, publisher, callNumber);
             return Response.status(200).entity("Success").build();
-        }
-        catch(Exception e){
+        } catch (Exception e) {
             return Response.status(500).entity("Error").build();
         }
     }
-    
-    //Update book - Complex data types
-    
-    //Delete book - Produces TEXT_PLAIN
-    
-    //Delete book - Produces JSON
-    
-    //Delete book - Produces XML
-    
-    //Delete book - Produces HTML
 
+    //Update book - Complex data types
+    //Delete book - Produces TEXT_PLAIN
+    //Delete book - Produces JSON
+    //Delete book - Produces XML
+    //Delete book - Produces HTML
 }
