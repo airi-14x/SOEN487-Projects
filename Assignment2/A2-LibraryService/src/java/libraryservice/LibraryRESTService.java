@@ -6,6 +6,7 @@ import a2.librarysystem.LibraryException;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -136,6 +137,8 @@ public class LibraryRESTService {
 
     //Add book - Basic data types 
     @POST
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    @Produces(MediaType.TEXT_PLAIN)
     @Path("/book_basic/add")
     public Response addBookBasic(@QueryParam("title") String title,
             @QueryParam("description") String description,
@@ -156,15 +159,18 @@ public class LibraryRESTService {
     //Add book - Complex data types 
     @POST
     @Path("/book_complex/add")
-    @Consumes(MediaType.APPLICATION_JSON)
-    public Response addBookComplex(@QueryParam("title") String title,
-            @QueryParam("description") String description,
-            @QueryParam("isbn") String isbn,
-            @QueryParam("author") String author,
-            @QueryParam("publisher") String publisher,
-            @QueryParam("callNumber") String callNumber) {
+    @Consumes(MediaType.APPLICATION_XML)
+    public Response addBookComplex(Book book) throws IOException {
+        XmlMapper xmlMapper = new XmlMapper();
+        Book bookObject = xmlMapper.readValue("<Book><title>" + book.getTitle() + "</title>" +
+                "<description>" + book.getDescription() + "</description>" + 
+                "<isbn>" + book.getIsbn() + "</isbn>" + 
+                "<author>" + book.getAuthor() + "</author>" +
+                "<publisher>" + book.getPublisher() + "</publisher>" + 
+                "<callNumber>" + book.getCallNumber() + "</callNumber></Book>", Book.class);
         try {
-            librarySystem.addBook(title, description, isbn, author, publisher, callNumber);
+            librarySystem.addBook(bookObject.getTitle(), bookObject.getDescription(), bookObject.getIsbn(), bookObject.getAuthor(),
+                    bookObject.getPublisher(), bookObject.getCallNumber());
             return Response.status(200).entity("Success").build();
         } catch (Exception e) {
             return Response.status(500).entity("Error").build();
