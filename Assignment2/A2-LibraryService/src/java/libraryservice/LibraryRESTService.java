@@ -5,6 +5,7 @@ import a2.librarysystem.Library;
 import a2.librarysystem.LibraryException;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
@@ -56,13 +57,17 @@ public class LibraryRESTService {
         return Response.status(200).entity(output).build();
     }
     
-    //TODO
+    //TODO - Make root element appear as Book
     //List books - Produces XML
     @GET
     @Produces(MediaType.APPLICATION_XML)
     @Path("/books_xml")
-    public Response listBooksXML() {
-        String output = librarySystem.displayBooks();
+    public Response listBooksXML() throws JsonProcessingException, LibraryException {
+        librarySystem.addBook("hi1","hi3","hi4","h5i","hi5","h3sia");
+        librarySystem.addBook("hi42","h4i2","h4i2","hi42","hi32","hi4d2s");
+        ConcurrentHashMap bookMap = librarySystem.getBooksMap();
+        XmlMapper objectMapper = new XmlMapper();
+        String output = objectMapper.writeValueAsString(bookMap.values());
         return Response.status(200).entity(output).build();
     }
     
