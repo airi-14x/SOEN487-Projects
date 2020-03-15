@@ -21,7 +21,7 @@ import javax.jws.soap.SOAPBinding.Style;
 public interface LoanServiceMemberManager {
     @WebMethod public String getMembers();
     @WebMethod public String getMemberInfo(int memberID);
-    @WebMethod public void addMember(String memberName, String memberContact) throws LoanException;
-    @WebMethod public void updateMember(int memberID, String memberName, String memberContact)  throws LoanException;
-    @WebMethod public void deleteMember(int memberID) throws LoanException;
+    @WebMethod public String addMember(String memberName, String memberContact) throws LoanException;
+    @WebMethod public String updateMember(int memberID, String memberName, String memberContact)  throws LoanException;
+    @WebMethod public String deleteMember(int memberID) throws LoanException;
 }
