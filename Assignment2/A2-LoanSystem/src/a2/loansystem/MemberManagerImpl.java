@@ -5,8 +5,6 @@
  */
 package a2.loansystem;
 
-import a2.librarycore.Book;
-import a2.loancore.Loan;
 import a2.loancore.Member;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -20,13 +18,12 @@ import java.sql.Statement;
 import java.util.Properties;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
-import javax.jws.WebService;
 
 /**
  *
  * @author Airi
  */
-@WebService(endpointInterface="a2.loansystem.MemberManager")
+
 public class MemberManagerImpl implements MemberManager {
 
     private static ConcurrentHashMap<Integer, Member> members = new ConcurrentHashMap<Integer, Member>();

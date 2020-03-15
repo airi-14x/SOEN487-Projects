@@ -8,9 +8,27 @@
         <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
+    <servlet>
+        <servlet-name>LoanManagerImpl</servlet-name>
+        <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>MemberManagerImpl</servlet-name>
+        <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HelloWorld</servlet-name>
         <url-pattern>/HelloWorld</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoanManagerImpl</servlet-name>
+        <url-pattern>/LoanManagerImpl</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MemberManagerImpl</servlet-name>
+        <url-pattern>/MemberManagerImpl</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

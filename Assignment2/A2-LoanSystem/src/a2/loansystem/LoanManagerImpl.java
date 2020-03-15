@@ -22,13 +22,12 @@ import java.sql.Statement;
 import java.util.Properties;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
-import javax.jws.WebService;
 
 /**
  *
  * @author Airi
  */
-@WebService(endpointInterface="a2.loansystem.LoanManager")
+
 public class LoanManagerImpl implements LoanManager {
     
     private static ConcurrentHashMap<Integer, Loan> loans = new ConcurrentHashMap<Integer, Loan>();

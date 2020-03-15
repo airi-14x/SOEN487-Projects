@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <endpoints version="2.0" xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime">
   <endpoint implementation="helloWorld.HelloWorld" name="HelloWorld" url-pattern="/HelloWorld"/>
+  <endpoint implementation="a2.loanservice.LoanManagerImpl" name="LoanManagerImpl" url-pattern="/LoanManagerImpl"/>
+  <endpoint implementation="a2.loanservice.MemberManagerImpl" name="MemberManagerImpl" url-pattern="/MemberManagerImpl"/>
 </endpoints>
