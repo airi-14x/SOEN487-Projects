@@ -7,6 +7,7 @@ package a2.librarycore;
 
 import java.io.Serializable;
 import java.util.Objects;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -17,11 +18,17 @@ import javax.xml.bind.annotation.XmlRootElement;
 public class Book implements Serializable {
 
     private int id; 
+    @XmlElement
     private String title;
+    @XmlElement
     private String description;
+    @XmlElement
     private String isbn;
+    @XmlElement
     private String author;
+    @XmlElement
     private String publisher;
+    @XmlElement
     private String callNumber;
 
     public Book() {
