@@ -100,8 +100,19 @@ public class LibraryRESTService {
     @GET
     @Produces(MediaType.TEXT_HTML)
     @Path("/book_html/{id}")
-    public Response getBookHTML(@PathParam("id") int id) {
-        String output = librarySystem.getBook(id);
+    public Response getBookHTML(@PathParam("id") int id) throws LibraryException {
+        Book book = librarySystem.getBookById(id);
+        String output =  "<html> " + "<title>" + "Library System" + "</title>"
+        + "<body>"
+                + "<h1>" + "Book information:" + "</h1>"
+                + "<div>" 
+                + "Title: " + book.getTitle() + "<br/>"
+                + "Description: " + book.getDescription() + "<br/>"
+                + "Isbn: " + book.getIsbn() + "<br/>"
+                + "Author: " + book.getAuthor() + "<br/>"
+                + "Publisher: " + book.getPublisher() + "<br/>"
+                + "Call Number: " + book.getCallNumber() + "<br/>"
+        + "</body>" + "</html> ";
         return Response.status(200).entity(output).build();
     }
     
