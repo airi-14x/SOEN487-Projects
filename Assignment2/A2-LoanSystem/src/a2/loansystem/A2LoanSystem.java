@@ -47,8 +47,8 @@ public class A2LoanSystem {
         System.out.println(library.getBooksMap());
         System.out.println(library.getCallNumbersMap());
 
-        // --- MemberManager --- //
-        MemberManager members = new MemberManager();
+        // --- MemberManagerImpl --- //
+        MemberManagerImpl members = new MemberManagerImpl();
         members.addMember("Airi", "fkwjf@gmail.com");
         members.addMember("Ali", "wssjf@gmail.com");
         System.out.println(members.getMembersMap());
@@ -63,8 +63,8 @@ public class A2LoanSystem {
         System.out.println(members.getMembersMap());
 
         
-        // --- LoanManager --- //
-        LoanManager loans = LoanManager.getInstance();
+        // --- LoanManagerImpl --- //
+        LoanManagerImpl loans = LoanManagerImpl.getInstance();
         loans.borrowBook("B 583 S74 2021", 1, "2020-02-04", "2020-03-04");
         System.out.println(loans.getLoansMap());
         Member member1 = new Member("Jo","hello@gmail.com");
@@ -78,11 +78,11 @@ public class A2LoanSystem {
         System.out.println(loans.getLoansMap());
         
         // Database Version //
-        //LoanManager loans = LoanManager.getInstance();
+        //LoanManager loans = LoanManagerImpl.getInstance();
         //loans.dropLoanTable();
         //loans.createLoanTable();
         //loans.cleanup();
-        //MemberManager members = MemberManager.getInstance();
+        //MemberManager members = MemberManagerImpl.getInstance();
         //members.dropMemberTable();
         //members.createMemberTable();
         //members.cleanup();
