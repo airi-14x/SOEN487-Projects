@@ -3,6 +3,11 @@ package libraryservice;
 import a2.librarycore.Book;
 import a2.librarysystem.Library;
 import a2.librarysystem.LibraryException;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.Path;
 import javax.ws.rs.DELETE;
@@ -43,8 +48,11 @@ public class LibraryRESTService {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/books_json")
-    public Response listBooksJSON() {
-        String output = librarySystem.displayBooks();
+    public Response listBooksJSON() throws JsonProcessingException {
+        ConcurrentHashMap bookMap = librarySystem.getBooksMap();
+        List<String> bookList = new ArrayList(bookMap.values());
+        ObjectMapper objectMapper = new ObjectMapper();
+        String output = objectMapper.writeValueAsString(bookList);
         return Response.status(200).entity(output).build();
     }
     
@@ -95,7 +103,6 @@ public class LibraryRESTService {
         return Response.status(200).entity(book).build();
     }
     
-    //TODO
     //Get book - Produces HTML
     @GET
     @Produces(MediaType.TEXT_HTML)
