@@ -13,7 +13,7 @@ import javax.xml.bind.annotation.XmlRootElement;
  *
  * @author Airi
  */
-@XmlRootElement
+@XmlRootElement(name="Book")
 public class Book implements Serializable {
 
     private int id; 
