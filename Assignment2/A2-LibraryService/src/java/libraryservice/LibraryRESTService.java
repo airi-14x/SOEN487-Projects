@@ -135,6 +135,7 @@ public class LibraryRESTService {
         return Response.status(200).entity(output).build();
     }
 
+    //TODO - not use query param, use form param when we have client
     //Add book - Basic data types 
     @POST
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
@@ -155,10 +156,9 @@ public class LibraryRESTService {
 
     }
 
-    //TODO
     //Add book - Complex data types 
     @POST
-    @Path("/book_complex/add")
+    @Path("/book_xml/add")
     @Consumes(MediaType.APPLICATION_XML)
     public Response addBookComplex(Book book) throws IOException {
         XmlMapper xmlMapper = new XmlMapper();
@@ -177,12 +177,13 @@ public class LibraryRESTService {
         }
 
     }
-
+    
+    //TODO - not use query param, use form param when we have client
     //Update book - Basic data types
     @PUT
     @Produces(MediaType.TEXT_PLAIN)
     @Path("/book_basic/update")
-    public Response updateBook(@QueryParam("id") int id,
+    public Response updateBookBasic(@QueryParam("id") int id,
             @QueryParam("title") String title,
             @QueryParam("description") String description,
             @QueryParam("isbn") String isbn,
@@ -198,6 +199,25 @@ public class LibraryRESTService {
     }
 
     //Update book - Complex data types
+    @PUT
+    @Produces(MediaType.APPLICATION_XML)
+    @Path("/book_xml/update/{id}")
+    public Response updateBookXml(@PathParam("id") int id, Book book) throws IOException {
+        XmlMapper xmlMapper = new XmlMapper();
+        Book bookObject = xmlMapper.readValue("<Book><title>" + book.getTitle() + "</title>" +
+                "<description>" + book.getDescription() + "</description>" + 
+                "<isbn>" + book.getIsbn() + "</isbn>" + 
+                "<author>" + book.getAuthor() + "</author>" +
+                "<publisher>" + book.getPublisher() + "</publisher>" + 
+                "<callNumber>" + book.getCallNumber() + "</callNumber></Book>", Book.class);
+        try {
+            librarySystem.updateBook(id, bookObject.getTitle(), bookObject.getDescription(), bookObject.getIsbn(), 
+                    bookObject.getAuthor(), bookObject.getPublisher(), bookObject.getCallNumber());
+            return Response.status(200).entity("Success").build();
+        } catch (Exception e) {
+            return Response.status(500).entity("Error").build();
+        }
+    }
     //Delete book - Produces TEXT_PLAIN
     //Delete book - Produces JSON
     //Delete book - Produces XML
