@@ -11,6 +11,7 @@ import a2.loancore.Member;
 import a2.loansystem.LoanException;
 import a2.loansystem.LoanManagerImpl;
 import java.io.IOException;
+import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import javax.jws.WebService;
 
@@ -24,21 +25,29 @@ public class LoanServiceLoanManagerImpl implements LoanServiceLoanManager {
     }
     
     @Override
-    public String listLoan(String bookTitle) {
-        throw new UnsupportedOperationException("Not supported yet.");
+      public String listLoan(String bookTitle) {
+        ConcurrentHashMap<Integer, Loan> loansMap = loanManager.getLoansMap();
+        for(Map.Entry<Integer, Loan> loan : loansMap.entrySet()){
+            if(loan.getValue().getBookTitle().equals(bookTitle))
+            {
+                return loan.toString();
+            }
+        }
+        return "No loans are associated with book title: " + bookTitle;
     }
 
     @Override
     public String listLoan(int memberID) {
-        // Get all Keys
-        ConcurrentHashMap.KeySetView<Integer, Loan> loans = loanManager.getLoansMap().keySet();
+        ConcurrentHashMap<Integer, Loan> loansMap = loanManager.getLoansMap();
         
-        for(Integer loan: loans){
-            
+        for(Map.Entry<Integer, Loan> loan : loansMap.entrySet()){
+            if(loan.getValue().getMember().getMemberID() == memberID)
+            {
+                //System.out.println("Member ID found: " + memberID);
+                return loan.toString();  
+            }
         }
-  
-        
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return "No loans are associated with memberID: " + memberID; 
     }
 
     @Override

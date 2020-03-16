@@ -6,6 +6,7 @@
 package a2.loancore;
 
 import java.io.Serializable;
+import java.util.Objects;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -78,4 +79,33 @@ public class Loan implements Serializable {
         return "Loan{" + "bookTitle=" + bookTitle + ", member=" + member + ", returnDate=" + returnDate + '}';
     }
 
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Loan other = (Loan) obj;
+        if (!Objects.equals(this.bookTitle, other.bookTitle)) {
+            return false;
+        }
+        if (!Objects.equals(this.member, other.member)) {
+            return false;
+        }
+        return true;
+    }
+    
+    
+    
 }

@@ -29,21 +29,20 @@ import java.util.concurrent.atomic.AtomicInteger;
  *
  * @author Airi
  */
-
 public class LoanManagerImpl implements LoanManager {
-    
+
     private static ConcurrentHashMap<Integer, Loan> loans = new ConcurrentHashMap<Integer, Loan>();
     private static AtomicInteger loanMapKey = new AtomicInteger();
     private static LoanManagerImpl loanManagerConnectionInstance;
     private static MemberManagerImpl memberManagerConnectionInstance;
     private static Library libraryConnectionInstance;
-    
-    public LoanManagerImpl() throws LoanException, IOException, LibraryException{
+
+    public LoanManagerImpl() throws LoanException, IOException, LibraryException {
         System.out.println("Created an instance of LoanSystem");
         memberManagerConnectionInstance = memberManagerConnectionInstance.getInstance();
         libraryConnectionInstance = libraryConnectionInstance.getInstance();
     }
-    
+
     // SINGLETON    
     public static LoanManagerImpl getInstance() throws LoanException, IOException, LibraryException {
         if (loanManagerConnectionInstance == null) {
@@ -52,80 +51,99 @@ public class LoanManagerImpl implements LoanManager {
         }
         return loanManagerConnectionInstance;
     }
-    
+
     public ConcurrentHashMap<Integer, Loan> getLoansMap() {
         return loans;
     }
-    
-    public void listLoan(int memberID) {
-        // Get all Keys
-        
-        /*ConcurrentHashMap<Integer, Loan> loans2 = loanManagerConnectionInstance.getLoansMap();
-        
-        
-        
-        for(Map.Entry<Integer, Loan> loan : loans2.entrySet()){
-            System.out.println("Current MemberID: ");
-            System.out.println(loan.getValue().getMember().getMemberID());
-        }*/
-        //for(int valuesloanManagerConnectionInstance.getLoansMap().keys();
-        
-        
-        
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
+    /*
+    public String listLoan(String bookTitle) {
+        ConcurrentHashMap<Integer, Loan> loansMap = loanManagerConnectionInstance.getLoansMap();
+        for (Map.Entry<Integer, Loan> loan : loansMap.entrySet()) {
+            if (loan.getValue().getBookTitle().equals(bookTitle)) {
+                return loan.toString();
+            }
+        }
+        return "No loans are associated with book title: " + bookTitle;
     }
-    
-    
+
+    public String listLoan(int memberID) {
+        ConcurrentHashMap<Integer, Loan> loansMap = loanManagerConnectionInstance.getLoansMap();
+
+        for (Map.Entry<Integer, Loan> loan : loansMap.entrySet()) {
+            if (loan.getValue().getMember().getMemberID() == memberID) {
+                //System.out.println("Member ID found: " + memberID);
+                return loan.toString();
+            }
+        }
+        return "No loans are associated with memberID: " + memberID;
+    }*/
+
     // Borrow a book --> Create loan
-    public void borrowBook(String callNumber, int memberID, String borrowDate, String returnDate) throws LoanException{
+    @Override
+    public void borrowBook(String callNumber, int memberID, String borrowDate, String returnDate) throws LoanException {
         ConcurrentHashMap<Integer, Member> memberMap = memberManagerConnectionInstance.getMembersMap();
         //System.out.println(memberMap);
         ConcurrentHashMap<String, Book> callNumberMap = libraryConnectionInstance.getCallNumbersMap();
         //System.out.println(callNumberMap);
         //Get current member with memberID
-        if (!memberMap.containsKey(memberID)){
+        if (!memberMap.containsKey(memberID)) {
             throw new LoanException("Loan Manager - Member does not exist!");
-        }
-        else{
-            if (!callNumberMap.containsKey(callNumber)){
+        } else {
+            if (!callNumberMap.containsKey(callNumber)) {
                 throw new LoanException("Loan Manager - Book's Call Number does not exist!");
-            }
-            else{
+            } else {
+                System.out.println("Here!");
                 Book book = callNumberMap.get(callNumber); // Get Book via callNumber
                 Member member = memberMap.get(memberID);
-                String bookTitle = book.getTitle();
+                
                 // Check if book is available => Associated with no memberID //
-                
-                
-                Loan loan = new Loan(book.getTitle(), member, borrowDate, returnDate);
-                int loanID = loanMapKey.incrementAndGet();
-                loan.setLoanID(loanID);
-                loans.put(loanID, loan);
+                if (loans.isEmpty()) {
+                    System.out.println("Here2!");
+                    Loan newLoan = new Loan(book.getTitle(), member, borrowDate, returnDate);
+                    int loanID = loanMapKey.incrementAndGet();
+                    newLoan.setLoanID(loanID);
+                    loans.put(loanID, newLoan);
+                } else {
+                     System.out.println("Here3!");
+                    for (Map.Entry<Integer, Loan> loan : loans.entrySet()) {
+                        if (loan.getValue().getMember() == null) {
+                            System.out.println("Here4!");
+                            System.out.println("Book is available");
+                            Loan newLoan = new Loan(book.getTitle(), member, borrowDate, returnDate);
+                            loans.put(loan.getValue().getLoanID(), newLoan);
+                            // Issue not updating old null Loan entry!!
+                        }
+                        else{
+                             System.out.println("Here5!");
+                            System.out.println("Book not available");
+                        }
+                    }
+                }
+
             }
-            
-        } 
+
+        }
     }
-    
+
     // Edit a Book Loan
-    public void editBookLoan(int loanID, String bookTitle, Member member, String borrowDate, String returnDate) throws LoanException{
-        if(!loans.containsKey(loanID))
-        {
+    @Override
+    public void editBookLoan(int loanID, String bookTitle, Member member, String borrowDate, String returnDate) throws LoanException {
+        if (!loans.containsKey(loanID)) {
             throw new LoanException("Loan Manager - Loan does not exist!");
-        }
-        else{
+        } else {
             Loan loan = new Loan(bookTitle, member, borrowDate, returnDate);
-            loans.put(loanID,loan); //Replace previous loan with updated book loan
+            loans.put(loanID, loan); //Replace previous loan with updated book loan
         }
     }
-    
+
     // Return Book
     // Set memberID and all attributes expect book to null
-    public void returnBookLoan(int loanID) throws LoanException{
-        if(!loans.containsKey(loanID))
-        {
+    @Override
+    public void returnBookLoan(int loanID) throws LoanException {
+        if (!loans.containsKey(loanID)) {
             throw new LoanException("Loan Manager - Loan does not exist!");
-        }
-        else{
+        } else {
             Loan loan = loans.get(loanID);
             // Keep book title there to get Call No.
             loan.setMember(null);
@@ -133,20 +151,19 @@ public class LoanManagerImpl implements LoanManager {
             loan.setReturnDate(null);
             loans.put(loanID, loan); // Update book loan
         }
-        
+
     }
-    
+
     // Delete a Book Loan
-    public void deleteBookLoan(int loanID) throws LoanException{
-        if(!loans.containsKey(loanID))
-        {
+    @Override
+    public void deleteBookLoan(int loanID) throws LoanException {
+        if (!loans.containsKey(loanID)) {
             throw new LoanException("Loan Manager - Loan does not exist!");
-        }
-        else{
+        } else {
             loans.remove(loanID); // Entirely remove loan from hashmap
         }
     }
-    
+
     // Database Version --> To implement after in-memory version //
     /*
     // SINGLETON Pattern
@@ -257,5 +274,5 @@ public class LoanManagerImpl implements LoanManager {
             e.printStackTrace();
         }
     }
-*/
+     */
 }

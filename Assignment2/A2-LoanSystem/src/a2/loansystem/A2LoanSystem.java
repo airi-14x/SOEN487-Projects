@@ -43,11 +43,12 @@ public class A2LoanSystem {
         System.out.println("Get Book");
         System.out.println(library.getBook(1));
 
-        System.out.println("Remove Book");
-        library.removeBook(1);
-        System.out.println(library.getBooksMap());
-        System.out.println(library.getCallNumbersMap());
+        //System.out.println("Remove Book");
+        //library.removeBook(1);
+        //System.out.println(library.getBooksMap());
+        //System.out.println(library.getCallNumbersMap());
 
+        System.out.println("==============");
         // --- MemberManagerImpl --- //
         MemberManagerImpl members = new MemberManagerImpl();
         members.addMember("Airi", "fkwjf@gmail.com");
@@ -64,21 +65,34 @@ public class A2LoanSystem {
         //System.out.println(members.getMembersMap());
 
         
+        System.out.println("==============");
         // --- LoanManagerImpl --- //
         LoanManagerImpl loans = LoanManagerImpl.getInstance();
         loans.borrowBook("B 583 S74 2021", 1, "2020-02-04", "2020-03-04");
         System.out.println(loans.getLoansMap());
         Member member1 = new Member("Jo","hello@gmail.com");
         member1.setMemberID(members.memberMapKey()); // Need to set ID separately
-        loans.editBookLoan(1, "djkfdj", member1, "2020-03-04", "2020-04-03");
+        loans.editBookLoan(1, "Meditations", member1, "2020-03-04", "2020-04-03");
         System.out.println(loans.getLoansMap());
+        
+        loans.borrowBook("B 583 S74 2021", 1, "2020-02-04", "2020-03-04");
+        // Enable to test out methods if LoanService ones fail //
+        /*
+        System.out.println(loans.listLoan(1));
+        System.out.println(loans.listLoan(2));
+        
+        System.out.println(loans.listLoan("Meditations"));
+        System.out.println(loans.listLoan("Meditations2"));
+        */
+        
         loans.returnBookLoan(1);
         System.out.println(loans.getLoansMap());
         
-        loans.deleteBookLoan(1);
+        loans.borrowBook("B 583 S74 2021", 1, "2020-02-04", "2020-03-04");
+        System.out.println(members.getMembersMap());
         System.out.println(loans.getLoansMap());
-        
-        loans.listLoan(1);
+        //loans.deleteBookLoan(1);
+        //System.out.println(loans.getLoansMap());
         
         /*
         int input = 0;
