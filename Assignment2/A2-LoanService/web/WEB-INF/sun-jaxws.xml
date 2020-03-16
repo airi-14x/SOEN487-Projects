@@ -3,4 +3,7 @@
   <endpoint implementation="helloWorld.HelloWorld" name="HelloWorld" url-pattern="/HelloWorld"/>
   <endpoint implementation="a2.loanservice.LoanServiceLoanManagerImpl" name="LoanServiceLoanManagerImpl" url-pattern="/LoanServiceLoanManagerImpl"/>
   <endpoint implementation="a2.loanservice.LoanServiceMemberManagerImpl" name="LoanServiceMemberManagerImpl" url-pattern="/LoanServiceMemberManagerImpl"/>
+  <endpoint implementation="helloWorld.HelloWorld" name="HelloWorld" url-pattern="/HelloWorld"/>
+  <endpoint implementation="a2.loanservice.LoanServiceLoanManagerImpl" name="LoanServiceLoanManagerImpl" url-pattern="/LoanServiceLoanManagerImpl"/>
+  <endpoint implementation="a2.loanservice.LoanServiceMemberManagerImpl" name="LoanServiceMemberManagerImpl" url-pattern="/LoanServiceMemberManagerImpl"/>
 </endpoints>

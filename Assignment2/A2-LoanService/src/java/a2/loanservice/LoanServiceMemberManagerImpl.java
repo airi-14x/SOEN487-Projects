@@ -16,7 +16,7 @@ public class LoanServiceMemberManagerImpl implements LoanServiceMemberManager {
     private static MemberManagerImpl memberManager;
     
     public LoanServiceMemberManagerImpl() throws LoanException, IOException {
-        System.out.println("Created an instance of LoanService- MemberSystem()");
+        System.out.println("Created an instance of LoanService - MemberSystem");
         memberManager = memberManager.getInstance();
     }
     

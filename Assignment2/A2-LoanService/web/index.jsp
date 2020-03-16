@@ -4,6 +4,8 @@
     Author     : Airi
 --%>
 
+<%@page import="a2.librarycore.Book"%>
+<%@page import="a2.librarysystem.Library"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -13,6 +15,7 @@
     </head>
     <body>
         <h1></h1>
+  
     <%-- start web service invocation --%><hr/>
     <%
     try {
@@ -109,6 +112,7 @@
     }
     %>
     <%-- end web service invocation --%><hr/>
+
     </body>
     
     

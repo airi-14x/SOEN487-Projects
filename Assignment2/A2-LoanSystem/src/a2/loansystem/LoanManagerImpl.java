@@ -19,6 +19,8 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Enumeration;
+import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -42,7 +44,6 @@ public class LoanManagerImpl implements LoanManager {
         libraryConnectionInstance = libraryConnectionInstance.getInstance();
     }
     
-    
     // SINGLETON    
     public static LoanManagerImpl getInstance() throws LoanException, IOException, LibraryException {
         if (loanManagerConnectionInstance == null) {
@@ -56,6 +57,25 @@ public class LoanManagerImpl implements LoanManager {
         return loans;
     }
     
+    public void listLoan(int memberID) {
+        // Get all Keys
+        
+        /*ConcurrentHashMap<Integer, Loan> loans2 = loanManagerConnectionInstance.getLoansMap();
+        
+        
+        
+        for(Map.Entry<Integer, Loan> loan : loans2.entrySet()){
+            System.out.println("Current MemberID: ");
+            System.out.println(loan.getValue().getMember().getMemberID());
+        }*/
+        //for(int valuesloanManagerConnectionInstance.getLoansMap().keys();
+        
+        
+        
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    
     // Borrow a book --> Create loan
     public void borrowBook(String callNumber, int memberID, String borrowDate, String returnDate) throws LoanException{
         ConcurrentHashMap<Integer, Member> memberMap = memberManagerConnectionInstance.getMembersMap();
@@ -68,12 +88,15 @@ public class LoanManagerImpl implements LoanManager {
         }
         else{
             if (!callNumberMap.containsKey(callNumber)){
-                System.out.println("here");
                 throw new LoanException("Loan Manager - Book's Call Number does not exist!");
             }
             else{
                 Book book = callNumberMap.get(callNumber); // Get Book via callNumber
                 Member member = memberMap.get(memberID);
+                String bookTitle = book.getTitle();
+                // Check if book is available => Associated with no memberID //
+                
+                
                 Loan loan = new Loan(book.getTitle(), member, borrowDate, returnDate);
                 int loanID = loanMapKey.incrementAndGet();
                 loan.setLoanID(loanID);

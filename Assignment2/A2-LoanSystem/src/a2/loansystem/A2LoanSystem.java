@@ -60,8 +60,8 @@ public class A2LoanSystem {
         members.updateMember(2, "Alice", "sfdd");
         System.out.println(members.getMembersMap());
 
-        members.deleteMember(2);
-        System.out.println(members.getMembersMap());
+        //members.deleteMember(2);
+        //System.out.println(members.getMembersMap());
 
         
         // --- LoanManagerImpl --- //
@@ -77,14 +77,17 @@ public class A2LoanSystem {
         
         loans.deleteBookLoan(1);
         System.out.println(loans.getLoansMap());
+        
+        loans.listLoan(1);
+        
+        /*
         int input = 0;
-        //System.out.println("Stop A2 LoanSystem by entering '1': ");
         Scanner scan = new Scanner(System.in);
         while(input != 1)
         {
             System.out.println("Stop A2 LoanSystem by entering '1': ");
             input = scan.nextInt();
-        }
+        }*/
         // Database Version //
         //LoanManager loans = LoanManagerImpl.getInstance();
         //loans.dropLoanTable();
