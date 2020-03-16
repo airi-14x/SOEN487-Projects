@@ -7,6 +7,8 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import java.io.IOException;
+import java.io.Reader;
+import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -22,6 +24,10 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Unmarshaller;
+import org.eclipse.persistence.jaxb.UnmarshallerProperties;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -156,18 +162,22 @@ public class LibraryRESTService {
 
     }
 
+    //TODO 
     //Add book - Complex data types 
     @POST
-    @Path("/book_xml/add")
-    @Consumes(MediaType.APPLICATION_XML)
-    public Response addBookComplex(Book book) throws IOException {
-        XmlMapper xmlMapper = new XmlMapper();
-        Book bookObject = xmlMapper.readValue("<Book><title>" + book.getTitle() + "</title>" +
-                "<description>" + book.getDescription() + "</description>" + 
-                "<isbn>" + book.getIsbn() + "</isbn>" + 
-                "<author>" + book.getAuthor() + "</author>" +
-                "<publisher>" + book.getPublisher() + "</publisher>" + 
-                "<callNumber>" + book.getCallNumber() + "</callNumber></Book>", Book.class);
+    @Path("/book_json/add")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response addBookComplex(Book book) throws IOException, JAXBException {
+        ObjectMapper objectMapper = new ObjectMapper();
+        String jsonString = objectMapper.writeValueAsString(book);
+        /*String jsonString = "{ \"title\" : " + book.getTitle() 
+                +"\"description\" : " + book.getDescription() + "," +
+                "\"isbn\" : " + book.getIsbn() + "," 
+                + "\"publisher\" : " + book.getPublisher() + "," 
+                + "\"callNumber\" : " + book.getCallNumber()
+                +"}";*/
+        
+        Book bookObject = jaxbJsonStringToObject(jsonString);
         try {
             librarySystem.addBook(bookObject.getTitle(), bookObject.getDescription(), bookObject.getIsbn(), bookObject.getAuthor(),
                     bookObject.getPublisher(), bookObject.getCallNumber());
@@ -176,7 +186,7 @@ public class LibraryRESTService {
             return Response.status(500).entity("Error").build();
         }
 
-    }
+    }   
     
     //TODO - not use query param, use form param when we have client
     //Update book - Basic data types
@@ -218,8 +228,26 @@ public class LibraryRESTService {
             return Response.status(500).entity("Error").build();
         }
     }
+    
+    // TODO 
     //Delete book - Produces TEXT_PLAIN
     //Delete book - Produces JSON
     //Delete book - Produces XML
     //Delete book - Produces HTML
+    
+    private static Book jaxbJsonStringToObject(String jsonString) throws JAXBException 
+    {
+        JAXBContext jaxbContext;
+        
+            jaxbContext = JAXBContext.newInstance(Book.class);
+            Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
+            
+            //Set JSON type
+            jaxbUnmarshaller.setProperty(UnmarshallerProperties.MEDIA_TYPE, "application/json");
+            jaxbUnmarshaller.setProperty(UnmarshallerProperties.JSON_INCLUDE_ROOT, false);
+             
+            Book book = (Book) jaxbUnmarshaller.unmarshal(new StringReader(jsonString));
+        
+        return book;
+    }
 }

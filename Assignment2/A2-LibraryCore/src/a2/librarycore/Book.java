@@ -7,6 +7,8 @@ package a2.librarycore;
 
 import java.io.Serializable;
 import java.util.Objects;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -14,9 +16,11 @@ import javax.xml.bind.annotation.XmlRootElement;
  *
  * @author Airi
  */
+//@XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name="Book")
 public class Book implements Serializable {
 
+    @XmlElement
     private int id; 
     @XmlElement
     private String title;
