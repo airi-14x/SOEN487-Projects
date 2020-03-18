@@ -6,22 +6,10 @@
 package a2.librarysystem;
 
 import a2.librarycore.Book;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.Properties;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  *
@@ -36,7 +24,7 @@ public class Library {
 
     // Cannot be private
     public Library() {
-        System.out.println("Created an instance of Library");
+        System.out.println("Created an instance of Library()");
     }
 
         
@@ -133,7 +121,7 @@ public class Library {
             throw new LibraryException("Library - Book cannot be removed!");
         } else {
             String callNumber = books.get(id).getCallNumber();
-            System.out.println(callNumber);
+            //System.out.println(callNumber);
             callNumbers.remove(callNumber);
             books.remove(id);
         }

@@ -76,7 +76,7 @@ public class Loan implements Serializable {
 
     @Override
     public String toString() {
-        return "Loan{" + "bookTitle=" + bookTitle + ", member=" + member + ", returnDate=" + returnDate + '}';
+        return "Loan{" + "loanID=" + loanID + ", bookTitle=" + bookTitle + ", member=" + member + ", borrowDate=" + borrowDate + ", returnDate=" + returnDate + '}';
     }
 
     @Override

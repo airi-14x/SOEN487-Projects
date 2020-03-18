@@ -26,56 +26,73 @@ public class A2LoanSystem {
         // --- Library --- //
         Library library = new Library();
         Book book = new Book();
+        
+        // ADD BOOKS //
         library.addBook("Meditations", "Written in Greek, without any intention of publication, by the only Roman emperor",
                 "01404493371", "Marcus Aurelius", "Penguin Classic", "B 583 S74 2012");
-        System.out.println(library.getBooksMap());
-        System.out.println(library.getCallNumbersMap());
-
+        library.addBook("Happiness", "helloworld", "231232141", "Panda Bear", "HappinessCorp", "H 123 456 2016");
         library.addBook("2-Meditations", "Written in Greek, without any intention of publication, by the only Roman emperor",
                 "01404493372", "Marcus Aurelius", "Penguin Classic", "B 583 S74 2021");
-
-        library.updateBook(1, "Meditations", "Written in Greek, without any intention of publication, by the only Roman emperor",
-                "01404493371", "Marcus Aurelius", "Penguin Classic", "B 583 S74 2014");
-        System.out.println("After Update");
         System.out.println(library.getBooksMap());
         System.out.println(library.getCallNumbersMap());
 
-        System.out.println("Get Book");
+        // UPDATE BOOK //
+        System.out.println("After Update:");
+        library.updateBook(1, "Meditations", "Written in Greek, without any intention of publication, by the only Roman emperor",
+                "01404493371", "Marcus Aurelius", "Penguin Classic", "B 583 S74 2014");
+        System.out.println(library.getBooksMap());
+        System.out.println(library.getCallNumbersMap());
+
+        // GET BOOK //
+        System.out.println("Get Book:");
         System.out.println(library.getBook(1));
 
-        //System.out.println("Remove Book");
-        //library.removeBook(1);
-        //System.out.println(library.getBooksMap());
-        //System.out.println(library.getCallNumbersMap());
+        
+        // DELETE BOOK //
+        /*
+        System.out.println("Remove Book");
+        library.removeBook(1);
+        System.out.println(library.getBooksMap());
+        System.out.println(library.getCallNumbersMap());
+        */
 
         System.out.println("==============");
         // --- MemberManagerImpl --- //
         MemberManagerImpl members = new MemberManagerImpl();
+        
+        // ADD MEMBER //
         members.addMember("Airi", "fkwjf@gmail.com");
         members.addMember("Ali", "wssjf@gmail.com");
         System.out.println(members.getMembersMap());
 
+        // GET MEMBER //
         System.out.println(members.getMembers());
         System.out.println(members.getMemberInfo(4));
 
+        // EDIT MEMBER //
         members.updateMember(2, "Alice", "sfdd");
         System.out.println(members.getMembersMap());
 
+        // DELETE MEMBER //
         //members.deleteMember(2);
         //System.out.println(members.getMembersMap());
 
-        
         System.out.println("==============");
         // --- LoanManagerImpl --- //
         LoanManagerImpl loans = LoanManagerImpl.getInstance();
+        
+        // BORROW BOOK //
         loans.borrowBook("B 583 S74 2021", 1, "2020-02-04", "2020-03-04");
         System.out.println(loans.getLoansMap());
         Member member1 = new Member("Jo","hello@gmail.com");
-        member1.setMemberID(members.memberMapKey()); // Need to set ID separately
+        member1.setMemberID(members.memberMapKey()); // Need to set ID separately if called outside of LoanSystem class
+        
+        // EDIT BOOK //
         loans.editBookLoan(1, "Meditations", member1, "2020-03-04", "2020-04-03");
         System.out.println(loans.getLoansMap());
         
         loans.borrowBook("B 583 S74 2021", 1, "2020-02-04", "2020-03-04");
+        
         // Enable to test out methods if LoanService ones fail //
         /*
         System.out.println(loans.listLoan(1));
@@ -88,29 +105,15 @@ public class A2LoanSystem {
         loans.returnBookLoan(1);
         System.out.println(loans.getLoansMap());
         
+        /*
         loans.borrowBook("B 583 S74 2021", 1, "2020-02-04", "2020-03-04");
         System.out.println(members.getMembersMap());
         System.out.println(loans.getLoansMap());
+        */
+        
         //loans.deleteBookLoan(1);
         //System.out.println(loans.getLoansMap());
         
-        /*
-        int input = 0;
-        Scanner scan = new Scanner(System.in);
-        while(input != 1)
-        {
-            System.out.println("Stop A2 LoanSystem by entering '1': ");
-            input = scan.nextInt();
-        }*/
-        // Database Version //
-        //LoanManager loans = LoanManagerImpl.getInstance();
-        //loans.dropLoanTable();
-        //loans.createLoanTable();
-        //loans.cleanup();
-        //MemberManager members = MemberManagerImpl.getInstance();
-        //members.dropMemberTable();
-        //members.createMemberTable();
-        //members.cleanup();
     }
 
 }
