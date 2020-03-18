@@ -25,11 +25,13 @@ public class MemberManagerImpl implements MemberManager {
         System.out.println("Created an instance of MemberSystem()");
     }
 
+    @Override
     public ConcurrentHashMap<Integer, Member> getMembersMap() {
         return members;
     }
     
     // For setting memberID manually //
+    @Override
     public int memberMapKey(){
         return memberMapKey.get();
     }
@@ -45,6 +47,7 @@ public class MemberManagerImpl implements MemberManager {
 
     // GET 
     // List members
+    @Override
     public synchronized String getMembers() {
         String currentMembers = members.toString();
         if (members.isEmpty()) {
@@ -55,6 +58,7 @@ public class MemberManagerImpl implements MemberManager {
     }
 
     // GET
+    @Override
     public synchronized String getMemberInfo(int memberID){
         // Return: memberID, String name, String contact
         if (!members.containsKey(memberID)) {
@@ -68,6 +72,7 @@ public class MemberManagerImpl implements MemberManager {
     }
 
     // POST
+    @Override
     public synchronized void addMember(String memberName, String memberContact) throws LoanException {
         int memberID = memberMapKey.incrementAndGet();
         Member member = new Member(memberName, memberContact);
@@ -80,6 +85,7 @@ public class MemberManagerImpl implements MemberManager {
     }
 
     // UPDATE
+    @Override
     public synchronized void updateMember(int memberID, String memberName, String memberContact) throws LoanException {
 
         if (!members.containsKey(memberID)) {
@@ -95,6 +101,7 @@ public class MemberManagerImpl implements MemberManager {
     }
 
     // DELETE
+    @Override
     public synchronized void deleteMember(int memberID) throws LoanException {
         if (!members.containsKey(memberID)) {
             throw new LoanException("Member Manager - Member cannot be found. Cannot delete!");

@@ -46,34 +46,44 @@ public class LoanManagerImpl implements LoanManager {
         return loans;
     }
 
-    /*
     public String listLoan(String bookTitle) {
         ConcurrentHashMap<Integer, Loan> loansMap = loanManagerConnectionInstance.getLoansMap();
+        String loanResult = ""; //Multiple loans with same title
         for (Map.Entry<Integer, Loan> loan : loansMap.entrySet()) {
             if (loan.getValue().getBookTitle().equals(bookTitle)) {
-                return loan.toString();
+                loanResult += loan.toString() + "\n";
             }
         }
-        return "No loans are associated with book title: " + bookTitle;
+        if (loanResult.isEmpty()){
+            return "No loans are associated with book title: " + bookTitle;
+        }
+        else{
+            return loanResult;
+        }
+       
     }
 
     public String listLoan(int memberID) {
         ConcurrentHashMap<Integer, Loan> loansMap = loanManagerConnectionInstance.getLoansMap();
-
+        String loanResult = ""; //Multiple loans with same memberID
         for (Map.Entry<Integer, Loan> loan : loansMap.entrySet()) {
             if (loan.getValue().getMember().getMemberID() == memberID) {
-                //System.out.println("Member ID found: " + memberID);
-                return loan.toString();
+                loanResult += loan.toString() + "\n";
             }
         }
-        return "No loans are associated with memberID: " + memberID;
-    }*/
+        if (loanResult.isEmpty()){
+            return "No loans are associated with memberID: " + memberID;
+        }
+        else{
+            return loanResult;
+        }
+        
+    }
     // Borrow a book --> Create loan
     @Override
     public void borrowBook(String callNumber, int memberID, String borrowDate, String returnDate) throws LoanException {
         ConcurrentHashMap<Integer, Member> memberMap = memberManagerConnectionInstance.getMembersMap();
         ConcurrentHashMap<String, Book> callNumberMap = libraryConnectionInstance.getCallNumbersMap();
-
         //Get current member with memberID
         if (!memberMap.containsKey(memberID)) {
             throw new LoanException("Loan Manager - Member does not exist!");
@@ -84,6 +94,7 @@ public class LoanManagerImpl implements LoanManager {
                 Book book = callNumberMap.get(callNumber); // Get Book via callNumber
                 Member member = memberMap.get(memberID);
 
+                int currentLoanID = 0;
                 // Check if book is available => Associated with no memberID //
                 if (loans.isEmpty()) {
                     Loan newLoan = new Loan(book.getTitle(), member, borrowDate, returnDate);
@@ -92,17 +103,25 @@ public class LoanManagerImpl implements LoanManager {
                     loans.put(loanID, newLoan);
                 } else {
                     for (Map.Entry<Integer, Loan> loan : loans.entrySet()) {
-                        if (loan.getValue().getMember() == null) {
-                            System.out.println("Book is available");
-                            Loan newLoan = new Loan(book.getTitle(), member, borrowDate, returnDate);
-                            newLoan.setLoanID(loan.getKey()); //Get current key "id" to match loanID value
-                            System.out.println("New Loan");
-                            System.out.println(newLoan);
-                            loans.put(loan.getKey(), newLoan);
-                            // Issue not updating old null Loan entry!!
-                        } else {
-                            System.out.println("Book not available");
+                        if (loan.getValue().getBookTitle().equals(book.getTitle())) {
+                            currentLoanID = loan.getKey();
+                            if (loan.getValue().getMember() == null) {
+                                System.out.println("Book is available");
+                                Loan newLoan = new Loan(book.getTitle(), member, borrowDate, returnDate);
+                                newLoan.setLoanID(currentLoanID); //Get current key "id" to match loanID value
+                                System.out.println("New Loan");
+                                System.out.println(newLoan);
+                                loans.put(loan.getKey(), newLoan);
+                            }
                         }
+                    }
+                    if (currentLoanID == 0) {
+                        System.out.println("Book not available");
+                    } else {
+                        Loan newLoan = new Loan(book.getTitle(), member, borrowDate, returnDate);
+                        int loanID = loanMapKey.incrementAndGet();
+                        newLoan.setLoanID(loanID);
+                        loans.put(loanID, newLoan);
                     }
                 }
 
@@ -111,15 +130,20 @@ public class LoanManagerImpl implements LoanManager {
         }
     }
 
-    // Edit a Book Loan
+    // Edit a Book Loan --> Just for editing borrowDate, returnDate, member. It will mess up if you edit bookTitle
     @Override
-    public void editBookLoan(int loanID, String bookTitle, Member member, String borrowDate, String returnDate) throws LoanException {
+    public void editBookLoan(int loanID, Member member, String borrowDate, String returnDate) throws LoanException {
         if (!loans.containsKey(loanID)) {
             throw new LoanException("Loan Manager - Loan does not exist!");
         } else {
-            Loan loan = new Loan(bookTitle, member, borrowDate, returnDate);
-            loan.setLoanID(loanID);
-            loans.put(loanID, loan); //Replace previous loan with updated book loan
+            Loan newLoan = new Loan(loans.get(loanID).getBookTitle(), member, borrowDate, returnDate);
+            newLoan.setLoanID(loanID);
+            System.out.println("Old Loans: ");
+            System.out.println(loans);
+            loans.put(loanID, newLoan); //Replace previous loan with updated book loan
+            System.out.println("New Loans: ");
+            System.out.println(loans);
+            System.out.println("=====!====");
         }
     }
 

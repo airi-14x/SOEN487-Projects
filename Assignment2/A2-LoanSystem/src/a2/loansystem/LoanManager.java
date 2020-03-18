@@ -17,7 +17,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public interface LoanManager {
     public ConcurrentHashMap<Integer, Loan> getLoansMap();
     public void borrowBook(String callNumber, int memberID, String borrowDate, String returnDate) throws LoanException;
-    public void editBookLoan(int loanID, String bookTitle, Member member, String borrowDate, String returnDate) throws LoanException;
+    public void editBookLoan(int loanID, Member member, String borrowDate, String returnDate) throws LoanException;
     public void returnBookLoan(int loanID) throws LoanException;
     public void deleteBookLoan(int loanID) throws LoanException;
 }

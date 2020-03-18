@@ -56,8 +56,8 @@ public class LoanServiceLoanManagerImpl implements LoanServiceLoanManager {
     }
 
     @Override
-    public void editBookLoan(int loanID, String bookTitle, Member member, String borrowDate, String returnDate) throws LoanException {
-       loanManager.editBookLoan(loanID, bookTitle, member, borrowDate, returnDate);
+    public void editBookLoan(int loanID, Member member, String borrowDate, String returnDate) throws LoanException {
+       loanManager.editBookLoan(loanID, member, borrowDate, returnDate);
     }
 
     @Override

@@ -31,8 +31,8 @@ public class A2LoanSystem {
         library.addBook("Meditations", "Written in Greek, without any intention of publication, by the only Roman emperor",
                 "01404493371", "Marcus Aurelius", "Penguin Classic", "B 583 S74 2012");
         library.addBook("Happiness", "helloworld", "231232141", "Panda Bear", "HappinessCorp", "H 123 456 2016");
-        library.addBook("2-Meditations", "Written in Greek, without any intention of publication, by the only Roman emperor",
-                "01404493372", "Marcus Aurelius", "Penguin Classic", "B 583 S74 2021");
+        library.addBook("123-Help", " publication, by the only Roman emperor",
+                "01404493372", "fefe", "Penguin Classic", "B 583 S74 2021");
         System.out.println(library.getBooksMap());
         System.out.println(library.getCallNumbersMap());
 
@@ -88,31 +88,41 @@ public class A2LoanSystem {
         member1.setMemberID(members.memberMapKey()); // Need to set ID separately if called outside of LoanSystem class
         
         // EDIT BOOK //
-        loans.editBookLoan(1, "Meditations", member1, "2020-03-04", "2020-04-03");
+        loans.editBookLoan(1, member1, "2020-03-04", "2020-04-03");
         System.out.println(loans.getLoansMap());
+        System.out.println(library.getBooksMap());
+        System.out.println(library.getCallNumbersMap());
         
+        // Borrowing a loaned book //
+        System.out.println("Borrowing - B 583 S74 2021:");
         loans.borrowBook("B 583 S74 2021", 1, "2020-02-04", "2020-03-04");
         
-        // Enable to test out methods if LoanService ones fail //
-        /*
-        System.out.println(loans.listLoan(1));
-        System.out.println(loans.listLoan(2));
         
-        System.out.println(loans.listLoan("Meditations"));
-        System.out.println(loans.listLoan("Meditations2"));
-        */
+        // Borrowing another book //
+        System.out.println("Borrowing - H 123 456 2016");
+        loans.borrowBook("H 123 456 2016", 1, "2020-02-04", "2020-03-04");
         
-        loans.returnBookLoan(1);
+        //loans.returnBookLoan(1);
         System.out.println(loans.getLoansMap());
         
-        /*
         loans.borrowBook("B 583 S74 2021", 1, "2020-02-04", "2020-03-04");
         System.out.println(members.getMembersMap());
         System.out.println(loans.getLoansMap());
-        */
         
-        //loans.deleteBookLoan(1);
-        //System.out.println(loans.getLoansMap());
+        
+        // Enable to test out methods if LoanService ones fail //
+        
+        System.out.println("Listing Loans:");
+        System.out.println(loans.listLoan(1));
+        System.out.println(loans.listLoan(2));
+        
+        System.out.println("Listing Loans(BookTitle):");
+        System.out.println(loans.listLoan("Meditations"));
+        System.out.println(loans.listLoan("Meditations2"));
+        
+        
+        loans.deleteBookLoan(1);
+        System.out.println(loans.getLoansMap());
         
     }
 
