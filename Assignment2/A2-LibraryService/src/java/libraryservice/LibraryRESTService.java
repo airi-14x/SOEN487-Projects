@@ -185,9 +185,18 @@ public class LibraryRESTService {
         }
     }
 
-    // TODO 
     //Delete book - Produces TEXT_PLAIN
-    //Delete book - Produces JSON
-    //Delete book - Produces XML
-    //Delete book - Produces HTML
+    @DELETE
+    @Produces(MediaType.TEXT_PLAIN)
+    @Path("/delete/{id}")
+    public Response deleteBookPlain(@PathParam("id") int id) {
+        try {
+            librarySystem.removeBook(id);
+            return Response.status(200).entity("Success").build();
+        } catch (LibraryException ex) {
+            return Response.status(500).entity("Error").build();
+            
+        }
+    }
+
 }
