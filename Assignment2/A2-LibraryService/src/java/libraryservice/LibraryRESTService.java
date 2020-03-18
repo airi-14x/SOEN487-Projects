@@ -5,28 +5,20 @@ import a2.librarycore.BookList;
 import a2.librarysystem.Library;
 import a2.librarysystem.LibraryException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import java.io.IOException;
-import java.io.Reader;
-import java.io.StringReader;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.Path;
 import javax.ws.rs.DELETE;
+import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Unmarshaller;
-import org.eclipse.persistence.jaxb.UnmarshallerProperties;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -66,7 +58,7 @@ public class LibraryRESTService {
     @Path("/books_xml")
     public BookList listBooksXML() throws LibraryException {
         ConcurrentHashMap bookMap = librarySystem.getBooksMap();
-        List<Book> bookList = new ArrayList<> (bookMap.values());
+        List<Book> bookList = new ArrayList<>(bookMap.values());
         BookList books = new BookList();
         books.setList(bookList);
         return books;
@@ -94,42 +86,54 @@ public class LibraryRESTService {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/book_json/{id}")
-    public Response getBookJSON(@PathParam("id") int id) throws LibraryException {
-        Book book = librarySystem.getBookById(id);
-        return Response.status(200).entity(book).build();
+    public Response getBookJSON(@PathParam("id") int id) {
+        try {
+            Book book = librarySystem.getBookById(id);
+            return Response.status(200).entity(book).build();
+        } catch (LibraryException ex) {
+            return Response.status(500).entity("Error").build();
+        }
     }
 
     //Get book - Produces XML
     @GET
     @Produces(MediaType.APPLICATION_XML)
     @Path("/book_xml/{id}")
-    public Response getBookXML(@PathParam("id") int id) throws LibraryException {
-        Book book = librarySystem.getBookById(id);
-        return Response.status(200).entity(book).build();
+    public Response getBookXML(@PathParam("id") int id) {
+        try {
+            Book book = librarySystem.getBookById(id);
+            return Response.status(200).entity(book).build();
+        } catch (LibraryException ex) {
+            return Response.status(500).entity("Error").build();
+        }
     }
 
     //Get book - Produces HTML
     @GET
     @Produces(MediaType.TEXT_HTML)
     @Path("/book_html/{id}")
-    public Response getBookHTML(@PathParam("id") int id) throws LibraryException {
-        Book book = librarySystem.getBookById(id);
-        String output = librarySystem.bookToHtml(book);
-        return Response.status(200).entity(output).build();
+    public Response getBookHTML(@PathParam("id") int id) {
+        try {
+            Book book = librarySystem.getBookById(id);
+            String output = librarySystem.bookToHtml(book);
+            return Response.status(200).entity(output).build();
+        } catch (LibraryException e) {
+            return Response.status(500).entity("Error").build();
+        }
+
     }
 
-    //TODO - not use query param, use form param when we have client
     //Add book - Basic data types 
     @POST
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     @Produces(MediaType.TEXT_PLAIN)
     @Path("/book_basic/add")
-    public Response addBookBasic(@QueryParam("title") String title,
-            @QueryParam("description") String description,
-            @QueryParam("isbn") String isbn,
-            @QueryParam("author") String author,
-            @QueryParam("publisher") String publisher,
-            @QueryParam("callNumber") String callNumber) {
+    public Response addBookBasic(@FormParam("title") String title,
+            @FormParam("description") String description,
+            @FormParam("isbn") String isbn,
+            @FormParam("author") String author,
+            @FormParam("publisher") String publisher,
+            @FormParam("callNumber") String callNumber) {
         try {
             librarySystem.addBook(title, description, isbn, author, publisher, callNumber);
             return Response.status(200).entity("Success").build();
@@ -139,16 +143,14 @@ public class LibraryRESTService {
 
     }
 
-    //TODO 
     //Add book - Complex data types 
     @POST
     @Path("/book_json/add")
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response addBookComplex(Book book) throws IOException, JAXBException {
-        ObjectMapper objectMapper = new ObjectMapper();
-        String jsonString = objectMapper.writeValueAsString(book);
-        Book bookObject = jaxbJsonStringToObject(jsonString);
+    public Response addBookComplex(String book) {
         try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            Book bookObject = objectMapper.readValue(book, Book.class);
             librarySystem.addBook(bookObject.getTitle(), bookObject.getDescription(), bookObject.getIsbn(), bookObject.getAuthor(),
                     bookObject.getPublisher(), bookObject.getCallNumber());
             return Response.status(200).entity("Success").build();
@@ -158,18 +160,17 @@ public class LibraryRESTService {
 
     }
 
-    //TODO - not use query param, use form param when we have client
     //Update book - Basic data types
     @PUT
     @Produces(MediaType.TEXT_PLAIN)
     @Path("/book_basic/update")
-    public Response updateBookBasic(@QueryParam("id") int id,
-            @QueryParam("title") String title,
-            @QueryParam("description") String description,
-            @QueryParam("isbn") String isbn,
-            @QueryParam("author") String author,
-            @QueryParam("publisher") String publisher,
-            @QueryParam("callNumber") String callNumber) {
+    public Response updateBookBasic(@FormParam("id") int id,
+            @FormParam("title") String title,
+            @FormParam("description") String description,
+            @FormParam("isbn") String isbn,
+            @FormParam("author") String author,
+            @FormParam("publisher") String publisher,
+            @FormParam("callNumber") String callNumber) {
         try {
             librarySystem.updateBook(id, title, description, isbn, author, publisher, callNumber);
             return Response.status(200).entity("Success").build();
@@ -178,33 +179,35 @@ public class LibraryRESTService {
         }
     }
 
-    //TODO
     //Update book - Complex data types
     @PUT
-    @Produces(MediaType.APPLICATION_XML)
-    @Path("/book_xml/update/{id}")
-    public Response updateBookXml(@PathParam("id") int id, Book book) {
-        return Response.status(200).entity("Success").build();
+    @Produces(MediaType.TEXT_PLAIN)
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Path("/book_json/update/{id}")
+    public Response updateBookXml(@PathParam("id") int id, String bookJson) {
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            Book book = objectMapper.readValue(bookJson, Book.class);
+            librarySystem.updateBook(id, book.getTitle(), book.getDescription(), book.getIsbn(),
+                    book.getAuthor(), book.getPublisher(), book.getCallNumber());
+            return Response.status(200).entity("Success").build();
+        } catch (Exception e) {
+            return Response.status(500).entity("Error").build();
+        }
     }
 
-    // TODO 
     //Delete book - Produces TEXT_PLAIN
-    //Delete book - Produces JSON
-    //Delete book - Produces XML
-    //Delete book - Produces HTML
-    
-    private static Book jaxbJsonStringToObject(String jsonString) throws JAXBException {
-        JAXBContext jaxbContext;
+    @DELETE
+    @Produces(MediaType.TEXT_PLAIN)
+    @Path("/delete/{id}")
+    public Response deleteBookPlain(@PathParam("id") int id) {
+        try {
+            librarySystem.removeBook(id);
+            return Response.status(200).entity("Success").build();
+        } catch (LibraryException ex) {
+            return Response.status(500).entity("Error").build();
 
-        jaxbContext = JAXBContext.newInstance(Book.class);
-        Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-
-        //Set JSON type
-        jaxbUnmarshaller.setProperty(UnmarshallerProperties.MEDIA_TYPE, "application/json");
-        jaxbUnmarshaller.setProperty(UnmarshallerProperties.JSON_INCLUDE_ROOT, false);
-
-        Book book = (Book) jaxbUnmarshaller.unmarshal(new StringReader(jsonString));
-
-        return book;
+        }
     }
+
 }
