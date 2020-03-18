@@ -18,7 +18,6 @@ import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
-import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.xml.bind.JAXBException;
@@ -61,7 +60,7 @@ public class LibraryRESTService {
     @Path("/books_xml")
     public BookList listBooksXML() throws LibraryException {
         ConcurrentHashMap bookMap = librarySystem.getBooksMap();
-        List<Book> bookList = new ArrayList<> (bookMap.values());
+        List<Book> bookList = new ArrayList<>(bookMap.values());
         BookList books = new BookList();
         books.setList(bookList);
         return books;
@@ -150,18 +149,17 @@ public class LibraryRESTService {
 
     }
 
-    //TODO - not use query param, use form param when we have client
     //Update book - Basic data types
     @PUT
     @Produces(MediaType.TEXT_PLAIN)
     @Path("/book_basic/update")
-    public Response updateBookBasic(@QueryParam("id") int id,
-            @QueryParam("title") String title,
-            @QueryParam("description") String description,
-            @QueryParam("isbn") String isbn,
-            @QueryParam("author") String author,
-            @QueryParam("publisher") String publisher,
-            @QueryParam("callNumber") String callNumber) {
+    public Response updateBookBasic(@FormParam("id") int id,
+            @FormParam("title") String title,
+            @FormParam("description") String description,
+            @FormParam("isbn") String isbn,
+            @FormParam("author") String author,
+            @FormParam("publisher") String publisher,
+            @FormParam("callNumber") String callNumber) {
         try {
             librarySystem.updateBook(id, title, description, isbn, author, publisher, callNumber);
             return Response.status(200).entity("Success").build();
@@ -170,13 +168,21 @@ public class LibraryRESTService {
         }
     }
 
-    //TODO
     //Update book - Complex data types
     @PUT
-    @Produces(MediaType.APPLICATION_XML)
-    @Path("/book_xml/update/{id}")
-    public Response updateBookXml(@PathParam("id") int id, Book book) {
-        return Response.status(200).entity("Success").build();
+    @Produces(MediaType.TEXT_PLAIN)
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Path("/book_json/update/{id}")
+    public Response updateBookXml(@PathParam("id") int id, String bookJson) {
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            Book book = objectMapper.readValue(bookJson, Book.class);
+            librarySystem.updateBook(id, book.getTitle(), book.getDescription(), book.getIsbn(),
+                    book.getAuthor(), book.getPublisher(), book.getCallNumber());
+            return Response.status(200).entity("Success").build();
+        } catch (Exception e) {
+            return Response.status(500).entity("Error").build();
+        }
     }
 
     // TODO 
