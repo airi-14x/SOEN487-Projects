@@ -50,6 +50,9 @@ public class LoanManagerImpl implements LoanManager {
         ConcurrentHashMap<Integer, Loan> loansMap = loanManagerConnectionInstance.getLoansMap();
         String loanResult = ""; //Multiple loans with same title
         for (Map.Entry<Integer, Loan> loan : loansMap.entrySet()) {
+            //System.out.println(bookTitle);
+            //System.out.println(loan.getValue().getBookTitle());
+            //System.out.println("!!!!!!");
             if (loan.getValue().getBookTitle().equals(bookTitle)) {
                 loanResult += loan.toString() + "\n";
             }
@@ -95,16 +98,24 @@ public class LoanManagerImpl implements LoanManager {
                 Member member = memberMap.get(memberID);
 
                 int currentLoanID = 0;
+                Member currentLoanMember = null;
+                
                 // Check if book is available => Associated with no memberID //
+                // No Loans exists //
                 if (loans.isEmpty()) {
                     Loan newLoan = new Loan(book.getTitle(), member, borrowDate, returnDate);
                     int loanID = loanMapKey.incrementAndGet();
                     newLoan.setLoanID(loanID);
                     loans.put(loanID, newLoan);
-                } else {
+                
+                }
+                // Loans exist //
+                else {
                     for (Map.Entry<Integer, Loan> loan : loans.entrySet()) {
+                        // Matching the same book title //
                         if (loan.getValue().getBookTitle().equals(book.getTitle())) {
                             currentLoanID = loan.getKey();
+                            // Loan associated with book belongs to no member //
                             if (loan.getValue().getMember() == null) {
                                 System.out.println("Book is available");
                                 Loan newLoan = new Loan(book.getTitle(), member, borrowDate, returnDate);
@@ -112,12 +123,13 @@ public class LoanManagerImpl implements LoanManager {
                                 System.out.println("New Loan");
                                 System.out.println(newLoan);
                                 loans.put(loan.getKey(), newLoan);
+                                currentLoanMember = member;
                             }
                         }
                     }
-                    if (currentLoanID == 0) {
+                    if (currentLoanID == 0 && currentLoanMember == null) {
                         System.out.println("Book not available");
-                    } else {
+                    } else  {
                         Loan newLoan = new Loan(book.getTitle(), member, borrowDate, returnDate);
                         int loanID = loanMapKey.incrementAndGet();
                         newLoan.setLoanID(loanID);
