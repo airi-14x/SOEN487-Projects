@@ -6,10 +6,7 @@ import a2.librarysystem.Library;
 import a2.librarysystem.LibraryException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
-import java.io.Reader;
-import java.io.StringReader;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import javax.ws.rs.Consumes;
@@ -24,10 +21,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
-import javax.xml.bind.Unmarshaller;
-import org.eclipse.persistence.jaxb.UnmarshallerProperties;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -139,15 +133,13 @@ public class LibraryRESTService {
 
     }
 
-    //TODO 
     //Add book - Complex data types 
     @POST
     @Path("/book_json/add")
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response addBookComplex(Book book) throws IOException, JAXBException {
+    public Response addBookComplex(String book) throws IOException, JAXBException {
         ObjectMapper objectMapper = new ObjectMapper();
-        String jsonString = objectMapper.writeValueAsString(book);
-        Book bookObject = jaxbJsonStringToObject(jsonString);
+        Book bookObject = objectMapper.readValue(book, Book.class);
         try {
             librarySystem.addBook(bookObject.getTitle(), bookObject.getDescription(), bookObject.getIsbn(), bookObject.getAuthor(),
                     bookObject.getPublisher(), bookObject.getCallNumber());
@@ -192,19 +184,4 @@ public class LibraryRESTService {
     //Delete book - Produces JSON
     //Delete book - Produces XML
     //Delete book - Produces HTML
-    
-    private static Book jaxbJsonStringToObject(String jsonString) throws JAXBException {
-        JAXBContext jaxbContext;
-
-        jaxbContext = JAXBContext.newInstance(Book.class);
-        Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-
-        //Set JSON type
-        jaxbUnmarshaller.setProperty(UnmarshallerProperties.MEDIA_TYPE, "application/json");
-        jaxbUnmarshaller.setProperty(UnmarshallerProperties.JSON_INCLUDE_ROOT, false);
-
-        Book book = (Book) jaxbUnmarshaller.unmarshal(new StringReader(jsonString));
-
-        return book;
-    }
 }
