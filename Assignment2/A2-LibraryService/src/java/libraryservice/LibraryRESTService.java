@@ -5,7 +5,6 @@ import a2.librarycore.BookList;
 import a2.librarysystem.Library;
 import a2.librarysystem.LibraryException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
@@ -20,7 +19,6 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import javax.xml.bind.JAXBException;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -88,28 +86,41 @@ public class LibraryRESTService {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/book_json/{id}")
-    public Response getBookJSON(@PathParam("id") int id) throws LibraryException {
-        Book book = librarySystem.getBookById(id);
-        return Response.status(200).entity(book).build();
+    public Response getBookJSON(@PathParam("id") int id) {
+        try {
+            Book book = librarySystem.getBookById(id);
+            return Response.status(200).entity(book).build();
+        } catch (LibraryException ex) {
+            return Response.status(500).entity("Error").build();
+        }
     }
 
     //Get book - Produces XML
     @GET
     @Produces(MediaType.APPLICATION_XML)
     @Path("/book_xml/{id}")
-    public Response getBookXML(@PathParam("id") int id) throws LibraryException {
-        Book book = librarySystem.getBookById(id);
-        return Response.status(200).entity(book).build();
+    public Response getBookXML(@PathParam("id") int id) {
+        try {
+            Book book = librarySystem.getBookById(id);
+            return Response.status(200).entity(book).build();
+        } catch (LibraryException ex) {
+            return Response.status(500).entity("Error").build();
+        }
     }
 
     //Get book - Produces HTML
     @GET
     @Produces(MediaType.TEXT_HTML)
     @Path("/book_html/{id}")
-    public Response getBookHTML(@PathParam("id") int id) throws LibraryException {
-        Book book = librarySystem.getBookById(id);
-        String output = librarySystem.bookToHtml(book);
-        return Response.status(200).entity(output).build();
+    public Response getBookHTML(@PathParam("id") int id) {
+        try {
+            Book book = librarySystem.getBookById(id);
+            String output = librarySystem.bookToHtml(book);
+            return Response.status(200).entity(output).build();
+        } catch (LibraryException e) {
+            return Response.status(500).entity("Error").build();
+        }
+
     }
 
     //Add book - Basic data types 
@@ -136,10 +147,10 @@ public class LibraryRESTService {
     @POST
     @Path("/book_json/add")
     @Consumes(MediaType.APPLICATION_JSON)
-    public Response addBookComplex(String book) throws IOException, JAXBException {
-        ObjectMapper objectMapper = new ObjectMapper();
-        Book bookObject = objectMapper.readValue(book, Book.class);
+    public Response addBookComplex(String book) {
         try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            Book bookObject = objectMapper.readValue(book, Book.class);
             librarySystem.addBook(bookObject.getTitle(), bookObject.getDescription(), bookObject.getIsbn(), bookObject.getAuthor(),
                     bookObject.getPublisher(), bookObject.getCallNumber());
             return Response.status(200).entity("Success").build();
@@ -195,7 +206,7 @@ public class LibraryRESTService {
             return Response.status(200).entity("Success").build();
         } catch (LibraryException ex) {
             return Response.status(500).entity("Error").build();
-            
+
         }
     }
 
