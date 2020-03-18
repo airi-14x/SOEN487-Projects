@@ -16,23 +16,16 @@ import javax.xml.bind.annotation.XmlRootElement;
  *
  * @author Airi
  */
-//@XmlAccessorType(XmlAccessType.FIELD)
+@XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name="Book")
 public class Book implements Serializable {
 
-    @XmlElement
     private int id; 
-    @XmlElement
     private String title;
-    @XmlElement
     private String description;
-    @XmlElement
     private String isbn;
-    @XmlElement
     private String author;
-    @XmlElement
     private String publisher;
-    @XmlElement
     private String callNumber;
 
     public Book() {
