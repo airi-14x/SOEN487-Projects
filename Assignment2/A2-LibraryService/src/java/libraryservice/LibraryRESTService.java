@@ -15,6 +15,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.Path;
 import javax.ws.rs.DELETE;
+import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
@@ -118,18 +119,17 @@ public class LibraryRESTService {
         return Response.status(200).entity(output).build();
     }
 
-    //TODO - not use query param, use form param when we have client
     //Add book - Basic data types 
     @POST
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     @Produces(MediaType.TEXT_PLAIN)
     @Path("/book_basic/add")
-    public Response addBookBasic(@QueryParam("title") String title,
-            @QueryParam("description") String description,
-            @QueryParam("isbn") String isbn,
-            @QueryParam("author") String author,
-            @QueryParam("publisher") String publisher,
-            @QueryParam("callNumber") String callNumber) {
+    public Response addBookBasic(@FormParam("title") String title,
+            @FormParam("description") String description,
+            @FormParam("isbn") String isbn,
+            @FormParam("author") String author,
+            @FormParam("publisher") String publisher,
+            @FormParam("callNumber") String callNumber) {
         try {
             librarySystem.addBook(title, description, isbn, author, publisher, callNumber);
             return Response.status(200).entity("Success").build();
