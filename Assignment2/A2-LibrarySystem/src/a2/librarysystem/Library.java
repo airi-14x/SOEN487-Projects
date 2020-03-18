@@ -17,6 +17,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Properties;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -137,6 +139,27 @@ public class Library {
             callNumbers.remove(callNumber);
             books.remove(id);
         }
+        
+    }
+    
+    public String booksToHtml() {
+        List<String> bookList = new ArrayList(books.values());
+        StringBuilder output = new StringBuilder();
+        output.append("<html><body><table style={border: 1px solid black}><h1>List of all books</h1>");
+        for (Iterator iter = bookList.iterator(); iter.hasNext();) {
+            output.append("<tr><td>" + iter.next() + "</td></tr>");
+        }
+        output.append("</table></body></html>");
+        return output.toString();
+    }
+    
+    public String bookToHtml(Book book) {
+        List<String> bookList = new ArrayList(books.values());
+        StringBuilder output = new StringBuilder();
+        output.append("<html><body><table style={border: 1px solid black}><h1>Requested book:</h1>");
+        output.append(book.toString());
+        output.append("</table></body></html>");
+        return output.toString();
     }
     
 
