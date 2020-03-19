@@ -22,7 +22,7 @@ public interface LoanServiceLoanManager {
     @WebMethod public String listLoan(String bookTitle);
     @WebMethod public String listLoan(int memberID);
     @WebMethod public void borrowBook(String callNumber, int memberID, String borrowDate, String returnDate) throws LoanException;
-    @WebMethod public void editBookLoan(int loanID, String bookTitle, Member member, String borrowDate, String returnDate) throws LoanException;
+    @WebMethod public void editBookLoan(int loanID, Member member, String borrowDate, String returnDate) throws LoanException;
     @WebMethod public void returnBookLoan(int loanID) throws LoanException;
     @WebMethod public void deleteBookLoan(int loanID) throws LoanException;
 }
