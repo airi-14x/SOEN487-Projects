@@ -80,6 +80,8 @@ public class A2LoanSystem {
         System.out.println("==============");
         // --- LoanManagerImpl --- //
         LoanManagerImpl loans = LoanManagerImpl.getInstance();
+        System.out.println("Current Books: ");
+        System.out.println(library.getBooksMap());
         
         // BORROW BOOK //
         System.out.println("Borrowing - B 583 S74 2014:");
@@ -101,32 +103,40 @@ public class A2LoanSystem {
         
         
         // Borrowing another book //
-        //System.out.println("Borrowing - H 123 456 2016: (Should be available)");
-        //loans.borrowBook("H 123 456 2016", 1, "2020-02-04", "2020-03-04");
+        System.out.println("Borrowing - H 123 456 2016: (Should be available)");
+        loans.borrowBook("H 123 456 2016", 1, "2020-02-04", "2020-03-04");
         
         System.out.println("Returning Book:");
         loans.returnBookLoan(1);
         System.out.println(loans.getLoansMap());
         
-        System.out.println("Borrow Book:"); //Why is it unavailable????
+        System.out.println("Borrowing - B 583 S74 2014: (Should be available)");
+        loans.borrowBook("B 583 S74 2014", 1, "2020-02-04", "2020-03-04");
+        
+        System.out.println("Borrow Book:"); 
         loans.borrowBook("B 583 S74 2021", 1, "2020-02-04", "2020-03-04");
         System.out.println(members.getMembersMap());
         System.out.println(loans.getLoansMap());
         
         
         // Enable to test out methods if LoanService ones fail //
-        /*
+        
         System.out.println("Listing Loans:");
         System.out.println(loans.listLoan(1));
         System.out.println(loans.listLoan(2));
         
         System.out.println("Listing Loans(BookTitle):");
-        System.out.println(loans.listLoan("123-Help"));
+        System.out.println(loans.listLoan("Happiness"));
         System.out.println(loans.listLoan("Meditations2"));
-        */
+        
+        loans.borrowBook("B 583 S74 2021", 1, "2020-02-04", "2020-03-04");
+        loans.borrowBook("H 123 456 2016", 1, "2020-02-04", "2020-03-04");
+        loans.returnBookLoan(2);
+        System.out.println(loans.listLoan(1));
         
         loans.deleteBookLoan(1);
-        System.out.println(loans.getLoansMap());
+        System.out.println(loans.listLoan(1));
+        //System.out.println(loans.getLoansMap());
         
     }
 
