@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-/*
+
 package a2.loanservice;
 
 import a2.librarysystem.LibraryException;
@@ -16,12 +16,12 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import javax.jws.WebService;
 
-@WebService(endpointInterface = "a2.loanservice.LoanServiceLoanManager")
-public class LoanServiceLoanManagerImpl implements LoanServiceLoanManager {
+@WebService(endpointInterface = "a2.loanservice.LoanServiceLoanManager1")
+public class LoanServiceLoanManagerImpl1 implements LoanServiceLoanManager1 {
 
     private static LoanManagerImpl loanManager;
 
-    public LoanServiceLoanManagerImpl() throws LoanException, IOException, LibraryException {
+    public LoanServiceLoanManagerImpl1() throws LoanException, IOException, LibraryException {
         System.out.println("Created an instance of LoanService - LoanManager");
         loanManager = loanManager.getInstance();
     }
@@ -81,4 +81,4 @@ public class LoanServiceLoanManagerImpl implements LoanServiceLoanManager {
         loanManager.deleteBookLoan(loanID);
     }
 
-}*/
+}
