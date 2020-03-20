@@ -120,7 +120,7 @@ public class A2LoanSystem {
         
         
         // Enable to test out methods if LoanService ones fail //
-        
+        /*
         System.out.println("Listing Loans:");
         System.out.println(loans.listLoan(1));
         System.out.println(loans.listLoan(2));
@@ -128,14 +128,15 @@ public class A2LoanSystem {
         System.out.println("Listing Loans(BookTitle):");
         System.out.println(loans.listLoan("Happiness"));
         System.out.println(loans.listLoan("Meditations2"));
+        */
         
         loans.borrowBook("B 583 S74 2021", 1, "2020-02-04", "2020-03-04");
         loans.borrowBook("H 123 456 2016", 1, "2020-02-04", "2020-03-04");
         loans.returnBookLoan(2);
-        System.out.println(loans.listLoan(1));
+        //System.out.println(loans.listLoan(1));
         
-        loans.deleteBookLoan(1);
-        System.out.println(loans.listLoan(1));
+        //loans.deleteBookLoan(1);
+        //System.out.println(loans.listLoan(1));
         //System.out.println(loans.getLoansMap());
         
     }
