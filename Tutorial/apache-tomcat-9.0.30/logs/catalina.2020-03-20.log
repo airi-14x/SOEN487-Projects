@@ -4257,3 +4257,1062 @@
 20-Mar-2020 11:18:32.958 INFOS [http-nio-8080-exec-131] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
 20-Mar-2020 11:18:32.969 INFOS [http-nio-8080-exec-131] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanService.xml] a pris [7 518] ms
 20-Mar-2020 11:18:33.004 INFOS [http-nio-8080-exec-129] org.apache.catalina.util.LifecycleBase.start La méthode start() a été appelée sur le composant [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/A2-LoanService]] après que start() ait déjà été appelé, le deuxième appel sera ignoré
+20-Mar-2020 11:25:31.962 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version du serveur:        Apache Tomcat/9.0.30
+20-Mar-2020 11:25:31.971 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Serveur compilé:       Dec 7 2019 16:42:04 UTC
+20-Mar-2020 11:25:31.971 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version du serveur:      9.0.30.0
+20-Mar-2020 11:25:31.971 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Nom de l'OS:           Mac OS X
+20-Mar-2020 11:25:31.971 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version de l'OS:        10.15.3
+20-Mar-2020 11:25:31.971 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+20-Mar-2020 11:25:31.971 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Répertoire de Java:     /Library/Java/JavaVirtualMachines/jdk1.8.0_141.jdk/Contents/Home/jre
+20-Mar-2020 11:25:31.971 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version de la JVM:           1.8.0_141-b15
+20-Mar-2020 11:25:31.971 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Fournisseur de la JVM:            Oracle Corporation
+20-Mar-2020 11:25:31.971 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30
+20-Mar-2020 11:25:31.971 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30
+20-Mar-2020 11:25:31.979 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Djava.util.logging.config.file=/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/logging.properties
+20-Mar-2020 11:25:31.979 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+20-Mar-2020 11:25:31.979 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Dhttp.nonProxyHosts=localhost|127.0.0.1|Airis-MBP
+20-Mar-2020 11:25:31.979 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Djdk.tls.ephemeralDHKeySize=2048
+20-Mar-2020 11:25:31.979 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+20-Mar-2020 11:25:31.980 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+20-Mar-2020 11:25:31.980 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Dignore.endorsed.dirs=
+20-Mar-2020 11:25:31.980 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Dcatalina.base=/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30
+20-Mar-2020 11:25:31.980 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Dcatalina.home=/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30
+20-Mar-2020 11:25:31.980 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Djava.io.tmpdir=/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/temp
+20-Mar-2020 11:25:31.980 INFOS [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent La librairie Apache Tomcat Native basée sur APR qui permet des performances optimales dans les environnements de production n'a pas été trouvée sur le java.library.path: [/Users/Airi/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+20-Mar-2020 11:25:33.028 INFOS [main] org.apache.coyote.AbstractProtocol.init Initialisation du gestionnaire de protocole ["http-nio-8080"]
+20-Mar-2020 11:25:33.122 INFOS [main] org.apache.coyote.AbstractProtocol.init Initialisation du gestionnaire de protocole ["ajp-nio-8009"]
+20-Mar-2020 11:25:33.131 INFOS [main] org.apache.catalina.startup.Catalina.load L'initialisation du serveur a pris [1 936] millisecondes
+20-Mar-2020 11:25:33.317 INFOS [main] org.apache.catalina.core.StandardService.startInternal Démarrage du service [Catalina]
+20-Mar-2020 11:25:33.317 INFOS [main] org.apache.catalina.core.StandardEngine.startInternal Démarrage du moteur de Servlets: [Apache Tomcat/9.0.30]
+20-Mar-2020 11:25:33.333 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryServiceTest.xml]
+20-Mar-2020 11:25:33.422 AVERTISSEMENT [main] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/A1-LibraryServiceTest] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryServiceTest.xml] a été ignoré
+20-Mar-2020 11:25:33.559 GRAVE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Erreur lors du déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryServiceTest.xml]
+	java.lang.IllegalStateException: Erreur lors du démarrage du conteneur fils
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:720)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:690)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:705)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:631)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1831)
+		at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:112)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:526)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:425)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1576)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:309)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:423)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:366)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:936)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:633)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:343)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:474)
+	Caused by: org.apache.catalina.LifecycleException: Echec de démarrage du composant [org.apache.catalina.webresources.StandardRoot@1b26f7b2]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4800)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4935)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:717)
+		... 37 more
+	Caused by: java.lang.IllegalArgumentException: L'ensemble de ressources principal [/Users/Airi/Documents/SOEN487-Projects/Assignment1/A1-LibraryServiceTest/build/web] est invalide
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:752)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:709)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 41 more
+20-Mar-2020 11:25:33.566 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryServiceTest.xml] a pris [233] ms
+20-Mar-2020 11:25:33.567 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/HelloWorldJersey.xml]
+20-Mar-2020 11:25:33.572 AVERTISSEMENT [main] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/HelloWorldJersey] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/HelloWorldJersey.xml] a été ignoré
+20-Mar-2020 11:25:33.588 GRAVE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Erreur lors du déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/HelloWorldJersey.xml]
+	java.lang.IllegalStateException: Erreur lors du démarrage du conteneur fils
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:720)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:690)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:705)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:631)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1831)
+		at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:112)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:526)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:425)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1576)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:309)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:423)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:366)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:936)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:633)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:343)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:474)
+	Caused by: org.apache.catalina.LifecycleException: Echec de démarrage du composant [org.apache.catalina.webresources.StandardRoot@74ad1f1f]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4800)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4935)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:717)
+		... 37 more
+	Caused by: java.lang.IllegalArgumentException: L'ensemble de ressources principal [/Users/Airi/Documents/SOEN487-Projects/Tutorial/HelloWorldJersey/build/web] est invalide
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:752)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:709)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 41 more
+20-Mar-2020 11:25:33.594 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/HelloWorldJersey.xml] a pris [24] ms
+20-Mar-2020 11:25:33.595 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/HelloWorld1.xml]
+20-Mar-2020 11:25:33.598 AVERTISSEMENT [main] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/HelloWorld1] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/HelloWorld1.xml] a été ignoré
+20-Mar-2020 11:25:33.623 GRAVE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Erreur lors du déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/HelloWorld1.xml]
+	java.lang.IllegalStateException: Erreur lors du démarrage du conteneur fils
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:720)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:690)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:705)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:631)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1831)
+		at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:112)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:526)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:425)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1576)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:309)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:423)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:366)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:936)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:633)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:343)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:474)
+	Caused by: org.apache.catalina.LifecycleException: Echec de démarrage du composant [org.apache.catalina.webresources.StandardRoot@4a87761d]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4800)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4935)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:717)
+		... 37 more
+	Caused by: java.lang.IllegalArgumentException: L'ensemble de ressources principal [/Users/Airi/Documents/SOEN487-Projects/Tutorial/HelloWorld1/build/web] est invalide
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:752)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:709)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 41 more
+20-Mar-2020 11:25:33.627 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/HelloWorld1.xml] a pris [31] ms
+20-Mar-2020 11:25:33.628 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryService.xml]
+20-Mar-2020 11:25:33.631 AVERTISSEMENT [main] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/A1-LibraryService] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryService.xml] a été ignoré
+20-Mar-2020 11:25:33.640 GRAVE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Erreur lors du déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryService.xml]
+	java.lang.IllegalStateException: Erreur lors du démarrage du conteneur fils
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:720)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:690)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:705)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:631)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1831)
+		at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:112)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:526)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:425)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1576)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:309)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:423)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:366)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:936)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:633)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:343)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:474)
+	Caused by: org.apache.catalina.LifecycleException: Echec de démarrage du composant [org.apache.catalina.webresources.StandardRoot@37374a5e]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4800)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4935)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:717)
+		... 37 more
+	Caused by: java.lang.IllegalArgumentException: L'ensemble de ressources principal [/Users/Airi/Documents/SOEN487-Projects/Assignment1/A1-LibraryService/build/web] est invalide
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:752)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:709)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 41 more
+20-Mar-2020 11:25:33.642 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryService.xml] a pris [13] ms
+20-Mar-2020 11:25:33.645 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanService.xml]
+20-Mar-2020 11:25:33.646 AVERTISSEMENT [main] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/A2-LoanService] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanService.xml] a été ignoré
+20-Mar-2020 11:25:48.507 INFOS [main] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 11:25:48.942 INFOS [main] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 11:25:49.013 INFOS [main] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 11:25:49.037 AVERTISSEMENT [main] com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parseAdapters WSSERVLET17 : nom dadresse en double
+20-Mar-2020 11:25:49.076 INFOS [main] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 11:25:49.077 AVERTISSEMENT [main] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port]"
+20-Mar-2020 11:25:49.103 AVERTISSEMENT [main] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.registerEndpointUrlPattern WSSERVLET26 : modèle d'URL en double dans l'adresse : LoanServiceLoanManagerImpl1
+20-Mar-2020 11:25:49.103 INFOS [main] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+20-Mar-2020 11:25:49.171 INFOS [main] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+20-Mar-2020 11:25:49.175 INFOS [main] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 11:25:49.175 INFOS [main] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 11:25:49.209 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanService.xml] a pris [15 564] ms
+20-Mar-2020 11:25:49.209 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryService1.xml]
+20-Mar-2020 11:25:49.210 AVERTISSEMENT [main] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/A1-LibraryService1] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryService1.xml] a été ignoré
+20-Mar-2020 11:25:49.214 GRAVE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Erreur lors du déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryService1.xml]
+	java.lang.IllegalStateException: Erreur lors du démarrage du conteneur fils
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:720)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:690)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:705)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:631)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1831)
+		at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:112)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:526)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:425)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1576)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:309)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:423)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:366)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:936)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:633)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:343)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:474)
+	Caused by: org.apache.catalina.LifecycleException: Echec de démarrage du composant [org.apache.catalina.webresources.StandardRoot@9eaaecf]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4800)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4935)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:717)
+		... 37 more
+	Caused by: java.lang.IllegalArgumentException: L'ensemble de ressources principal [/Users/Airi/Documents/SOEN487-Projects/Assignment1/A1-LibraryService1/build/web] est invalide
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:752)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:709)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 41 more
+20-Mar-2020 11:25:49.216 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryService1.xml] a pris [7] ms
+20-Mar-2020 11:25:49.216 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryClient.xml]
+20-Mar-2020 11:25:49.217 AVERTISSEMENT [main] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/A1-LibraryClient] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryClient.xml] a été ignoré
+20-Mar-2020 11:25:49.220 GRAVE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Erreur lors du déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryClient.xml]
+	java.lang.IllegalStateException: Erreur lors du démarrage du conteneur fils
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:720)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:690)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:705)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:631)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1831)
+		at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:112)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:526)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:425)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1576)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:309)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:423)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:366)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:936)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:633)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:343)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:474)
+	Caused by: org.apache.catalina.LifecycleException: Echec de démarrage du composant [org.apache.catalina.webresources.StandardRoot@165ec33]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4800)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4935)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:717)
+		... 37 more
+	Caused by: java.lang.IllegalArgumentException: L'ensemble de ressources principal [/Users/Airi/Documents/SOEN487-Projects/Assignment1/A1-LibraryClient/build/web] est invalide
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:752)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:709)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 41 more
+20-Mar-2020 11:25:49.223 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryClient.xml] a pris [7] ms
+20-Mar-2020 11:25:49.225 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/docs]
+20-Mar-2020 11:25:49.246 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/docs] de l'application web s'est terminé en [22] ms
+20-Mar-2020 11:25:49.247 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/manager]
+20-Mar-2020 11:25:49.283 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/manager] de l'application web s'est terminé en [36] ms
+20-Mar-2020 11:25:49.283 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/examples]
+20-Mar-2020 11:25:49.537 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/examples] de l'application web s'est terminé en [254] ms
+20-Mar-2020 11:25:49.538 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/host-manager]
+20-Mar-2020 11:25:49.562 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/host-manager] de l'application web s'est terminé en [23] ms
+20-Mar-2020 11:25:49.568 INFOS [main] org.apache.coyote.AbstractProtocol.start Démarrage du gestionnaire de protocole ["http-nio-8080"]
+20-Mar-2020 11:25:49.587 INFOS [main] org.apache.coyote.AbstractProtocol.start Démarrage du gestionnaire de protocole ["ajp-nio-8009"]
+20-Mar-2020 11:25:49.589 INFOS [main] org.apache.catalina.startup.Catalina.start Le démarrage du serveur a pris [16 457] millisecondes
+20-Mar-2020 11:26:37.325 INFOS [http-nio-8080-exec-9] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A2-LoanService] a démarré
+20-Mar-2020 11:26:37.336 INFOS [http-nio-8080-exec-9] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+20-Mar-2020 11:26:37.350 INFOS [http-nio-8080-exec-9] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 11:26:37.351 INFOS [http-nio-8080-exec-9] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 11:26:37.352 INFOS [http-nio-8080-exec-9] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 11:26:37.353 INFOS [http-nio-8080-exec-9] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 11:26:37.353 INFOS [http-nio-8080-exec-9] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 11:26:37.354 INFOS [http-nio-8080-exec-9] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 11:26:59.488 INFOS [http-nio-8080-exec-9] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 11:27:00.440 INFOS [http-nio-8080-exec-9] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 11:27:00.659 INFOS [http-nio-8080-exec-9] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 11:27:00.738 AVERTISSEMENT [http-nio-8080-exec-9] com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parseAdapters WSSERVLET17 : nom dadresse en double
+20-Mar-2020 11:27:00.817 INFOS [http-nio-8080-exec-9] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 11:27:00.818 AVERTISSEMENT [http-nio-8080-exec-9] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port]"
+20-Mar-2020 11:27:00.879 AVERTISSEMENT [http-nio-8080-exec-9] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.registerEndpointUrlPattern WSSERVLET26 : modèle d'URL en double dans l'adresse : LoanServiceLoanManagerImpl1
+20-Mar-2020 11:27:00.879 INFOS [http-nio-8080-exec-9] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+20-Mar-2020 11:27:00.979 INFOS [http-nio-8080-exec-9] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+20-Mar-2020 11:27:00.980 INFOS [http-nio-8080-exec-9] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 11:27:00.980 INFOS [http-nio-8080-exec-9] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 11:27:00.993 INFOS [http-nio-8080-exec-9] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+20-Mar-2020 11:27:01.054 INFOS [http-nio-8080-exec-7] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+20-Mar-2020 11:27:01.066 INFOS [http-nio-8080-exec-7] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 11:27:01.069 INFOS [http-nio-8080-exec-7] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 11:27:01.071 INFOS [http-nio-8080-exec-7] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 11:27:01.072 INFOS [http-nio-8080-exec-7] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 11:27:01.072 INFOS [http-nio-8080-exec-7] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 11:27:01.073 INFOS [http-nio-8080-exec-7] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 11:27:01.590 INFOS [http-nio-8080-exec-7] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/A2-LoanService]
+20-Mar-2020 11:27:50.117 INFOS [http-nio-8080-exec-1] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanService.xml]
+20-Mar-2020 11:27:50.118 AVERTISSEMENT [http-nio-8080-exec-1] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/A2-LoanService] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanService.xml] a été ignoré
+20-Mar-2020 11:27:59.078 INFOS [http-nio-8080-exec-1] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 11:27:59.609 INFOS [http-nio-8080-exec-1] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 11:27:59.727 INFOS [http-nio-8080-exec-1] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 11:27:59.767 AVERTISSEMENT [http-nio-8080-exec-1] com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parseAdapters WSSERVLET17 : nom dadresse en double
+20-Mar-2020 11:27:59.827 INFOS [http-nio-8080-exec-1] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 11:27:59.828 AVERTISSEMENT [http-nio-8080-exec-1] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port]"
+20-Mar-2020 11:27:59.853 AVERTISSEMENT [http-nio-8080-exec-1] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.registerEndpointUrlPattern WSSERVLET26 : modèle d'URL en double dans l'adresse : LoanServiceLoanManagerImpl1
+20-Mar-2020 11:27:59.854 INFOS [http-nio-8080-exec-1] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+20-Mar-2020 11:27:59.900 INFOS [http-nio-8080-exec-1] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+20-Mar-2020 11:27:59.901 INFOS [http-nio-8080-exec-1] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 11:27:59.902 INFOS [http-nio-8080-exec-1] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 11:27:59.910 INFOS [http-nio-8080-exec-1] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanService.xml] a pris [9 793] ms
+20-Mar-2020 11:27:59.960 INFOS [http-nio-8080-exec-8] org.apache.catalina.util.LifecycleBase.start La méthode start() a été appelée sur le composant [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/A2-LoanService]] après que start() ait déjà été appelé, le deuxième appel sera ignoré
+20-Mar-2020 11:45:37.075 INFOS [http-nio-8080-exec-13] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A2-LoanService] a démarré
+20-Mar-2020 11:45:37.109 INFOS [http-nio-8080-exec-13] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+20-Mar-2020 11:45:37.153 INFOS [http-nio-8080-exec-13] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 11:45:37.164 INFOS [http-nio-8080-exec-13] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 11:45:37.168 INFOS [http-nio-8080-exec-13] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 11:45:37.174 INFOS [http-nio-8080-exec-13] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 11:45:37.174 INFOS [http-nio-8080-exec-13] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 11:45:37.176 INFOS [http-nio-8080-exec-13] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 11:45:47.644 INFOS [http-nio-8080-exec-13] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 11:45:48.078 INFOS [http-nio-8080-exec-13] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 11:45:48.146 INFOS [http-nio-8080-exec-13] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 11:45:48.179 AVERTISSEMENT [http-nio-8080-exec-13] com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parseAdapters WSSERVLET17 : nom dadresse en double
+20-Mar-2020 11:45:48.220 INFOS [http-nio-8080-exec-13] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 11:45:48.221 AVERTISSEMENT [http-nio-8080-exec-13] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port]"
+20-Mar-2020 11:45:48.241 AVERTISSEMENT [http-nio-8080-exec-13] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.registerEndpointUrlPattern WSSERVLET26 : modèle d'URL en double dans l'adresse : LoanServiceLoanManagerImpl1
+20-Mar-2020 11:45:48.241 INFOS [http-nio-8080-exec-13] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+20-Mar-2020 11:45:48.431 INFOS [http-nio-8080-exec-13] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+20-Mar-2020 11:45:48.433 INFOS [http-nio-8080-exec-13] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 11:45:48.433 INFOS [http-nio-8080-exec-13] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 11:45:48.445 INFOS [http-nio-8080-exec-13] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+20-Mar-2020 11:46:43.869 INFOS [http-nio-8080-exec-18] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A2-LoanService] a démarré
+20-Mar-2020 11:46:43.875 INFOS [http-nio-8080-exec-18] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+20-Mar-2020 11:46:43.887 INFOS [http-nio-8080-exec-18] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 11:46:43.892 INFOS [http-nio-8080-exec-18] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 11:46:43.897 INFOS [http-nio-8080-exec-18] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 11:46:43.900 INFOS [http-nio-8080-exec-18] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 11:46:43.900 INFOS [http-nio-8080-exec-18] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 11:46:43.901 INFOS [http-nio-8080-exec-18] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 11:46:52.960 INFOS [http-nio-8080-exec-18] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 11:46:53.883 INFOS [http-nio-8080-exec-18] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 11:46:54.101 INFOS [http-nio-8080-exec-18] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 11:46:54.169 AVERTISSEMENT [http-nio-8080-exec-18] com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parseAdapters WSSERVLET17 : nom dadresse en double
+20-Mar-2020 11:46:54.304 INFOS [http-nio-8080-exec-18] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 11:46:54.305 AVERTISSEMENT [http-nio-8080-exec-18] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port]"
+20-Mar-2020 11:46:54.361 AVERTISSEMENT [http-nio-8080-exec-18] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.registerEndpointUrlPattern WSSERVLET26 : modèle d'URL en double dans l'adresse : LoanServiceLoanManagerImpl1
+20-Mar-2020 11:46:54.361 INFOS [http-nio-8080-exec-18] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+20-Mar-2020 11:46:54.426 INFOS [http-nio-8080-exec-18] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+20-Mar-2020 11:46:54.427 INFOS [http-nio-8080-exec-18] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 11:46:54.427 INFOS [http-nio-8080-exec-18] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 11:46:54.456 INFOS [http-nio-8080-exec-18] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+20-Mar-2020 11:46:57.274 INFOS [http-nio-8080-exec-14] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A2-LoanService] a démarré
+20-Mar-2020 11:46:57.283 INFOS [http-nio-8080-exec-14] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+20-Mar-2020 11:46:57.295 INFOS [http-nio-8080-exec-14] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 11:46:57.296 INFOS [http-nio-8080-exec-14] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 11:46:57.297 INFOS [http-nio-8080-exec-14] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 11:46:57.298 INFOS [http-nio-8080-exec-14] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 11:46:57.298 INFOS [http-nio-8080-exec-14] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 11:46:57.299 INFOS [http-nio-8080-exec-14] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 11:47:07.731 INFOS [http-nio-8080-exec-14] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 11:47:08.497 INFOS [http-nio-8080-exec-14] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 11:47:08.627 INFOS [http-nio-8080-exec-14] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 11:47:08.671 AVERTISSEMENT [http-nio-8080-exec-14] com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parseAdapters WSSERVLET17 : nom dadresse en double
+20-Mar-2020 11:47:08.734 INFOS [http-nio-8080-exec-14] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 11:47:08.735 AVERTISSEMENT [http-nio-8080-exec-14] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port]"
+20-Mar-2020 11:47:08.769 AVERTISSEMENT [http-nio-8080-exec-14] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.registerEndpointUrlPattern WSSERVLET26 : modèle d'URL en double dans l'adresse : LoanServiceLoanManagerImpl1
+20-Mar-2020 11:47:08.769 INFOS [http-nio-8080-exec-14] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+20-Mar-2020 11:47:08.868 INFOS [http-nio-8080-exec-14] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+20-Mar-2020 11:47:08.882 INFOS [http-nio-8080-exec-14] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 11:47:08.886 INFOS [http-nio-8080-exec-14] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 11:47:08.925 INFOS [http-nio-8080-exec-14] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+20-Mar-2020 11:47:09.094 INFOS [http-nio-8080-exec-26] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A2-LoanService] a démarré
+20-Mar-2020 11:47:09.109 INFOS [http-nio-8080-exec-26] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+20-Mar-2020 11:47:09.117 INFOS [http-nio-8080-exec-26] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 11:47:09.118 INFOS [http-nio-8080-exec-26] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 11:47:09.119 INFOS [http-nio-8080-exec-26] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 11:47:09.120 INFOS [http-nio-8080-exec-26] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 11:47:09.121 INFOS [http-nio-8080-exec-26] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 11:47:09.121 INFOS [http-nio-8080-exec-26] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 11:47:16.234 INFOS [http-nio-8080-exec-26] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 11:47:16.700 INFOS [http-nio-8080-exec-26] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 11:47:16.814 INFOS [http-nio-8080-exec-26] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 11:47:16.854 AVERTISSEMENT [http-nio-8080-exec-26] com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parseAdapters WSSERVLET17 : nom dadresse en double
+20-Mar-2020 11:47:16.895 INFOS [http-nio-8080-exec-26] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 11:47:16.896 AVERTISSEMENT [http-nio-8080-exec-26] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port]"
+20-Mar-2020 11:47:16.929 AVERTISSEMENT [http-nio-8080-exec-26] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.registerEndpointUrlPattern WSSERVLET26 : modèle d'URL en double dans l'adresse : LoanServiceLoanManagerImpl1
+20-Mar-2020 11:47:16.929 INFOS [http-nio-8080-exec-26] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+20-Mar-2020 11:47:16.969 INFOS [http-nio-8080-exec-26] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+20-Mar-2020 11:47:16.970 INFOS [http-nio-8080-exec-26] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 11:47:16.970 INFOS [http-nio-8080-exec-26] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 11:47:16.975 INFOS [http-nio-8080-exec-26] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+20-Mar-2020 11:49:30.737 INFOS [http-nio-8080-exec-34] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A2-LoanService] a démarré
+20-Mar-2020 11:49:30.746 INFOS [http-nio-8080-exec-34] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+20-Mar-2020 11:49:30.778 INFOS [http-nio-8080-exec-34] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 11:49:30.781 INFOS [http-nio-8080-exec-34] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 11:49:30.789 INFOS [http-nio-8080-exec-34] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 11:49:30.792 INFOS [http-nio-8080-exec-34] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 11:49:30.794 INFOS [http-nio-8080-exec-34] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 11:49:30.795 INFOS [http-nio-8080-exec-34] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 11:49:36.799 INFOS [http-nio-8080-exec-34] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 11:49:37.220 INFOS [http-nio-8080-exec-34] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 11:49:37.297 INFOS [http-nio-8080-exec-34] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 11:49:37.337 AVERTISSEMENT [http-nio-8080-exec-34] com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parseAdapters WSSERVLET17 : nom dadresse en double
+20-Mar-2020 11:49:37.376 INFOS [http-nio-8080-exec-34] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 11:49:37.376 AVERTISSEMENT [http-nio-8080-exec-34] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port]"
+20-Mar-2020 11:49:37.394 AVERTISSEMENT [http-nio-8080-exec-34] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.registerEndpointUrlPattern WSSERVLET26 : modèle d'URL en double dans l'adresse : LoanServiceLoanManagerImpl1
+20-Mar-2020 11:49:37.394 INFOS [http-nio-8080-exec-34] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+20-Mar-2020 11:49:37.429 INFOS [http-nio-8080-exec-34] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+20-Mar-2020 11:49:37.430 INFOS [http-nio-8080-exec-34] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 11:49:37.430 INFOS [http-nio-8080-exec-34] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 11:49:37.437 INFOS [http-nio-8080-exec-34] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+20-Mar-2020 11:52:42.251 INFOS [http-nio-8080-exec-38] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A2-LoanService] a démarré
+20-Mar-2020 11:52:42.258 INFOS [http-nio-8080-exec-38] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+20-Mar-2020 11:52:42.280 INFOS [http-nio-8080-exec-38] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 11:52:42.283 INFOS [http-nio-8080-exec-38] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 11:52:42.286 INFOS [http-nio-8080-exec-38] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 11:52:42.288 INFOS [http-nio-8080-exec-38] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 11:52:42.289 INFOS [http-nio-8080-exec-38] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 11:52:42.290 INFOS [http-nio-8080-exec-38] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 11:52:54.245 INFOS [http-nio-8080-exec-38] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 11:52:54.779 GRAVE [http-nio-8080-exec-38] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.parseAdaptersAndCreateDelegate WSSERVLET11 : échec de l'analyse du descripteur d'exécution : java.lang.NoClassDefFoundError: <error>
+	java.lang.NoClassDefFoundError: <error>
+		at java.lang.Class.getDeclaredMethods0(Native Method)
+		at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+		at java.lang.Class.privateGetPublicMethods(Class.java:2902)
+		at java.lang.Class.getMethods(Class.java:1615)
+		at com.sun.xml.ws.model.RuntimeModeler.processClass(RuntimeModeler.java:460)
+		at com.sun.xml.ws.model.RuntimeModeler.buildRuntimeModel(RuntimeModeler.java:314)
+		at com.sun.xml.ws.db.DatabindingImpl.<init>(DatabindingImpl.java:99)
+		at com.sun.xml.ws.db.DatabindingProviderImpl.create(DatabindingProviderImpl.java:74)
+		at com.sun.xml.ws.db.DatabindingProviderImpl.create(DatabindingProviderImpl.java:58)
+		at com.sun.xml.ws.db.DatabindingFactoryImpl.createRuntime(DatabindingFactoryImpl.java:130)
+		at com.sun.xml.ws.server.EndpointFactory.createSEIModel(EndpointFactory.java:433)
+		at com.sun.xml.ws.server.EndpointFactory.create(EndpointFactory.java:268)
+		at com.sun.xml.ws.server.EndpointFactory.createEndpoint(EndpointFactory.java:145)
+		at com.sun.xml.ws.api.server.WSEndpoint.create(WSEndpoint.java:569)
+		at com.sun.xml.ws.api.server.WSEndpoint.create(WSEndpoint.java:552)
+		at com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parseAdapters(DeploymentDescriptorParser.java:261)
+		at com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parse(DeploymentDescriptorParser.java:153)
+		at com.sun.xml.ws.transport.http.servlet.WSServletContextListener.parseAdaptersAndCreateDelegate(WSServletContextListener.java:131)
+		at com.sun.xml.ws.transport.http.servlet.WSServletContainerInitializer.onStartup(WSServletContainerInitializer.java:65)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5135)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3758)
+		at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:1121)
+		at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:365)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:666)
+		at org.apache.catalina.valves.RequestFilterValve.process(RequestFilterValve.java:348)
+		at org.apache.catalina.valves.RemoteAddrValve.invoke(RemoteAddrValve.java:53)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Thread.java:748)
+	Caused by: java.lang.ClassNotFoundException: <error>
+		at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1365)
+		at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1188)
+		... 50 more
+20-Mar-2020 11:52:54.786 GRAVE [http-nio-8080-exec-38] org.apache.catalina.core.StandardContext.startInternal Erreur lors du traitement de ServletContainerInitializer
+	javax.servlet.ServletException: com.sun.xml.ws.transport.http.servlet.WSServletException: WSSERVLET11 : échec de l'analyse du descripteur d'exécution : java.lang.NoClassDefFoundError: <error>
+		at com.sun.xml.ws.transport.http.servlet.WSServletContainerInitializer.onStartup(WSServletContainerInitializer.java:70)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5135)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3758)
+		at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:1121)
+		at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:365)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:666)
+		at org.apache.catalina.valves.RequestFilterValve.process(RequestFilterValve.java:348)
+		at org.apache.catalina.valves.RemoteAddrValve.invoke(RemoteAddrValve.java:53)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Thread.java:748)
+	Caused by: com.sun.xml.ws.transport.http.servlet.WSServletException: WSSERVLET11 : échec de l'analyse du descripteur d'exécution : java.lang.NoClassDefFoundError: <error>
+		at com.sun.xml.ws.transport.http.servlet.WSServletContextListener.parseAdaptersAndCreateDelegate(WSServletContextListener.java:141)
+		at com.sun.xml.ws.transport.http.servlet.WSServletContainerInitializer.onStartup(WSServletContainerInitializer.java:65)
+		... 31 more
+	Caused by: java.lang.NoClassDefFoundError: <error>
+		at java.lang.Class.getDeclaredMethods0(Native Method)
+		at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+		at java.lang.Class.privateGetPublicMethods(Class.java:2902)
+		at java.lang.Class.getMethods(Class.java:1615)
+		at com.sun.xml.ws.model.RuntimeModeler.processClass(RuntimeModeler.java:460)
+		at com.sun.xml.ws.model.RuntimeModeler.buildRuntimeModel(RuntimeModeler.java:314)
+		at com.sun.xml.ws.db.DatabindingImpl.<init>(DatabindingImpl.java:99)
+		at com.sun.xml.ws.db.DatabindingProviderImpl.create(DatabindingProviderImpl.java:74)
+		at com.sun.xml.ws.db.DatabindingProviderImpl.create(DatabindingProviderImpl.java:58)
+		at com.sun.xml.ws.db.DatabindingFactoryImpl.createRuntime(DatabindingFactoryImpl.java:130)
+		at com.sun.xml.ws.server.EndpointFactory.createSEIModel(EndpointFactory.java:433)
+		at com.sun.xml.ws.server.EndpointFactory.create(EndpointFactory.java:268)
+		at com.sun.xml.ws.server.EndpointFactory.createEndpoint(EndpointFactory.java:145)
+		at com.sun.xml.ws.api.server.WSEndpoint.create(WSEndpoint.java:569)
+		at com.sun.xml.ws.api.server.WSEndpoint.create(WSEndpoint.java:552)
+		at com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parseAdapters(DeploymentDescriptorParser.java:261)
+		at com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parse(DeploymentDescriptorParser.java:153)
+		at com.sun.xml.ws.transport.http.servlet.WSServletContextListener.parseAdaptersAndCreateDelegate(WSServletContextListener.java:131)
+		... 32 more
+	Caused by: java.lang.ClassNotFoundException: <error>
+		at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1365)
+		at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1188)
+		... 50 more
+20-Mar-2020 11:52:54.791 GRAVE [http-nio-8080-exec-38] org.apache.catalina.core.StandardContext.startInternal Erreur de démarrage du contexte [/A2-LoanService] suite aux erreurs précédentes
+20-Mar-2020 11:52:54.799 INFOS [http-nio-8080-exec-38] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+20-Mar-2020 11:52:57.809 INFOS [http-nio-8080-exec-32] org.apache.catalina.util.LifecycleBase.stop La méthode stop() a été appelée sur le composant [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/A2-LoanService]] après que stop() ait déjà été appelé, le deuxième appel sera ignoré
+20-Mar-2020 11:52:58.311 INFOS [http-nio-8080-exec-32] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/A2-LoanService]
+20-Mar-2020 11:52:58.334 INFOS [http-nio-8080-exec-40] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanService.xml]
+20-Mar-2020 11:52:58.335 AVERTISSEMENT [http-nio-8080-exec-40] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/A2-LoanService] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanService.xml] a été ignoré
+20-Mar-2020 11:53:07.188 INFOS [http-nio-8080-exec-40] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 11:53:07.189 AVERTISSEMENT [http-nio-8080-exec-40] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort]"
+20-Mar-2020 11:53:07.788 INFOS [http-nio-8080-exec-40] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 11:53:07.941 INFOS [http-nio-8080-exec-40] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 11:53:07.978 AVERTISSEMENT [http-nio-8080-exec-40] com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parseAdapters WSSERVLET17 : nom dadresse en double
+20-Mar-2020 11:53:08.032 INFOS [http-nio-8080-exec-40] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 11:53:08.033 AVERTISSEMENT [http-nio-8080-exec-40] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port]"
+20-Mar-2020 11:53:08.065 AVERTISSEMENT [http-nio-8080-exec-40] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.registerEndpointUrlPattern WSSERVLET26 : modèle d'URL en double dans l'adresse : LoanServiceLoanManagerImpl1
+20-Mar-2020 11:53:08.066 INFOS [http-nio-8080-exec-40] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+20-Mar-2020 11:53:08.106 INFOS [http-nio-8080-exec-40] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+20-Mar-2020 11:53:08.107 INFOS [http-nio-8080-exec-40] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 11:53:08.107 INFOS [http-nio-8080-exec-40] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 11:53:08.117 INFOS [http-nio-8080-exec-40] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanService.xml] a pris [9 782] ms
+20-Mar-2020 11:53:08.167 INFOS [http-nio-8080-exec-35] org.apache.catalina.util.LifecycleBase.start La méthode start() a été appelée sur le composant [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/A2-LoanService]] après que start() ait déjà été appelé, le deuxième appel sera ignoré
+20-Mar-2020 12:14:27.098 INFOS [http-nio-8080-exec-46] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A2-LoanService] a démarré
+20-Mar-2020 12:14:27.119 INFOS [http-nio-8080-exec-46] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+20-Mar-2020 12:14:27.147 INFOS [http-nio-8080-exec-46] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 12:14:27.151 INFOS [http-nio-8080-exec-46] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 12:14:27.153 INFOS [http-nio-8080-exec-46] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:14:27.155 INFOS [http-nio-8080-exec-46] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:14:27.156 INFOS [http-nio-8080-exec-46] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 12:14:27.157 INFOS [http-nio-8080-exec-46] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 12:14:36.984 INFOS [http-nio-8080-exec-46] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 12:14:36.985 AVERTISSEMENT [http-nio-8080-exec-46] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort]"
+20-Mar-2020 12:14:37.647 INFOS [http-nio-8080-exec-46] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 12:14:37.822 INFOS [http-nio-8080-exec-46] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:14:37.864 AVERTISSEMENT [http-nio-8080-exec-46] com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parseAdapters WSSERVLET17 : nom dadresse en double
+20-Mar-2020 12:14:37.920 INFOS [http-nio-8080-exec-46] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:14:37.920 AVERTISSEMENT [http-nio-8080-exec-46] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port]"
+20-Mar-2020 12:14:37.950 AVERTISSEMENT [http-nio-8080-exec-46] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.registerEndpointUrlPattern WSSERVLET26 : modèle d'URL en double dans l'adresse : LoanServiceLoanManagerImpl1
+20-Mar-2020 12:14:37.950 INFOS [http-nio-8080-exec-46] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+20-Mar-2020 12:14:37.990 INFOS [http-nio-8080-exec-46] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+20-Mar-2020 12:14:37.992 INFOS [http-nio-8080-exec-46] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 12:14:37.992 INFOS [http-nio-8080-exec-46] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 12:14:37.999 INFOS [http-nio-8080-exec-46] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+20-Mar-2020 12:15:24.458 INFOS [http-nio-8080-exec-44] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A2-LoanService] a démarré
+20-Mar-2020 12:15:24.464 INFOS [http-nio-8080-exec-44] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+20-Mar-2020 12:15:24.470 INFOS [http-nio-8080-exec-44] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 12:15:24.471 INFOS [http-nio-8080-exec-44] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 12:15:24.472 INFOS [http-nio-8080-exec-44] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:15:24.472 INFOS [http-nio-8080-exec-44] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:15:24.473 INFOS [http-nio-8080-exec-44] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 12:15:24.473 INFOS [http-nio-8080-exec-44] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 12:15:35.727 INFOS [http-nio-8080-exec-44] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 12:15:35.737 AVERTISSEMENT [http-nio-8080-exec-44] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort]"
+20-Mar-2020 12:15:36.500 INFOS [http-nio-8080-exec-44] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 12:15:36.623 INFOS [http-nio-8080-exec-44] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:15:36.727 AVERTISSEMENT [http-nio-8080-exec-44] com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parseAdapters WSSERVLET17 : nom dadresse en double
+20-Mar-2020 12:15:36.822 INFOS [http-nio-8080-exec-44] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:15:36.823 AVERTISSEMENT [http-nio-8080-exec-44] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port]"
+20-Mar-2020 12:15:36.877 AVERTISSEMENT [http-nio-8080-exec-44] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.registerEndpointUrlPattern WSSERVLET26 : modèle d'URL en double dans l'adresse : LoanServiceLoanManagerImpl1
+20-Mar-2020 12:15:36.878 INFOS [http-nio-8080-exec-44] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+20-Mar-2020 12:15:36.929 INFOS [http-nio-8080-exec-44] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+20-Mar-2020 12:15:36.938 INFOS [http-nio-8080-exec-44] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 12:15:36.940 INFOS [http-nio-8080-exec-44] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 12:15:36.956 INFOS [http-nio-8080-exec-44] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+20-Mar-2020 12:15:37.073 INFOS [http-nio-8080-exec-47] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A2-LoanService] a démarré
+20-Mar-2020 12:15:37.084 INFOS [http-nio-8080-exec-47] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+20-Mar-2020 12:15:37.091 INFOS [http-nio-8080-exec-47] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 12:15:37.092 INFOS [http-nio-8080-exec-47] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 12:15:37.096 INFOS [http-nio-8080-exec-47] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:15:37.098 INFOS [http-nio-8080-exec-47] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:15:37.098 INFOS [http-nio-8080-exec-47] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 12:15:37.099 INFOS [http-nio-8080-exec-47] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 12:15:48.147 INFOS [http-nio-8080-exec-47] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 12:15:48.148 AVERTISSEMENT [http-nio-8080-exec-47] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort]"
+20-Mar-2020 12:15:49.246 INFOS [http-nio-8080-exec-47] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 12:15:49.430 INFOS [http-nio-8080-exec-47] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:15:49.486 AVERTISSEMENT [http-nio-8080-exec-47] com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parseAdapters WSSERVLET17 : nom dadresse en double
+20-Mar-2020 12:15:49.581 INFOS [http-nio-8080-exec-47] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:15:49.588 AVERTISSEMENT [http-nio-8080-exec-47] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port]"
+20-Mar-2020 12:15:49.691 AVERTISSEMENT [http-nio-8080-exec-47] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.registerEndpointUrlPattern WSSERVLET26 : modèle d'URL en double dans l'adresse : LoanServiceLoanManagerImpl1
+20-Mar-2020 12:15:49.692 INFOS [http-nio-8080-exec-47] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+20-Mar-2020 12:15:49.765 INFOS [http-nio-8080-exec-47] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+20-Mar-2020 12:15:49.767 INFOS [http-nio-8080-exec-47] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 12:15:49.768 INFOS [http-nio-8080-exec-47] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 12:15:49.776 INFOS [http-nio-8080-exec-47] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+20-Mar-2020 12:15:49.880 INFOS [http-nio-8080-exec-55] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A2-LoanService] a démarré
+20-Mar-2020 12:15:49.898 INFOS [http-nio-8080-exec-55] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+20-Mar-2020 12:15:49.912 INFOS [http-nio-8080-exec-55] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 12:15:49.915 INFOS [http-nio-8080-exec-55] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 12:15:49.918 INFOS [http-nio-8080-exec-55] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:15:49.920 INFOS [http-nio-8080-exec-55] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:15:49.921 INFOS [http-nio-8080-exec-55] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 12:15:49.924 INFOS [http-nio-8080-exec-55] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 12:16:01.952 INFOS [http-nio-8080-exec-55] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 12:16:01.962 AVERTISSEMENT [http-nio-8080-exec-55] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort]"
+20-Mar-2020 12:16:02.768 INFOS [http-nio-8080-exec-55] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 12:16:02.878 INFOS [http-nio-8080-exec-55] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:16:02.979 AVERTISSEMENT [http-nio-8080-exec-55] com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parseAdapters WSSERVLET17 : nom dadresse en double
+20-Mar-2020 12:16:03.148 INFOS [http-nio-8080-exec-55] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:16:03.148 AVERTISSEMENT [http-nio-8080-exec-55] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port]"
+20-Mar-2020 12:16:03.182 AVERTISSEMENT [http-nio-8080-exec-55] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.registerEndpointUrlPattern WSSERVLET26 : modèle d'URL en double dans l'adresse : LoanServiceLoanManagerImpl1
+20-Mar-2020 12:16:03.183 INFOS [http-nio-8080-exec-55] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+20-Mar-2020 12:16:03.247 INFOS [http-nio-8080-exec-55] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+20-Mar-2020 12:16:03.249 INFOS [http-nio-8080-exec-55] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 12:16:03.249 INFOS [http-nio-8080-exec-55] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 12:16:03.258 INFOS [http-nio-8080-exec-55] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+20-Mar-2020 12:16:04.007 INFOS [http-nio-8080-exec-50] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A2-LoanService] a démarré
+20-Mar-2020 12:16:04.015 INFOS [http-nio-8080-exec-50] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+20-Mar-2020 12:16:04.026 INFOS [http-nio-8080-exec-50] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 12:16:04.028 INFOS [http-nio-8080-exec-50] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 12:16:04.030 INFOS [http-nio-8080-exec-50] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:16:04.031 INFOS [http-nio-8080-exec-50] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:16:04.031 INFOS [http-nio-8080-exec-50] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 12:16:04.032 INFOS [http-nio-8080-exec-50] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 12:16:18.772 INFOS [http-nio-8080-exec-50] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 12:16:18.773 AVERTISSEMENT [http-nio-8080-exec-50] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort]"
+20-Mar-2020 12:16:20.151 INFOS [http-nio-8080-exec-50] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 12:16:20.324 INFOS [http-nio-8080-exec-50] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:16:20.368 AVERTISSEMENT [http-nio-8080-exec-50] com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parseAdapters WSSERVLET17 : nom dadresse en double
+20-Mar-2020 12:16:20.438 INFOS [http-nio-8080-exec-50] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:16:20.438 AVERTISSEMENT [http-nio-8080-exec-50] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port]"
+20-Mar-2020 12:16:20.531 AVERTISSEMENT [http-nio-8080-exec-50] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.registerEndpointUrlPattern WSSERVLET26 : modèle d'URL en double dans l'adresse : LoanServiceLoanManagerImpl1
+20-Mar-2020 12:16:20.531 INFOS [http-nio-8080-exec-50] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+20-Mar-2020 12:16:20.589 INFOS [http-nio-8080-exec-50] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+20-Mar-2020 12:16:20.595 INFOS [http-nio-8080-exec-50] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 12:16:20.595 INFOS [http-nio-8080-exec-50] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 12:16:20.604 INFOS [http-nio-8080-exec-50] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+20-Mar-2020 12:16:20.693 INFOS [http-nio-8080-exec-54] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A2-LoanService] a démarré
+20-Mar-2020 12:16:20.711 INFOS [http-nio-8080-exec-54] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+20-Mar-2020 12:16:20.730 INFOS [http-nio-8080-exec-54] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 12:16:20.741 INFOS [http-nio-8080-exec-54] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 12:16:20.744 INFOS [http-nio-8080-exec-54] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:16:20.746 INFOS [http-nio-8080-exec-54] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:16:20.747 INFOS [http-nio-8080-exec-54] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 12:16:20.747 INFOS [http-nio-8080-exec-54] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 12:16:41.771 INFOS [http-nio-8080-exec-54] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 12:16:41.772 AVERTISSEMENT [http-nio-8080-exec-54] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort]"
+20-Mar-2020 12:16:42.810 INFOS [http-nio-8080-exec-54] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 12:16:42.931 INFOS [http-nio-8080-exec-54] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:16:43.123 AVERTISSEMENT [http-nio-8080-exec-54] com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parseAdapters WSSERVLET17 : nom dadresse en double
+20-Mar-2020 12:16:43.284 INFOS [http-nio-8080-exec-54] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:16:43.284 AVERTISSEMENT [http-nio-8080-exec-54] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port]"
+20-Mar-2020 12:16:43.310 AVERTISSEMENT [http-nio-8080-exec-54] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.registerEndpointUrlPattern WSSERVLET26 : modèle d'URL en double dans l'adresse : LoanServiceLoanManagerImpl1
+20-Mar-2020 12:16:43.310 INFOS [http-nio-8080-exec-54] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+20-Mar-2020 12:16:43.442 INFOS [http-nio-8080-exec-54] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+20-Mar-2020 12:16:43.471 INFOS [http-nio-8080-exec-54] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 12:16:43.472 INFOS [http-nio-8080-exec-54] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 12:16:43.481 INFOS [http-nio-8080-exec-54] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+20-Mar-2020 12:16:43.620 INFOS [http-nio-8080-exec-45] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A2-LoanService] a démarré
+20-Mar-2020 12:16:43.625 INFOS [http-nio-8080-exec-45] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+20-Mar-2020 12:16:43.633 INFOS [http-nio-8080-exec-45] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 12:16:43.635 INFOS [http-nio-8080-exec-45] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 12:16:43.636 INFOS [http-nio-8080-exec-45] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:16:43.638 INFOS [http-nio-8080-exec-45] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:16:43.639 INFOS [http-nio-8080-exec-45] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 12:16:43.641 INFOS [http-nio-8080-exec-45] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 12:16:50.346 INFOS [http-nio-8080-exec-45] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 12:16:50.348 AVERTISSEMENT [http-nio-8080-exec-45] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort]"
+20-Mar-2020 12:16:50.963 INFOS [http-nio-8080-exec-45] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 12:16:51.265 INFOS [http-nio-8080-exec-45] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:16:51.339 AVERTISSEMENT [http-nio-8080-exec-45] com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parseAdapters WSSERVLET17 : nom dadresse en double
+20-Mar-2020 12:16:51.504 INFOS [http-nio-8080-exec-45] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:16:51.505 AVERTISSEMENT [http-nio-8080-exec-45] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port]"
+20-Mar-2020 12:16:51.559 AVERTISSEMENT [http-nio-8080-exec-45] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.registerEndpointUrlPattern WSSERVLET26 : modèle d'URL en double dans l'adresse : LoanServiceLoanManagerImpl1
+20-Mar-2020 12:16:51.560 INFOS [http-nio-8080-exec-45] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+20-Mar-2020 12:16:51.640 INFOS [http-nio-8080-exec-45] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+20-Mar-2020 12:16:51.642 INFOS [http-nio-8080-exec-45] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 12:16:51.643 INFOS [http-nio-8080-exec-45] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 12:16:51.672 INFOS [http-nio-8080-exec-45] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+20-Mar-2020 12:17:35.772 INFOS [http-nio-8080-exec-59] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A2-LoanService] a démarré
+20-Mar-2020 12:17:35.780 INFOS [http-nio-8080-exec-59] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+20-Mar-2020 12:17:35.789 INFOS [http-nio-8080-exec-59] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 12:17:35.790 INFOS [http-nio-8080-exec-59] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 12:17:35.791 INFOS [http-nio-8080-exec-59] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:17:35.793 INFOS [http-nio-8080-exec-59] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:17:35.794 INFOS [http-nio-8080-exec-59] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 12:17:35.797 INFOS [http-nio-8080-exec-59] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 12:17:43.661 INFOS [http-nio-8080-exec-59] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 12:17:43.662 AVERTISSEMENT [http-nio-8080-exec-59] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort]"
+20-Mar-2020 12:17:44.250 INFOS [http-nio-8080-exec-59] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 12:17:44.449 INFOS [http-nio-8080-exec-59] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:17:44.487 AVERTISSEMENT [http-nio-8080-exec-59] com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parseAdapters WSSERVLET17 : nom dadresse en double
+20-Mar-2020 12:17:44.588 INFOS [http-nio-8080-exec-59] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:17:44.594 AVERTISSEMENT [http-nio-8080-exec-59] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port]"
+20-Mar-2020 12:17:44.634 AVERTISSEMENT [http-nio-8080-exec-59] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.registerEndpointUrlPattern WSSERVLET26 : modèle d'URL en double dans l'adresse : LoanServiceLoanManagerImpl1
+20-Mar-2020 12:17:44.635 INFOS [http-nio-8080-exec-59] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+20-Mar-2020 12:17:44.685 INFOS [http-nio-8080-exec-59] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+20-Mar-2020 12:17:44.686 INFOS [http-nio-8080-exec-59] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 12:17:44.687 INFOS [http-nio-8080-exec-59] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 12:17:44.696 INFOS [http-nio-8080-exec-59] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+20-Mar-2020 12:19:40.624 INFOS [http-nio-8080-exec-66] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A2-LoanService] a démarré
+20-Mar-2020 12:19:40.635 INFOS [http-nio-8080-exec-66] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+20-Mar-2020 12:19:40.645 INFOS [http-nio-8080-exec-66] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 12:19:40.647 INFOS [http-nio-8080-exec-66] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 12:19:40.649 INFOS [http-nio-8080-exec-66] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:19:40.652 INFOS [http-nio-8080-exec-66] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:19:40.652 INFOS [http-nio-8080-exec-66] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 12:19:40.654 INFOS [http-nio-8080-exec-66] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 12:19:51.326 INFOS [http-nio-8080-exec-66] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 12:19:51.327 AVERTISSEMENT [http-nio-8080-exec-66] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort]"
+20-Mar-2020 12:19:51.985 INFOS [http-nio-8080-exec-66] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 12:19:52.148 INFOS [http-nio-8080-exec-66] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:19:52.205 AVERTISSEMENT [http-nio-8080-exec-66] com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parseAdapters WSSERVLET17 : nom dadresse en double
+20-Mar-2020 12:19:52.262 INFOS [http-nio-8080-exec-66] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:19:52.264 AVERTISSEMENT [http-nio-8080-exec-66] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port]"
+20-Mar-2020 12:19:52.318 AVERTISSEMENT [http-nio-8080-exec-66] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.registerEndpointUrlPattern WSSERVLET26 : modèle d'URL en double dans l'adresse : LoanServiceLoanManagerImpl1
+20-Mar-2020 12:19:52.318 INFOS [http-nio-8080-exec-66] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+20-Mar-2020 12:19:52.508 INFOS [http-nio-8080-exec-66] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+20-Mar-2020 12:19:52.509 INFOS [http-nio-8080-exec-66] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 12:19:52.509 INFOS [http-nio-8080-exec-66] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 12:19:52.514 INFOS [http-nio-8080-exec-66] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+20-Mar-2020 12:22:01.119 INFOS [http-nio-8080-exec-72] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A2-LoanService] a démarré
+20-Mar-2020 12:22:01.128 INFOS [http-nio-8080-exec-72] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+20-Mar-2020 12:22:01.152 INFOS [http-nio-8080-exec-72] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 12:22:01.159 INFOS [http-nio-8080-exec-72] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 12:22:01.164 INFOS [http-nio-8080-exec-72] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:22:01.168 INFOS [http-nio-8080-exec-72] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:22:01.169 INFOS [http-nio-8080-exec-72] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 12:22:01.171 INFOS [http-nio-8080-exec-72] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 12:22:11.137 INFOS [http-nio-8080-exec-72] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 12:22:11.140 AVERTISSEMENT [http-nio-8080-exec-72] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort]"
+20-Mar-2020 12:22:11.881 INFOS [http-nio-8080-exec-72] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 12:22:12.135 INFOS [http-nio-8080-exec-72] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:22:12.258 AVERTISSEMENT [http-nio-8080-exec-72] com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parseAdapters WSSERVLET17 : nom dadresse en double
+20-Mar-2020 12:22:12.331 INFOS [http-nio-8080-exec-72] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:22:12.331 AVERTISSEMENT [http-nio-8080-exec-72] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port]"
+20-Mar-2020 12:22:12.426 AVERTISSEMENT [http-nio-8080-exec-72] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.registerEndpointUrlPattern WSSERVLET26 : modèle d'URL en double dans l'adresse : LoanServiceLoanManagerImpl1
+20-Mar-2020 12:22:12.435 INFOS [http-nio-8080-exec-72] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+20-Mar-2020 12:22:12.515 INFOS [http-nio-8080-exec-72] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+20-Mar-2020 12:22:12.519 INFOS [http-nio-8080-exec-72] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 12:22:12.519 INFOS [http-nio-8080-exec-72] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 12:22:12.537 INFOS [http-nio-8080-exec-72] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+20-Mar-2020 12:22:12.655 INFOS [http-nio-8080-exec-60] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A2-LoanService] a démarré
+20-Mar-2020 12:22:12.668 INFOS [http-nio-8080-exec-60] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+20-Mar-2020 12:22:12.681 INFOS [http-nio-8080-exec-60] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 12:22:12.683 INFOS [http-nio-8080-exec-60] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 12:22:12.684 INFOS [http-nio-8080-exec-60] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:22:12.686 INFOS [http-nio-8080-exec-60] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:22:12.686 INFOS [http-nio-8080-exec-60] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 12:22:12.687 INFOS [http-nio-8080-exec-60] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 12:22:25.010 INFOS [http-nio-8080-exec-60] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 12:22:25.011 AVERTISSEMENT [http-nio-8080-exec-60] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort]"
+20-Mar-2020 12:22:25.958 INFOS [http-nio-8080-exec-60] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 12:22:26.104 INFOS [http-nio-8080-exec-60] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:22:26.143 AVERTISSEMENT [http-nio-8080-exec-60] com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parseAdapters WSSERVLET17 : nom dadresse en double
+20-Mar-2020 12:22:26.227 INFOS [http-nio-8080-exec-60] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:22:26.228 AVERTISSEMENT [http-nio-8080-exec-60] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port]"
+20-Mar-2020 12:22:26.269 AVERTISSEMENT [http-nio-8080-exec-60] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.registerEndpointUrlPattern WSSERVLET26 : modèle d'URL en double dans l'adresse : LoanServiceLoanManagerImpl1
+20-Mar-2020 12:22:26.269 INFOS [http-nio-8080-exec-60] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+20-Mar-2020 12:22:26.316 INFOS [http-nio-8080-exec-60] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+20-Mar-2020 12:22:26.333 INFOS [http-nio-8080-exec-60] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 12:22:26.335 INFOS [http-nio-8080-exec-60] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 12:22:26.342 INFOS [http-nio-8080-exec-60] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+20-Mar-2020 12:22:42.355 INFOS [http-nio-8080-exec-70] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A2-LoanService] a démarré
+20-Mar-2020 12:22:42.360 INFOS [http-nio-8080-exec-70] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+20-Mar-2020 12:22:42.366 INFOS [http-nio-8080-exec-70] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 12:22:42.367 INFOS [http-nio-8080-exec-70] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 12:22:42.368 INFOS [http-nio-8080-exec-70] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:22:42.369 INFOS [http-nio-8080-exec-70] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:22:42.369 INFOS [http-nio-8080-exec-70] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 12:22:42.370 INFOS [http-nio-8080-exec-70] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 12:22:48.404 INFOS [http-nio-8080-exec-70] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 12:22:48.405 AVERTISSEMENT [http-nio-8080-exec-70] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort]"
+20-Mar-2020 12:22:49.005 INFOS [http-nio-8080-exec-70] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 12:22:49.143 INFOS [http-nio-8080-exec-70] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:22:49.194 AVERTISSEMENT [http-nio-8080-exec-70] com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parseAdapters WSSERVLET17 : nom dadresse en double
+20-Mar-2020 12:22:49.263 INFOS [http-nio-8080-exec-70] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:22:49.263 AVERTISSEMENT [http-nio-8080-exec-70] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port]"
+20-Mar-2020 12:22:49.306 AVERTISSEMENT [http-nio-8080-exec-70] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.registerEndpointUrlPattern WSSERVLET26 : modèle d'URL en double dans l'adresse : LoanServiceLoanManagerImpl1
+20-Mar-2020 12:22:49.306 INFOS [http-nio-8080-exec-70] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+20-Mar-2020 12:22:49.347 INFOS [http-nio-8080-exec-70] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+20-Mar-2020 12:22:49.349 INFOS [http-nio-8080-exec-70] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 12:22:49.349 INFOS [http-nio-8080-exec-70] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 12:22:49.355 INFOS [http-nio-8080-exec-70] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+20-Mar-2020 12:25:03.196 INFOS [http-nio-8080-exec-78] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A2-LoanService] a démarré
+20-Mar-2020 12:25:03.203 INFOS [http-nio-8080-exec-78] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+20-Mar-2020 12:25:03.212 INFOS [http-nio-8080-exec-78] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 12:25:03.215 INFOS [http-nio-8080-exec-78] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 12:25:03.216 INFOS [http-nio-8080-exec-78] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:25:03.217 INFOS [http-nio-8080-exec-78] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:25:03.217 INFOS [http-nio-8080-exec-78] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 12:25:03.218 INFOS [http-nio-8080-exec-78] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 12:25:12.216 INFOS [http-nio-8080-exec-78] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 12:25:12.217 AVERTISSEMENT [http-nio-8080-exec-78] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort]"
+20-Mar-2020 12:25:12.946 INFOS [http-nio-8080-exec-78] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 12:25:13.101 INFOS [http-nio-8080-exec-78] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:25:13.148 AVERTISSEMENT [http-nio-8080-exec-78] com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parseAdapters WSSERVLET17 : nom dadresse en double
+20-Mar-2020 12:25:13.211 INFOS [http-nio-8080-exec-78] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:25:13.211 AVERTISSEMENT [http-nio-8080-exec-78] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port]"
+20-Mar-2020 12:25:13.247 AVERTISSEMENT [http-nio-8080-exec-78] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.registerEndpointUrlPattern WSSERVLET26 : modèle d'URL en double dans l'adresse : LoanServiceLoanManagerImpl1
+20-Mar-2020 12:25:13.248 INFOS [http-nio-8080-exec-78] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+20-Mar-2020 12:25:13.304 INFOS [http-nio-8080-exec-78] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+20-Mar-2020 12:25:13.306 INFOS [http-nio-8080-exec-78] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 12:25:13.306 INFOS [http-nio-8080-exec-78] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 12:25:13.321 INFOS [http-nio-8080-exec-78] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+20-Mar-2020 12:25:13.439 INFOS [http-nio-8080-exec-67] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A2-LoanService] a démarré
+20-Mar-2020 12:25:13.444 INFOS [http-nio-8080-exec-67] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+20-Mar-2020 12:25:13.451 INFOS [http-nio-8080-exec-67] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 12:25:13.454 INFOS [http-nio-8080-exec-67] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 12:25:13.455 INFOS [http-nio-8080-exec-67] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:25:13.456 INFOS [http-nio-8080-exec-67] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:25:13.457 INFOS [http-nio-8080-exec-67] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 12:25:13.457 INFOS [http-nio-8080-exec-67] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 12:25:25.922 INFOS [http-nio-8080-exec-67] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 12:25:25.925 AVERTISSEMENT [http-nio-8080-exec-67] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort]"
+20-Mar-2020 12:25:26.748 INFOS [http-nio-8080-exec-67] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 12:25:26.950 INFOS [http-nio-8080-exec-67] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:25:27.006 AVERTISSEMENT [http-nio-8080-exec-67] com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parseAdapters WSSERVLET17 : nom dadresse en double
+20-Mar-2020 12:25:27.077 INFOS [http-nio-8080-exec-67] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:25:27.077 AVERTISSEMENT [http-nio-8080-exec-67] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port]"
+20-Mar-2020 12:25:27.116 AVERTISSEMENT [http-nio-8080-exec-67] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.registerEndpointUrlPattern WSSERVLET26 : modèle d'URL en double dans l'adresse : LoanServiceLoanManagerImpl1
+20-Mar-2020 12:25:27.117 INFOS [http-nio-8080-exec-67] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+20-Mar-2020 12:25:27.160 INFOS [http-nio-8080-exec-67] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+20-Mar-2020 12:25:27.161 INFOS [http-nio-8080-exec-67] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 12:25:27.161 INFOS [http-nio-8080-exec-67] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 12:25:27.169 INFOS [http-nio-8080-exec-67] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+20-Mar-2020 12:25:57.412 INFOS [http-nio-8080-exec-80] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A2-LoanService] a démarré
+20-Mar-2020 12:25:57.420 INFOS [http-nio-8080-exec-80] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+20-Mar-2020 12:25:57.427 INFOS [http-nio-8080-exec-80] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 12:25:57.430 INFOS [http-nio-8080-exec-80] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 12:25:57.431 INFOS [http-nio-8080-exec-80] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:25:57.432 INFOS [http-nio-8080-exec-80] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:25:57.432 INFOS [http-nio-8080-exec-80] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 12:25:57.432 INFOS [http-nio-8080-exec-80] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 12:26:05.974 INFOS [http-nio-8080-exec-80] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 12:26:05.975 AVERTISSEMENT [http-nio-8080-exec-80] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort]"
+20-Mar-2020 12:26:07.035 INFOS [http-nio-8080-exec-80] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 12:26:07.302 INFOS [http-nio-8080-exec-80] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:26:07.367 AVERTISSEMENT [http-nio-8080-exec-80] com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parseAdapters WSSERVLET17 : nom dadresse en double
+20-Mar-2020 12:26:07.427 INFOS [http-nio-8080-exec-80] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:26:07.427 AVERTISSEMENT [http-nio-8080-exec-80] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port]"
+20-Mar-2020 12:26:07.449 AVERTISSEMENT [http-nio-8080-exec-80] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.registerEndpointUrlPattern WSSERVLET26 : modèle d'URL en double dans l'adresse : LoanServiceLoanManagerImpl1
+20-Mar-2020 12:26:07.450 INFOS [http-nio-8080-exec-80] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+20-Mar-2020 12:26:07.488 INFOS [http-nio-8080-exec-80] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+20-Mar-2020 12:26:07.490 INFOS [http-nio-8080-exec-80] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 12:26:07.490 INFOS [http-nio-8080-exec-80] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 12:26:07.498 INFOS [http-nio-8080-exec-80] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+20-Mar-2020 12:26:43.251 INFOS [http-nio-8080-exec-82] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A2-LoanService] a démarré
+20-Mar-2020 12:26:43.262 INFOS [http-nio-8080-exec-82] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+20-Mar-2020 12:26:43.276 INFOS [http-nio-8080-exec-82] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 12:26:43.278 INFOS [http-nio-8080-exec-82] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 12:26:43.279 INFOS [http-nio-8080-exec-82] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:26:43.280 INFOS [http-nio-8080-exec-82] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:26:43.281 INFOS [http-nio-8080-exec-82] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 12:26:43.281 INFOS [http-nio-8080-exec-82] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 12:26:51.598 INFOS [http-nio-8080-exec-82] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 12:26:51.599 AVERTISSEMENT [http-nio-8080-exec-82] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort]"
+20-Mar-2020 12:26:52.375 INFOS [http-nio-8080-exec-82] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 12:26:52.534 INFOS [http-nio-8080-exec-82] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:26:52.570 AVERTISSEMENT [http-nio-8080-exec-82] com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parseAdapters WSSERVLET17 : nom dadresse en double
+20-Mar-2020 12:26:52.641 INFOS [http-nio-8080-exec-82] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:26:52.642 AVERTISSEMENT [http-nio-8080-exec-82] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port]"
+20-Mar-2020 12:26:52.674 AVERTISSEMENT [http-nio-8080-exec-82] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.registerEndpointUrlPattern WSSERVLET26 : modèle d'URL en double dans l'adresse : LoanServiceLoanManagerImpl1
+20-Mar-2020 12:26:52.675 INFOS [http-nio-8080-exec-82] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+20-Mar-2020 12:26:52.708 INFOS [http-nio-8080-exec-82] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+20-Mar-2020 12:26:52.709 INFOS [http-nio-8080-exec-82] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 12:26:52.709 INFOS [http-nio-8080-exec-82] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 12:26:52.712 INFOS [http-nio-8080-exec-82] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+20-Mar-2020 12:26:57.610 INFOS [http-nio-8080-exec-83] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A2-LoanService] a démarré
+20-Mar-2020 12:26:57.621 INFOS [http-nio-8080-exec-83] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+20-Mar-2020 12:26:57.640 INFOS [http-nio-8080-exec-83] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 12:26:57.640 INFOS [http-nio-8080-exec-83] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 12:26:57.641 INFOS [http-nio-8080-exec-83] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:26:57.642 INFOS [http-nio-8080-exec-83] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:26:57.643 INFOS [http-nio-8080-exec-83] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 12:26:57.644 INFOS [http-nio-8080-exec-83] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 12:27:09.943 INFOS [http-nio-8080-exec-83] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 12:27:09.948 AVERTISSEMENT [http-nio-8080-exec-83] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort]"
+20-Mar-2020 12:27:11.203 INFOS [http-nio-8080-exec-83] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 12:27:11.483 INFOS [http-nio-8080-exec-83] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:27:11.551 AVERTISSEMENT [http-nio-8080-exec-83] com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parseAdapters WSSERVLET17 : nom dadresse en double
+20-Mar-2020 12:27:11.675 INFOS [http-nio-8080-exec-83] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:27:11.676 AVERTISSEMENT [http-nio-8080-exec-83] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port]"
+20-Mar-2020 12:27:11.719 AVERTISSEMENT [http-nio-8080-exec-83] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.registerEndpointUrlPattern WSSERVLET26 : modèle d'URL en double dans l'adresse : LoanServiceLoanManagerImpl1
+20-Mar-2020 12:27:11.725 INFOS [http-nio-8080-exec-83] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+20-Mar-2020 12:27:11.803 INFOS [http-nio-8080-exec-83] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+20-Mar-2020 12:27:11.805 INFOS [http-nio-8080-exec-83] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 12:27:11.805 INFOS [http-nio-8080-exec-83] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 12:27:11.822 INFOS [http-nio-8080-exec-83] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+20-Mar-2020 12:27:16.374 INFOS [http-nio-8080-exec-86] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+20-Mar-2020 12:27:16.389 INFOS [http-nio-8080-exec-86] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 12:27:16.392 INFOS [http-nio-8080-exec-86] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 12:27:16.394 INFOS [http-nio-8080-exec-86] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:27:16.395 INFOS [http-nio-8080-exec-86] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:27:16.396 INFOS [http-nio-8080-exec-86] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 12:27:16.396 INFOS [http-nio-8080-exec-86] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+20-Mar-2020 12:27:16.903 INFOS [http-nio-8080-exec-86] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/A2-LoanService]
+20-Mar-2020 12:31:09.542 INFOS [http-nio-8080-exec-93] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanService.xml]
+20-Mar-2020 12:31:09.550 AVERTISSEMENT [http-nio-8080-exec-93] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/A2-LoanService] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanService.xml] a été ignoré
+20-Mar-2020 12:31:23.574 INFOS [http-nio-8080-exec-93] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+20-Mar-2020 12:31:23.574 AVERTISSEMENT [http-nio-8080-exec-93] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort]"
+20-Mar-2020 12:31:24.150 INFOS [http-nio-8080-exec-93] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+20-Mar-2020 12:31:24.246 INFOS [http-nio-8080-exec-93] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:31:24.283 AVERTISSEMENT [http-nio-8080-exec-93] com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parseAdapters WSSERVLET17 : nom dadresse en double
+20-Mar-2020 12:31:24.324 INFOS [http-nio-8080-exec-93] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+20-Mar-2020 12:31:24.325 AVERTISSEMENT [http-nio-8080-exec-93] org.glassfish.gmbal.impl.JMXRegistrationManager.resumeRegistration "GMBAL901: JMX exception on registration of MBean MBeanImpl[type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port,oname=com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port]"
+20-Mar-2020 12:31:24.355 AVERTISSEMENT [http-nio-8080-exec-93] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.registerEndpointUrlPattern WSSERVLET26 : modèle d'URL en double dans l'adresse : LoanServiceLoanManagerImpl1
+20-Mar-2020 12:31:24.355 INFOS [http-nio-8080-exec-93] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+20-Mar-2020 12:31:24.392 INFOS [http-nio-8080-exec-93] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+20-Mar-2020 12:31:24.393 INFOS [http-nio-8080-exec-93] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 12:31:24.393 INFOS [http-nio-8080-exec-93] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+20-Mar-2020 12:31:24.397 INFOS [http-nio-8080-exec-93] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanService.xml] a pris [14 854] ms
+20-Mar-2020 12:31:24.435 INFOS [http-nio-8080-exec-92] org.apache.catalina.util.LifecycleBase.start La méthode start() a été appelée sur le composant [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/A2-LoanService]] après que start() ait déjà été appelé, le deuxième appel sera ignoré
