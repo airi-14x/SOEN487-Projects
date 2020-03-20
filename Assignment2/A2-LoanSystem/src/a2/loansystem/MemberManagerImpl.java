@@ -14,13 +14,12 @@ import java.util.concurrent.atomic.AtomicInteger;
  *
  * @author Airi
  */
-
 public class MemberManagerImpl implements MemberManager {
 
     private static ConcurrentHashMap<Integer, Member> members = new ConcurrentHashMap<Integer, Member>();
     private static AtomicInteger memberMapKey = new AtomicInteger(); // Need to create memberID --> UNIQUE
-    private static MemberManagerImpl memberManagerConnectionInstance; 
-    
+    private static MemberManagerImpl memberManagerConnectionInstance;
+
     public MemberManagerImpl() {
         System.out.println("Created an instance of MemberSystem()");
     }
@@ -29,13 +28,13 @@ public class MemberManagerImpl implements MemberManager {
     public ConcurrentHashMap<Integer, Member> getMembersMap() {
         return members;
     }
-    
+
     // For setting memberID manually //
     @Override
-    public int memberMapKey(){
+    public int memberMapKey() {
         return memberMapKey.get();
     }
-    
+
     // SINGLETON    
     public static MemberManagerImpl getInstance() throws LoanException, IOException {
         if (memberManagerConnectionInstance == null) {
@@ -59,12 +58,11 @@ public class MemberManagerImpl implements MemberManager {
 
     // GET
     @Override
-    public synchronized String getMemberInfo(int memberID){
+    public synchronized String getMemberInfo(int memberID) {
         // Return: memberID, String name, String contact
         if (!members.containsKey(memberID)) {
             return "Member doesn't exist";
         }
-        
         Member member = members.get(memberID);
         String memberInfo = member.toString();
         return memberInfo;
@@ -108,6 +106,5 @@ public class MemberManagerImpl implements MemberManager {
         } else {
             members.remove(memberID);
         }
-
     }
 }

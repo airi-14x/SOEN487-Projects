@@ -37,13 +37,13 @@ public class LoanServiceMemberManagerImpl implements LoanServiceMemberManager {
     }
 
     @Override
-    public String updateMember(int memberID, String memberName, String memberContact) throws LoanException {
+    public String updateMember(int memberID, String memberName, String memberContact) throws LoanException{
         memberManager.updateMember(memberID, memberName, memberContact);
         return memberManager.getMembers();
     }
 
     @Override
-    public String deleteMember(int memberID) throws LoanException {
+    public String deleteMember(int memberID) throws LoanException{
         memberManager.deleteMember(memberID);
         return memberManager.getMembers();
     }

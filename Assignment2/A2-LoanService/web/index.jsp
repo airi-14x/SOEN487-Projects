@@ -109,8 +109,6 @@
     }
     %>
     <%-- end web service invocation --%><hr/>
-    </body>
-    
-    
+    </body>  
     
 </html>
