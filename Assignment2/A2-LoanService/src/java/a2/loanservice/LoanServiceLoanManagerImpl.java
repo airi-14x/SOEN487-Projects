@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+/*
 package a2.loanservice;
 
 import a2.librarysystem.LibraryException;
@@ -42,7 +43,7 @@ public class LoanServiceLoanManagerImpl implements LoanServiceLoanManager {
     }
 
     @Override
-    public String listLoan(int memberID) {
+    public String listLoanID(int memberID) {
         ConcurrentHashMap<Integer, Loan> loansMap = loanManager.getLoansMap();
         String loanResult = ""; //Multiple loans with same memberID
         for (Map.Entry<Integer, Loan> loan : loansMap.entrySet()) {
@@ -80,4 +81,4 @@ public class LoanServiceLoanManagerImpl implements LoanServiceLoanManager {
         loanManager.deleteBookLoan(loanID);
     }
 
-}
+}*/

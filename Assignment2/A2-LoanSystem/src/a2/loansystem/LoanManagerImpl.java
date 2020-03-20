@@ -46,6 +46,7 @@ public class LoanManagerImpl implements LoanManager {
         return loans;
     }
 
+    /*
     public String listLoan(String bookTitle) {
         ConcurrentHashMap<Integer, Loan> loansMap = loanManagerConnectionInstance.getLoansMap();
         String loanResult = ""; //Multiple loans with same title
@@ -79,7 +80,7 @@ public class LoanManagerImpl implements LoanManager {
             return loanResult;
         }
 
-    }
+    }*/
 
     // Borrow a book --> Create loan
     @Override

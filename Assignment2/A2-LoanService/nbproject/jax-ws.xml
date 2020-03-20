@@ -4,9 +4,6 @@
     <service name="HelloWorld">
       <implementation-class>helloWorld.HelloWorld</implementation-class>
     </service>
-    <service name="LoanServiceLoanManagerImpl">
-      <implementation-class>a2.loanservice.LoanServiceLoanManagerImpl</implementation-class>
-    </service>
     <service name="LoanServiceMemberManagerImpl">
       <implementation-class>a2.loanservice.LoanServiceMemberManagerImpl</implementation-class>
     </service>
