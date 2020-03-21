@@ -689,3 +689,630 @@ Stacktrace:
 		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 		at java.lang.Thread.run(Thread.java:748)
+21-Mar-2020 18:08:51.038 GRAVE [http-nio-8080-exec-48] org.apache.catalina.core.StandardWrapperValve.invoke Servlet.service() du Servlet [jsp] dans le contexte au chemin [/A2-LoanClient] a retourné une exception [Impossible de compiler la classe pour la JSP: 
+
+Une erreur s'est produite à la ligne: [21] dans le fichier jsp: [/index.jsp]
+helloWorldClient.HelloWorld_Service cannot be resolved to a type
+18:     <%-- start web service invocation --%><hr/>
+19:     <%
+20:     try {
+21: 	helloWorldClient.HelloWorld_Service service = new helloWorldClient.HelloWorld_Service();
+22: 	helloWorldClient.HelloWorld port = service.getHelloWorldPort();
+23: 	 // TODO initialize WS operation arguments here
+24: 	java.lang.String name = "";
+
+
+Une erreur s'est produite à la ligne: [21] dans le fichier jsp: [/index.jsp]
+helloWorldClient.HelloWorld_Service cannot be resolved to a type
+18:     <%-- start web service invocation --%><hr/>
+19:     <%
+20:     try {
+21: 	helloWorldClient.HelloWorld_Service service = new helloWorldClient.HelloWorld_Service();
+22: 	helloWorldClient.HelloWorld port = service.getHelloWorldPort();
+23: 	 // TODO initialize WS operation arguments here
+24: 	java.lang.String name = "";
+
+
+Une erreur s'est produite à la ligne: [22] dans le fichier jsp: [/index.jsp]
+helloWorldClient.HelloWorld cannot be resolved to a type
+19:     <%
+20:     try {
+21: 	helloWorldClient.HelloWorld_Service service = new helloWorldClient.HelloWorld_Service();
+22: 	helloWorldClient.HelloWorld port = service.getHelloWorldPort();
+23: 	 // TODO initialize WS operation arguments here
+24: 	java.lang.String name = "";
+25: 	// TODO process result here
+
+
+Une erreur s'est produite à la ligne: [37] dans le fichier jsp: [/index.jsp]
+a2.loanservice.client.LoanServiceMemberManagerImplService cannot be resolved to a type
+34:     <%-- start web service invocation --%><hr/>
+35:     <%
+36:     try {
+37: 	a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
+38: 	a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+39: 	// TODO process result here
+40: 	java.lang.String result = port.getMembers();
+
+
+Une erreur s'est produite à la ligne: [37] dans le fichier jsp: [/index.jsp]
+a2.loanservice.client.LoanServiceMemberManagerImplService cannot be resolved to a type
+34:     <%-- start web service invocation --%><hr/>
+35:     <%
+36:     try {
+37: 	a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
+38: 	a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+39: 	// TODO process result here
+40: 	java.lang.String result = port.getMembers();
+
+
+Une erreur s'est produite à la ligne: [38] dans le fichier jsp: [/index.jsp]
+a2.loanservice.client.LoanServiceMemberManager cannot be resolved to a type
+35:     <%
+36:     try {
+37: 	a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
+38: 	a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+39: 	// TODO process result here
+40: 	java.lang.String result = port.getMembers();
+41: 	out.println("Result = "+result);
+
+
+Une erreur s'est produite à la ligne: [51] dans le fichier jsp: [/index.jsp]
+a2.loanservice.client.LoanServiceMemberManagerImplService cannot be resolved to a type
+48:     <%-- start web service invocation --%><hr/>
+49:     <%
+50:     try {
+51: 	a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
+52: 	a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+53: 	 // TODO initialize WS operation arguments here
+54: 	java.lang.String arg0 = "hello";
+
+
+Une erreur s'est produite à la ligne: [51] dans le fichier jsp: [/index.jsp]
+a2.loanservice.client.LoanServiceMemberManagerImplService cannot be resolved to a type
+48:     <%-- start web service invocation --%><hr/>
+49:     <%
+50:     try {
+51: 	a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
+52: 	a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+53: 	 // TODO initialize WS operation arguments here
+54: 	java.lang.String arg0 = "hello";
+
+
+Une erreur s'est produite à la ligne: [52] dans le fichier jsp: [/index.jsp]
+a2.loanservice.client.LoanServiceMemberManager cannot be resolved to a type
+49:     <%
+50:     try {
+51: 	a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
+52: 	a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+53: 	 // TODO initialize WS operation arguments here
+54: 	java.lang.String arg0 = "hello";
+55: 	java.lang.String arg1 = "dskj";
+
+
+Une erreur s'est produite à la ligne: [69] dans le fichier jsp: [/index.jsp]
+a2.loanservice.client.LoanServiceMemberManagerImplService cannot be resolved to a type
+66:     <%-- start web service invocation --%><hr/>
+67:     <%
+68:     try {
+69: 	a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
+70: 	a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+71: 	 // TODO initialize WS operation arguments here
+72: 	int arg0 = 1;
+
+
+Une erreur s'est produite à la ligne: [69] dans le fichier jsp: [/index.jsp]
+a2.loanservice.client.LoanServiceMemberManagerImplService cannot be resolved to a type
+66:     <%-- start web service invocation --%><hr/>
+67:     <%
+68:     try {
+69: 	a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
+70: 	a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+71: 	 // TODO initialize WS operation arguments here
+72: 	int arg0 = 1;
+
+
+Une erreur s'est produite à la ligne: [70] dans le fichier jsp: [/index.jsp]
+a2.loanservice.client.LoanServiceMemberManager cannot be resolved to a type
+67:     <%
+68:     try {
+69: 	a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
+70: 	a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+71: 	 // TODO initialize WS operation arguments here
+72: 	int arg0 = 1;
+73: 	// TODO process result here
+
+
+Une erreur s'est produite à la ligne: [84] dans le fichier jsp: [/index.jsp]
+a2.loanservice.client.LoanServiceMemberManagerImplService cannot be resolved to a type
+81:     <%-- start web service invocation --%><hr/>
+82:     <%
+83:     try {
+84: 	a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
+85: 	a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+86: 	 // TODO initialize WS operation arguments here
+87: 	int arg0 = 2;
+
+
+Une erreur s'est produite à la ligne: [84] dans le fichier jsp: [/index.jsp]
+a2.loanservice.client.LoanServiceMemberManagerImplService cannot be resolved to a type
+81:     <%-- start web service invocation --%><hr/>
+82:     <%
+83:     try {
+84: 	a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
+85: 	a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+86: 	 // TODO initialize WS operation arguments here
+87: 	int arg0 = 2;
+
+
+Une erreur s'est produite à la ligne: [85] dans le fichier jsp: [/index.jsp]
+a2.loanservice.client.LoanServiceMemberManager cannot be resolved to a type
+82:     <%
+83:     try {
+84: 	a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
+85: 	a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+86: 	 // TODO initialize WS operation arguments here
+87: 	int arg0 = 2;
+88: 	java.lang.String arg1 = "NewAiri";
+
+
+Une erreur s'est produite à la ligne: [101] dans le fichier jsp: [/index.jsp]
+a2.loanservice.client.LoanServiceMemberManagerImplService cannot be resolved to a type
+98:     <%-- start web service invocation --%><hr/>
+99:     <%
+100:     try {
+101: 	a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
+102: 	a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+103: 	 // TODO initialize WS operation arguments here
+104: 	int arg0 = 1;
+
+
+Une erreur s'est produite à la ligne: [101] dans le fichier jsp: [/index.jsp]
+a2.loanservice.client.LoanServiceMemberManagerImplService cannot be resolved to a type
+98:     <%-- start web service invocation --%><hr/>
+99:     <%
+100:     try {
+101: 	a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
+102: 	a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+103: 	 // TODO initialize WS operation arguments here
+104: 	int arg0 = 1;
+
+
+Une erreur s'est produite à la ligne: [102] dans le fichier jsp: [/index.jsp]
+a2.loanservice.client.LoanServiceMemberManager cannot be resolved to a type
+99:     <%
+100:     try {
+101: 	a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
+102: 	a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+103: 	 // TODO initialize WS operation arguments here
+104: 	int arg0 = 1;
+105: 	port.deleteMember(arg0);
+
+
+Stacktrace:] avec la cause
+	org.apache.jasper.JasperException: Impossible de compiler la classe pour la JSP: 
+
+Une erreur s'est produite à la ligne: [21] dans le fichier jsp: [/index.jsp]
+helloWorldClient.HelloWorld_Service cannot be resolved to a type
+18:     <%-- start web service invocation --%><hr/>
+19:     <%
+20:     try {
+21: 	helloWorldClient.HelloWorld_Service service = new helloWorldClient.HelloWorld_Service();
+22: 	helloWorldClient.HelloWorld port = service.getHelloWorldPort();
+23: 	 // TODO initialize WS operation arguments here
+24: 	java.lang.String name = "";
+
+
+Une erreur s'est produite à la ligne: [21] dans le fichier jsp: [/index.jsp]
+helloWorldClient.HelloWorld_Service cannot be resolved to a type
+18:     <%-- start web service invocation --%><hr/>
+19:     <%
+20:     try {
+21: 	helloWorldClient.HelloWorld_Service service = new helloWorldClient.HelloWorld_Service();
+22: 	helloWorldClient.HelloWorld port = service.getHelloWorldPort();
+23: 	 // TODO initialize WS operation arguments here
+24: 	java.lang.String name = "";
+
+
+Une erreur s'est produite à la ligne: [22] dans le fichier jsp: [/index.jsp]
+helloWorldClient.HelloWorld cannot be resolved to a type
+19:     <%
+20:     try {
+21: 	helloWorldClient.HelloWorld_Service service = new helloWorldClient.HelloWorld_Service();
+22: 	helloWorldClient.HelloWorld port = service.getHelloWorldPort();
+23: 	 // TODO initialize WS operation arguments here
+24: 	java.lang.String name = "";
+25: 	// TODO process result here
+
+
+Une erreur s'est produite à la ligne: [37] dans le fichier jsp: [/index.jsp]
+a2.loanservice.client.LoanServiceMemberManagerImplService cannot be resolved to a type
+34:     <%-- start web service invocation --%><hr/>
+35:     <%
+36:     try {
+37: 	a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
+38: 	a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+39: 	// TODO process result here
+40: 	java.lang.String result = port.getMembers();
+
+
+Une erreur s'est produite à la ligne: [37] dans le fichier jsp: [/index.jsp]
+a2.loanservice.client.LoanServiceMemberManagerImplService cannot be resolved to a type
+34:     <%-- start web service invocation --%><hr/>
+35:     <%
+36:     try {
+37: 	a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
+38: 	a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+39: 	// TODO process result here
+40: 	java.lang.String result = port.getMembers();
+
+
+Une erreur s'est produite à la ligne: [38] dans le fichier jsp: [/index.jsp]
+a2.loanservice.client.LoanServiceMemberManager cannot be resolved to a type
+35:     <%
+36:     try {
+37: 	a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
+38: 	a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+39: 	// TODO process result here
+40: 	java.lang.String result = port.getMembers();
+41: 	out.println("Result = "+result);
+
+
+Une erreur s'est produite à la ligne: [51] dans le fichier jsp: [/index.jsp]
+a2.loanservice.client.LoanServiceMemberManagerImplService cannot be resolved to a type
+48:     <%-- start web service invocation --%><hr/>
+49:     <%
+50:     try {
+51: 	a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
+52: 	a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+53: 	 // TODO initialize WS operation arguments here
+54: 	java.lang.String arg0 = "hello";
+
+
+Une erreur s'est produite à la ligne: [51] dans le fichier jsp: [/index.jsp]
+a2.loanservice.client.LoanServiceMemberManagerImplService cannot be resolved to a type
+48:     <%-- start web service invocation --%><hr/>
+49:     <%
+50:     try {
+51: 	a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
+52: 	a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+53: 	 // TODO initialize WS operation arguments here
+54: 	java.lang.String arg0 = "hello";
+
+
+Une erreur s'est produite à la ligne: [52] dans le fichier jsp: [/index.jsp]
+a2.loanservice.client.LoanServiceMemberManager cannot be resolved to a type
+49:     <%
+50:     try {
+51: 	a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
+52: 	a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+53: 	 // TODO initialize WS operation arguments here
+54: 	java.lang.String arg0 = "hello";
+55: 	java.lang.String arg1 = "dskj";
+
+
+Une erreur s'est produite à la ligne: [69] dans le fichier jsp: [/index.jsp]
+a2.loanservice.client.LoanServiceMemberManagerImplService cannot be resolved to a type
+66:     <%-- start web service invocation --%><hr/>
+67:     <%
+68:     try {
+69: 	a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
+70: 	a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+71: 	 // TODO initialize WS operation arguments here
+72: 	int arg0 = 1;
+
+
+Une erreur s'est produite à la ligne: [69] dans le fichier jsp: [/index.jsp]
+a2.loanservice.client.LoanServiceMemberManagerImplService cannot be resolved to a type
+66:     <%-- start web service invocation --%><hr/>
+67:     <%
+68:     try {
+69: 	a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
+70: 	a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+71: 	 // TODO initialize WS operation arguments here
+72: 	int arg0 = 1;
+
+
+Une erreur s'est produite à la ligne: [70] dans le fichier jsp: [/index.jsp]
+a2.loanservice.client.LoanServiceMemberManager cannot be resolved to a type
+67:     <%
+68:     try {
+69: 	a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
+70: 	a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+71: 	 // TODO initialize WS operation arguments here
+72: 	int arg0 = 1;
+73: 	// TODO process result here
+
+
+Une erreur s'est produite à la ligne: [84] dans le fichier jsp: [/index.jsp]
+a2.loanservice.client.LoanServiceMemberManagerImplService cannot be resolved to a type
+81:     <%-- start web service invocation --%><hr/>
+82:     <%
+83:     try {
+84: 	a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
+85: 	a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+86: 	 // TODO initialize WS operation arguments here
+87: 	int arg0 = 2;
+
+
+Une erreur s'est produite à la ligne: [84] dans le fichier jsp: [/index.jsp]
+a2.loanservice.client.LoanServiceMemberManagerImplService cannot be resolved to a type
+81:     <%-- start web service invocation --%><hr/>
+82:     <%
+83:     try {
+84: 	a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
+85: 	a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+86: 	 // TODO initialize WS operation arguments here
+87: 	int arg0 = 2;
+
+
+Une erreur s'est produite à la ligne: [85] dans le fichier jsp: [/index.jsp]
+a2.loanservice.client.LoanServiceMemberManager cannot be resolved to a type
+82:     <%
+83:     try {
+84: 	a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
+85: 	a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+86: 	 // TODO initialize WS operation arguments here
+87: 	int arg0 = 2;
+88: 	java.lang.String arg1 = "NewAiri";
+
+
+Une erreur s'est produite à la ligne: [101] dans le fichier jsp: [/index.jsp]
+a2.loanservice.client.LoanServiceMemberManagerImplService cannot be resolved to a type
+98:     <%-- start web service invocation --%><hr/>
+99:     <%
+100:     try {
+101: 	a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
+102: 	a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+103: 	 // TODO initialize WS operation arguments here
+104: 	int arg0 = 1;
+
+
+Une erreur s'est produite à la ligne: [101] dans le fichier jsp: [/index.jsp]
+a2.loanservice.client.LoanServiceMemberManagerImplService cannot be resolved to a type
+98:     <%-- start web service invocation --%><hr/>
+99:     <%
+100:     try {
+101: 	a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
+102: 	a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+103: 	 // TODO initialize WS operation arguments here
+104: 	int arg0 = 1;
+
+
+Une erreur s'est produite à la ligne: [102] dans le fichier jsp: [/index.jsp]
+a2.loanservice.client.LoanServiceMemberManager cannot be resolved to a type
+99:     <%
+100:     try {
+101: 	a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
+102: 	a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+103: 	 // TODO initialize WS operation arguments here
+104: 	int arg0 = 1;
+105: 	port.deleteMember(arg0);
+
+
+Stacktrace:
+		at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+		at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:213)
+		at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:519)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:392)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:362)
+		at org.apache.jasper.compiler.Compiler.compile(Compiler.java:346)
+		at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:605)
+		at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:400)
+		at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:385)
+		at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:329)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Thread.java:748)
+21-Mar-2020 18:10:23.699 GRAVE [http-nio-8080-exec-61] org.apache.catalina.core.StandardWrapperValve.invoke "Servlet.service()" pour la servlet [MemberManagerController] a généré une exception
+	javax.xml.ws.WebServiceException: Echec de l'accès au WSDL à http://localhost:8080/A2-LoanService/LoanServiceMemberManagerImpl?wsdl avec 
+	http://localhost:8080/A2-LoanService/LoanServiceMemberManagerImpl?wsdl.
+		at com.sun.xml.ws.wsdl.parser.RuntimeWSDLParser.tryWithMex(RuntimeWSDLParser.java:251)
+		at com.sun.xml.ws.wsdl.parser.RuntimeWSDLParser.parse(RuntimeWSDLParser.java:228)
+		at com.sun.xml.ws.wsdl.parser.RuntimeWSDLParser.parse(RuntimeWSDLParser.java:191)
+		at com.sun.xml.ws.wsdl.parser.RuntimeWSDLParser.parse(RuntimeWSDLParser.java:160)
+		at com.sun.xml.ws.client.WSServiceDelegate.parseWSDL(WSServiceDelegate.java:307)
+		at com.sun.xml.ws.client.WSServiceDelegate.<init>(WSServiceDelegate.java:269)
+		at com.sun.xml.ws.client.WSServiceDelegate.<init>(WSServiceDelegate.java:205)
+		at com.sun.xml.ws.client.WSServiceDelegate.<init>(WSServiceDelegate.java:195)
+		at com.sun.xml.ws.spi.ProviderImpl.createServiceDelegate(ProviderImpl.java:112)
+		at javax.xml.ws.Service.<init>(Service.java:77)
+		at a2.loanservice.client.LoanServiceMemberManagerImplService.<init>(LoanServiceMemberManagerImplService.java:42)
+		at LoanServiceMemberClientTest.MemberManagerController.getMembers(MemberManagerController.java:127)
+		at LoanServiceMemberClientTest.MemberManagerController.doGet(MemberManagerController.java:67)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Thread.java:748)
+	Caused by: java.io.FileNotFoundException: http://localhost:8080/A2-LoanService/LoanServiceMemberManagerImpl?wsdl
+		at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1872)
+		at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1474)
+		at java.net.URL.openStream(URL.java:1045)
+		at com.sun.xml.ws.wsdl.parser.RuntimeWSDLParser.createReader(RuntimeWSDLParser.java:977)
+		at com.sun.xml.ws.wsdl.parser.RuntimeWSDLParser.resolveWSDL(RuntimeWSDLParser.java:394)
+		at com.sun.xml.ws.wsdl.parser.RuntimeWSDLParser.parse(RuntimeWSDLParser.java:213)
+		... 35 more
+21-Mar-2020 18:10:32.324 GRAVE [http-nio-8080-exec-59] org.apache.catalina.core.StandardWrapperValve.invoke "Servlet.service()" pour la servlet [MemberManagerController] a généré une exception
+	javax.xml.ws.WebServiceException: Echec de l'accès au WSDL à http://localhost:8080/A2-LoanService/LoanServiceMemberManagerImpl?wsdl avec 
+	http://localhost:8080/A2-LoanService/LoanServiceMemberManagerImpl?wsdl.
+		at com.sun.xml.ws.wsdl.parser.RuntimeWSDLParser.tryWithMex(RuntimeWSDLParser.java:251)
+		at com.sun.xml.ws.wsdl.parser.RuntimeWSDLParser.parse(RuntimeWSDLParser.java:228)
+		at com.sun.xml.ws.wsdl.parser.RuntimeWSDLParser.parse(RuntimeWSDLParser.java:191)
+		at com.sun.xml.ws.wsdl.parser.RuntimeWSDLParser.parse(RuntimeWSDLParser.java:160)
+		at com.sun.xml.ws.client.WSServiceDelegate.parseWSDL(WSServiceDelegate.java:307)
+		at com.sun.xml.ws.client.WSServiceDelegate.<init>(WSServiceDelegate.java:269)
+		at com.sun.xml.ws.client.WSServiceDelegate.<init>(WSServiceDelegate.java:205)
+		at com.sun.xml.ws.client.WSServiceDelegate.<init>(WSServiceDelegate.java:195)
+		at com.sun.xml.ws.spi.ProviderImpl.createServiceDelegate(ProviderImpl.java:112)
+		at javax.xml.ws.Service.<init>(Service.java:77)
+		at a2.loanservice.client.LoanServiceMemberManagerImplService.<init>(LoanServiceMemberManagerImplService.java:42)
+		at LoanServiceMemberClientTest.MemberManagerController.getMemberInfo(MemberManagerController.java:133)
+		at LoanServiceMemberClientTest.MemberManagerController.doGet(MemberManagerController.java:75)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Thread.java:748)
+	Caused by: java.io.FileNotFoundException: http://localhost:8080/A2-LoanService/LoanServiceMemberManagerImpl?wsdl
+		at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1872)
+		at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1474)
+		at java.net.URL.openStream(URL.java:1045)
+		at com.sun.xml.ws.wsdl.parser.RuntimeWSDLParser.createReader(RuntimeWSDLParser.java:977)
+		at com.sun.xml.ws.wsdl.parser.RuntimeWSDLParser.resolveWSDL(RuntimeWSDLParser.java:394)
+		at com.sun.xml.ws.wsdl.parser.RuntimeWSDLParser.parse(RuntimeWSDLParser.java:213)
+		... 35 more
+21-Mar-2020 18:10:36.628 GRAVE [http-nio-8080-exec-25] org.apache.catalina.core.StandardWrapperValve.invoke "Servlet.service()" pour la servlet [MemberManagerController] a généré une exception
+	javax.xml.ws.WebServiceException: Echec de l'accès au WSDL à http://localhost:8080/A2-LoanService/LoanServiceMemberManagerImpl?wsdl avec 
+	http://localhost:8080/A2-LoanService/LoanServiceMemberManagerImpl?wsdl.
+		at com.sun.xml.ws.wsdl.parser.RuntimeWSDLParser.tryWithMex(RuntimeWSDLParser.java:251)
+		at com.sun.xml.ws.wsdl.parser.RuntimeWSDLParser.parse(RuntimeWSDLParser.java:228)
+		at com.sun.xml.ws.wsdl.parser.RuntimeWSDLParser.parse(RuntimeWSDLParser.java:191)
+		at com.sun.xml.ws.wsdl.parser.RuntimeWSDLParser.parse(RuntimeWSDLParser.java:160)
+		at com.sun.xml.ws.client.WSServiceDelegate.parseWSDL(WSServiceDelegate.java:307)
+		at com.sun.xml.ws.client.WSServiceDelegate.<init>(WSServiceDelegate.java:269)
+		at com.sun.xml.ws.client.WSServiceDelegate.<init>(WSServiceDelegate.java:205)
+		at com.sun.xml.ws.client.WSServiceDelegate.<init>(WSServiceDelegate.java:195)
+		at com.sun.xml.ws.spi.ProviderImpl.createServiceDelegate(ProviderImpl.java:112)
+		at javax.xml.ws.Service.<init>(Service.java:77)
+		at a2.loanservice.client.LoanServiceMemberManagerImplService.<init>(LoanServiceMemberManagerImplService.java:42)
+		at LoanServiceMemberClientTest.MemberManagerController.addMember(MemberManagerController.java:139)
+		at LoanServiceMemberClientTest.MemberManagerController.doPost(MemberManagerController.java:106)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Thread.java:748)
+	Caused by: java.io.FileNotFoundException: http://localhost:8080/A2-LoanService/LoanServiceMemberManagerImpl?wsdl
+		at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1872)
+		at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1474)
+		at java.net.URL.openStream(URL.java:1045)
+		at com.sun.xml.ws.wsdl.parser.RuntimeWSDLParser.createReader(RuntimeWSDLParser.java:977)
+		at com.sun.xml.ws.wsdl.parser.RuntimeWSDLParser.resolveWSDL(RuntimeWSDLParser.java:394)
+		at com.sun.xml.ws.wsdl.parser.RuntimeWSDLParser.parse(RuntimeWSDLParser.java:213)
+		... 35 more
+21-Mar-2020 18:10:55.123 GRAVE [http-nio-8080-exec-60] org.apache.catalina.core.StandardWrapperValve.invoke "Servlet.service()" pour la servlet [MemberManagerController] a généré une exception
+	javax.xml.ws.WebServiceException: Echec de l'accès au WSDL à http://localhost:8080/A2-LoanService/LoanServiceMemberManagerImpl?wsdl avec 
+	http://localhost:8080/A2-LoanService/LoanServiceMemberManagerImpl?wsdl.
+		at com.sun.xml.ws.wsdl.parser.RuntimeWSDLParser.tryWithMex(RuntimeWSDLParser.java:251)
+		at com.sun.xml.ws.wsdl.parser.RuntimeWSDLParser.parse(RuntimeWSDLParser.java:228)
+		at com.sun.xml.ws.wsdl.parser.RuntimeWSDLParser.parse(RuntimeWSDLParser.java:191)
+		at com.sun.xml.ws.wsdl.parser.RuntimeWSDLParser.parse(RuntimeWSDLParser.java:160)
+		at com.sun.xml.ws.client.WSServiceDelegate.parseWSDL(WSServiceDelegate.java:307)
+		at com.sun.xml.ws.client.WSServiceDelegate.<init>(WSServiceDelegate.java:269)
+		at com.sun.xml.ws.client.WSServiceDelegate.<init>(WSServiceDelegate.java:205)
+		at com.sun.xml.ws.client.WSServiceDelegate.<init>(WSServiceDelegate.java:195)
+		at com.sun.xml.ws.spi.ProviderImpl.createServiceDelegate(ProviderImpl.java:112)
+		at javax.xml.ws.Service.<init>(Service.java:77)
+		at a2.loanservice.client.LoanServiceMemberManagerImplService.<init>(LoanServiceMemberManagerImplService.java:42)
+		at LoanServiceMemberClientTest.MemberManagerController.getMembers(MemberManagerController.java:127)
+		at LoanServiceMemberClientTest.MemberManagerController.doGet(MemberManagerController.java:67)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Thread.java:748)
+	Caused by: java.io.FileNotFoundException: http://localhost:8080/A2-LoanService/LoanServiceMemberManagerImpl?wsdl
+		at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1872)
+		at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1474)
+		at java.net.URL.openStream(URL.java:1045)
+		at com.sun.xml.ws.wsdl.parser.RuntimeWSDLParser.createReader(RuntimeWSDLParser.java:977)
+		at com.sun.xml.ws.wsdl.parser.RuntimeWSDLParser.resolveWSDL(RuntimeWSDLParser.java:394)
+		at com.sun.xml.ws.wsdl.parser.RuntimeWSDLParser.parse(RuntimeWSDLParser.java:213)
+		... 35 more

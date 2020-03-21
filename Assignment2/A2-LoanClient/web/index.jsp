@@ -112,13 +112,20 @@
     <%-- end web service invocation --%><hr/>
     
     
-    <form action="MemberManagerServlet" method="GET">
+    <form action="MemberManagerController" method="GET">
         View All Members: <input type="submit" name="members" value="displayAll"/><br>
     </form>
     
-    <form action="MemberManagerServlet" method="GET">
+    <form action="MemberManagerController" method="GET">
         View Member with ID:<input type="text" name="viewMemberID">
         <input type="submit" name="members" value="displayMember"/><br>
+    </form>
+    
+    <h3>Add a Member</h3>
+    <form action="MemberManagerController" method="POST">
+                Member Name: <input type="text" name="memberName"><br>
+                Member Contact Info: <input type="text" name="memberContact"><br>
+                <input type="submit" name="members" value="addMember" />
     </form>
     
     </body>  
