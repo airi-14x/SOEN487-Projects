@@ -85,7 +85,7 @@ public class LibraryClient {
         return webTarget.path("book_xml/" + id).request(MediaType.APPLICATION_XML).get(responseType);
     }
     
-    //Bug - 406
+    //Bug - 406 in console
     //Get book - html
     public <T> T getBookHtml(Class<T> responseType, int id) throws ClientErrorException {
         webTarget = client.target(BASE_URI).path("LibraryRESTService");
@@ -127,7 +127,7 @@ public class LibraryClient {
         return webTarget.path("book_basic/update").request().put(Entity.form(form));
     }
     
-    //Bug - 406 
+    //Bug - 406 in console
     //Update book - complex data type (json)
     public Response updateBookJson(int id, String book) {
          webTarget = client.target(BASE_URI).path("LibraryRESTService");
