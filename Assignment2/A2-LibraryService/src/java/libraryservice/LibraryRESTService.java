@@ -184,7 +184,7 @@ public class LibraryRESTService {
     @Produces(MediaType.TEXT_PLAIN)
     @Consumes(MediaType.APPLICATION_JSON)
     @Path("/book_json/update/{id}")
-    public Response updateBookXml(@PathParam("id") int id, String bookJson) {
+    public Response updateBookJson(@PathParam("id") int id, String bookJson) {
         try {
             ObjectMapper objectMapper = new ObjectMapper();
             Book book = objectMapper.readValue(bookJson, Book.class);
@@ -200,7 +200,7 @@ public class LibraryRESTService {
     @DELETE
     @Produces(MediaType.TEXT_PLAIN)
     @Path("/delete/{id}")
-    public Response deleteBookPlain(@PathParam("id") int id) {
+    public Response deleteBook(@PathParam("id") int id) {
         try {
             librarySystem.removeBook(id);
             return Response.status(200).entity("Success").build();
