@@ -3,11 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package LoanServiceMemberClientTest;
+package LoanServiceLoanClientTest;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -18,8 +17,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Airi
  */
-@WebServlet(name = "MemberManagerServlet", urlPatterns = {"/MemberManagerServlet"})
-public class MemberManagerServlet extends HttpServlet {
+@WebServlet(name = "LoanManagerServlet", urlPatterns = {"/LoanManagerServlet"})
+public class LoanManagerServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -38,10 +37,10 @@ public class MemberManagerServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet MemberManagerServlet</title>");            
+            out.println("<title>Servlet LoanManagerServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet MemberManagerServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet LoanManagerServlet at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -59,26 +58,7 @@ public class MemberManagerServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        if (request.getParameter("members").equals("displayAll")){
-            a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
-            a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
-            request.setAttribute("results", port.getMembers());
-        }
-        else if (request.getParameter("members").equals("displayMember")){
-            if(!request.getParameter("viewMemberID").equals(""))
-            {
-                String memberID =  request.getParameter("viewMemberID");
-                a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
-                a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
-                request.setAttribute("results", port.getMemberInfo(Integer.parseInt(memberID)));
-            }
-        }
-        
-        //return port.getMembers();
-        RequestDispatcher rd = request.getRequestDispatcher("/results.jsp");
-        rd.forward(request, response);
-        //processRequest(request, response);
+        processRequest(request, response);
     }
 
     /**
@@ -104,6 +84,5 @@ public class MemberManagerServlet extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-
 
 }

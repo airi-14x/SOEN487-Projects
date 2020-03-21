@@ -115,7 +115,12 @@
     <form action="MemberManagerServlet" method="GET">
         View All Members: <input type="submit" name="members" value="displayAll"/><br>
     </form>
-
+    
+    <form action="MemberManagerServlet" method="GET">
+        View Member with ID:<input type="text" name="viewMemberID">
+        <input type="submit" name="members" value="displayMember"/><br>
+    </form>
+    
     </body>  
     
 </html>

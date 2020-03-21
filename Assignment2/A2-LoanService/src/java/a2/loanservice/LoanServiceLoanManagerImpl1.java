@@ -27,14 +27,15 @@ public class LoanServiceLoanManagerImpl1 implements LoanServiceLoanManager1 {
     }
 
     @Override
-    public String listLoan(String bookTitle) throws LoanServiceSOAPFault {
+    public String listLoan(String bookTitle){
         ConcurrentHashMap<Integer, Loan> loansMap = loanManager.getLoansMap();
         String loanResult = ""; //Multiple loans with same title
         
+        /*
         if (bookTitle.isEmpty()){
             Throwable t = new IllegalArgumentException("Empty book title");
             throw new LoanServiceSOAPFault("Error in listLoan()",t);
-        }
+        }*/
         
         for (Map.Entry<Integer, Loan> loan : loansMap.entrySet()) {
             if (loan.getValue().getBookTitle().equals(bookTitle)) {
@@ -49,14 +50,15 @@ public class LoanServiceLoanManagerImpl1 implements LoanServiceLoanManager1 {
     }
 
     @Override
-    public String listLoanID(int memberID) throws LoanServiceSOAPFault {
+    public String listLoanID(int memberID){
         ConcurrentHashMap<Integer, Loan> loansMap = loanManager.getLoansMap();
         String loanResult = ""; //Multiple loans with same memberID
         
+        /*
         if (memberID == 0){
             Throwable t = new IllegalArgumentException("Invalid memberID");
             throw new LoanServiceSOAPFault("Error in listLoanID()",t);
-        }
+        }*/
         for (Map.Entry<Integer, Loan> loan : loansMap.entrySet()) {
             if (loan.getValue().getMember() != null) {
                 if (loan.getValue().getMember().getMemberID() == memberID) {
@@ -73,42 +75,46 @@ public class LoanServiceLoanManagerImpl1 implements LoanServiceLoanManager1 {
     }
 
     @Override
-    public void borrowBook(String callNumber, int memberID, String borrowDate, String returnDate) throws LoanException, LoanServiceSOAPFault {
+    public void borrowBook(String callNumber, int memberID, String borrowDate, String returnDate) throws LoanException{
+        /*
         if (callNumber.isEmpty() || memberID == 0 || borrowDate.isEmpty() || returnDate.isEmpty())
         {
             Throwable t = new IllegalArgumentException("Invalid parameters in borrowBook()");
             throw new LoanServiceSOAPFault("Error in borrowBook",t);
-        }
+        }*/
         loanManager.borrowBook(callNumber, memberID, borrowDate, returnDate);
     }
 
     @Override
-    public void editBookLoan(int loanID, Member member, String borrowDate, String returnDate) throws LoanException, LoanServiceSOAPFault {
+    public void editBookLoan(int loanID, Member member, String borrowDate, String returnDate) throws LoanException{
+        /*
         if (loanID == 0 || member == null || borrowDate.isEmpty() || returnDate.isEmpty())
         {
             Throwable t = new IllegalArgumentException("Invalid parameters in editBookLoan()");
             throw new LoanServiceSOAPFault("Error in editBookLoan",t);
-        }
+        }*/
         
         loanManager.editBookLoan(loanID, member, borrowDate, returnDate);
     }
 
     @Override
-    public void returnBookLoan(int loanID) throws LoanException, LoanServiceSOAPFault {
+    public void returnBookLoan(int loanID) throws LoanException{
+        /*
         if(loanID == 0)
         {
             Throwable t = new IllegalArgumentException("Invalid memberID");
             throw new LoanServiceSOAPFault("Error in returnBookLoan()",t);
-        }
+        }*/
         loanManager.returnBookLoan(loanID);
     }
 
     @Override
-    public void deleteBookLoan(int loanID) throws LoanException, LoanServiceSOAPFault {
+    public void deleteBookLoan(int loanID) throws LoanException{
+        /*
         if (loanID == 0){
             Throwable t = new IllegalArgumentException("Invalid memberID");
             throw new LoanServiceSOAPFault("Error in deleteBookLoan()",t);
-        }
+        }*/
         loanManager.deleteBookLoan(loanID);
     }
 
