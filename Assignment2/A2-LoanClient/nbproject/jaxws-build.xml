@@ -58,22 +58,6 @@
         <delete dir="${build.generated.sources.dir}/jax-ws/a2/loanservice/client"/>
         <delete dir="${build.generated.dir}/jax-wsCache/LoanServiceMemberManagerImpl"/>
     </target>
-    <target name="wsimport-client-LoanServiceLoanManagerImpl1" depends="wsimport-init">
-        <mkdir dir="${build.generated.dir}/jax-wsCache/LoanServiceLoanManagerImpl1"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/LoanServiceLoanManagerImpl1" destdir="${build.generated.dir}/jax-wsCache/LoanServiceLoanManagerImpl1" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/LoanServiceLoanManagerImpl1/wsdl/localhost_8080/A2-LoanService/LoanServiceLoanManagerImpl1.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/A2-LoanService/LoanServiceLoanManagerImpl1?wsdl" xnocompile="true" xendorsed="true" package="a2.loanservice.loanmanager.client">
-            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/LoanServiceLoanManagerImpl1/wsdl/localhost_8080/A2-LoanService/LoanServiceLoanManagerImpl1.wsdl"/>
-            <produces dir="${build.generated.dir}/jax-wsCache/LoanServiceLoanManagerImpl1"/>
-        </wsimport>
-        <copy todir="${build.generated.sources.dir}/jax-ws">
-            <fileset dir="${build.generated.dir}/jax-wsCache/LoanServiceLoanManagerImpl1">
-                <include name="**/*.java"/>
-            </fileset>
-        </copy>
-    </target>
-    <target name="wsimport-client-clean-LoanServiceLoanManagerImpl1" depends="-init-project">
-        <delete dir="${build.generated.sources.dir}/jax-ws/a2/loanservice/loanmanager/client"/>
-        <delete dir="${build.generated.dir}/jax-wsCache/LoanServiceLoanManagerImpl1"/>
-    </target>
     <target name="wsimport-client-HelloWorld_1" depends="wsimport-init">
         <mkdir dir="${build.generated.dir}/jax-wsCache/HelloWorld_1"/>
         <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/HelloWorld_1" destdir="${build.generated.dir}/jax-wsCache/HelloWorld_1" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/HelloWorld_1/wsdl/localhost_8080/A2-LoanService/HelloWorld.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/A2-LoanService/HelloWorld?wsdl" xnocompile="true" xendorsed="true" package="HelloWorldClientTest">
@@ -106,5 +90,21 @@
         <delete dir="${build.generated.sources.dir}/jax-ws/LoanServiceMemberClientTest"/>
         <delete dir="${build.generated.dir}/jax-wsCache/LoanServiceMemberManagerImpl_1"/>
     </target>
-    <target name="wsimport-client-generate" depends="wsimport-client-HelloWorld, wsimport-client-LoanServiceMemberManagerImpl, wsimport-client-LoanServiceLoanManagerImpl1, wsimport-client-HelloWorld_1, wsimport-client-LoanServiceMemberManagerImpl_1"/>
+    <target name="wsimport-client-LoanServiceLoanManagerImpl1" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/LoanServiceLoanManagerImpl1"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/LoanServiceLoanManagerImpl1" destdir="${build.generated.dir}/jax-wsCache/LoanServiceLoanManagerImpl1" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/LoanServiceLoanManagerImpl1/wsdl/localhost_8080/A2-LoanService/LoanServiceLoanManagerImpl1.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/A2-LoanService/LoanServiceLoanManagerImpl1?wsdl" xnocompile="true" xendorsed="true" package="LoanServiceLoanClientTest">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/LoanServiceLoanManagerImpl1/wsdl/localhost_8080/A2-LoanService/LoanServiceLoanManagerImpl1.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/LoanServiceLoanManagerImpl1"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/LoanServiceLoanManagerImpl1">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-LoanServiceLoanManagerImpl1" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/LoanServiceLoanClientTest"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/LoanServiceLoanManagerImpl1"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-HelloWorld, wsimport-client-LoanServiceMemberManagerImpl, wsimport-client-HelloWorld_1, wsimport-client-LoanServiceMemberManagerImpl_1, wsimport-client-LoanServiceLoanManagerImpl1"/>
 </project>

@@ -3,10 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package a2.loanservice.test.client;
+package LoanServiceMemberClientTest;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -59,18 +60,13 @@ public class MemberManagerServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        try(PrintWriter out = response.getWriter()) {
-	a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
-	a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
-	// TODO process result here
-	java.lang.String result = port.getMembers();
-        
-           out.println("Result = "+result);
-         } catch (Exception ex) {
-	// TODO handle custom exceptions here
-    }
-        
-        processRequest(request, response);
+        a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
+        a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+        request.setAttribute("results", port.getMembers());
+        //return port.getMembers();
+        RequestDispatcher rd = request.getRequestDispatcher("/results.jsp");
+        rd.forward(request, response);
+        //processRequest(request, response);
     }
 
     /**
