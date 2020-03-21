@@ -3998,3 +3998,418 @@
 21-Mar-2020 16:21:45.349 INFOS [main] org.apache.coyote.AbstractProtocol.stop Arrêt du gestionnaire de protocole ["ajp-nio-8009"]
 21-Mar-2020 16:21:45.377 INFOS [main] org.apache.coyote.AbstractProtocol.destroy Destruction du gestionnaire de protocole ["http-nio-8080"]
 21-Mar-2020 16:21:45.379 INFOS [main] org.apache.coyote.AbstractProtocol.destroy Destruction du gestionnaire de protocole ["ajp-nio-8009"]
+21-Mar-2020 16:39:00.619 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version du serveur:        Apache Tomcat/9.0.30
+21-Mar-2020 16:39:00.623 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Serveur compilé:       Dec 7 2019 16:42:04 UTC
+21-Mar-2020 16:39:00.623 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version du serveur:      9.0.30.0
+21-Mar-2020 16:39:00.624 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Nom de l'OS:           Mac OS X
+21-Mar-2020 16:39:00.624 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version de l'OS:        10.15.3
+21-Mar-2020 16:39:00.624 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86_64
+21-Mar-2020 16:39:00.624 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Répertoire de Java:     /Library/Java/JavaVirtualMachines/jdk1.8.0_141.jdk/Contents/Home/jre
+21-Mar-2020 16:39:00.624 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Version de la JVM:           1.8.0_141-b15
+21-Mar-2020 16:39:00.625 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Fournisseur de la JVM:            Oracle Corporation
+21-Mar-2020 16:39:00.625 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         /Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30
+21-Mar-2020 16:39:00.625 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         /Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30
+21-Mar-2020 16:39:00.631 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Djava.util.logging.config.file=/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/logging.properties
+21-Mar-2020 16:39:00.632 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+21-Mar-2020 16:39:00.633 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Dhttp.nonProxyHosts=localhost|127.0.0.1|Airis-MBP
+21-Mar-2020 16:39:00.633 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Djdk.tls.ephemeralDHKeySize=2048
+21-Mar-2020 16:39:00.634 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+21-Mar-2020 16:39:00.634 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027
+21-Mar-2020 16:39:00.634 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Dignore.endorsed.dirs=
+21-Mar-2020 16:39:00.634 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Dcatalina.base=/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30
+21-Mar-2020 16:39:00.634 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Dcatalina.home=/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30
+21-Mar-2020 16:39:00.634 INFOS [main] org.apache.catalina.startup.VersionLoggerListener.log Argument de la ligne de commande: -Djava.io.tmpdir=/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/temp
+21-Mar-2020 16:39:00.634 INFOS [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent La librairie Apache Tomcat Native basée sur APR qui permet des performances optimales dans les environnements de production n'a pas été trouvée sur le java.library.path: [/Users/Airi/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.]
+21-Mar-2020 16:39:01.226 INFOS [main] org.apache.coyote.AbstractProtocol.init Initialisation du gestionnaire de protocole ["http-nio-8080"]
+21-Mar-2020 16:39:01.438 INFOS [main] org.apache.coyote.AbstractProtocol.init Initialisation du gestionnaire de protocole ["ajp-nio-8009"]
+21-Mar-2020 16:39:01.445 INFOS [main] org.apache.catalina.startup.Catalina.load L'initialisation du serveur a pris [1 227] millisecondes
+21-Mar-2020 16:39:01.522 INFOS [main] org.apache.catalina.core.StandardService.startInternal Démarrage du service [Catalina]
+21-Mar-2020 16:39:01.523 INFOS [main] org.apache.catalina.core.StandardEngine.startInternal Démarrage du moteur de Servlets: [Apache Tomcat/9.0.30]
+21-Mar-2020 16:39:01.540 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryServiceTest.xml]
+21-Mar-2020 16:39:01.572 AVERTISSEMENT [main] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/A1-LibraryServiceTest] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryServiceTest.xml] a été ignoré
+21-Mar-2020 16:39:01.633 GRAVE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Erreur lors du déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryServiceTest.xml]
+	java.lang.IllegalStateException: Erreur lors du démarrage du conteneur fils
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:720)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:690)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:705)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:631)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1831)
+		at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:112)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:526)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:425)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1576)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:309)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:423)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:366)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:936)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:633)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:343)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:474)
+	Caused by: org.apache.catalina.LifecycleException: Echec de démarrage du composant [org.apache.catalina.webresources.StandardRoot@491cc5c9]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4800)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4935)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:717)
+		... 37 more
+	Caused by: java.lang.IllegalArgumentException: L'ensemble de ressources principal [/Users/Airi/Documents/SOEN487-Projects/Assignment1/A1-LibraryServiceTest/build/web] est invalide
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:752)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:709)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 41 more
+21-Mar-2020 16:39:01.635 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryServiceTest.xml] a pris [95] ms
+21-Mar-2020 16:39:01.635 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/HelloWorldJersey.xml]
+21-Mar-2020 16:39:01.637 AVERTISSEMENT [main] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/HelloWorldJersey] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/HelloWorldJersey.xml] a été ignoré
+21-Mar-2020 16:39:01.644 GRAVE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Erreur lors du déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/HelloWorldJersey.xml]
+	java.lang.IllegalStateException: Erreur lors du démarrage du conteneur fils
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:720)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:690)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:705)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:631)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1831)
+		at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:112)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:526)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:425)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1576)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:309)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:423)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:366)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:936)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:633)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:343)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:474)
+	Caused by: org.apache.catalina.LifecycleException: Echec de démarrage du composant [org.apache.catalina.webresources.StandardRoot@757942a1]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4800)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4935)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:717)
+		... 37 more
+	Caused by: java.lang.IllegalArgumentException: L'ensemble de ressources principal [/Users/Airi/Documents/SOEN487-Projects/Tutorial/HelloWorldJersey/build/web] est invalide
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:752)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:709)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 41 more
+21-Mar-2020 16:39:01.646 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/HelloWorldJersey.xml] a pris [10] ms
+21-Mar-2020 16:39:01.646 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/HelloWorld1.xml]
+21-Mar-2020 16:39:01.647 AVERTISSEMENT [main] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/HelloWorld1] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/HelloWorld1.xml] a été ignoré
+21-Mar-2020 16:39:01.655 GRAVE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Erreur lors du déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/HelloWorld1.xml]
+	java.lang.IllegalStateException: Erreur lors du démarrage du conteneur fils
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:720)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:690)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:705)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:631)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1831)
+		at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:112)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:526)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:425)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1576)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:309)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:423)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:366)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:936)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:633)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:343)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:474)
+	Caused by: org.apache.catalina.LifecycleException: Echec de démarrage du composant [org.apache.catalina.webresources.StandardRoot@4671e53b]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4800)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4935)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:717)
+		... 37 more
+	Caused by: java.lang.IllegalArgumentException: L'ensemble de ressources principal [/Users/Airi/Documents/SOEN487-Projects/Tutorial/HelloWorld1/build/web] est invalide
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:752)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:709)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 41 more
+21-Mar-2020 16:39:01.657 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/HelloWorld1.xml] a pris [11] ms
+21-Mar-2020 16:39:01.657 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryService.xml]
+21-Mar-2020 16:39:01.659 AVERTISSEMENT [main] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/A1-LibraryService] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryService.xml] a été ignoré
+21-Mar-2020 16:39:01.664 GRAVE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Erreur lors du déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryService.xml]
+	java.lang.IllegalStateException: Erreur lors du démarrage du conteneur fils
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:720)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:690)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:705)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:631)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1831)
+		at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:112)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:526)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:425)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1576)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:309)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:423)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:366)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:936)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:633)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:343)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:474)
+	Caused by: org.apache.catalina.LifecycleException: Echec de démarrage du composant [org.apache.catalina.webresources.StandardRoot@52f759d7]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4800)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4935)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:717)
+		... 37 more
+	Caused by: java.lang.IllegalArgumentException: L'ensemble de ressources principal [/Users/Airi/Documents/SOEN487-Projects/Assignment1/A1-LibraryService/build/web] est invalide
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:752)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:709)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 41 more
+21-Mar-2020 16:39:01.670 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryService.xml] a pris [9] ms
+21-Mar-2020 16:39:01.671 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanService.xml]
+21-Mar-2020 16:39:01.672 AVERTISSEMENT [main] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/A2-LoanService] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanService.xml] a été ignoré
+21-Mar-2020 16:39:18.085 INFOS [main] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+21-Mar-2020 16:39:18.897 INFOS [main] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+21-Mar-2020 16:39:19.077 INFOS [main] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+21-Mar-2020 16:39:19.166 INFOS [main] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+21-Mar-2020 16:39:19.392 INFOS [main] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+21-Mar-2020 16:39:19.398 INFOS [main] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+21-Mar-2020 16:39:19.398 INFOS [main] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+21-Mar-2020 16:39:19.541 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanService.xml] a pris [17 871] ms
+21-Mar-2020 16:39:19.541 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanClient.xml]
+21-Mar-2020 16:39:19.543 AVERTISSEMENT [main] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/A2-LoanClient] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanClient.xml] a été ignoré
+21-Mar-2020 16:39:26.030 INFOS [main] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+21-Mar-2020 16:39:26.076 INFOS [main] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+21-Mar-2020 16:39:26.077 INFOS [main] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+21-Mar-2020 16:39:26.102 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanClient.xml] a pris [6 560] ms
+21-Mar-2020 16:39:26.102 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryService1.xml]
+21-Mar-2020 16:39:26.104 AVERTISSEMENT [main] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/A1-LibraryService1] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryService1.xml] a été ignoré
+21-Mar-2020 16:39:26.111 GRAVE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Erreur lors du déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryService1.xml]
+	java.lang.IllegalStateException: Erreur lors du démarrage du conteneur fils
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:720)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:690)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:705)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:631)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1831)
+		at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:112)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:526)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:425)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1576)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:309)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:423)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:366)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:936)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:633)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:343)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:474)
+	Caused by: org.apache.catalina.LifecycleException: Echec de démarrage du composant [org.apache.catalina.webresources.StandardRoot@3d223638]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4800)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4935)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:717)
+		... 37 more
+	Caused by: java.lang.IllegalArgumentException: L'ensemble de ressources principal [/Users/Airi/Documents/SOEN487-Projects/Assignment1/A1-LibraryService1/build/web] est invalide
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:752)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:709)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 41 more
+21-Mar-2020 16:39:26.116 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryService1.xml] a pris [14] ms
+21-Mar-2020 16:39:26.117 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryClient.xml]
+21-Mar-2020 16:39:26.118 AVERTISSEMENT [main] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/A1-LibraryClient] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryClient.xml] a été ignoré
+21-Mar-2020 16:39:26.129 GRAVE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Erreur lors du déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryClient.xml]
+	java.lang.IllegalStateException: Erreur lors du démarrage du conteneur fils
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:720)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:690)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:705)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:631)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1831)
+		at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:112)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:526)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:425)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1576)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:309)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:423)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:366)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:936)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+		at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:633)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:343)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:474)
+	Caused by: org.apache.catalina.LifecycleException: Echec de démarrage du composant [org.apache.catalina.webresources.StandardRoot@7fd1342c]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4800)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4935)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:717)
+		... 37 more
+	Caused by: java.lang.IllegalArgumentException: L'ensemble de ressources principal [/Users/Airi/Documents/SOEN487-Projects/Assignment1/A1-LibraryClient/build/web] est invalide
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:752)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:709)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 41 more
+21-Mar-2020 16:39:26.131 INFOS [main] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A1-LibraryClient.xml] a pris [13] ms
+21-Mar-2020 16:39:26.132 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/docs]
+21-Mar-2020 16:39:26.157 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/docs] de l'application web s'est terminé en [25] ms
+21-Mar-2020 16:39:26.157 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/manager]
+21-Mar-2020 16:39:26.216 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/manager] de l'application web s'est terminé en [58] ms
+21-Mar-2020 16:39:26.217 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/examples]
+21-Mar-2020 16:39:26.623 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/examples] de l'application web s'est terminé en [406] ms
+21-Mar-2020 16:39:26.624 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Déploiement du répertoire d'application web [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/host-manager]
+21-Mar-2020 16:39:26.656 INFOS [main] org.apache.catalina.startup.HostConfig.deployDirectory Le déploiement du répertoire [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/webapps/host-manager] de l'application web s'est terminé en [32] ms
+21-Mar-2020 16:39:26.666 INFOS [main] org.apache.coyote.AbstractProtocol.start Démarrage du gestionnaire de protocole ["http-nio-8080"]
+21-Mar-2020 16:39:26.690 INFOS [main] org.apache.coyote.AbstractProtocol.start Démarrage du gestionnaire de protocole ["ajp-nio-8009"]
+21-Mar-2020 16:39:26.694 INFOS [main] org.apache.catalina.startup.Catalina.start Le démarrage du serveur a pris [25 248] millisecondes
+21-Mar-2020 16:39:36.107 INFOS [http-nio-8080-exec-3] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+21-Mar-2020 16:39:36.109 INFOS [http-nio-8080-exec-3] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+21-Mar-2020 16:39:36.642 INFOS [http-nio-8080-exec-3] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/A2-LoanClient]
+21-Mar-2020 16:39:36.666 INFOS [http-nio-8080-exec-1] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanClient.xml]
+21-Mar-2020 16:39:36.667 AVERTISSEMENT [http-nio-8080-exec-1] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/A2-LoanClient] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanClient.xml] a été ignoré
+21-Mar-2020 16:39:39.673 INFOS [http-nio-8080-exec-1] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+21-Mar-2020 16:39:39.699 INFOS [http-nio-8080-exec-1] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+21-Mar-2020 16:39:39.700 INFOS [http-nio-8080-exec-1] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+21-Mar-2020 16:39:39.704 INFOS [http-nio-8080-exec-1] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanClient.xml] a pris [3 037] ms
+21-Mar-2020 16:41:13.165 INFOS [main] org.apache.catalina.core.StandardServer.await Une commande d'arrêt valide a été reçue sur le port d'arrêt, arrêt de l'instance du serveur
+21-Mar-2020 16:41:13.165 INFOS [main] org.apache.coyote.AbstractProtocol.pause Le gestionnaire de protocole ["http-nio-8080"] est mis en pause
+21-Mar-2020 16:41:13.174 INFOS [main] org.apache.coyote.AbstractProtocol.pause Le gestionnaire de protocole ["ajp-nio-8009"] est mis en pause
+21-Mar-2020 16:41:13.181 INFOS [main] org.apache.catalina.core.StandardService.stopInternal Arrêt du service [Catalina]
+21-Mar-2020 16:41:13.188 INFOS [main] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+21-Mar-2020 16:41:13.191 INFOS [main] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-HelloWorld-HelloWorldPort
+21-Mar-2020 16:41:13.191 INFOS [main] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+21-Mar-2020 16:41:13.192 INFOS [main] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+21-Mar-2020 16:41:13.192 INFOS [main] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+21-Mar-2020 16:41:13.192 INFOS [main] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+21-Mar-2020 16:41:13.197 INFOS [main] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+21-Mar-2020 16:41:13.198 INFOS [main] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+21-Mar-2020 16:41:13.209 INFOS [main] org.apache.coyote.AbstractProtocol.stop Arrêt du gestionnaire de protocole ["http-nio-8080"]
+21-Mar-2020 16:41:13.216 INFOS [main] org.apache.coyote.AbstractProtocol.stop Arrêt du gestionnaire de protocole ["ajp-nio-8009"]
+21-Mar-2020 16:41:13.218 INFOS [main] org.apache.coyote.AbstractProtocol.destroy Destruction du gestionnaire de protocole ["http-nio-8080"]
+21-Mar-2020 16:41:13.221 INFOS [main] org.apache.coyote.AbstractProtocol.destroy Destruction du gestionnaire de protocole ["ajp-nio-8009"]

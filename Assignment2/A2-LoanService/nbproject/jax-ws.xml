@@ -7,9 +7,6 @@
     <service name="LoanServiceMemberManagerImpl">
       <implementation-class>a2.loanservice.LoanServiceMemberManagerImpl</implementation-class>
     </service>
-    <service name="LoanServiceLoanManagerImpl1">
-      <implementation-class>a2.loanservice.LoanServiceLoanManagerImpl1</implementation-class>
-    </service>
   </services>
   <clients>
     <client name="HelloWorld">
