@@ -154,12 +154,8 @@ public class Library {
     }
     
     public String bookToHtml(Book book) {
-        List<String> bookList = new ArrayList(books.values());
-        StringBuilder output = new StringBuilder();
-        output.append("<html><body><table style={border: 1px solid black}><h1>Requested book:</h1>");
-        output.append(book.toString());
-        output.append("</table></body></html>");
-        return output.toString();
+        return  "<html> " + "<title>" + "Book Html" + "</title>"
+        + "<body><h1>" + book.toString() + "</body></h1>" + "</html> ";
     }
     
 

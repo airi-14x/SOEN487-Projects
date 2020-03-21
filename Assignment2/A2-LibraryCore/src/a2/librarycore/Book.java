@@ -100,6 +100,7 @@ public class Book implements Serializable {
     public String toString() {
         return "Book{" + "id=" + id + ", title=" + title + ", description=" + description + ", isbn=" + isbn + ", author=" + author + ", publisher=" + publisher + ", callNumber=" + callNumber + '}';
     }
+    
 
     @Override
     public boolean equals(Object object) {
