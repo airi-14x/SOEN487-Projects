@@ -13,13 +13,15 @@
     </head>
     <body>
         <h1></h1>
+        
+        
     <%-- start web service invocation --%><hr/>
     <%
     try {
 	helloWorldClient.HelloWorld_Service service = new helloWorldClient.HelloWorld_Service();
 	helloWorldClient.HelloWorld port = service.getHelloWorldPort();
 	 // TODO initialize WS operation arguments here
-	java.lang.String name = "TestingHelloWorld";
+	java.lang.String name = "";
 	// TODO process result here
 	java.lang.String result = port.hello(name);
 	out.println("Result = "+result);
@@ -28,7 +30,6 @@
     }
     %>
     <%-- end web service invocation --%><hr/>
-    
     
     <%-- start web service invocation --%><hr/>
     <%
@@ -114,7 +115,12 @@
     <form action="MemberManagerServlet" method="GET">
         View All Members: <input type="submit" name="members" value="displayAll"/><br>
     </form>
-
+    
+    <form action="MemberManagerServlet" method="GET">
+        View Member with ID:<input type="text" name="viewMemberID">
+        <input type="submit" name="members" value="displayMember"/><br>
+    </form>
+    
     </body>  
     
 </html>
