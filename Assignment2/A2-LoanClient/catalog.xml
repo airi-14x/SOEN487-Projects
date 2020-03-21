@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/A2-LoanService/HelloWorld?wsdl" uri="src/conf/xml-resources/web-service-references/HelloWorld/wsdl/localhost_8080/A2-LoanService/HelloWorld.wsdl"/>
+    <system systemId="http://localhost:8080/A2-LoanService/HelloWorld?xsd=1" uri="src/conf/xml-resources/web-service-references/HelloWorld/wsdl/localhost_8080/A2-LoanService/HelloWorld.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/A2-LoanService/LoanServiceMemberManagerImpl?wsdl" uri="src/conf/xml-resources/web-service-references/LoanServiceMemberManagerImpl/wsdl/localhost_8080/A2-LoanService/LoanServiceMemberManagerImpl.wsdl"/>
+    <system systemId="http://localhost:8080/A2-LoanService/LoanServiceMemberManagerImpl?xsd=1" uri="src/conf/xml-resources/web-service-references/LoanServiceMemberManagerImpl/wsdl/localhost_8080/A2-LoanService/LoanServiceMemberManagerImpl.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/A2-LoanService/LoanServiceLoanManagerImpl?wsdl" uri="src/conf/xml-resources/web-service-references/LoanServiceLoanManagerImpl_1/wsdl/localhost_8080/A2-LoanService/LoanServiceLoanManagerImpl.wsdl"/>
+    <system systemId="http://localhost:8080/A2-LoanService/LoanServiceLoanManagerImpl1?wsdl" uri="src/conf/xml-resources/web-service-references/LoanServiceLoanManagerImpl1/wsdl/localhost_8080/A2-LoanService/LoanServiceLoanManagerImpl1.wsdl"/>
+    <system systemId="http://localhost:8080/A2-LoanService/LoanServiceLoanManagerImpl1?xsd=1" uri="src/conf/xml-resources/web-service-references/LoanServiceLoanManagerImpl1/wsdl/localhost_8080/A2-LoanService/LoanServiceLoanManagerImpl1.xsd_1.xsd"/>
+</catalog>
