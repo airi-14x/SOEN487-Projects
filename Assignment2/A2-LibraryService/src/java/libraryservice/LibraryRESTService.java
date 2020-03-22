@@ -47,7 +47,7 @@ public class LibraryRESTService {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/books_json")
-    public List<Book> listBooksJSON() {
+    public List<Book> listBooksJson() throws LibraryException {
         ConcurrentHashMap bookMap = librarySystem.getBooksMap();
         return new ArrayList<>(bookMap.values());
     }

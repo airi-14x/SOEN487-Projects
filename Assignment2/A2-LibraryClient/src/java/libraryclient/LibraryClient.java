@@ -5,6 +5,7 @@
  */
 package libraryclient;
 
+import a2.librarycore.BookList;
 import javax.ws.rs.ClientErrorException;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.Entity;
