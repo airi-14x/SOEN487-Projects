@@ -4,9 +4,17 @@
         <servlet-name>ListBooksJson</servlet-name>
         <servlet-class>servlets.ListBooksJson</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ListBooksXml</servlet-name>
+        <servlet-class>servlets.ListBooksXml</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ListBooksJson</servlet-name>
         <url-pattern>/ListBooksJson</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListBooksXml</servlet-name>
+        <url-pattern>/ListBooksXml</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

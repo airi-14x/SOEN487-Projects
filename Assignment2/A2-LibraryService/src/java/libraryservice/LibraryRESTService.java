@@ -56,12 +56,9 @@ public class LibraryRESTService {
     @GET
     @Produces(MediaType.APPLICATION_XML)
     @Path("/books_xml")
-    public BookList listBooksXML() throws LibraryException {
+    public List<Book> listBooksXml() throws LibraryException {
         ConcurrentHashMap bookMap = librarySystem.getBooksMap();
-        List<Book> bookList = new ArrayList<>(bookMap.values());
-        BookList books = new BookList();
-        books.setList(bookList);
-        return books;
+        return new ArrayList<>(bookMap.values());
     }
 
     //List books - Produces HTML

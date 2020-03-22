@@ -14,5 +14,8 @@
     <body>
         <h1>List of current books in JSON format</h1>
         ${books}
-    </body>
+    <li><a href="ListBooks">List books - PlAIN-TEXT</a></li>
+    <li><a href="ListBooksXml">List books - XML</a></li>
+    <li><a href="ListBooksHtml">List books - HTML</a></li>
+</body>
 </html>

@@ -16,6 +16,8 @@
         ${books}
         <ul>
             <li><a href="ListBooksJson">List books - JSON</a></li>
+            <li><a href="ListBooksXml">List books - XML</a></li>
+            <li><a href="ListBooksHtml">List books - HTML</a></li>
         </ul>
     </body>
 </html>
