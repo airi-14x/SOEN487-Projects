@@ -145,7 +145,7 @@ public class Library {
     public String booksToHtml() {
         List<String> bookList = new ArrayList(books.values());
         StringBuilder output = new StringBuilder();
-        output.append("<html><body><table style={border: 1px solid black}><h1>List of all books</h1>");
+        output.append("<html><body><table style={border: 1px solid black}>");
         for (Iterator iter = bookList.iterator(); iter.hasNext();) {
             output.append("<tr><td>" + iter.next() + "</td></tr>");
         }

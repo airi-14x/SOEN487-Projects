@@ -8,6 +8,10 @@
         <servlet-name>ListBooksXml</servlet-name>
         <servlet-class>servlets.ListBooksXml</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AddBook</servlet-name>
+        <servlet-class>servlets.AddBook</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ListBooksJson</servlet-name>
         <url-pattern>/ListBooksJson</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>ListBooksXml</servlet-name>
         <url-pattern>/ListBooksXml</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddBook</servlet-name>
+        <url-pattern>/AddBook</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,12 +13,16 @@
         <title>List Books Plain</title>
     </head>
     <body>
-        <h1>List of current books in text/plain format</h1>
+        <h1>List of current books</h1>
+        <h3>Text/plain format</h3>
         ${books}
-        <ul>
-            <li><a href="ListBooksJson">List books - JSON</a></li>
-            <li><a href="ListBooksXml">List books - XML</a></li>
-            <li><a href="ListBooksHtml">List books - HTML</a></li>
-        </ul>
+        <br/>
+        <h3>JSON format</h3>
+        ${booksJson}
+        <br/>
+        <h3>XML format</h3>
+        <c:out value="${booksXml}"/>
+        <h3>HTML format</h3>
+        ${booksHtml}
     </body>
 </html>
