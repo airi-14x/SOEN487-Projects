@@ -53,7 +53,7 @@ public class ListBooksJson extends HttpServlet {
         LibraryClient client = new LibraryClient();
         String books = client.listBooksJson(String.class);
         request.setAttribute("books", books);
-        request.getRequestDispatcher("listbooks.jsp").forward(request, response);
+        request.getRequestDispatcher("listbooksjson.jsp").forward(request, response);
     }
 
     /**
