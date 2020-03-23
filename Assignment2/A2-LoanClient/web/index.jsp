@@ -134,6 +134,13 @@
         <input type="submit" name="members" value="updateMember" />
     </form>
 
+    <h3>Delete a Member</h3>
+    <form action="MemberManagerController" method="GET">
+                Delete member with memberID:<input type="text" name="deleteMemberID">
+                <input type="submit" name="members" value="deleteMember"/><br>
+                
+    </form>
+
     </body>  
     
 </html>

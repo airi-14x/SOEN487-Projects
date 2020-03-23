@@ -28,6 +28,7 @@ import javax.xml.ws.WebServiceRef;
  *
  * @author Airi
  */
+// http://localhost:8080/A2-LoanService/LoanServiceMemberManagerImpl?wsdl --> Check if exists
 @WebServlet(name = "MemberManagerController", urlPatterns = {"/MemberManagerController"})
 public class MemberManagerController extends HttpServlet {
     /**
@@ -82,6 +83,23 @@ public class MemberManagerController extends HttpServlet {
                     request.setAttribute("results", getMemberInfo(memberIDValue));
                 } catch (NumberFormatException e) {
                     request.setAttribute("results", "Error: Invalid Input!");
+                }
+
+            } else {
+                request.setAttribute("results", "Error: Empty Input!");
+            }
+        } else if (request.getParameter("members").equals("deleteMember")){
+            if (!request.getParameter("deleteMemberID").equals("")) {
+                String memberID = request.getParameter("deleteMemberID");
+                int memberIDValue;
+                try {
+                    memberIDValue = Integer.parseInt(memberID);
+                    deleteMember(memberIDValue);
+                    request.setAttribute("results", "Delete Member with: " + memberID);
+                } catch (NumberFormatException e) {
+                    request.setAttribute("results", "Error: Invalid Input!");
+                } catch (LoanException_Exception ex) {
+                    Logger.getLogger(MemberManagerController.class.getName()).log(Level.SEVERE, null, ex);
                 }
 
             } else {
