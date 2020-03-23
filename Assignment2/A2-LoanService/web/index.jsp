@@ -15,6 +15,38 @@
         <h3>Generating LoanService WSDL file</h3>
         <p>Check if this exists:</p>
         <p><a href="http://localhost:8080/A2-LoanService/LoanServiceMemberManagerImpl?wsdl">MemberManager WSDL</a></p>
+
+        <h3>Check Member Information</h3>
+        <form action="MemberManagerController" method="GET">
+            View All Members: <input type="submit" name="members" value="displayAll"/><br>
+        </form>
+
+        <form action="MemberManagerController" method="GET">
+            View Member with ID:<input type="text" name="viewMemberID">
+            <input type="submit" name="members" value="displayMember"/><br>
+        </form>
+
+        <h3>Add a Member</h3>
+        <form action="MemberManagerController" method="POST">
+            Member Name: <input type="text" name="addMemberName"><br>
+            Member Contact Info: <input type="text" name="addMemberContact"><br>
+            <input type="submit" name="members" value="addMember" />
+        </form>
+
+        <h3>Update a Member</h3>
+        <form action="MemberManagerController" method="POST">
+            Member ID: <input type="text" name="updateMemberID"><br>
+            Member Name: <input type="text" name="updateMemberName"><br>
+            Member Contact Info: <input type="text" name="updateMemberContact"><br>
+            <input type="submit" name="members" value="updateMember" />
+        </form>
+
+        <h3>Delete a Member</h3>
+        <form action="MemberManagerController" method="GET">
+            Delete member with memberID:<input type="text" name="deleteMemberID">
+            <input type="submit" name="members" value="deleteMember"/><br>
+
+        </form>
     </body>  
-    
+
 </html>
