@@ -31,6 +31,7 @@ import javax.xml.ws.WebServiceRef;
 // http://localhost:8080/A2-LoanService/LoanServiceMemberManagerImpl?wsdl --> Check if exists
 @WebServlet(name = "MemberManagerController", urlPatterns = {"/MemberManagerController"})
 public class MemberManagerController extends HttpServlet {
+
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -48,7 +49,7 @@ public class MemberManagerController extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet MemberManagerServlet</title>");            
+            out.println("<title>Servlet MemberManagerServlet</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet MemberManagerServlet at " + request.getContextPath() + "</h1>");
@@ -72,7 +73,7 @@ public class MemberManagerController extends HttpServlet {
 
         if (request.getParameter("members").equals("displayAll")) {
             request.setAttribute("results", getMembers());
-            
+
         } else if (request.getParameter("members").equals("displayMember")) {
             if (!request.getParameter("viewMemberID").equals("")) {
                 String memberID = request.getParameter("viewMemberID");
@@ -88,7 +89,7 @@ public class MemberManagerController extends HttpServlet {
             } else {
                 request.setAttribute("results", "Error: Empty Input!");
             }
-        } else if (request.getParameter("members").equals("deleteMember")){
+        } else if (request.getParameter("members").equals("deleteMember")) {
             if (!request.getParameter("deleteMemberID").equals("")) {
                 String memberID = request.getParameter("deleteMemberID");
                 int memberIDValue;
@@ -112,7 +113,6 @@ public class MemberManagerController extends HttpServlet {
         //processRequest(request, response);
     }
 
-
     /**
      * Handles the HTTP <code>POST</code> method.
      *
@@ -133,24 +133,25 @@ public class MemberManagerController extends HttpServlet {
             } catch (a2.loanservice.client.LoanException_Exception ex) {
                 Logger.getLogger(MemberManagerController.class.getName()).log(Level.SEVERE, null, ex);
             }
-        }
-        else if (request.getParameter("members").equals("updateMember"))
-        {
-           try {
+        } else if (request.getParameter("members").equals("updateMember")) {
+            try {
                 String memberName = request.getParameter("updateMemberName");
                 String memberContact = request.getParameter("updateMemberContact");
                 int memberIDValue;
-                if (!request.getParameter("updateMemberID").equals(""))
-                {
+                if (!request.getParameter("updateMemberID").equals("")) {
                     String memberID = request.getParameter("updateMemberID");
                     memberIDValue = Integer.parseInt(memberID);
-                    updateMember(memberIDValue,memberName, memberContact);
+                    updateMember(memberIDValue, memberName, memberContact);
+                    request.setAttribute("results", "Update Member!");
                 }
-              
-                request.setAttribute("results", "Update Member!");
+                else{
+                    request.setAttribute("results", "Error: Empty Input!");
+                }
+            } catch (NumberFormatException e) {
+                request.setAttribute("results", "Error: Invalid Input!");
             } catch (a2.loanservice.client.LoanException_Exception ex) {
                 Logger.getLogger(MemberManagerController.class.getName()).log(Level.SEVERE, null, ex);
-            } 
+            }
         }
         RequestDispatcher rd = request.getRequestDispatcher("/results.jsp");
         rd.forward(request, response);
@@ -166,8 +167,6 @@ public class MemberManagerController extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
-    
-    
     private static String getMembers() {
         a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
         a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
@@ -192,7 +191,7 @@ public class MemberManagerController extends HttpServlet {
         port.updateMember(arg0, arg1, arg2);
     }
 
-    private static void deleteMember(int arg0) throws  a2.loanservice.client.LoanException_Exception {
+    private static void deleteMember(int arg0) throws a2.loanservice.client.LoanException_Exception {
         a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
         a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
         port.deleteMember(arg0);
