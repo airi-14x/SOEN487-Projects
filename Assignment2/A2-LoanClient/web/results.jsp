@@ -13,5 +13,6 @@
     </head>
     <body>
         ${results}
+        <p><a href="./index.jsp">Back to homepage</a></p>
     </body>
 </html>

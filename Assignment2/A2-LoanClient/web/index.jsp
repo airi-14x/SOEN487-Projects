@@ -9,12 +9,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Loan Client JSP Page</title>
     </head>
     <body>
-        <h1></h1>
-        
-        
+    
     <%-- start web service invocation --%><hr/>
     <%
     try {
@@ -43,7 +41,7 @@
 	// TODO handle custom exceptions here
     }
     %>
-    <%-- end web service invocation --%><hr/>
+    <%-- end web service invocation --%><hr/>    
     
     <%-- start web service invocation --%><hr/>
     <%
@@ -111,7 +109,7 @@
     %>
     <%-- end web service invocation --%><hr/>
     
-    
+
     <form action="MemberManagerController" method="GET">
         View All Members: <input type="submit" name="members" value="displayAll"/><br>
     </form>
@@ -123,11 +121,19 @@
     
     <h3>Add a Member</h3>
     <form action="MemberManagerController" method="POST">
-                Member Name: <input type="text" name="memberName"><br>
-                Member Contact Info: <input type="text" name="memberContact"><br>
+                Member Name: <input type="text" name="addMemberName"><br>
+                Member Contact Info: <input type="text" name="addMemberContact"><br>
                 <input type="submit" name="members" value="addMember" />
     </form>
     
+    <h3>Update a Member</h3>
+    <form action="MemberManagerController" method="POST">
+        Member ID: <input type="text" name="updateMemberID"><br>
+        Member Name: <input type="text" name="updateMemberName"><br>
+        Member Contact Info: <input type="text" name="updateMemberContact"><br>
+        <input type="submit" name="members" value="updateMember" />
+    </form>
+
     </body>  
     
 </html>

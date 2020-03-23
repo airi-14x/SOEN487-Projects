@@ -16,6 +16,13 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.xml.namespace.QName;
+import javax.xml.transform.Source;
+import javax.xml.ws.Dispatch;
+import javax.xml.transform.stream.StreamSource;
+import javax.xml.ws.Service;
+import java.io.StringReader;
+import javax.xml.ws.WebServiceRef;
 
 /**
  *
@@ -23,7 +30,6 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "MemberManagerController", urlPatterns = {"/MemberManagerController"})
 public class MemberManagerController extends HttpServlet {
-
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -65,6 +71,7 @@ public class MemberManagerController extends HttpServlet {
 
         if (request.getParameter("members").equals("displayAll")) {
             request.setAttribute("results", getMembers());
+            
         } else if (request.getParameter("members").equals("displayMember")) {
             if (!request.getParameter("viewMemberID").equals("")) {
                 String memberID = request.getParameter("viewMemberID");
@@ -101,13 +108,31 @@ public class MemberManagerController extends HttpServlet {
             throws ServletException, IOException {
         if (request.getParameter("members").equals("addMember")) {
             try {
-                String memberName = request.getParameter("memberName");
-                String memberContact = request.getParameter("memberContact");
+                String memberName = request.getParameter("addMemberName");
+                String memberContact = request.getParameter("addMemberContact");
                 addMember(memberName, memberContact);
                 request.setAttribute("results", "Add a new Member!");
             } catch (a2.loanservice.client.LoanException_Exception ex) {
                 Logger.getLogger(MemberManagerController.class.getName()).log(Level.SEVERE, null, ex);
             }
+        }
+        else if (request.getParameter("members").equals("updateMember"))
+        {
+           try {
+                String memberName = request.getParameter("updateMemberName");
+                String memberContact = request.getParameter("updateMemberContact");
+                int memberIDValue;
+                if (!request.getParameter("updateMemberID").equals(""))
+                {
+                    String memberID = request.getParameter("updateMemberID");
+                    memberIDValue = Integer.parseInt(memberID);
+                    updateMember(memberIDValue,memberName, memberContact);
+                }
+              
+                request.setAttribute("results", "Update Member!");
+            } catch (a2.loanservice.client.LoanException_Exception ex) {
+                Logger.getLogger(MemberManagerController.class.getName()).log(Level.SEVERE, null, ex);
+            } 
         }
         RequestDispatcher rd = request.getRequestDispatcher("/results.jsp");
         rd.forward(request, response);
@@ -123,7 +148,9 @@ public class MemberManagerController extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
-     private static String getMembers() {
+    
+    
+    private static String getMembers() {
         a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
         a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
         return port.getMembers();
@@ -152,6 +179,5 @@ public class MemberManagerController extends HttpServlet {
         a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
         port.deleteMember(arg0);
     }
-
 
 }

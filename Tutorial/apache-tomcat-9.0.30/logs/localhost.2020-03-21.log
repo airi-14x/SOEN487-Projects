@@ -1316,3 +1316,5 @@ Stacktrace:
 		at com.sun.xml.ws.wsdl.parser.RuntimeWSDLParser.resolveWSDL(RuntimeWSDLParser.java:394)
 		at com.sun.xml.ws.wsdl.parser.RuntimeWSDLParser.parse(RuntimeWSDLParser.java:213)
 		... 35 more
+21-Mar-2020 18:19:10.606 INFOS [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+21-Mar-2020 18:19:10.606 INFOS [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()
