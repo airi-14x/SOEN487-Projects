@@ -62,7 +62,6 @@
         <h3>Edit Book Loan</h3>
         <form action="LoanManagerController" method="POST">
             Loan ID: <input type="text" name="editLoanID"/><br>
-            Member ID: <input type="text" name="editMemberID"/><br>
             Borrow Date: <input type="text" name="editBorrowDate"/><br>
             Return Date: <input type="text" name="editReturnDate"/><br>
             <input type="submit" name="loans" value="editBookLoan"/><br>

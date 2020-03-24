@@ -92,7 +92,7 @@ public class A2LoanSystem {
         
         // EDIT BOOK //
         System.out.println("Editing Loan 1: ");
-        loans.editBookLoan(1, member1, "2020-03-04", "2020-04-03");
+        loans.editBookLoan(1, "2020-03-04", "2020-04-03");
         System.out.println(loans.getLoansMap());
         System.out.println(library.getBooksMap());
         System.out.println(library.getCallNumbersMap());
