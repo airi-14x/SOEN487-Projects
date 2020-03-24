@@ -16,6 +16,8 @@
         <p>Check if this exists:</p>
         <p><a href="http://localhost:8080/A2-LoanService/LoanServiceMemberManagerImpl?wsdl">MemberManager WSDL</a></p>
 
+        <h4>Link to: <a href="./librarySystem.jsp">Library System</a></h4>
+        
         <h2>Member Manager</h2>
         <h3>Check Member Information</h3>
         <form action="MemberManagerController" method="GET">
@@ -46,31 +48,6 @@
         <form action="MemberManagerController" method="GET">
             Delete member with memberID:<input type="text" name="deleteMemberID">
             <input type="submit" name="members" value="deleteMember"/><br>
-
-        </form>
-        
-        <h2>Library System</h2>
-        <h3>Add Book to Library</h3>
-        <form action="LibrarySystemController" method="POST">
-            Title <input type="text" name="title"><br>
-            Description <input type="text" name="description"><br>
-            ISBN <input type="text" name="isbn"><br>
-            Author <input type="text" name="author"><br>
-            Publisher <input type="text" name="publisher"><br>
-            Call Number <input type="text" name="callNumber"><br>
-            <input type="submit" name="library" value="addBook"/>
-        </form>
-        
-        <h3>Update Book in Library </h3>
-        <form action="LibrarySystemController" method="POST">
-            Book ID <input type="text" name="bookID"><br>
-            Title <input type="text" name="title"><br>
-            Description <input type="text" name="description"><br>
-            ISBN <input type="text" name="isbn"><br>
-            Author <input type="text" name="author"><br>
-            Publisher <input type="text" name="publisher"><br>
-            Call Number <input type="text" name="callNumber"><br>
-             <input type="submit" name="library" value="updateBook"/>
         </form>
         
     </body>  

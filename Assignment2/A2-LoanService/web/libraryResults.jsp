@@ -18,6 +18,7 @@
         ${results}
         <h3>Call Number Results:</h3>
         ${callNumberResults}
-        <p><a href="./index.jsp">Back to homepage</a></p>
+        <p><a href="./librarySystem.jsp">Back to Library System</a></p>
+        <p><a href="./index.jsp">Back to LoanService homepage</a></p>
     </body>
 </html>
