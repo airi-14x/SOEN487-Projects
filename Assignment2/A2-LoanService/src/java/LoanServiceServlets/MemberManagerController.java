@@ -93,6 +93,7 @@ public class MemberManagerController extends HttpServlet {
                     request.setAttribute("results", "Error: Invalid Input!");
                 } catch (LoanException_Exception ex) {
                     Logger.getLogger(MemberManagerController.class.getName()).log(Level.SEVERE, null, ex);
+                    request.setAttribute("results", "Unable to delete member");
                 }
 
             } else {
@@ -100,7 +101,7 @@ public class MemberManagerController extends HttpServlet {
             }
         }
 
-        RequestDispatcher rd = request.getRequestDispatcher("/results.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("/memberResults.jsp");
         rd.forward(request, response);
         //processRequest(request, response);
     }
@@ -124,6 +125,7 @@ public class MemberManagerController extends HttpServlet {
                 request.setAttribute("results", "Add a new Member!");
             } catch (a2.loanservice.client.LoanException_Exception ex) {
                 Logger.getLogger(MemberManagerController.class.getName()).log(Level.SEVERE, null, ex);
+                request.setAttribute("results", "Unable to add member!");
             }
         } else if (request.getParameter("members").equals("updateMember")) {
             try {
@@ -143,9 +145,10 @@ public class MemberManagerController extends HttpServlet {
                 request.setAttribute("results", "Error: Invalid Input!");
             } catch (a2.loanservice.client.LoanException_Exception ex) {
                 Logger.getLogger(MemberManagerController.class.getName()).log(Level.SEVERE, null, ex);
+                request.setAttribute("results", "Unable to update!");
             }
         }
-        RequestDispatcher rd = request.getRequestDispatcher("/results.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("/memberResults.jsp");
         rd.forward(request, response);
     }
 

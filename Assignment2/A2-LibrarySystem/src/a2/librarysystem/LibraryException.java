@@ -11,8 +11,21 @@ package a2.librarysystem;
  */
 public class LibraryException extends Exception{
 
+    String libraryErrorMessage;
+    
     public LibraryException(String errorMessage) {
         System.out.println(errorMessage);
+        libraryErrorMessage = errorMessage;
     }
+
+    public String getLibraryErrorMessage() {
+        return libraryErrorMessage;
+    }
+
+    public void setLibraryErrorMessage(String libraryErrorMessage) {
+        this.libraryErrorMessage = libraryErrorMessage;
+    }
+    
+    
        
 }

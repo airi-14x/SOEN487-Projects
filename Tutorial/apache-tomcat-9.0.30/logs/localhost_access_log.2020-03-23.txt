@@ -4989,3 +4989,9 @@
 127.0.0.1 - - [23/Mar/2020:13:10:36 -0400] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
 127.0.0.1 - airi14x [23/Mar/2020:13:10:36 -0400] "GET /manager/text/ HTTP/1.1" 200 41
 0:0:0:0:0:0:0:1 - - [23/Mar/2020:13:10:38 -0400] "GET /A2-LoanService/index.jsp HTTP/1.1" 200 1850
+127.0.0.1 - - [23/Mar/2020:13:13:03 -0400] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - airi14x [23/Mar/2020:13:13:03 -0400] "GET /manager/text/ HTTP/1.1" 200 41
+127.0.0.1 - - [23/Mar/2020:13:13:03 -0400] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - airi14x [23/Mar/2020:13:13:03 -0400] "GET /manager/text/ HTTP/1.1" 200 41
+127.0.0.1 - - [23/Mar/2020:13:13:03 -0400] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - airi14x [23/Mar/2020:13:13:03 -0400] "GET /manager/text/ HTTP/1.1" 200 41
