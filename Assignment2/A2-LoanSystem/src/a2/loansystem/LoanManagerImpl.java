@@ -146,13 +146,13 @@ public class LoanManagerImpl implements LoanManager {
         }
     }
 
-    // Edit a Book Loan --> Just for editing borrowDate, returnDate, member. It will mess up if you edit bookTitle
+    // Edit a Book Loan --> Just for editing borrowDate, returnDate. It will mess up if you edit bookTitle
     @Override
-    public void editBookLoan(int loanID, Member member, String borrowDate, String returnDate) throws LoanException {
+    public void editBookLoan(int loanID, String borrowDate, String returnDate) throws LoanException {
         if (!loans.containsKey(loanID)) {
             throw new LoanException("Loan Manager - Loan does not exist!");
         } else {
-            Loan newLoan = new Loan(loans.get(loanID).getBookTitle(), member, borrowDate, returnDate);
+            Loan newLoan = new Loan(loans.get(loanID).getBookTitle(), loans.get(loanID).getMember(), borrowDate, returnDate);
             newLoan.setLoanID(loanID);
             System.out.println("Old Loans: ");
             System.out.println(loans);

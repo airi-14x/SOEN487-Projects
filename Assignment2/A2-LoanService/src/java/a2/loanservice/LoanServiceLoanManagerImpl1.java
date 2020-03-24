@@ -86,7 +86,7 @@ public class LoanServiceLoanManagerImpl1 implements LoanServiceLoanManager1 {
     }
 
     @Override
-    public void editBookLoan(int loanID, Member member, String borrowDate, String returnDate) throws LoanException{
+    public void editBookLoan(int loanID, String borrowDate, String returnDate) throws LoanException{
         /*
         if (loanID == 0 || member == null || borrowDate.isEmpty() || returnDate.isEmpty())
         {
@@ -94,7 +94,7 @@ public class LoanServiceLoanManagerImpl1 implements LoanServiceLoanManager1 {
             throw new LoanServiceSOAPFault("Error in editBookLoan",t);
         }*/
         
-        loanManager.editBookLoan(loanID, member, borrowDate, returnDate);
+        loanManager.editBookLoan(loanID, borrowDate, returnDate);
     }
 
     @Override
