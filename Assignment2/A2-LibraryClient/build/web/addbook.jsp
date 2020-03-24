@@ -36,7 +36,7 @@
         </form> 
         <hr/>
         <h1>Add a book - Complex Data Type</h1>
-        <form action="AddBookJson" method="POST">
+        <form action="AddBookXml" method="POST">
             <label for="title">Title</label>
             <input name="title" required />
             <br/>

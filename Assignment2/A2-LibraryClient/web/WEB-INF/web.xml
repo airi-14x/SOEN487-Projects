@@ -13,8 +13,8 @@
         <servlet-class>servlets.AddBook</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>AddBookJson</servlet-name>
-        <servlet-class>servlets.AddBookJson</servlet-class>
+        <servlet-name>AddBookXml</servlet-name>
+        <servlet-class>servlets.AddBookXml</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ListBooksJson</servlet-name>
@@ -29,8 +29,8 @@
         <url-pattern>/AddBook</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>AddBookJson</servlet-name>
-        <url-pattern>/AddBookJson</url-pattern>
+        <servlet-name>AddBookXml</servlet-name>
+        <url-pattern>/AddBookXml</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -5,6 +5,7 @@
  */
 package libraryclient;
 
+import a2.librarycore.Book;
 import a2.librarycore.BookList;
 import javax.ws.rs.ClientErrorException;
 import javax.ws.rs.client.Client;
@@ -108,9 +109,9 @@ public class LibraryClient {
     }
     
     //Add book - complex data type (with json)
-    public Response addBookJson(String book) {
+    public Response addBookXml(Book book) {
          webTarget = client.target(BASE_URI).path("LibraryRESTService");
-         return webTarget.path("book_json/add").request("application/json").post(Entity.json(book));
+         return webTarget.path("book_xml/add").request("application/xml").post(Entity.xml(book));
     }
     
     
@@ -129,10 +130,10 @@ public class LibraryClient {
     }
     
     //Bug - 406 in console
-    //Update book - complex data type (json)
-    public Response updateBookJson(int id, String book) {
+    //Update book - complex data type (xml)
+    public Response updateBookXml(int id, Book book) {
          webTarget = client.target(BASE_URI).path("LibraryRESTService");
-         return webTarget.path("book_json/update/" + id).request("application/json").put(Entity.json(book));
+         return webTarget.path("book_xml/update/" + id).request("application/xml").put(Entity.json(book));
     }
     
     //Delete book - produces plain text 

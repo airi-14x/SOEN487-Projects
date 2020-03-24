@@ -19,7 +19,7 @@ import libraryclient.LibraryClient;
  *
  * @author jasminelatendresse
  */
-public class AddBookJson extends HttpServlet {
+public class AddBookXml extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -72,7 +72,7 @@ public class AddBookJson extends HttpServlet {
         String callNumber = request.getParameter("callNumber");
         
         Book book = new Book(title, description, isbn, author, publisher, callNumber);
-        Response res = client.addBookBasic(book);
+        Response res = client.addBookXml(book);
         
         if(res.getStatus() == 200) {
             request.setAttribute("resMessage", res);
