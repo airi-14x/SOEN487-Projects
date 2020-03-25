@@ -1,7 +1,6 @@
 package libraryservice;
 
 import a2.librarycore.Book;
-import a2.librarycore.BookList;
 import a2.librarysystem.Library;
 import a2.librarysystem.LibraryException;
 import com.fasterxml.jackson.databind.ObjectMapper;
