@@ -16,7 +16,7 @@
         ${message}
         <h3>Current Loan Results:</h3>
         ${results}
-        <h4><a href="./librarySystem.jsp">Back to Library System</a></h4>
         <h4><a href="./index.jsp">Back to LoanService homepage</a></h4>
+        <h4><a href="./librarySystem.jsp">Back to Library System</a></h4>
     </body>
 </html>

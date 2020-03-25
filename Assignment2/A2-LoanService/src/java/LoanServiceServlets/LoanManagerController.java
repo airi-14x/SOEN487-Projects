@@ -5,7 +5,10 @@
  */
 package LoanServiceServlets;
 
+import a2.librarysystem.LibraryException;
+import a2.loanservice.LoanServiceLoanManagerImpl1;
 import a2.loanservice.loanmanager.client.LoanException_Exception;
+import a2.loansystem.LoanException;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.Level;
@@ -77,6 +80,12 @@ public class LoanManagerController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        LoanServiceLoanManagerImpl1 loanServiceLoanManager = null;
+        try {
+            loanServiceLoanManager = new LoanServiceLoanManagerImpl1();
+        } catch (LoanException | LibraryException ex) {
+            Logger.getLogger(LoanManagerController.class.getName()).log(Level.SEVERE, null, ex);
+        }
         if (request.getParameter("loans").equals("borrowBook")) {
             int memberIDValue;
             try {
@@ -88,15 +97,17 @@ public class LoanManagerController extends HttpServlet {
                     memberIDValue = Integer.parseInt(memberID);
                     borrowBook(callNumber, memberIDValue, borrowDate, returnDate);
                     request.setAttribute("message", "Borrowed a book!");
+                    request.setAttribute("results", loanServiceLoanManager.getLoansMap());
                 } else {
                     request.setAttribute("message", "Error: Empty Input!");
+                    request.setAttribute("results", loanServiceLoanManager.getLoansMap());
                 }
             } catch (NumberFormatException e) {
                 request.setAttribute("message", "Error: Invalid Input!");
             } catch (LoanException_Exception ex) {
                 Logger.getLogger(LoanManagerController.class.getName()).log(Level.SEVERE, null, ex);
                 request.setAttribute("message", "Unable to borrow a book!");
-                request.setAttribute("results", ex.getFaultInfo().getMessage());
+                request.setAttribute("results", loanServiceLoanManager.getLoansMap());
             }
         }
 
@@ -149,5 +160,5 @@ public class LoanManagerController extends HttpServlet {
         a2.loanservice.loanmanager.client.LoanServiceLoanManager1 port = service.getLoanServiceLoanManagerImpl1Port();
         return port.listLoanID(arg0);
     }
-
+    
 }

@@ -8,7 +8,6 @@ package a2.loanservice;
 
 import a2.librarysystem.LibraryException;
 import a2.loancore.Loan;
-import a2.loancore.Member;
 import a2.loansystem.LoanException;
 import a2.loansystem.LoanManagerImpl;
 import java.io.IOException;
@@ -24,6 +23,11 @@ public class LoanServiceLoanManagerImpl1 implements LoanServiceLoanManager1 {
     public LoanServiceLoanManagerImpl1() throws LoanException, IOException, LibraryException {
         System.out.println("Created an instance of LoanService - LoanManager");
         loanManager = loanManager.getInstance();
+    }
+    
+    @Override
+    public ConcurrentHashMap<Integer, Loan> getLoansMap() {
+        return loanManager.getLoansMap();
     }
 
     @Override
