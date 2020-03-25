@@ -32,6 +32,10 @@
         <servlet-name>ChooseBook</servlet-name>
         <servlet-class>servlets.ChooseBook</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ViewBook</servlet-name>
+        <servlet-class>servlets.ViewBook</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ListBooksJson</servlet-name>
         <url-pattern>/ListBooksJson</url-pattern>
@@ -63,6 +67,10 @@
     <servlet-mapping>
         <servlet-name>ChooseBook</servlet-name>
         <url-pattern>/ChooseBook</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewBook</servlet-name>
+        <url-pattern>/ViewBook</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
