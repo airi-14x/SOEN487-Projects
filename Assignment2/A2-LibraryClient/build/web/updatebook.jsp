@@ -62,5 +62,7 @@
             <br/>
             <input type="submit" value="Submit" />
         </form> 
+        <br/>
+        <a href="index.html">Back to the main page</a>
     </body>
 </html>

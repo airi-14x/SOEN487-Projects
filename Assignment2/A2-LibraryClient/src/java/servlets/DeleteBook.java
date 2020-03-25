@@ -11,6 +11,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.ws.rs.core.Response;
+import libraryclient.LibraryClient;
 
 /**
  *
@@ -29,19 +31,7 @@ public class DeleteBook extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet DeleteBook</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet DeleteBook at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -70,7 +60,25 @@ public class DeleteBook extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        response.setContentType("text/html");
+        LibraryClient client = new LibraryClient();
+        try {
+            int id = Integer.parseInt(request.getParameter("id"));
+            Response res = client.deleteBook(id);
+
+            if (res.getStatus() == 200) {
+                request.setAttribute("resMessage", res);
+                request.setAttribute("successMessage", "Book successfully deleted.");
+                request.getRequestDispatcher("success.jsp").forward(request, response);
+            } else {
+                request.setAttribute("message", "An error occurred. Book could not be deleted.");
+                request.getRequestDispatcher("error.jsp").forward(request, response);
+            }
+
+        } catch (Exception e) {
+            request.setAttribute("message", "An error occurred. Book could not be deleted.");
+            request.getRequestDispatcher("error.jsp").forward(request, response);
+        }
     }
 
     /**
