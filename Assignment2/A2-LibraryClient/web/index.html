@@ -18,6 +18,13 @@ and open the template in the editor.
                 <li><a href="addbook.jsp">Add a book</a></li>
                 <li><a href="updatebook.jsp">Update a book</a></li>
             </ul>
+            <hr/>
+            <h3>Delete a book</h3>
+            <form action="DeleteBook" method="POST">
+                 <label for="id">Book id</label>
+            <input name="id" required />
+            <input type="submit" value="Submit" />
+            </form>
         </div>
     </body>
 </html>

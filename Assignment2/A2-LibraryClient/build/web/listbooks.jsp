@@ -25,5 +25,7 @@
         <br/>
         <h3>HTML format</h3>
         ${booksHtml}
+        <br/>
+        <a href="index.html">Back to the main page</a>
     </body>
 </html>
