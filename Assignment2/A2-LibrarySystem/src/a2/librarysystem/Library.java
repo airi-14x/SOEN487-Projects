@@ -33,7 +33,7 @@ public class Library {
 
     private static ConcurrentHashMap<Integer, Book> books = new ConcurrentHashMap<Integer, Book>();
     private static ConcurrentHashMap<String, Book> callNumbers = new ConcurrentHashMap<String, Book>();
-    private static Library libraryConnectionInstance; 
+    private static Library libraryConnectionInstance;
     private static AtomicInteger bookMapKey = new AtomicInteger();
 
     // Cannot be private
@@ -41,7 +41,6 @@ public class Library {
         System.out.println("Created an instance of Library");
     }
 
-        
     // SINGLETON    
     public static Library getInstance() throws LibraryException, IOException {
         if (libraryConnectionInstance == null) {
@@ -50,12 +49,12 @@ public class Library {
         }
         return libraryConnectionInstance;
     }
-    
+
     public ConcurrentHashMap<Integer, Book> getBooksMap() {
         return books;
     }
-    
-    public ConcurrentHashMap<String, Book> getCallNumbersMap(){
+
+    public ConcurrentHashMap<String, Book> getCallNumbersMap() {
         return callNumbers;
     }
 
@@ -67,26 +66,23 @@ public class Library {
         }
         return currentBooks;
     }
-    
-        
+
     //GET
-    public synchronized String getBook(int id){
-        if (!books.containsKey(id)){
+    public synchronized String getBook(int id) {
+        if (!books.containsKey(id)) {
             return "Book doesn't exist";
-        }
-        else{
+        } else {
             Book currentBook = books.get(id);
             String bookInfo = currentBook.toString();
             return bookInfo;
         }
     }
-    
+
     //GET
-    public synchronized Book getBookById(int id) throws LibraryException{
-        if (!books.containsKey(id)){
+    public synchronized Book getBookById(int id) throws LibraryException {
+        if (!books.containsKey(id)) {
             throw new LibraryException("Book does not exist.");
-        }
-        else{
+        } else {
             return books.get(id);
         }
     }
@@ -104,31 +100,95 @@ public class Library {
             books.put(bookID, book);
             if (!books.containsKey(bookID)) {
                 throw new LibraryException("Library - Error in adding a book!");
-            }
-            else{
+            } else {
                 callNumbers.put(callNumber, book); // Add to ConcurrentHashMap
             }
         }
 
     }
-    
+
+    //POST
+    public synchronized void addBookComplex(Book bookObject) throws LibraryException {
+        Book book = new Book();
+        String title = bookObject.getTitle();
+        String description = bookObject.getDescription();
+        String isbn = bookObject.getIsbn();
+        String author = bookObject.getAuthor();
+        String publisher = bookObject.getPublisher();
+        String callNumber = bookObject.getCallNumber();
+
+        // Check if callNumber exists
+        if (callNumbers.containsKey(callNumber)) {
+            throw new LibraryException("Library - Error duplicate call number. Book cannot be created!");
+        } else {
+            int bookID = bookMapKey.incrementAndGet();
+            book.setId(bookID);
+            book.setTitle(title);
+            book.setDescription(description);
+            book.setIsbn(isbn);
+            book.setAuthor(author);
+            book.setPublisher(publisher);
+            book.setCallNumber(callNumber);
+            books.put(bookID, book);
+            if (!books.containsKey(bookID)) {
+                throw new LibraryException("Library - Error in adding a book!");
+            } else {
+                callNumbers.put(callNumber, book); // Add to ConcurrentHashMap
+            }
+        }
+
+    }
+
     //PUT
     public synchronized void updateBook(int id, String title, String description, String isbn, String author, String publisher, String callNumber) throws LibraryException {
-        Book book = new Book(title, description, isbn, author, publisher, callNumber);
+        Book book = books.get(id);
+        if(book == null) {
+            throw new LibraryException("No book with id: " + id);
+        }
         if (callNumbers.containsKey(callNumber)) {
             throw new LibraryException("Library - Error duplicate call number. Book cannot be updated!");
         }
-        book.setId(id);
-        if (!books.containsKey(id)) {
-            throw new LibraryException("Library - Error in updating a book!");        
-        } else {
-            String oldCallNumber = books.get(id).getCallNumber();
-            callNumbers.remove(oldCallNumber); // Manually remove oldCallNumber from hashmap
-            books.put(id, book); // Replace with current book object
-            callNumbers.put(callNumber, book); // Update callNumber hashmap
-        }
+        String previousCallNumber = book.getCallNumber();
+        callNumbers.remove(previousCallNumber);
+        callNumbers.put(callNumber, book);
+        book.setTitle(title);
+        book.setDescription(description);
+        book.setIsbn(isbn);
+        book.setAuthor(author);
+        book.setPublisher(publisher);
+        book.setCallNumber(callNumber);
     }
-    
+
+    //PUT
+    public synchronized void updateBookComplex(int id, Book bookObject) throws LibraryException {
+        
+        String title = bookObject.getTitle();
+        String description = bookObject.getDescription();
+        String isbn = bookObject.getIsbn();
+        String author = bookObject.getAuthor();
+        String publisher = bookObject.getPublisher();
+        String callNumber = bookObject.getCallNumber();
+        
+        Book book = books.get(id);
+        if(book == null) {
+            throw new LibraryException("No book with id: " + id);
+        }
+        if (callNumbers.containsKey(callNumber)) {
+            throw new LibraryException("Library - Error duplicate call number. Book cannot be updated!");
+        }
+        
+        String previousCallNumber = book.getCallNumber();
+        callNumbers.remove(previousCallNumber);
+        callNumbers.put(callNumber, book);
+        
+        book.setTitle(title);
+        book.setDescription(description);
+        book.setIsbn(isbn);
+        book.setAuthor(author);
+        book.setPublisher(publisher);
+        book.setCallNumber(callNumber);
+    }
+
     //DELETE
     public synchronized void removeBook(int id) throws LibraryException {
         if (!books.containsKey(id)) {
@@ -139,25 +199,25 @@ public class Library {
             callNumbers.remove(callNumber);
             books.remove(id);
         }
-        
+
     }
-    
+
     public String booksToHtml() {
         List<String> bookList = new ArrayList(books.values());
         StringBuilder output = new StringBuilder();
-        output.append("<html><body><table style={border: 1px solid black}><h1>List of all books</h1>");
+        output.append("<html><body><table style={border: 1px solid black}>");
         for (Iterator iter = bookList.iterator(); iter.hasNext();) {
             output.append("<tr><td>" + iter.next() + "</td></tr>");
         }
         output.append("</table></body></html>");
         return output.toString();
     }
-    
+
     public String bookToHtml(Book book) {
-        return  "<html> " + "<title>" + "Book Html" + "</title>"
-        + "<body><h1>" + book.toString() + "</body></h1>" + "</html> ";
+        return "<html> " + "<title>" + "Book Html" + "</title>"
+                + "<body><h1>" + book.toString() + "</body></h1>" + "</html> ";
     }
-    
+
 
     /*
     // SINGLETON Pattern

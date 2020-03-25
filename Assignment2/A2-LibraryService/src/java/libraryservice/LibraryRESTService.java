@@ -1,7 +1,6 @@
 package libraryservice;
 
 import a2.librarycore.Book;
-import a2.librarycore.BookList;
 import a2.librarysystem.Library;
 import a2.librarysystem.LibraryException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -47,7 +46,7 @@ public class LibraryRESTService {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/books_json")
-    public List<Book> listBooksJSON() {
+    public List<Book> listBooksJson() throws LibraryException {
         ConcurrentHashMap bookMap = librarySystem.getBooksMap();
         return new ArrayList<>(bookMap.values());
     }
@@ -56,12 +55,9 @@ public class LibraryRESTService {
     @GET
     @Produces(MediaType.APPLICATION_XML)
     @Path("/books_xml")
-    public BookList listBooksXML() throws LibraryException {
+    public List<Book> listBooksXml() throws LibraryException {
         ConcurrentHashMap bookMap = librarySystem.getBooksMap();
-        List<Book> bookList = new ArrayList<>(bookMap.values());
-        BookList books = new BookList();
-        books.setList(bookList);
-        return books;
+        return new ArrayList<>(bookMap.values());
     }
 
     //List books - Produces HTML
@@ -142,27 +138,26 @@ public class LibraryRESTService {
         }
 
     }
-
-    //Add book - Complex data types 
+    
+    
+    //Add book - complex data type
     @POST
-    @Path("/book_json/add")
-    @Consumes(MediaType.APPLICATION_JSON)
-    public Response addBookComplex(String book) {
+    @Path("/book_xml/add")
+    @Consumes(MediaType.APPLICATION_XML)
+    public Response addBookXml(Book book) {
         try {
-            ObjectMapper objectMapper = new ObjectMapper();
-            Book bookObject = objectMapper.readValue(book, Book.class);
-            librarySystem.addBook(bookObject.getTitle(), bookObject.getDescription(), bookObject.getIsbn(), bookObject.getAuthor(),
-                    bookObject.getPublisher(), bookObject.getCallNumber());
+            librarySystem.addBookComplex(book);
             return Response.status(200).entity("Success").build();
         } catch (Exception e) {
             return Response.status(500).entity("Error").build();
         }
-
     }
+    
 
     //Update book - Basic data types
-    @PUT
+    @POST
     @Produces(MediaType.TEXT_PLAIN)
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     @Path("/book_basic/update")
     public Response updateBookBasic(@FormParam("id") int id,
             @FormParam("title") String title,
@@ -178,18 +173,15 @@ public class LibraryRESTService {
             return Response.status(500).entity("Error").build();
         }
     }
-
+    
     //Update book - Complex data types
-    @PUT
+    @POST
     @Produces(MediaType.TEXT_PLAIN)
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Path("/book_json/update/{id}")
-    public Response updateBookJson(@PathParam("id") int id, String bookJson) {
+    @Consumes(MediaType.APPLICATION_XML)
+    @Path("/book_xml/update/{id}")
+    public Response updateBookXml(@PathParam("id") int id, Book book) {
         try {
-            ObjectMapper objectMapper = new ObjectMapper();
-            Book book = objectMapper.readValue(bookJson, Book.class);
-            librarySystem.updateBook(id, book.getTitle(), book.getDescription(), book.getIsbn(),
-                    book.getAuthor(), book.getPublisher(), book.getCallNumber());
+            librarySystem.updateBookComplex(id, book);
             return Response.status(200).entity("Success").build();
         } catch (Exception e) {
             return Response.status(500).entity("Error").build();
