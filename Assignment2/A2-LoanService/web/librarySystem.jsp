@@ -12,7 +12,8 @@
         <title>Library System JSP</title>
     </head>
     <body>
-
+        <h4>Link to: <a href="./index.jsp">Loan System</a></h4>
+        
         <h2>Library System</h2>
         <h3> Display Books in Library </h3>
         <form action="LibrarySystemController" method="GET">

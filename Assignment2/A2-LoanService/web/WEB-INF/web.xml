@@ -4,7 +4,7 @@
         <listener-class>com.sun.xml.ws.transport.http.servlet.WSServletContextListener</listener-class>
     </listener>
     <servlet>
-        <servlet-name>HelloWorld</servlet-name>
+        <servlet-name>LoanServiceLoanManagerImpl1</servlet-name>
         <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
@@ -13,22 +13,13 @@
         <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
-    <servlet>
-        <servlet-name>LoanServiceLoanManagerImpl1</servlet-name>
-        <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
-        <load-on-startup>1</load-on-startup>
-    </servlet>
     <servlet-mapping>
-        <servlet-name>HelloWorld</servlet-name>
-        <url-pattern>/HelloWorld</url-pattern>
+        <servlet-name>LoanServiceLoanManagerImpl1</servlet-name>
+        <url-pattern>/LoanServiceLoanManagerImpl1</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>LoanServiceMemberManagerImpl</servlet-name>
         <url-pattern>/LoanServiceMemberManagerImpl</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>LoanServiceLoanManagerImpl1</servlet-name>
-        <url-pattern>/LoanServiceLoanManagerImpl1</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

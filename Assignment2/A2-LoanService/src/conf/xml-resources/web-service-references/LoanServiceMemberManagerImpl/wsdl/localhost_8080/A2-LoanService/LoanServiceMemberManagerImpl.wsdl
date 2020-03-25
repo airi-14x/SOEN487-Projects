@@ -18,7 +18,9 @@
 <part name="arg0" type="xsd:string"/>
 <part name="arg1" type="xsd:string"/>
 </message>
-<message name="addMemberResponse"/>
+<message name="addMemberResponse">
+<part name="return" type="xsd:string"/>
+</message>
 <message name="LoanException">
 <part name="fault" element="tns:LoanException"/>
 </message>
@@ -27,11 +29,15 @@
 <part name="arg1" type="xsd:string"/>
 <part name="arg2" type="xsd:string"/>
 </message>
-<message name="updateMemberResponse"/>
+<message name="updateMemberResponse">
+<part name="return" type="xsd:string"/>
+</message>
 <message name="deleteMember">
 <part name="arg0" type="xsd:int"/>
 </message>
-<message name="deleteMemberResponse"/>
+<message name="deleteMemberResponse">
+<part name="return" type="xsd:string"/>
+</message>
 <portType name="LoanServiceMemberManager">
 <operation name="getMembers">
 <input wsam:Action="http://loanservice.a2/LoanServiceMemberManager/getMembersRequest" message="tns:getMembers"/>

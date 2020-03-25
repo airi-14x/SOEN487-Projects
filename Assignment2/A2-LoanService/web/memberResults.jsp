@@ -13,6 +13,6 @@
     </head>
     <body>
         ${results}
-        <p><a href="./index.jsp">Back to homepage</a></p>
+        <p><a href="./index.jsp">Back to LoanService homepage</a></p>
     </body>
 </html>

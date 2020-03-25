@@ -5,7 +5,8 @@
  */
 package LoanServiceServlets;
 
-import a2.loanservice.client.LoanException_Exception;
+//import a2.loanservice.client.LoanException_Exception;
+import a2.loanservice.membermanager.client.LoanException_Exception;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.Level;
@@ -59,6 +60,7 @@ public class MemberManagerController extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -114,6 +116,7 @@ public class MemberManagerController extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -123,7 +126,7 @@ public class MemberManagerController extends HttpServlet {
                 String memberContact = request.getParameter("addMemberContact");
                 addMember(memberName, memberContact);
                 request.setAttribute("results", "Add a new Member!");
-            } catch (a2.loanservice.client.LoanException_Exception ex) {
+            } catch (LoanException_Exception ex) {
                 Logger.getLogger(MemberManagerController.class.getName()).log(Level.SEVERE, null, ex);
                 request.setAttribute("results", "Unable to add member!");
             }
@@ -143,15 +146,15 @@ public class MemberManagerController extends HttpServlet {
                 }
             } catch (NumberFormatException e) {
                 request.setAttribute("results", "Error: Invalid Input!");
-            } catch (a2.loanservice.client.LoanException_Exception ex) {
+            } catch (LoanException_Exception ex) {
                 Logger.getLogger(MemberManagerController.class.getName()).log(Level.SEVERE, null, ex);
                 request.setAttribute("results", "Unable to update!");
             }
         }
-        RequestDispatcher rd = request.getRequestDispatcher("/memberResults.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("/loanResults.jsp");
         rd.forward(request, response);
     }
-
+    
     /**
      * Returns a short description of the servlet.
      *
@@ -163,33 +166,34 @@ public class MemberManagerController extends HttpServlet {
     }// </editor-fold>
 
     private static String getMembers() {
-        a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
-        a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+        a2.loanservice.membermanager.client.LoanServiceMemberManagerImplService service = new a2.loanservice.membermanager.client.LoanServiceMemberManagerImplService();
+        a2.loanservice.membermanager.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
         return port.getMembers();
     }
 
     private static String getMemberInfo(int arg0) {
-        a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
-        a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+        a2.loanservice.membermanager.client.LoanServiceMemberManagerImplService service = new a2.loanservice.membermanager.client.LoanServiceMemberManagerImplService();
+        a2.loanservice.membermanager.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
         return port.getMemberInfo(arg0);
     }
 
-    private static void addMember(java.lang.String arg0, java.lang.String arg1) throws a2.loanservice.client.LoanException_Exception {
-        a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
-        a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
-        port.addMember(arg0, arg1);
+    private static String addMember(java.lang.String arg0, java.lang.String arg1) throws LoanException_Exception {
+        a2.loanservice.membermanager.client.LoanServiceMemberManagerImplService service = new a2.loanservice.membermanager.client.LoanServiceMemberManagerImplService();
+        a2.loanservice.membermanager.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+        return port.addMember(arg0, arg1);
     }
 
-    private static void updateMember(int arg0, java.lang.String arg1, java.lang.String arg2) throws a2.loanservice.client.LoanException_Exception {
-        a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
-        a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
-        port.updateMember(arg0, arg1, arg2);
+    private static String updateMember(int arg0, java.lang.String arg1, java.lang.String arg2) throws LoanException_Exception {
+        a2.loanservice.membermanager.client.LoanServiceMemberManagerImplService service = new a2.loanservice.membermanager.client.LoanServiceMemberManagerImplService();
+        a2.loanservice.membermanager.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+        return port.updateMember(arg0, arg1, arg2);
     }
 
-    private static void deleteMember(int arg0) throws a2.loanservice.client.LoanException_Exception {
-        a2.loanservice.client.LoanServiceMemberManagerImplService service = new a2.loanservice.client.LoanServiceMemberManagerImplService();
-        a2.loanservice.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
-        port.deleteMember(arg0);
+    private static String deleteMember(int arg0) throws LoanException_Exception {
+        a2.loanservice.membermanager.client.LoanServiceMemberManagerImplService service = new a2.loanservice.membermanager.client.LoanServiceMemberManagerImplService();
+        a2.loanservice.membermanager.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+        return port.deleteMember(arg0);
     }
-
+    
+    
 }
