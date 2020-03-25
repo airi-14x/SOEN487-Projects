@@ -11,8 +11,21 @@ package a2.loansystem;
  */
 public class LoanException extends Exception {
     
+    String loanErrorMessage;
+    
     public LoanException(String errorMessage) {
         System.out.println(errorMessage);
+        setLoanErrorMessage(errorMessage);
     }
+
+    public String getLoanErrorMessage() {
+        return loanErrorMessage;
+    }
+
+    public void setLoanErrorMessage(String loanErrorMessage) {
+        this.loanErrorMessage = loanErrorMessage;
+    }
+    
+    
     
 }
