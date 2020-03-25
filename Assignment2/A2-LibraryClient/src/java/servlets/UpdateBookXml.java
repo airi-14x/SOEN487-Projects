@@ -5,12 +5,20 @@
  */
 package servlets;
 
+import a2.librarycore.Book;
+import com.google.common.base.Splitter;
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.util.Map;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.ws.rs.ClientErrorException;
+import javax.ws.rs.core.Response;
+import libraryclient.LibraryClient;
 
 /**
  *
@@ -29,18 +37,41 @@ public class UpdateBookXml extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet UpdateBookXml</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet UpdateBookXml at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+        
+    }
+    
+    @Override
+    protected void doPut(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("text/html");
+        
+        Map<String, String> params = getParameterMap(request);
+        LibraryClient client = new LibraryClient();
+        
+        try {
+            int id = Integer.parseInt(params.get("id"));
+            String title = params.get("title");
+            String description = params.get("description");
+            String isbn = params.get("isbn");
+            String author = params.get("author");
+            String publisher = params.get("publisher");
+            String callNumber = params.get("callNumber");
+            
+            Book book = new Book(title, description, isbn, author, publisher, callNumber);
+            
+            Response res = client.updateBookXml(id, book);
+
+            if (res.getStatus() == 200) {
+                request.setAttribute("resMessage", res);
+                request.setAttribute("successMessage", "Book successfully updated.");
+                request.getRequestDispatcher("success.jsp").forward(request, response);
+            } else {
+                request.setAttribute("message", "An error occurred. Book could not be updated." + res.getStatus());
+                request.getRequestDispatcher("error.jsp").forward(request, response);
+            }
+        } catch (IOException | NumberFormatException | ServletException | ClientErrorException e) {
+            request.setAttribute("message", "An error occurred. Book could not be updated.");
+            request.getRequestDispatcher("error.jsp").forward(request, response);
         }
     }
 
@@ -70,7 +101,7 @@ public class UpdateBookXml extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        doPut(request, response);
     }
 
     /**
@@ -82,5 +113,41 @@ public class UpdateBookXml extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+    
+    private static Map<String, String> getParameterMap(HttpServletRequest request) {
+    BufferedReader br = null;
+    Map<String, String> dataMap = null;
+
+    try {
+
+        InputStreamReader reader = new InputStreamReader(
+                request.getInputStream());
+        br = new BufferedReader(reader);
+
+        String data = br.readLine();
+
+        dataMap = Splitter.on('&')
+                .trimResults()
+                .withKeyValueSeparator(
+                        Splitter.on('=')
+                        .limit(2)
+                        .trimResults())
+                .split(data);
+
+        return dataMap;
+    } catch (IOException ex) {
+        //Logger.getLogger(Utils.class.getName()).log(Level.SEVERE, null, ex);
+    } finally {
+        if (br != null) {
+            try {
+                br.close();
+            } catch (IOException ex) {
+                //Logger.getLogger(Utils.class.getName()).log(Level.WARNING, null, ex);
+            }
+        }
+    }
+
+    return dataMap;
+}
 
 }

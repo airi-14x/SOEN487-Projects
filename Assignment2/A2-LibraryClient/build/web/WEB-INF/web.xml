@@ -24,6 +24,14 @@
         <servlet-name>UpdateBookXml</servlet-name>
         <servlet-class>servlets.UpdateBookXml</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DeleteBook</servlet-name>
+        <servlet-class>servlets.DeleteBook</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ChooseBook</servlet-name>
+        <servlet-class>servlets.ChooseBook</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ListBooksJson</servlet-name>
         <url-pattern>/ListBooksJson</url-pattern>
@@ -47,6 +55,14 @@
     <servlet-mapping>
         <servlet-name>UpdateBookXml</servlet-name>
         <url-pattern>/UpdateBookXml</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteBook</servlet-name>
+        <url-pattern>/DeleteBook</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ChooseBook</servlet-name>
+        <url-pattern>/ChooseBook</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

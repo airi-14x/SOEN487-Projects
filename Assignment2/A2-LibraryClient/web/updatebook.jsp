@@ -13,7 +13,7 @@
     </head>
     <body>
         <h1>Update a book - Parameterized Argument</h1>
-        <form action="UpdateBook" method="PUT">
+        <form action="UpdateBook" method="POST">
             <label for="id">ID</label>
             <input name="id" required /><br/>
             <label for="title">Title</label>
@@ -38,9 +38,10 @@
         </form> 
         <hr/>
         <h1>Update a book - Complex Data Type</h1>
-        <form action="UpdateBookXml" method="PUT">
+        <form action="UpdateBookXml" method="POST">
             <label for="id">ID</label>
             <input name="id" required />
+            <br/>
             <label for="title">Title</label>
             <input name="title" required />
             <br/>

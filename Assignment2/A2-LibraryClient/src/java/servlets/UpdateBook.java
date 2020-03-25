@@ -15,6 +15,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.ws.rs.ClientErrorException;
 import javax.ws.rs.core.Response;
 import libraryclient.LibraryClient;
 
@@ -35,7 +36,7 @@ public class UpdateBook extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+        
     }
 
     /**
@@ -63,8 +64,11 @@ public class UpdateBook extends HttpServlet {
             String publisher = params.get("publisher");
             String callNumber = params.get("callNumber");
             
+            PrintWriter out = response.getWriter();
+            
             Response res = client.updateBookBasic(id, title, description, isbn, author, publisher, callNumber);
-
+            
+            out.write(res.toString());
             if (res.getStatus() == 200) {
                 request.setAttribute("resMessage", res);
                 request.setAttribute("successMessage", "Book successfully updated.");
@@ -73,7 +77,7 @@ public class UpdateBook extends HttpServlet {
                 request.setAttribute("message", "An error occurred. Book could not be updated.");
                 request.getRequestDispatcher("error.jsp").forward(request, response);
             }
-        } catch (Exception e) {
+        } catch (IOException | NumberFormatException | ServletException | ClientErrorException e) {
             request.setAttribute("message", "An error occurred. Book could not be updated.");
             request.getRequestDispatcher("error.jsp").forward(request, response);
         }
@@ -105,7 +109,7 @@ public class UpdateBook extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        doPut(request, response);
     }
 
     /**
