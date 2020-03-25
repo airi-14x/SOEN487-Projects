@@ -110,10 +110,11 @@ public class LoanManagerController extends HttpServlet {
             } catch (LoanException_Exception ex) {
                 Logger.getLogger(LoanManagerController.class.getName()).log(Level.SEVERE, null, ex);
                 request.setAttribute("message", "Unable to borrow a book!");
-                request.setAttribute("results", getLoansMap());
+                request.setAttribute("results", ex.getFaultInfo().getLoanErrorMessage());
             } catch (LoanServiceSOAPFault_Exception ex) {
                 Logger.getLogger(LoanManagerController.class.getName()).log(Level.SEVERE, null, ex);
                 request.setAttribute("message", "Unable to borrow a book!");
+                request.setAttribute("results", ex.getFaultInfo().getMessage());
             }
         }
 
