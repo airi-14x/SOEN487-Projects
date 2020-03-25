@@ -156,7 +156,7 @@ public class LibraryRESTService {
     
 
     //Update book - Basic data types
-    @POST
+    @PUT
     @Produces(MediaType.TEXT_PLAIN)
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     @Path("/book_basic/update")
@@ -176,7 +176,7 @@ public class LibraryRESTService {
     }
     
     //Update book - Complex data types
-    @POST
+    @PUT
     @Produces(MediaType.TEXT_PLAIN)
     @Consumes(MediaType.APPLICATION_XML)
     @Path("/book_xml/update/{id}")

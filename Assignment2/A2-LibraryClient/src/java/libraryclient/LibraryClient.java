@@ -125,13 +125,13 @@ public class LibraryClient {
         form.add("author", author);
         form.add("publisher", publisher);
         form.add("callNumber", callNumber);
-        return webTarget.path("book_basic/update").request().post(Entity.form(form));
+        return webTarget.path("book_basic/update").request().put(Entity.form(form));
     }
     
     //Update book - complex data type (xml)
     public Response updateBookXml(int id, Book book) {
          webTarget = client.target(BASE_URI).path("LibraryRESTService");
-         return webTarget.path("book_xml/update/" + id).request().post(Entity.xml(book));
+         return webTarget.path("book_xml/update/" + id).request().put(Entity.xml(book));
     }
     
     //Delete book - produces plain text 
