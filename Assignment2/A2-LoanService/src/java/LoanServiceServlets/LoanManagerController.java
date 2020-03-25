@@ -89,33 +89,40 @@ public class LoanManagerController extends HttpServlet {
         } catch (LoanException | LibraryException ex) {
             Logger.getLogger(LoanManagerController.class.getName()).log(Level.SEVERE, null, ex);
         }
-        if (request.getParameter("loans").equals("borrowBook")) {
-            int memberIDValue;
-            try {
-                String callNumber = request.getParameter("addCallNumber");
-                String borrowDate = request.getParameter("addBorrowDate");
-                String returnDate = request.getParameter("addReturnDate");
-                if (!request.getParameter("addBorrowMemberID").equals("")) {
-                    String memberID = request.getParameter("addBorrowMemberID");
-                    memberIDValue = Integer.parseInt(memberID);
-                    borrowBook(callNumber, memberIDValue, borrowDate, returnDate);
-                    request.setAttribute("message", "Borrowed a book!");
-                    request.setAttribute("results", loanServiceLoanManager.getLoansMap());
-                } else {
-                    request.setAttribute("message", "Error: Empty Input!");
-                    request.setAttribute("results", loanServiceLoanManager.getLoansMap());
-                }
-            } catch (NumberFormatException e) {
-                request.setAttribute("message", "Error: Invalid Input!");
-            } catch (LoanException_Exception ex) {
-                Logger.getLogger(LoanManagerController.class.getName()).log(Level.SEVERE, null, ex);
-                request.setAttribute("message", "Unable to borrow a book!");
-                request.setAttribute("results", ex.getFaultInfo().getLoanErrorMessage());
-            } catch (LoanServiceSOAPFault_Exception ex) {
-                Logger.getLogger(LoanManagerController.class.getName()).log(Level.SEVERE, null, ex);
-                request.setAttribute("message", "Unable to borrow a book!");
-                request.setAttribute("results", ex.getFaultInfo().getMessage());
-            }
+        switch (request.getParameter("loans")) {
+            case "borrowBook":
+                int memberIDValue;
+                try {
+                    String callNumber = request.getParameter("addCallNumber");
+                    String borrowDate = request.getParameter("addBorrowDate");
+                    String returnDate = request.getParameter("addReturnDate");
+                    if (!request.getParameter("addBorrowMemberID").equals("")) {
+                        String memberID = request.getParameter("addBorrowMemberID");
+                        memberIDValue = Integer.parseInt(memberID);
+                        borrowBook(callNumber, memberIDValue, borrowDate, returnDate);
+                        request.setAttribute("message", "Borrowed a book!");
+                        request.setAttribute("results", loanServiceLoanManager.getLoansMap());
+                    } else {
+                        request.setAttribute("message", "Error: Empty Input!");
+                        request.setAttribute("results", loanServiceLoanManager.getLoansMap());
+                    }
+                } catch (NumberFormatException e) {
+                    request.setAttribute("message", "Error: Invalid Input!");
+                } catch (LoanException_Exception ex) {
+                    Logger.getLogger(LoanManagerController.class.getName()).log(Level.SEVERE, null, ex);
+                    request.setAttribute("message", "Unable to borrow a book!");
+                    request.setAttribute("results", ex.getFaultInfo().getLoanErrorMessage());
+                } catch (LoanServiceSOAPFault_Exception ex) {
+                    Logger.getLogger(LoanManagerController.class.getName()).log(Level.SEVERE, null, ex);
+                    request.setAttribute("message", "Unable to borrow a book!");
+                    request.setAttribute("results", ex.getFaultInfo().getMessage());
+                }   break;
+            case "editBookLoan":
+                break;
+            case "returnBookLoan":
+                break;
+            default:
+                break;
         }
 
         RequestDispatcher rd = request.getRequestDispatcher("/loanResults.jsp");
