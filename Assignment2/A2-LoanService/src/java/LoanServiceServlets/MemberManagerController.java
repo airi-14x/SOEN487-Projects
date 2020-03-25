@@ -95,7 +95,7 @@ public class MemberManagerController extends HttpServlet {
                     request.setAttribute("results", "Error: Invalid Input!");
                 } catch (LoanException_Exception ex) {
                     Logger.getLogger(MemberManagerController.class.getName()).log(Level.SEVERE, null, ex);
-                    request.setAttribute("results", "Unable to delete member");
+                    request.setAttribute("results", ex.getFaultInfo().getLoanErrorMessage());
                 }
 
             } else {
@@ -148,7 +148,7 @@ public class MemberManagerController extends HttpServlet {
                 request.setAttribute("results", "Error: Invalid Input!");
             } catch (LoanException_Exception ex) {
                 Logger.getLogger(MemberManagerController.class.getName()).log(Level.SEVERE, null, ex);
-                request.setAttribute("results", "Unable to update!");
+                request.setAttribute("results", ex.getFaultInfo().getLoanErrorMessage());
             }
         }
         RequestDispatcher rd = request.getRequestDispatcher("/loanResults.jsp");
