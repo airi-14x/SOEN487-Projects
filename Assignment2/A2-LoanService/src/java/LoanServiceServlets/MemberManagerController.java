@@ -148,7 +148,7 @@ public class MemberManagerController extends HttpServlet {
                 request.setAttribute("results", "Unable to update!");
             }
         }
-        RequestDispatcher rd = request.getRequestDispatcher("/memberResults.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("/loanResults.jsp");
         rd.forward(request, response);
     }
 

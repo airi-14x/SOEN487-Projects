@@ -5,8 +5,12 @@
  */
 package LoanServiceServlets;
 
+import a2.loanservice.loanmanager.client.LoanException_Exception;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -37,7 +41,7 @@ public class LoanManagerController extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet LoanManagerController</title>");            
+            out.println("<title>Servlet LoanManagerController</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet LoanManagerController at " + request.getContextPath() + "</h1>");
@@ -58,7 +62,8 @@ public class LoanManagerController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        RequestDispatcher rd = request.getRequestDispatcher("/loanResults.jsp");
+        rd.forward(request, response);
     }
 
     /**
@@ -72,7 +77,31 @@ public class LoanManagerController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        if (request.getParameter("loans").equals("borrowBook")) {
+            int memberIDValue;
+            try {
+                String callNumber = request.getParameter("addCallNumber");
+                String borrowDate = request.getParameter("addBorrowDate");
+                String returnDate = request.getParameter("addReturnDate");
+                if (!request.getParameter("addBorrowMemberID").equals("")) {
+                    String memberID = request.getParameter("addBorrowMemberID");
+                    memberIDValue = Integer.parseInt(memberID);
+                    borrowBook(callNumber, memberIDValue, borrowDate, returnDate);
+                    request.setAttribute("message", "Borrowed a book!");
+                } else {
+                    request.setAttribute("message", "Error: Empty Input!");
+                }
+            } catch (NumberFormatException e) {
+                request.setAttribute("message", "Error: Invalid Input!");
+            } catch (LoanException_Exception ex) {
+                Logger.getLogger(LoanManagerController.class.getName()).log(Level.SEVERE, null, ex);
+                request.setAttribute("message", "Unable to borrow a book!");
+                request.setAttribute("results", ex.getFaultInfo().getMessage());
+            }
+        }
+
+        RequestDispatcher rd = request.getRequestDispatcher("/loanResults.jsp");
+        rd.forward(request, response);
     }
 
     /**
@@ -84,5 +113,41 @@ public class LoanManagerController extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+
+    private static void borrowBook(java.lang.String arg0, int arg1, java.lang.String arg2, java.lang.String arg3) throws LoanException_Exception {
+        a2.loanservice.loanmanager.client.LoanServiceLoanManagerImpl1Service service = new a2.loanservice.loanmanager.client.LoanServiceLoanManagerImpl1Service();
+        a2.loanservice.loanmanager.client.LoanServiceLoanManager1 port = service.getLoanServiceLoanManagerImpl1Port();
+        port.borrowBook(arg0, arg1, arg2, arg3);
+    }
+
+    private static void editBookLoan(int arg0, a2.loanservice.loanmanager.client.Member arg1, java.lang.String arg2, java.lang.String arg3) throws LoanException_Exception {
+        a2.loanservice.loanmanager.client.LoanServiceLoanManagerImpl1Service service = new a2.loanservice.loanmanager.client.LoanServiceLoanManagerImpl1Service();
+        a2.loanservice.loanmanager.client.LoanServiceLoanManager1 port = service.getLoanServiceLoanManagerImpl1Port();
+        port.editBookLoan(arg0, arg1, arg2, arg3);
+    }
+
+    private static void returnBookLoan(int arg0) throws LoanException_Exception {
+        a2.loanservice.loanmanager.client.LoanServiceLoanManagerImpl1Service service = new a2.loanservice.loanmanager.client.LoanServiceLoanManagerImpl1Service();
+        a2.loanservice.loanmanager.client.LoanServiceLoanManager1 port = service.getLoanServiceLoanManagerImpl1Port();
+        port.returnBookLoan(arg0);
+    }
+
+    private static void deleteBookLoan(int arg0) throws LoanException_Exception {
+        a2.loanservice.loanmanager.client.LoanServiceLoanManagerImpl1Service service = new a2.loanservice.loanmanager.client.LoanServiceLoanManagerImpl1Service();
+        a2.loanservice.loanmanager.client.LoanServiceLoanManager1 port = service.getLoanServiceLoanManagerImpl1Port();
+        port.deleteBookLoan(arg0);
+    }
+
+    private static String listLoan(java.lang.String arg0) {
+        a2.loanservice.loanmanager.client.LoanServiceLoanManagerImpl1Service service = new a2.loanservice.loanmanager.client.LoanServiceLoanManagerImpl1Service();
+        a2.loanservice.loanmanager.client.LoanServiceLoanManager1 port = service.getLoanServiceLoanManagerImpl1Port();
+        return port.listLoan(arg0);
+    }
+
+    private static String listLoanID(int arg0) {
+        a2.loanservice.loanmanager.client.LoanServiceLoanManagerImpl1Service service = new a2.loanservice.loanmanager.client.LoanServiceLoanManagerImpl1Service();
+        a2.loanservice.loanmanager.client.LoanServiceLoanManager1 port = service.getLoanServiceLoanManagerImpl1Port();
+        return port.listLoanID(arg0);
+    }
 
 }
