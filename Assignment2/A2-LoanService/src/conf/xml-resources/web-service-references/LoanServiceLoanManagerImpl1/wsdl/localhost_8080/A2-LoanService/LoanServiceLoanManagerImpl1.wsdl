@@ -4,6 +4,25 @@
 <xsd:import namespace="http://loanservice.a2/" schemaLocation="http://localhost:8080/A2-LoanService/LoanServiceLoanManagerImpl1?xsd=1"/>
 </xsd:schema>
 </types>
+<message name="listLoan">
+<part name="arg0" type="xsd:string"/>
+</message>
+<message name="listLoanResponse">
+<part name="return" type="xsd:string"/>
+</message>
+<message name="LoanServiceSOAPFault">
+<part name="fault" element="tns:LoanServiceSOAPFault"/>
+</message>
+<message name="getLoansMap"/>
+<message name="getLoansMapResponse">
+<part name="return" type="tns:concurrentHashMap"/>
+</message>
+<message name="listLoanID">
+<part name="arg0" type="xsd:int"/>
+</message>
+<message name="listLoanIDResponse">
+<part name="return" type="xsd:string"/>
+</message>
 <message name="borrowBook">
 <part name="arg0" type="xsd:string"/>
 <part name="arg1" type="xsd:int"/>
@@ -16,9 +35,8 @@
 </message>
 <message name="editBookLoan">
 <part name="arg0" type="xsd:int"/>
-<part name="arg1" type="tns:member"/>
+<part name="arg1" type="xsd:string"/>
 <part name="arg2" type="xsd:string"/>
-<part name="arg3" type="xsd:string"/>
 </message>
 <message name="editBookLoanResponse"/>
 <message name="returnBookLoan">
@@ -29,50 +47,81 @@
 <part name="arg0" type="xsd:int"/>
 </message>
 <message name="deleteBookLoanResponse"/>
-<message name="listLoanID">
-<part name="arg0" type="xsd:int"/>
-</message>
-<message name="listLoanIDResponse">
-<part name="return" type="xsd:string"/>
-</message>
-<message name="listLoan">
-<part name="arg0" type="xsd:string"/>
-</message>
-<message name="listLoanResponse">
-<part name="return" type="xsd:string"/>
-</message>
 <portType name="LoanServiceLoanManager1">
+<operation name="listLoan">
+<input wsam:Action="http://loanservice.a2/LoanServiceLoanManager1/listLoanRequest" message="tns:listLoan"/>
+<output wsam:Action="http://loanservice.a2/LoanServiceLoanManager1/listLoanResponse" message="tns:listLoanResponse"/>
+<fault message="tns:LoanServiceSOAPFault" name="LoanServiceSOAPFault" wsam:Action="http://loanservice.a2/LoanServiceLoanManager1/listLoan/Fault/LoanServiceSOAPFault"/>
+</operation>
+<operation name="getLoansMap">
+<input wsam:Action="http://loanservice.a2/LoanServiceLoanManager1/getLoansMapRequest" message="tns:getLoansMap"/>
+<output wsam:Action="http://loanservice.a2/LoanServiceLoanManager1/getLoansMapResponse" message="tns:getLoansMapResponse"/>
+</operation>
+<operation name="listLoanID">
+<input wsam:Action="http://loanservice.a2/LoanServiceLoanManager1/listLoanIDRequest" message="tns:listLoanID"/>
+<output wsam:Action="http://loanservice.a2/LoanServiceLoanManager1/listLoanIDResponse" message="tns:listLoanIDResponse"/>
+<fault message="tns:LoanServiceSOAPFault" name="LoanServiceSOAPFault" wsam:Action="http://loanservice.a2/LoanServiceLoanManager1/listLoanID/Fault/LoanServiceSOAPFault"/>
+</operation>
 <operation name="borrowBook" parameterOrder="arg0 arg1 arg2 arg3">
 <input wsam:Action="http://loanservice.a2/LoanServiceLoanManager1/borrowBookRequest" message="tns:borrowBook"/>
 <output wsam:Action="http://loanservice.a2/LoanServiceLoanManager1/borrowBookResponse" message="tns:borrowBookResponse"/>
 <fault message="tns:LoanException" name="LoanException" wsam:Action="http://loanservice.a2/LoanServiceLoanManager1/borrowBook/Fault/LoanException"/>
+<fault message="tns:LoanServiceSOAPFault" name="LoanServiceSOAPFault" wsam:Action="http://loanservice.a2/LoanServiceLoanManager1/borrowBook/Fault/LoanServiceSOAPFault"/>
 </operation>
-<operation name="editBookLoan" parameterOrder="arg0 arg1 arg2 arg3">
+<operation name="editBookLoan" parameterOrder="arg0 arg1 arg2">
 <input wsam:Action="http://loanservice.a2/LoanServiceLoanManager1/editBookLoanRequest" message="tns:editBookLoan"/>
 <output wsam:Action="http://loanservice.a2/LoanServiceLoanManager1/editBookLoanResponse" message="tns:editBookLoanResponse"/>
 <fault message="tns:LoanException" name="LoanException" wsam:Action="http://loanservice.a2/LoanServiceLoanManager1/editBookLoan/Fault/LoanException"/>
+<fault message="tns:LoanServiceSOAPFault" name="LoanServiceSOAPFault" wsam:Action="http://loanservice.a2/LoanServiceLoanManager1/editBookLoan/Fault/LoanServiceSOAPFault"/>
 </operation>
 <operation name="returnBookLoan">
 <input wsam:Action="http://loanservice.a2/LoanServiceLoanManager1/returnBookLoanRequest" message="tns:returnBookLoan"/>
 <output wsam:Action="http://loanservice.a2/LoanServiceLoanManager1/returnBookLoanResponse" message="tns:returnBookLoanResponse"/>
 <fault message="tns:LoanException" name="LoanException" wsam:Action="http://loanservice.a2/LoanServiceLoanManager1/returnBookLoan/Fault/LoanException"/>
+<fault message="tns:LoanServiceSOAPFault" name="LoanServiceSOAPFault" wsam:Action="http://loanservice.a2/LoanServiceLoanManager1/returnBookLoan/Fault/LoanServiceSOAPFault"/>
 </operation>
 <operation name="deleteBookLoan">
 <input wsam:Action="http://loanservice.a2/LoanServiceLoanManager1/deleteBookLoanRequest" message="tns:deleteBookLoan"/>
 <output wsam:Action="http://loanservice.a2/LoanServiceLoanManager1/deleteBookLoanResponse" message="tns:deleteBookLoanResponse"/>
 <fault message="tns:LoanException" name="LoanException" wsam:Action="http://loanservice.a2/LoanServiceLoanManager1/deleteBookLoan/Fault/LoanException"/>
-</operation>
-<operation name="listLoanID">
-<input wsam:Action="http://loanservice.a2/LoanServiceLoanManager1/listLoanIDRequest" message="tns:listLoanID"/>
-<output wsam:Action="http://loanservice.a2/LoanServiceLoanManager1/listLoanIDResponse" message="tns:listLoanIDResponse"/>
-</operation>
-<operation name="listLoan">
-<input wsam:Action="http://loanservice.a2/LoanServiceLoanManager1/listLoanRequest" message="tns:listLoan"/>
-<output wsam:Action="http://loanservice.a2/LoanServiceLoanManager1/listLoanResponse" message="tns:listLoanResponse"/>
+<fault message="tns:LoanServiceSOAPFault" name="LoanServiceSOAPFault" wsam:Action="http://loanservice.a2/LoanServiceLoanManager1/deleteBookLoan/Fault/LoanServiceSOAPFault"/>
 </operation>
 </portType>
 <binding name="LoanServiceLoanManagerImpl1PortBinding" type="tns:LoanServiceLoanManager1">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc"/>
+<operation name="listLoan">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal" namespace="http://loanservice.a2/"/>
+</input>
+<output>
+<soap:body use="literal" namespace="http://loanservice.a2/"/>
+</output>
+<fault name="LoanServiceSOAPFault">
+<soap:fault name="LoanServiceSOAPFault" use="literal"/>
+</fault>
+</operation>
+<operation name="getLoansMap">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal" namespace="http://loanservice.a2/"/>
+</input>
+<output>
+<soap:body use="literal" namespace="http://loanservice.a2/"/>
+</output>
+</operation>
+<operation name="listLoanID">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal" namespace="http://loanservice.a2/"/>
+</input>
+<output>
+<soap:body use="literal" namespace="http://loanservice.a2/"/>
+</output>
+<fault name="LoanServiceSOAPFault">
+<soap:fault name="LoanServiceSOAPFault" use="literal"/>
+</fault>
+</operation>
 <operation name="borrowBook">
 <soap:operation soapAction=""/>
 <input>
@@ -83,6 +132,9 @@
 </output>
 <fault name="LoanException">
 <soap:fault name="LoanException" use="literal"/>
+</fault>
+<fault name="LoanServiceSOAPFault">
+<soap:fault name="LoanServiceSOAPFault" use="literal"/>
 </fault>
 </operation>
 <operation name="editBookLoan">
@@ -96,6 +148,9 @@
 <fault name="LoanException">
 <soap:fault name="LoanException" use="literal"/>
 </fault>
+<fault name="LoanServiceSOAPFault">
+<soap:fault name="LoanServiceSOAPFault" use="literal"/>
+</fault>
 </operation>
 <operation name="returnBookLoan">
 <soap:operation soapAction=""/>
@@ -107,6 +162,9 @@
 </output>
 <fault name="LoanException">
 <soap:fault name="LoanException" use="literal"/>
+</fault>
+<fault name="LoanServiceSOAPFault">
+<soap:fault name="LoanServiceSOAPFault" use="literal"/>
 </fault>
 </operation>
 <operation name="deleteBookLoan">
@@ -120,24 +178,9 @@
 <fault name="LoanException">
 <soap:fault name="LoanException" use="literal"/>
 </fault>
-</operation>
-<operation name="listLoanID">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal" namespace="http://loanservice.a2/"/>
-</input>
-<output>
-<soap:body use="literal" namespace="http://loanservice.a2/"/>
-</output>
-</operation>
-<operation name="listLoan">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal" namespace="http://loanservice.a2/"/>
-</input>
-<output>
-<soap:body use="literal" namespace="http://loanservice.a2/"/>
-</output>
+<fault name="LoanServiceSOAPFault">
+<soap:fault name="LoanServiceSOAPFault" use="literal"/>
+</fault>
 </operation>
 </binding>
 <service name="LoanServiceLoanManagerImpl1Service">

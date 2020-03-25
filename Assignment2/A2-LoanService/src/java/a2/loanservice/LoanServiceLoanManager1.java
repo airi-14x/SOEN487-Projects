@@ -9,7 +9,6 @@
 package a2.loanservice;
 
 import a2.loancore.Loan;
-import a2.loancore.Member;
 import a2.loansystem.LoanException;
 import java.util.concurrent.ConcurrentHashMap;
 import javax.jws.WebMethod;

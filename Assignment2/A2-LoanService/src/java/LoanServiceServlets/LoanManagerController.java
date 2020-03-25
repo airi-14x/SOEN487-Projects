@@ -6,8 +6,8 @@
 package LoanServiceServlets;
 
 import a2.librarysystem.LibraryException;
-import a2.loanservice.LoanServiceLoanManagerImpl1;
-import a2.loanservice.loanmanager.client.LoanException_Exception;
+//import a2.loanservice.LoanServiceLoanManagerImpl1;
+//import a2.loanservice.loanmanager.client.LoanException_Exception;
 import a2.loansystem.LoanException;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -77,6 +77,7 @@ public class LoanManagerController extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
+    /*
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -114,7 +115,7 @@ public class LoanManagerController extends HttpServlet {
         RequestDispatcher rd = request.getRequestDispatcher("/loanResults.jsp");
         rd.forward(request, response);
     }
-
+    */
     /**
      * Returns a short description of the servlet.
      *
@@ -124,7 +125,8 @@ public class LoanManagerController extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-
+/*
+    
     private static void borrowBook(java.lang.String arg0, int arg1, java.lang.String arg2, java.lang.String arg3) throws LoanException_Exception {
         a2.loanservice.loanmanager.client.LoanServiceLoanManagerImpl1Service service = new a2.loanservice.loanmanager.client.LoanServiceLoanManagerImpl1Service();
         a2.loanservice.loanmanager.client.LoanServiceLoanManager1 port = service.getLoanServiceLoanManagerImpl1Port();
@@ -160,5 +162,5 @@ public class LoanManagerController extends HttpServlet {
         a2.loanservice.loanmanager.client.LoanServiceLoanManager1 port = service.getLoanServiceLoanManagerImpl1Port();
         return port.listLoanID(arg0);
     }
-    
+ */   
 }
