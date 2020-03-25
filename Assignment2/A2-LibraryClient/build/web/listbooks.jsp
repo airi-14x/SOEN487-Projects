@@ -22,6 +22,7 @@
         <br/>
         <h3>XML format</h3>
         <c:out value="${booksXml}"/>
+        <br/>
         <h3>HTML format</h3>
         ${booksHtml}
     </body>

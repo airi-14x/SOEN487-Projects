@@ -141,24 +141,26 @@ public class Library {
 
     //PUT
     public synchronized void updateBook(int id, String title, String description, String isbn, String author, String publisher, String callNumber) throws LibraryException {
-        Book book = new Book(title, description, isbn, author, publisher, callNumber);
+        Book book = books.get(id);
+        if(book == null) {
+            throw new LibraryException("No book with id: " + id);
+        }
         if (callNumbers.containsKey(callNumber)) {
             throw new LibraryException("Library - Error duplicate call number. Book cannot be updated!");
         }
-        book.setId(id);
-        if (!books.containsKey(id)) {
-            throw new LibraryException("Library - Error in updating a book!");
-        } else {
-            String oldCallNumber = books.get(id).getCallNumber();
-            callNumbers.remove(oldCallNumber); // Manually remove oldCallNumber from hashmap
-            books.put(id, book); // Replace with current book object
-            callNumbers.put(callNumber, book); // Update callNumber hashmap
-        }
+        String previousCallNumber = book.getCallNumber();
+        callNumbers.remove(previousCallNumber);
+        callNumbers.put(callNumber, book);
+        book.setTitle(title);
+        book.setDescription(description);
+        book.setIsbn(isbn);
+        book.setAuthor(author);
+        book.setPublisher(publisher);
+        book.setCallNumber(callNumber);
     }
 
     //PUT
     public synchronized void updateBookComplex(int id, Book bookObject) throws LibraryException {
-        Book book = new Book();
         
         String title = bookObject.getTitle();
         String description = bookObject.getDescription();
@@ -166,25 +168,25 @@ public class Library {
         String author = bookObject.getAuthor();
         String publisher = bookObject.getPublisher();
         String callNumber = bookObject.getCallNumber();
-
+        
+        Book book = books.get(id);
+        if(book == null) {
+            throw new LibraryException("No book with id: " + id);
+        }
+        if (callNumbers.containsKey(callNumber)) {
+            throw new LibraryException("Library - Error duplicate call number. Book cannot be updated!");
+        }
+        
+        String previousCallNumber = book.getCallNumber();
+        callNumbers.remove(previousCallNumber);
+        callNumbers.put(callNumber, book);
+        
         book.setTitle(title);
         book.setDescription(description);
         book.setIsbn(isbn);
         book.setAuthor(author);
         book.setPublisher(publisher);
         book.setCallNumber(callNumber);
-        if (callNumbers.containsKey(callNumber)) {
-            throw new LibraryException("Library - Error duplicate call number. Book cannot be updated!");
-        }
-        book.setId(id);
-        if (!books.containsKey(id)) {
-            throw new LibraryException("Library - Error in updating a book!");
-        } else {
-            String oldCallNumber = books.get(id).getCallNumber();
-            callNumbers.remove(oldCallNumber); // Manually remove oldCallNumber from hashmap
-            books.put(id, book); // Replace with current book object
-            callNumbers.put(callNumber, book); // Update callNumber hashmap
-        }
     }
 
     //DELETE

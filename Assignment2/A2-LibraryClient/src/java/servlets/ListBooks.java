@@ -50,19 +50,25 @@ public class ListBooks extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html");
         LibraryClient client = new LibraryClient();
-        
+
         String books = client.listBooksPlain(String.class);
         request.setAttribute("books", books);
-        
-        String booksJson = client.listBooksJson(String.class);
-        request.setAttribute("booksJson", booksJson);
-        
-        String booksXml = client.listBooksXml(String.class);
-        request.setAttribute("booksXml", booksXml);
-        
-        String booksHtml = client.listBooksHtml(String.class);
-        request.setAttribute("booksHtml", booksHtml);
-        
+
+        if (books.equals("No books to display")) {
+            request.setAttribute("bookJson", " ");
+            request.setAttribute("booksXml", " ");
+            request.setAttribute("booksHtml", " ");
+        } else {
+            String booksJson = client.listBooksJson(String.class);
+            request.setAttribute("booksJson", booksJson);
+
+            String booksXml = client.listBooksXml(String.class);
+            request.setAttribute("booksXml", booksXml);
+
+            String booksHtml = client.listBooksHtml(String.class);
+            request.setAttribute("booksHtml", booksHtml);
+        }
+
         request.getRequestDispatcher("listbooks.jsp").forward(request, response);
     }
 

@@ -16,6 +16,14 @@
         <servlet-name>AddBookXml</servlet-name>
         <servlet-class>servlets.AddBookXml</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>UpdateBook</servlet-name>
+        <servlet-class>servlets.UpdateBook</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateBookXml</servlet-name>
+        <servlet-class>servlets.UpdateBookXml</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ListBooksJson</servlet-name>
         <url-pattern>/ListBooksJson</url-pattern>
@@ -31,6 +39,14 @@
     <servlet-mapping>
         <servlet-name>AddBookXml</servlet-name>
         <url-pattern>/AddBookXml</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateBook</servlet-name>
+        <url-pattern>/UpdateBook</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateBookXml</servlet-name>
+        <url-pattern>/UpdateBookXml</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

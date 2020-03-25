@@ -158,6 +158,7 @@ public class LibraryRESTService {
     //Update book - Basic data types
     @PUT
     @Produces(MediaType.TEXT_PLAIN)
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     @Path("/book_basic/update")
     public Response updateBookBasic(@FormParam("id") int id,
             @FormParam("title") String title,
