@@ -67,6 +67,83 @@ public class LoanManagerController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        LoanServiceLoanManagerImpl1 loanServiceLoanManager = null;
+        try {
+            loanServiceLoanManager = new LoanServiceLoanManagerImpl1();
+        } catch (LoanException | LibraryException ex) {
+            Logger.getLogger(LoanManagerController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        switch (request.getParameter("loans")) {
+            case "deleteBookLoan":
+                if (!request.getParameter("deleteLoanID").equals("")) {
+                    String loanID = request.getParameter("deleteLoanID");
+                    int deleteIDValue;
+                    try {
+                        deleteIDValue = Integer.parseInt(loanID);
+                        deleteBookLoan(deleteIDValue);
+                        request.setAttribute("message", "Delete Loan with: " + loanID);
+                        request.setAttribute("results", loanServiceLoanManager.getLoansMap());
+                    } catch (NumberFormatException e) {
+                        request.setAttribute("message", "Error: Invalid Input!");
+                        request.setAttribute("results", loanServiceLoanManager.getLoansMap());
+                    } catch (LoanException_Exception ex) {
+                        Logger.getLogger(MemberManagerController.class.getName()).log(Level.SEVERE, null, ex);
+                        request.setAttribute("message", "Unable to delete loan");
+                        request.setAttribute("results", ex.getFaultInfo().getLoanErrorMessage());
+                    } catch (LoanServiceSOAPFault_Exception ex) {
+                        Logger.getLogger(LoanManagerController.class.getName()).log(Level.SEVERE, null, ex);
+                        request.setAttribute("message", "Unable to delete loan");
+                        request.setAttribute("results", ex.getFaultInfo().getMessage());
+                    }
+
+                } else {
+                    request.setAttribute("message", "Error: Empty Input!");
+                }
+                break;
+            case "listLoan1":
+                if (!request.getParameter("listLoanID").equals("")) {
+                    String memberID = request.getParameter("listLoanID");
+                    int memberIDValue;
+                    try {
+                        memberIDValue = Integer.parseInt(memberID);
+                        request.setAttribute("message", "Get Loan associated with Member ID: " + memberID);
+                        request.setAttribute("results", listLoanID(memberIDValue));
+                    } catch (NumberFormatException e) {
+                        request.setAttribute("message", "Error: Invalid Input!");
+                        request.setAttribute("results", "");
+                    } catch (LoanServiceSOAPFault_Exception ex) {
+                        Logger.getLogger(LoanManagerController.class.getName()).log(Level.SEVERE, null, ex);
+                        request.setAttribute("message", "Unable to get member associated with Member ID: " + memberID);
+                        request.setAttribute("results", ex.getFaultInfo().getMessage());
+                    }
+
+                } else {
+                    request.setAttribute("message", "Error: Empty Input!");
+                }
+                break;
+            case "listLoan2":
+                if (!request.getParameter("listLoanBook").equals("")) {
+                    String bookTitle = request.getParameter("listLoanBook");
+                    try {
+                        request.setAttribute("message", "Get loan associated with Book Title: " + bookTitle);
+                        request.setAttribute("results", listLoan(bookTitle));
+                    } catch (NumberFormatException e) {
+                        request.setAttribute("message", "Error: Invalid Input!");
+                        request.setAttribute("results", "");
+                    } catch (LoanServiceSOAPFault_Exception ex) {
+                        Logger.getLogger(LoanManagerController.class.getName()).log(Level.SEVERE, null, ex);
+                        request.setAttribute("message", "Unable to get loans associated with Book Title: " + bookTitle);
+                        request.setAttribute("results", ex.getFaultInfo().getMessage());
+                    }
+
+                } else {
+                    request.setAttribute("message", "Error: Empty Input!");
+                }
+                break;
+            default:
+                break;
+        }
+
         RequestDispatcher rd = request.getRequestDispatcher("/loanResults.jsp");
         rd.forward(request, response);
     }
@@ -79,7 +156,6 @@ public class LoanManagerController extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -104,7 +180,7 @@ public class LoanManagerController extends HttpServlet {
                         request.setAttribute("results", loanServiceLoanManager.getLoansMap());
                     } else {
                         request.setAttribute("message", "Error: Empty Input!");
-                        request.setAttribute("results", loanServiceLoanManager.getLoansMap());
+                        request.setAttribute("results", "");
                     }
                 } catch (NumberFormatException e) {
                     request.setAttribute("message", "Error: Invalid Input!");
@@ -116,10 +192,58 @@ public class LoanManagerController extends HttpServlet {
                     Logger.getLogger(LoanManagerController.class.getName()).log(Level.SEVERE, null, ex);
                     request.setAttribute("message", "Unable to borrow a book!");
                     request.setAttribute("results", ex.getFaultInfo().getMessage());
-                }   break;
+                }
+                break;
             case "editBookLoan":
+                int loanIDValue;
+                if (!request.getParameter("editLoanID").equals("")) {
+                    String loanID = request.getParameter("editLoanID");
+                    String borrowDate = request.getParameter("editBorrowDate");
+                    String returnDate = request.getParameter("editReturnDate");
+                    try {
+                        loanIDValue = Integer.parseInt(loanID);
+                        editBookLoan(loanIDValue, borrowDate, returnDate);
+                        request.setAttribute("message", "Edit Loan with: " + loanIDValue);
+                        request.setAttribute("results", loanServiceLoanManager.getLoansMap());
+                    } catch (NumberFormatException e) {
+                        request.setAttribute("message", "Error: Invalid Input!");
+                        request.setAttribute("results", loanServiceLoanManager.getLoansMap());
+                    } catch (LoanException_Exception ex) {
+                        Logger.getLogger(MemberManagerController.class.getName()).log(Level.SEVERE, null, ex);
+                        request.setAttribute("message", "Unable to delete loan");
+                        request.setAttribute("results", ex.getFaultInfo().getLoanErrorMessage());
+                    } catch (LoanServiceSOAPFault_Exception ex) {
+                        Logger.getLogger(LoanManagerController.class.getName()).log(Level.SEVERE, null, ex);
+                        request.setAttribute("message", "Unable to edit loan");
+                        request.setAttribute("results", ex.getFaultInfo().getMessage());
+                    }
+
+                } else {
+                    request.setAttribute("message", "Error: Empty Input!");
+                }
                 break;
             case "returnBookLoan":
+                if (!request.getParameter("returnLoanID").equals("")) {
+                    String loanID = request.getParameter("returnLoanID");
+                    try {
+                        loanIDValue = Integer.parseInt(loanID);
+                        returnBookLoan(loanIDValue);
+                        request.setAttribute("message", "Return Book with LoanID: " + loanID);
+                        request.setAttribute("results", loanServiceLoanManager.getLoansMap());
+                    } catch (NumberFormatException e) {
+                        request.setAttribute("message", "Error: Invalid Input!");
+                        request.setAttribute("results", "");
+                    } catch (LoanServiceSOAPFault_Exception ex) {
+                        Logger.getLogger(LoanManagerController.class.getName()).log(Level.SEVERE, null, ex);
+                        request.setAttribute("message", "Unable to return Book with LoanID: " + loanID);
+                        request.setAttribute("results", ex.getFaultInfo().getMessage());
+                    } catch (LoanException_Exception ex) {
+                        Logger.getLogger(LoanManagerController.class.getName()).log(Level.SEVERE, null, ex);
+                        request.setAttribute("results", ex.getFaultInfo().getLoanErrorMessage());
+                    }
+                } else {
+                    request.setAttribute("message", "Error: Empty Input!");
+                }
                 break;
             default:
                 break;
@@ -128,7 +252,7 @@ public class LoanManagerController extends HttpServlet {
         RequestDispatcher rd = request.getRequestDispatcher("/loanResults.jsp");
         rd.forward(request, response);
     }
-    
+
     /**
      * Returns a short description of the servlet.
      *
@@ -138,7 +262,6 @@ public class LoanManagerController extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
-
 
     private static void borrowBook(java.lang.String arg0, int arg1, java.lang.String arg2, java.lang.String arg3) throws LoanServiceSOAPFault_Exception, LoanException_Exception {
         a2.loanservice.loanmanager.client.LoanServiceLoanManagerImpl1Service service = new a2.loanservice.loanmanager.client.LoanServiceLoanManagerImpl1Service();
@@ -182,6 +305,4 @@ public class LoanManagerController extends HttpServlet {
         port.returnBookLoan(arg0);
     }
 
-    
-    
 }
