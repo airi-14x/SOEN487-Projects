@@ -129,6 +129,7 @@ public class LoanManagerImpl implements LoanManager {
                                 currentLoanID = loan.getKey();
                                 currentLoanMember = member;
                                 System.out.println("Book not available");
+                                throw new LoanException("Book not available");
                             }
                         }
                     }
