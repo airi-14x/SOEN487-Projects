@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Loan Service JSP</title>
+        <title>Loan Service Client JSP</title>
     </head>
     <body>
         <h3>Generating LoanService WSDL file</h3>
