@@ -83,10 +83,11 @@ public class LibrarySystemController extends HttpServlet {
                         } catch (NumberFormatException e) {
                             request.setAttribute("results", "Error: Invalid Input!");
                         }
-                        
+
                     } else {
                         request.setAttribute("results", "Error: Empty Input!");
-                    }   break;
+                    }
+                    break;
                 case "deleteBook":
                     if (!request.getParameter("deleteBookID").equals("")) {
                         String bookID = request.getParameter("deleteBookID");
@@ -100,10 +101,11 @@ public class LibrarySystemController extends HttpServlet {
                         } catch (NumberFormatException e) {
                             request.setAttribute("results", "Error: Invalid Input!");
                         }
-                        
+
                     } else {
                         request.setAttribute("results", "Error: Empty Input!");
-                    }   break;
+                    }
+                    break;
                 default:
                     break;
             }
@@ -146,17 +148,22 @@ public class LibrarySystemController extends HttpServlet {
                 request.setAttribute("results", library.getBooksMap());
                 request.setAttribute("callNumberResults", library.getCallNumbersMap());
             } else if (request.getParameter("library").equals("updateBook")) {
-                int bookIDValue;
-                try {
-                    bookIDValue = Integer.parseInt("bookID");
-                    library.updateBook(bookIDValue, title, description, isbn, author, publisher, callNumber);
-                    request.setAttribute("message", "Updated book!");
-                    request.setAttribute("results", library.getBooksMap());
-                    request.setAttribute("callNumberResults", library.getCallNumbersMap());
-                } catch (NumberFormatException e) {
-                    request.setAttribute("message", "Error: Invalid Input!");
-                    request.setAttribute("results", "");
-                    request.setAttribute("callNumberResults", "");
+                if (!request.getParameter("updateBookID").equals("")) {
+                    String updateBookID = request.getParameter("updateBookID");
+                    int bookIDValue;
+                    try {
+                        bookIDValue = Integer.parseInt(updateBookID);
+                        library.updateBook(bookIDValue, title, description, isbn, author, publisher, callNumber);
+                        request.setAttribute("message", "Updated book!");
+                        request.setAttribute("results", library.getBooksMap());
+                        request.setAttribute("callNumberResults", library.getCallNumbersMap());
+                    } catch (NumberFormatException e) {
+                        request.setAttribute("message", "Error: Invalid Input!");
+                        request.setAttribute("results", "");
+                        request.setAttribute("callNumberResults", "");
+                    }
+                } else {
+                    request.setAttribute("results", "Error: Empty Input!");
                 }
             }
         } catch (LibraryException ex) {
