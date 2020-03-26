@@ -24,7 +24,7 @@ import javax.jws.soap.SOAPBinding;
 @WebService
 @SOAPBinding(style = SOAPBinding.Style.RPC)
 public interface LoanServiceLoanManager1 {
-    //@WebMethod public ConcurrentHashMap<Integer, Loan> getLoansMap();
+    @WebMethod public String getLoansMap();
     @WebMethod public String listLoan(String bookTitle) throws LoanServiceSOAPFault;
     @WebMethod public String listLoanID(int memberID) throws LoanServiceSOAPFault;
     @WebMethod public void borrowBook(String callNumber, int memberID, String borrowDate, String returnDate) throws LoanServiceSOAPFault;

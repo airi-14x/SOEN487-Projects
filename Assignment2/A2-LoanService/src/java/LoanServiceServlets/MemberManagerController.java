@@ -152,7 +152,7 @@ public class MemberManagerController extends HttpServlet {
                 request.setAttribute("results", ex.getFaultInfo().getLoanErrorMessage());
             }
         }
-        RequestDispatcher rd = request.getRequestDispatcher("/loanResults.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("/memberResults.jsp");
         rd.forward(request, response);
     }
     

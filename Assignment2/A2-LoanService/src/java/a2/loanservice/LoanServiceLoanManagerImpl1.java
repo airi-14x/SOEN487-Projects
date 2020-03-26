@@ -27,8 +27,14 @@ public class LoanServiceLoanManagerImpl1 implements LoanServiceLoanManager1 {
         loanManager = loanManager.getInstance();
     }
     
-    public ConcurrentHashMap<Integer, Loan> getLoansMap() {
-        return loanManager.getLoansMap();
+    public String getLoansMap() {
+        ConcurrentHashMap<Integer, Loan> loansMap = loanManager.getLoansMap();
+        String loanResult = "";
+        for (Map.Entry<Integer, Loan> loan : loansMap.entrySet()) {
+                loanResult += loan.toString() + "\n";
+           
+        }
+        return loanResult;
     }
 
     @Override
