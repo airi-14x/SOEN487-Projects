@@ -17,14 +17,14 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 @XmlSeeAlso(Book.class)
 public class BookList {
 
-    private List<Book> list;
+    private List<Book> book;
 
     public List<Book> getList() {
-        return list;
+        return book;
     }
 
-    public void setList(List<Book> list) {
-        this.list = list;
+    public void setList(List<Book> book) {
+        this.book = book;
     }
 
 }

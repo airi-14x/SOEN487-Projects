@@ -6,24 +6,13 @@
 package a2.librarysystem;
 
 import a2.librarycore.Book;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Properties;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  *
@@ -33,7 +22,7 @@ public class Library {
 
     private static ConcurrentHashMap<Integer, Book> books = new ConcurrentHashMap<Integer, Book>();
     private static ConcurrentHashMap<String, Book> callNumbers = new ConcurrentHashMap<String, Book>();
-    private static Library libraryConnectionInstance; 
+    private static Library libraryConnectionInstance;
     private static AtomicInteger bookMapKey = new AtomicInteger();
 
     // Cannot be private
@@ -41,7 +30,6 @@ public class Library {
         System.out.println("Created an instance of Library");
     }
 
-        
     // SINGLETON    
     public static Library getInstance() throws LibraryException, IOException {
         if (libraryConnectionInstance == null) {
@@ -50,12 +38,12 @@ public class Library {
         }
         return libraryConnectionInstance;
     }
-    
+
     public ConcurrentHashMap<Integer, Book> getBooksMap() {
         return books;
     }
-    
-    public ConcurrentHashMap<String, Book> getCallNumbersMap(){
+
+    public ConcurrentHashMap<String, Book> getCallNumbersMap() {
         return callNumbers;
     }
 
@@ -67,26 +55,23 @@ public class Library {
         }
         return currentBooks;
     }
-    
-        
+
     //GET
-    public synchronized String getBook(int id){
-        if (!books.containsKey(id)){
+    public synchronized String getBook(int id) {
+        if (!books.containsKey(id)) {
             return "Book doesn't exist";
-        }
-        else{
+        } else {
             Book currentBook = books.get(id);
             String bookInfo = currentBook.toString();
             return bookInfo;
         }
     }
-    
+
     //GET
-    public synchronized Book getBookById(int id) throws LibraryException{
-        if (!books.containsKey(id)){
+    public synchronized Book getBookById(int id) throws LibraryException {
+        if (!books.containsKey(id)) {
             throw new LibraryException("Book does not exist.");
-        }
-        else{
+        } else {
             return books.get(id);
         }
     }
@@ -104,31 +89,95 @@ public class Library {
             books.put(bookID, book);
             if (!books.containsKey(bookID)) {
                 throw new LibraryException("Library - Error in adding a book!");
-            }
-            else{
+            } else {
                 callNumbers.put(callNumber, book); // Add to ConcurrentHashMap
             }
         }
 
     }
-    
+
+    //POST
+    public synchronized void addBookComplex(Book bookObject) throws LibraryException {
+        Book book = new Book();
+        String title = bookObject.getTitle();
+        String description = bookObject.getDescription();
+        String isbn = bookObject.getIsbn();
+        String author = bookObject.getAuthor();
+        String publisher = bookObject.getPublisher();
+        String callNumber = bookObject.getCallNumber();
+
+        // Check if callNumber exists
+        if (callNumbers.containsKey(callNumber)) {
+            throw new LibraryException("Library - Error duplicate call number. Book cannot be created!");
+        } else {
+            int bookID = bookMapKey.incrementAndGet();
+            book.setId(bookID);
+            book.setTitle(title);
+            book.setDescription(description);
+            book.setIsbn(isbn);
+            book.setAuthor(author);
+            book.setPublisher(publisher);
+            book.setCallNumber(callNumber);
+            books.put(bookID, book);
+            if (!books.containsKey(bookID)) {
+                throw new LibraryException("Library - Error in adding a book!");
+            } else {
+                callNumbers.put(callNumber, book); // Add to ConcurrentHashMap
+            }
+        }
+
+    }
+
     //PUT
     public synchronized void updateBook(int id, String title, String description, String isbn, String author, String publisher, String callNumber) throws LibraryException {
-        Book book = new Book(title, description, isbn, author, publisher, callNumber);
+        Book book = books.get(id);
+        if(book == null) {
+            throw new LibraryException("No book with id: " + id);
+        }
         if (callNumbers.containsKey(callNumber)) {
             throw new LibraryException("Library - Error duplicate call number. Book cannot be updated!");
         }
-        book.setId(id);
-        if (!books.containsKey(id)) {
-            throw new LibraryException("Library - Error in updating a book!");        
-        } else {
-            String oldCallNumber = books.get(id).getCallNumber();
-            callNumbers.remove(oldCallNumber); // Manually remove oldCallNumber from hashmap
-            books.put(id, book); // Replace with current book object
-            callNumbers.put(callNumber, book); // Update callNumber hashmap
-        }
+        String previousCallNumber = book.getCallNumber();
+        callNumbers.remove(previousCallNumber);
+        callNumbers.put(callNumber, book);
+        book.setTitle(title);
+        book.setDescription(description);
+        book.setIsbn(isbn);
+        book.setAuthor(author);
+        book.setPublisher(publisher);
+        book.setCallNumber(callNumber);
     }
-    
+
+    //PUT
+    public synchronized void updateBookComplex(int id, Book bookObject) throws LibraryException {
+        
+        String title = bookObject.getTitle();
+        String description = bookObject.getDescription();
+        String isbn = bookObject.getIsbn();
+        String author = bookObject.getAuthor();
+        String publisher = bookObject.getPublisher();
+        String callNumber = bookObject.getCallNumber();
+        
+        Book book = books.get(id);
+        if(book == null) {
+            throw new LibraryException("No book with id: " + id);
+        }
+        if (callNumbers.containsKey(callNumber)) {
+            throw new LibraryException("Library - Error duplicate call number. Book cannot be updated!");
+        }
+        
+        String previousCallNumber = book.getCallNumber();
+        callNumbers.remove(previousCallNumber);
+        callNumbers.put(callNumber, book);
+        
+        book.setTitle(title);
+        book.setDescription(description);
+        book.setIsbn(isbn);
+        book.setAuthor(author);
+        book.setPublisher(publisher);
+        book.setCallNumber(callNumber);
+    }
+
     //DELETE
     public synchronized void removeBook(int id) throws LibraryException {
         if (!books.containsKey(id)) {
@@ -139,205 +188,23 @@ public class Library {
             callNumbers.remove(callNumber);
             books.remove(id);
         }
-        
+
     }
-    
+
     public String booksToHtml() {
         List<String> bookList = new ArrayList(books.values());
         StringBuilder output = new StringBuilder();
-        output.append("<html><body><table style={border: 1px solid black}><h1>List of all books</h1>");
+        output.append("<html><body><table style={border: 1px solid black}>");
         for (Iterator iter = bookList.iterator(); iter.hasNext();) {
             output.append("<tr><td>" + iter.next() + "</td></tr>");
         }
         output.append("</table></body></html>");
         return output.toString();
     }
-    
+
     public String bookToHtml(Book book) {
-        return  "<html> " + "<title>" + "Book Html" + "</title>"
-        + "<body><h1>" + book.toString() + "</body></h1>" + "</html> ";
-    }
-    
-
-    /*
-    // SINGLETON Pattern
-    private static Library libraryConnectionInstance;
-    private Connection connection = null;
-    private Statement statement = null;
-    private ResultSet resultSet = null;
-
-    //private String user = "root";
-    //private String pass = "root1234";
-
-    // !!! Create a "LibraryRepo" Schema
-    private Library() throws LibraryException, FileNotFoundException, IOException {
-        // 1. Get a connection to database
-        try {
-            InputStream input = new FileInputStream("librarySystemConfig.properties");
-            Properties prop = new Properties();
-            
-            // Load Properties
-            prop.load(input);
-            
-            Class.forName("com.mysql.jdbc.Driver");
-            //connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/LibraryRepo?serverTimezone=UTC", user, pass);
-            connection = DriverManager.getConnection(prop.getProperty("db.url"), prop.getProperty("db.user"), prop.getProperty("db.password"));
-        } catch (SQLException | ClassNotFoundException ex) {
-            throw new LibraryException("Library - Error in connecting to database");
-            //Logger.getLogger(Library.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        return "<html> " + "<title>" + "Book Html" + "</title>"
+                + "<body><h1>" + book.toString() + "</body></h1>" + "</html> ";
     }
 
-    public Connection getConnectionInstance() {
-        return connection;
-    }
-
-    // SINGLETON    
-    public static Library getInstance() throws LibraryException, IOException {
-        if (libraryConnectionInstance == null) {
-            libraryConnectionInstance = new Library();
-            System.out.println("Library - Instance has been created!");
-        }
-        return libraryConnectionInstance;
-    }
-
-    public Statement createStatement() throws LibraryException {
-        try {
-            // 2. Create a statement
-            statement = connection.createStatement();
-        } catch (SQLException ex) {
-            throw new LibraryException("Library - Error in creating query!");
-        }
-        return statement;
-    }
-
-    public ResultSet executeQuery(String query) throws LibraryException {
-        try {
-            createStatement();
-            resultSet = statement.executeQuery(query);
-        } catch (SQLException ex) {
-            throw new LibraryException("Library - Error in executing query!");
-        }
-        return resultSet;
-    }
-
-    public int executeUpdate(String query) throws LibraryException {
-        int update = 0;
-        try {
-            createStatement();
-            update = statement.executeUpdate(query);
-        } catch (SQLException ex) {
-            throw new LibraryException("Library - Error in executing update query!");
-        }
-        return update;
-    }
-
-    public void cleanup() throws LibraryException {
-
-        try {
-            if (resultSet != null) {
-                resultSet.close();
-            }
-            if (statement != null) {
-                statement.close();
-            }
-            if (connection != null) {
-                connection.close();
-            }
-        } catch (SQLException ex) {
-            throw new LibraryException("Library - Error in cleanup!");
-        }
-    }
-
-    // Testing DB //
-    public void createLibraryTable() throws LibraryException {
-        try {
-            libraryConnectionInstance.executeUpdate("CREATE TABLE `book`(\n"
-                    + "	`id` INT  NOT NULL AUTO_INCREMENT,\n"
-                    + "    `title` VARCHAR(64) DEFAULT NULL,\n"
-                    + "    `description` VARCHAR(256) DEFAULT NULL,\n"
-                    + "    `isbn` VARCHAR(64) DEFAULT NULL UNIQUE,\n"
-                    + "    `author` VARCHAR(64) DEFAULT NULL,\n"
-                    + "    `publisher` VARCHAR(64) DEFAULT NULL,\n"
-                    + "    `call_number` VARCHAR(64) DEFAULT NULL UNIQUE,\n"
-                    + "    PRIMARY KEY(`id`)\n"
-                    + ")AUTO_INCREMENT=1;");
-        } catch (LibraryException e) {
-            throw new LibraryException("Library - Error in creating table!");
-        }
-    }
-
-    // CREATE
-    public void addNewBook(Book book, String callNumber) throws LibraryException {
-        String title = book.getTitle();
-        String description = book.getDescription();
-        String isbn = book.getIsbn();
-        String author = book.getAuthor();
-        String publisher = book.getPublisher();
-        
-        String query = "INSERT INTO Book(title, description, isbn, author, publisher, call_number) values (?,?,?,?,?,?)";
-        try {
-            PreparedStatement statement = libraryConnectionInstance.getConnectionInstance().prepareStatement(query);
-            statement.setString(1, title);
-            statement.setString(2, description);
-            statement.setString(3, isbn);
-            statement.setString(4, author);
-            statement.setString(5, publisher);
-            statement.setString(6, callNumber);
-            statement.execute();
-        } catch (SQLException ex) {
-            throw new LibraryException("Library - Error in adding a book!");
-            //Logger.getLogger(Library.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
-
-    // READ
-    public ResultSet listAllBooks() throws LibraryException, SQLException {
-        ResultSet resultSet = libraryConnectionInstance.executeQuery("SELECT * FROM book");        
-        return resultSet;
-    }
-
-    public ResultSet getBookInfo(int id) throws LibraryException {
-        ResultSet resultSet = libraryConnectionInstance.executeQuery("SELECT * FROM book WHERE id=" + id);
-        return resultSet;
-    }
-
-    // UPDATE
-    public void updateBookInfo(int id, Book book, String callNumber) throws LibraryException {
-        String title = book.getTitle();
-        String description = book.getDescription();
-        String isbn = book.getIsbn();
-        String author = book.getAuthor();
-        String publisher = book.getPublisher();
-        
-        String query = "UPDATE book SET title=?, description=?, isbn=?, author=?, publisher=?, call_number=? WHERE id=" + id;
-
-        try {
-            PreparedStatement statement = libraryConnectionInstance.getConnectionInstance().prepareStatement(query);
-            statement.setString(1, title);
-            statement.setString(2, description);
-            statement.setString(3, isbn);
-            statement.setString(4, author);
-            statement.setString(5, publisher);
-            statement.setString(6, callNumber);
-
-            statement.executeUpdate();
-        } catch (SQLException ex) {
-            throw new LibraryException("Library - Error in updating a book!");
-        }
-    }
-
-    // DELETE
-    public void deleteBook(int id) throws LibraryException {
-        libraryConnectionInstance.executeUpdate("DELETE FROM book WHERE id=" + id);
-    }
-
-    public void dropLibraryTable() {
-        try {
-            libraryConnectionInstance.executeUpdate("DROP TABLE book");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-     */
 }

@@ -5,6 +5,8 @@
  */
 package libraryclient;
 
+import a2.librarycore.Book;
+import a2.librarycore.BookList;
 import javax.ws.rs.ClientErrorException;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.Entity;
@@ -66,7 +68,7 @@ public class LibraryClient {
         resource = resource.path("books_html");
         return resource.request(MediaType.TEXT_HTML).get(responseType);
     }
-    
+
     //Get book - plain text
     public <T> T getBookPlain(Class<T> responseType, int id) throws ClientErrorException {
         webTarget = client.target(BASE_URI).path("LibraryRESTService");
@@ -85,7 +87,6 @@ public class LibraryClient {
         return webTarget.path("book_xml/" + id).request(MediaType.APPLICATION_XML).get(responseType);
     }
     
-    //Bug - 406 in console
     //Get book - html
     public <T> T getBookHtml(Class<T> responseType, int id) throws ClientErrorException {
         webTarget = client.target(BASE_URI).path("LibraryRESTService");
@@ -107,9 +108,9 @@ public class LibraryClient {
     }
     
     //Add book - complex data type (with json)
-    public Response addBookJson(String book) {
+    public Response addBookXml(Book book) {
          webTarget = client.target(BASE_URI).path("LibraryRESTService");
-         return webTarget.path("book_json/add").request("application/json").post(Entity.json(book));
+         return webTarget.path("book_xml/add").request("application/xml").post(Entity.xml(book));
     }
     
     
@@ -127,11 +128,10 @@ public class LibraryClient {
         return webTarget.path("book_basic/update").request().put(Entity.form(form));
     }
     
-    //Bug - 406 in console
-    //Update book - complex data type (json)
-    public Response updateBookJson(int id, String book) {
+    //Update book - complex data type (xml)
+    public Response updateBookXml(int id, Book book) {
          webTarget = client.target(BASE_URI).path("LibraryRESTService");
-         return webTarget.path("book_json/update/" + id).request("application/json").put(Entity.json(book));
+         return webTarget.path("book_xml/update/" + id).request().put(Entity.xml(book));
     }
     
     //Delete book - produces plain text 
