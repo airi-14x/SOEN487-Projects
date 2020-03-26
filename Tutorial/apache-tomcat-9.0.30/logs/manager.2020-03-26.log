@@ -438,3 +438,182 @@
 26-Mar-2020 14:20:39.479 INFOS [http-nio-8080-exec-31] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/A2-LoanService'
 26-Mar-2020 14:21:16.961 INFOS [http-nio-8080-exec-23] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
 26-Mar-2020 14:21:26.204 INFOS [http-nio-8080-exec-33] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:26:02.439 INFOS [http-nio-8080-exec-34] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:26:16.552 INFOS [http-nio-8080-exec-37] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:26:55.975 INFOS [http-nio-8080-exec-38] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:30:59.499 INFOS [http-nio-8080-exec-37] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:30:59.524 INFOS [http-nio-8080-exec-39] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/A2-LoanService'
+26-Mar-2020 14:31:09.325 INFOS [http-nio-8080-exec-33] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:31:12.344 INFOS [http-nio-8080-exec-42] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/A2-LoanService'
+26-Mar-2020 14:31:19.292 INFOS [http-nio-8080-exec-41] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:31:19.381 INFOS [http-nio-8080-exec-42] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:31:21.223 INFOS [http-nio-8080-exec-38] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:31:21.285 INFOS [http-nio-8080-exec-46] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:31:23.268 INFOS [http-nio-8080-exec-35] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:31:27.437 INFOS [http-nio-8080-exec-48] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:31:39.811 INFOS [http-nio-8080-exec-47] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:31:39.824 INFOS [http-nio-8080-exec-35] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:31:39.910 INFOS [http-nio-8080-exec-46] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/var/folders/q9/r0kqgvws6mxcw59hj8ll3z2w0000gn/T/context688246610241447630.xml'
+26-Mar-2020 14:31:51.165 INFOS [http-nio-8080-exec-48] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/A2-LoanService'
+26-Mar-2020 14:32:18.531 INFOS [http-nio-8080-exec-50] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:33:15.872 INFOS [http-nio-8080-exec-46] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:34:03.722 INFOS [http-nio-8080-exec-54] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:34:17.176 INFOS [http-nio-8080-exec-50] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:38:00.101 INFOS [http-nio-8080-exec-53] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:38:00.117 INFOS [http-nio-8080-exec-54] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/A2-LoanService'
+26-Mar-2020 14:38:09.125 INFOS [http-nio-8080-exec-50] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:38:09.190 INFOS [http-nio-8080-exec-45] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/A2-LoanService'
+26-Mar-2020 14:38:09.190 GRAVE [http-nio-8080-exec-45] org.apache.catalina.core.ApplicationContext.log Manager: Erreur lors du rechargement de [/A2-LoanService]
+	java.lang.IllegalStateException: Le contexte [/A2-LoanService] n'a pas encore été démarré
+		at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3741)
+		at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:1121)
+		at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:365)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:666)
+		at org.apache.catalina.valves.RequestFilterValve.process(RequestFilterValve.java:348)
+		at org.apache.catalina.valves.RemoteAddrValve.invoke(RemoteAddrValve.java:53)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Thread.java:748)
+26-Mar-2020 14:38:09.524 INFOS [http-nio-8080-exec-46] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:38:09.529 INFOS [http-nio-8080-exec-53] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:38:09.548 INFOS [http-nio-8080-exec-50] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/A2-LoanService'
+26-Mar-2020 14:38:10.075 INFOS [http-nio-8080-exec-45] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/var/folders/q9/r0kqgvws6mxcw59hj8ll3z2w0000gn/T/context6854117424466965812.xml'
+26-Mar-2020 14:38:31.572 INFOS [http-nio-8080-exec-55] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:38:31.581 INFOS [http-nio-8080-exec-51] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:38:31.601 INFOS [http-nio-8080-exec-57] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/A2-LoanService'
+26-Mar-2020 14:38:32.159 INFOS [http-nio-8080-exec-58] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/var/folders/q9/r0kqgvws6mxcw59hj8ll3z2w0000gn/T/context8373223750978397910.xml'
+26-Mar-2020 14:38:58.898 INFOS [http-nio-8080-exec-51] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:38:58.909 INFOS [http-nio-8080-exec-57] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:38:58.945 INFOS [http-nio-8080-exec-60] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/A2-LoanService'
+26-Mar-2020 14:38:59.477 INFOS [http-nio-8080-exec-61] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/var/folders/q9/r0kqgvws6mxcw59hj8ll3z2w0000gn/T/context2659062886819794795.xml'
+26-Mar-2020 14:39:10.213 INFOS [http-nio-8080-exec-62] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/A2-LoanService'
+26-Mar-2020 14:39:18.532 INFOS [http-nio-8080-exec-53] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:39:18.546 INFOS [http-nio-8080-exec-56] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/A2-LoanService'
+26-Mar-2020 14:39:24.346 INFOS [http-nio-8080-exec-62] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:39:24.432 INFOS [http-nio-8080-exec-59] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:39:26.312 INFOS [http-nio-8080-exec-57] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:39:30.769 INFOS [http-nio-8080-exec-65] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:39:47.187 INFOS [http-nio-8080-exec-64] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:39:47.196 INFOS [http-nio-8080-exec-57] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:39:47.229 INFOS [http-nio-8080-exec-60] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/var/folders/q9/r0kqgvws6mxcw59hj8ll3z2w0000gn/T/context6013688309699329262.xml'
+26-Mar-2020 14:39:55.733 INFOS [http-nio-8080-exec-67] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/A2-LoanService'
+26-Mar-2020 14:40:34.132 INFOS [http-nio-8080-exec-66] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:41:03.033 INFOS [http-nio-8080-exec-71] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:41:15.968 INFOS [http-nio-8080-exec-74] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:41:48.595 INFOS [http-nio-8080-exec-72] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:41:55.955 INFOS [http-nio-8080-exec-67] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:42:19.118 INFOS [http-nio-8080-exec-67] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:42:21.789 INFOS [http-nio-8080-exec-67] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:42:21.818 INFOS [http-nio-8080-exec-74] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:42:21.839 INFOS [http-nio-8080-exec-67] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/A2-LoanService'
+26-Mar-2020 14:42:38.481 INFOS [http-nio-8080-exec-69] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:42:38.491 INFOS [http-nio-8080-exec-74] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/A2-LoanService'
+26-Mar-2020 14:42:45.369 INFOS [http-nio-8080-exec-73] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:43:01.105 INFOS [http-nio-8080-exec-69] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:43:08.090 INFOS [http-nio-8080-exec-71] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:44:17.144 INFOS [http-nio-8080-exec-82] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:44:39.218 INFOS [http-nio-8080-exec-80] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:44:48.980 INFOS [http-nio-8080-exec-81] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:44:59.584 INFOS [http-nio-8080-exec-80] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:47:39.745 INFOS [http-nio-8080-exec-84] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:48:40.692 INFOS [http-nio-8080-exec-77] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:48:40.701 INFOS [http-nio-8080-exec-76] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/A2-LoanService'
+26-Mar-2020 14:49:34.139 INFOS [http-nio-8080-exec-81] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:49:34.157 INFOS [http-nio-8080-exec-80] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/A2-LoanService'
+26-Mar-2020 14:49:34.157 GRAVE [http-nio-8080-exec-80] org.apache.catalina.core.ApplicationContext.log Manager: Erreur lors du rechargement de [/A2-LoanService]
+	java.lang.IllegalStateException: Le contexte [/A2-LoanService] n'a pas encore été démarré
+		at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3741)
+		at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:1121)
+		at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:365)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:666)
+		at org.apache.catalina.valves.RequestFilterValve.process(RequestFilterValve.java:348)
+		at org.apache.catalina.valves.RemoteAddrValve.invoke(RemoteAddrValve.java:53)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Thread.java:748)
+26-Mar-2020 14:49:36.771 INFOS [http-nio-8080-exec-81] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:49:36.810 INFOS [http-nio-8080-exec-80] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/A2-LoanService'
+26-Mar-2020 14:49:45.372 INFOS [http-nio-8080-exec-86] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:49:45.431 INFOS [http-nio-8080-exec-81] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:49:47.330 INFOS [http-nio-8080-exec-90] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:49:49.581 INFOS [http-nio-8080-exec-91] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:52:29.001 INFOS [http-nio-8080-exec-90] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:52:29.013 INFOS [http-nio-8080-exec-84] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:52:29.071 INFOS [http-nio-8080-exec-89] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/var/folders/q9/r0kqgvws6mxcw59hj8ll3z2w0000gn/T/context1571208435301646403.xml'
+26-Mar-2020 14:52:36.518 INFOS [http-nio-8080-exec-96] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/A2-LoanService'
+26-Mar-2020 14:53:12.771 INFOS [http-nio-8080-exec-97] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:53:12.780 INFOS [http-nio-8080-exec-95] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:53:12.803 INFOS [http-nio-8080-exec-99] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/A2-LoanService'
+26-Mar-2020 14:53:13.337 INFOS [http-nio-8080-exec-91] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/var/folders/q9/r0kqgvws6mxcw59hj8ll3z2w0000gn/T/context5908930914339875757.xml'
+26-Mar-2020 14:53:24.776 INFOS [http-nio-8080-exec-93] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/A2-LoanService'
+26-Mar-2020 14:53:44.995 INFOS [http-nio-8080-exec-94] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:53:45.340 INFOS [http-nio-8080-exec-103] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:56:09.446 INFOS [http-nio-8080-exec-103] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:56:09.464 INFOS [http-nio-8080-exec-105] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/A2-LoanService'
+26-Mar-2020 14:56:23.078 INFOS [http-nio-8080-exec-96] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:56:23.087 INFOS [http-nio-8080-exec-98] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/A2-LoanService'
+26-Mar-2020 14:57:04.928 INFOS [http-nio-8080-exec-102] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:57:04.935 INFOS [http-nio-8080-exec-103] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/A2-LoanService'
+26-Mar-2020 14:57:17.626 INFOS [http-nio-8080-exec-101] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:57:17.647 INFOS [http-nio-8080-exec-96] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/A2-LoanService'
+26-Mar-2020 14:57:37.274 INFOS [http-nio-8080-exec-111] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:57:37.285 INFOS [http-nio-8080-exec-112] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/A2-LoanService'
+26-Mar-2020 14:58:06.041 INFOS [http-nio-8080-exec-111] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:58:06.054 INFOS [http-nio-8080-exec-114] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/A2-LoanService'
+26-Mar-2020 14:58:24.837 INFOS [http-nio-8080-exec-106] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:58:24.849 INFOS [http-nio-8080-exec-102] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/A2-LoanService'
+26-Mar-2020 14:58:38.719 INFOS [http-nio-8080-exec-116] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:58:38.729 INFOS [http-nio-8080-exec-111] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/A2-LoanService'
+26-Mar-2020 14:58:50.159 INFOS [http-nio-8080-exec-101] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:58:50.168 INFOS [http-nio-8080-exec-113] org.apache.catalina.core.ApplicationContext.log Manager: undeploy: Undeploying web application at '/A2-LoanService'
+26-Mar-2020 14:58:54.776 INFOS [http-nio-8080-exec-124] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:58:54.807 INFOS [http-nio-8080-exec-122] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:58:58.733 INFOS [http-nio-8080-exec-101] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:58:58.778 INFOS [http-nio-8080-exec-124] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:59:02.801 INFOS [http-nio-8080-exec-101] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:59:14.952 INFOS [http-nio-8080-exec-125] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:59:14.959 INFOS [http-nio-8080-exec-124] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 14:59:15.001 INFOS [http-nio-8080-exec-126] org.apache.catalina.core.ApplicationContext.log Manager: install: Installing context configuration at 'file:/var/folders/q9/r0kqgvws6mxcw59hj8ll3z2w0000gn/T/context6604135279402014263.xml'
+26-Mar-2020 14:59:22.192 INFOS [http-nio-8080-exec-101] org.apache.catalina.core.ApplicationContext.log Manager: start: Starting web application '/A2-LoanService'
+26-Mar-2020 15:00:20.507 INFOS [http-nio-8080-exec-131] org.apache.catalina.core.ApplicationContext.log Manager: list: Listing contexts for virtual host 'localhost'
+26-Mar-2020 15:00:20.519 INFOS [http-nio-8080-exec-129] org.apache.catalina.core.ApplicationContext.log Manager: restart: Reloading web application '/A2-LoanService'

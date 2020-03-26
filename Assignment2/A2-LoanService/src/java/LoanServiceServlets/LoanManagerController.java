@@ -5,11 +5,9 @@
  */
 package LoanServiceServlets;
 
-import a2.librarysystem.LibraryException;
-import a2.loanservice.LoanServiceLoanManagerImpl1;
+
 import a2.loanservice.loanmanager.client.LoanServiceSOAPFault_Exception;
 
-import a2.loansystem.LoanException;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.Level;
@@ -68,12 +66,6 @@ public class LoanManagerController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        LoanServiceLoanManagerImpl1 loanServiceLoanManager = null;
-        try {
-            loanServiceLoanManager = new LoanServiceLoanManagerImpl1();
-        } catch (LoanException | LibraryException ex) {
-            Logger.getLogger(LoanManagerController.class.getName()).log(Level.SEVERE, null, ex);
-        }
         switch (request.getParameter("loans")) {
             case "deleteBookLoan":
                 if (!request.getParameter("deleteLoanID").equals("")) {
@@ -81,12 +73,11 @@ public class LoanManagerController extends HttpServlet {
                     int deleteIDValue;
                     try {
                         deleteIDValue = Integer.parseInt(loanID);
-                        deleteBookLoan(deleteIDValue);
                         request.setAttribute("message", "Delete Loan with: " + loanID);
-                        request.setAttribute("results", getLoansMap());
+                        request.setAttribute("results", deleteBookLoan(deleteIDValue));
                     } catch (NumberFormatException e) {
                         request.setAttribute("message", "Error: Invalid Input!");
-                        request.setAttribute("results", getLoansMap());
+                        request.setAttribute("results", "");
                     } catch (LoanServiceSOAPFault_Exception ex) {
                         Logger.getLogger(LoanManagerController.class.getName()).log(Level.SEVERE, null, ex);
                         request.setAttribute("message", "Unable to delete loan");
@@ -158,12 +149,6 @@ public class LoanManagerController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        LoanServiceLoanManagerImpl1 loanServiceLoanManager = null;
-        try {
-            loanServiceLoanManager = new LoanServiceLoanManagerImpl1();
-        } catch (LoanException | LibraryException ex) {
-            Logger.getLogger(LoanManagerController.class.getName()).log(Level.SEVERE, null, ex);
-        }
         switch (request.getParameter("loans")) {
             case "borrowBook":
                 int memberIDValue;
@@ -174,9 +159,9 @@ public class LoanManagerController extends HttpServlet {
                     if (!request.getParameter("addBorrowMemberID").equals("")) {
                         String memberID = request.getParameter("addBorrowMemberID");
                         memberIDValue = Integer.parseInt(memberID);
-                        borrowBook(callNumber, memberIDValue, borrowDate, returnDate);
+                        
                         request.setAttribute("message", "Borrowed a book!");
-                        request.setAttribute("results", getLoansMap());
+                        request.setAttribute("results", borrowBook(callNumber, memberIDValue, borrowDate, returnDate));
                     } else {
                         request.setAttribute("message", "Error: Empty Input!");
                         request.setAttribute("results", "");
@@ -197,12 +182,11 @@ public class LoanManagerController extends HttpServlet {
                     String returnDate = request.getParameter("editReturnDate");
                     try {
                         loanIDValue = Integer.parseInt(loanID);
-                        editBookLoan(loanIDValue, borrowDate, returnDate);
                         request.setAttribute("message", "Edit Loan with: " + loanIDValue);
-                        request.setAttribute("results", getLoansMap());
+                        request.setAttribute("results", editBookLoan(loanIDValue, borrowDate, returnDate));
                     } catch (NumberFormatException e) {
                         request.setAttribute("message", "Error: Invalid Input!");
-                        request.setAttribute("results", getLoansMap());
+                        request.setAttribute("results", "");
                     } catch (LoanServiceSOAPFault_Exception ex) {
                         Logger.getLogger(LoanManagerController.class.getName()).log(Level.SEVERE, null, ex);
                         request.setAttribute("message", "Unable to edit loan");
@@ -218,9 +202,8 @@ public class LoanManagerController extends HttpServlet {
                     String loanID = request.getParameter("returnLoanID");
                     try {
                         loanIDValue = Integer.parseInt(loanID);
-                        returnBookLoan(loanIDValue);
                         request.setAttribute("message", "Return Book with LoanID: " + loanID);
-                        request.setAttribute("results", getLoansMap());
+                        request.setAttribute("results", returnBookLoan(loanIDValue));
                     } catch (NumberFormatException e) {
                         request.setAttribute("message", "Error: Invalid Input!");
                         request.setAttribute("results", "");
@@ -252,23 +235,6 @@ public class LoanManagerController extends HttpServlet {
         return "Short description";
     }// </editor-fold>
 
-    private static void borrowBook(java.lang.String arg0, int arg1, java.lang.String arg2, java.lang.String arg3) throws LoanServiceSOAPFault_Exception {
-        a2.loanservice.loanmanager.client.LoanServiceLoanManagerImpl1Service service = new a2.loanservice.loanmanager.client.LoanServiceLoanManagerImpl1Service();
-        a2.loanservice.loanmanager.client.LoanServiceLoanManager1 port = service.getLoanServiceLoanManagerImpl1Port();
-        port.borrowBook(arg0, arg1, arg2, arg3);
-    }
-
-    private static void deleteBookLoan(int arg0) throws LoanServiceSOAPFault_Exception {
-        a2.loanservice.loanmanager.client.LoanServiceLoanManagerImpl1Service service = new a2.loanservice.loanmanager.client.LoanServiceLoanManagerImpl1Service();
-        a2.loanservice.loanmanager.client.LoanServiceLoanManager1 port = service.getLoanServiceLoanManagerImpl1Port();
-        port.deleteBookLoan(arg0);
-    }
-
-    private static void editBookLoan(int arg0, java.lang.String arg1, java.lang.String arg2) throws LoanServiceSOAPFault_Exception {
-        a2.loanservice.loanmanager.client.LoanServiceLoanManagerImpl1Service service = new a2.loanservice.loanmanager.client.LoanServiceLoanManagerImpl1Service();
-        a2.loanservice.loanmanager.client.LoanServiceLoanManager1 port = service.getLoanServiceLoanManagerImpl1Port();
-        port.editBookLoan(arg0, arg1, arg2);
-    }
 
     private static String listLoan(java.lang.String arg0) throws LoanServiceSOAPFault_Exception {
         a2.loanservice.loanmanager.client.LoanServiceLoanManagerImpl1Service service = new a2.loanservice.loanmanager.client.LoanServiceLoanManagerImpl1Service();
@@ -282,17 +248,28 @@ public class LoanManagerController extends HttpServlet {
         return port.listLoanID(arg0);
     }
 
-    private static void returnBookLoan(int arg0) throws LoanServiceSOAPFault_Exception {
+    private static String borrowBook(java.lang.String arg0, int arg1, java.lang.String arg2, java.lang.String arg3) throws LoanServiceSOAPFault_Exception {
         a2.loanservice.loanmanager.client.LoanServiceLoanManagerImpl1Service service = new a2.loanservice.loanmanager.client.LoanServiceLoanManagerImpl1Service();
         a2.loanservice.loanmanager.client.LoanServiceLoanManager1 port = service.getLoanServiceLoanManagerImpl1Port();
-        port.returnBookLoan(arg0);
+        return port.borrowBook(arg0, arg1, arg2, arg3);
     }
 
-    private static String getLoansMap() {
+    private static String deleteBookLoan(int arg0) throws LoanServiceSOAPFault_Exception {
         a2.loanservice.loanmanager.client.LoanServiceLoanManagerImpl1Service service = new a2.loanservice.loanmanager.client.LoanServiceLoanManagerImpl1Service();
         a2.loanservice.loanmanager.client.LoanServiceLoanManager1 port = service.getLoanServiceLoanManagerImpl1Port();
-        return port.getLoansMap();
+        return port.deleteBookLoan(arg0);
     }
-    
-    
+
+    private static String editBookLoan(int arg0, java.lang.String arg1, java.lang.String arg2) throws LoanServiceSOAPFault_Exception {
+        a2.loanservice.loanmanager.client.LoanServiceLoanManagerImpl1Service service = new a2.loanservice.loanmanager.client.LoanServiceLoanManagerImpl1Service();
+        a2.loanservice.loanmanager.client.LoanServiceLoanManager1 port = service.getLoanServiceLoanManagerImpl1Port();
+        return port.editBookLoan(arg0, arg1, arg2);
+    }
+
+    private static String returnBookLoan(int arg0) throws LoanServiceSOAPFault_Exception {
+        a2.loanservice.loanmanager.client.LoanServiceLoanManagerImpl1Service service = new a2.loanservice.loanmanager.client.LoanServiceLoanManagerImpl1Service();
+        a2.loanservice.loanmanager.client.LoanServiceLoanManager1 port = service.getLoanServiceLoanManagerImpl1Port();
+        return port.returnBookLoan(arg0);
+    }
+
 }

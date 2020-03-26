@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package a2.loanservice;
 
 import a2.librarysystem.LibraryException;
@@ -26,27 +25,17 @@ public class LoanServiceLoanManagerImpl1 implements LoanServiceLoanManager1 {
         System.out.println("Created an instance of LoanService - LoanManager");
         loanManager = loanManager.getInstance();
     }
-    
-    public String getLoansMap() {
-        ConcurrentHashMap<Integer, Loan> loansMap = loanManager.getLoansMap();
-        String loanResult = "";
-        for (Map.Entry<Integer, Loan> loan : loansMap.entrySet()) {
-                loanResult += loan.toString() + "\n";
-           
-        }
-        return loanResult;
-    }
 
     @Override
-    public String listLoan(String bookTitle)throws LoanServiceSOAPFault{
+    public String listLoan(String bookTitle) throws LoanServiceSOAPFault {
         ConcurrentHashMap<Integer, Loan> loansMap = loanManager.getLoansMap();
         String loanResult = ""; //Multiple loans with same title
-        
-        if (bookTitle.isEmpty()){
+
+        if (bookTitle.isEmpty()) {
             Throwable t = new IllegalArgumentException("Empty book title");
-            throw new LoanServiceSOAPFault("Error in listLoan()",t);
+            throw new LoanServiceSOAPFault("Error in listLoan()", t);
         }
-        
+
         for (Map.Entry<Integer, Loan> loan : loansMap.entrySet()) {
             if (loan.getValue().getBookTitle().equals(bookTitle)) {
                 loanResult += loan.toString() + "\n";
@@ -60,13 +49,13 @@ public class LoanServiceLoanManagerImpl1 implements LoanServiceLoanManager1 {
     }
 
     @Override
-    public String listLoanID(int memberID) throws LoanServiceSOAPFault{
+    public String listLoanID(int memberID) throws LoanServiceSOAPFault {
         ConcurrentHashMap<Integer, Loan> loansMap = loanManager.getLoansMap();
         String loanResult = ""; //Multiple loans with same memberID
-        
-        if (memberID == 0){
+
+        if (memberID == 0) {
             Throwable t = new IllegalArgumentException("Invalid memberID");
-            throw new LoanServiceSOAPFault("Error in listLoanID()",t);
+            throw new LoanServiceSOAPFault("Error in listLoanID()", t);
         }
         for (Map.Entry<Integer, Loan> loan : loansMap.entrySet()) {
             if (loan.getValue().getMember() != null) {
@@ -84,14 +73,20 @@ public class LoanServiceLoanManagerImpl1 implements LoanServiceLoanManager1 {
     }
 
     @Override
-    public void borrowBook(String callNumber, int memberID, String borrowDate, String returnDate) throws LoanServiceSOAPFault{
-        if (callNumber.isEmpty() || memberID == 0 || borrowDate.isEmpty() || returnDate.isEmpty())
-        {
+    public String borrowBook(String callNumber, int memberID, String borrowDate, String returnDate) throws LoanServiceSOAPFault {
+        if (callNumber.isEmpty() || memberID == 0 || borrowDate.isEmpty() || returnDate.isEmpty()) {
             Throwable t = new IllegalArgumentException("Invalid parameters in borrowBook()");
-            throw new LoanServiceSOAPFault("Error in borrowBook",t);
+            throw new LoanServiceSOAPFault("Error in borrowBook", t);
         }
         try {
             loanManager.borrowBook(callNumber, memberID, borrowDate, returnDate);
+            ConcurrentHashMap<Integer, Loan> loansMap = loanManager.getLoansMap();
+            String loanResult = "";
+            for (Map.Entry<Integer, Loan> loan : loansMap.entrySet()) {
+                loanResult += loan.toString() + "\n";
+
+            }
+            return loanResult;
         } catch (LoanException ex) {
             Logger.getLogger(LoanServiceLoanManagerImpl1.class.getName()).log(Level.SEVERE, null, ex);
             throw new LoanServiceSOAPFault(ex.getLoanErrorMessage());
@@ -99,16 +94,22 @@ public class LoanServiceLoanManagerImpl1 implements LoanServiceLoanManager1 {
     }
 
     @Override
-    public void editBookLoan(int loanID, String borrowDate, String returnDate) throws LoanServiceSOAPFault{
-        
-        if (loanID == 0 || borrowDate.isEmpty() || returnDate.isEmpty())
-        {
+    public String editBookLoan(int loanID, String borrowDate, String returnDate) throws LoanServiceSOAPFault {
+
+        if (loanID == 0 || borrowDate.isEmpty() || returnDate.isEmpty()) {
             Throwable t = new IllegalArgumentException("Invalid parameters in editBookLoan()");
-            throw new LoanServiceSOAPFault("Error in editBookLoan",t);
+            throw new LoanServiceSOAPFault("Error in editBookLoan", t);
         }
-        
+
         try {
             loanManager.editBookLoan(loanID, borrowDate, returnDate);
+            ConcurrentHashMap<Integer, Loan> loansMap = loanManager.getLoansMap();
+            String loanResult = "";
+            for (Map.Entry<Integer, Loan> loan : loansMap.entrySet()) {
+                loanResult += loan.toString() + "\n";
+
+            }
+            return loanResult;
         } catch (LoanException ex) {
             Logger.getLogger(LoanServiceLoanManagerImpl1.class.getName()).log(Level.SEVERE, null, ex);
             throw new LoanServiceSOAPFault(ex.getLoanErrorMessage());
@@ -116,14 +117,20 @@ public class LoanServiceLoanManagerImpl1 implements LoanServiceLoanManager1 {
     }
 
     @Override
-    public void returnBookLoan(int loanID) throws LoanServiceSOAPFault{ 
-        if(loanID == 0)
-        {
+    public String returnBookLoan(int loanID) throws LoanServiceSOAPFault {
+        if (loanID == 0) {
             Throwable t = new IllegalArgumentException("Invalid memberID");
-            throw new LoanServiceSOAPFault("Error in returnBookLoan()",t);
+            throw new LoanServiceSOAPFault("Error in returnBookLoan()", t);
         }
         try {
             loanManager.returnBookLoan(loanID);
+            ConcurrentHashMap<Integer, Loan> loansMap = loanManager.getLoansMap();
+            String loanResult = "";
+            for (Map.Entry<Integer, Loan> loan : loansMap.entrySet()) {
+                loanResult += loan.toString() + "\n";
+
+            }
+            return loanResult;
         } catch (LoanException ex) {
             Logger.getLogger(LoanServiceLoanManagerImpl1.class.getName()).log(Level.SEVERE, null, ex);
             throw new LoanServiceSOAPFault(ex.getLoanErrorMessage());
@@ -131,13 +138,20 @@ public class LoanServiceLoanManagerImpl1 implements LoanServiceLoanManager1 {
     }
 
     @Override
-    public void deleteBookLoan(int loanID) throws LoanServiceSOAPFault{
-        if (loanID == 0){
+    public String deleteBookLoan(int loanID) throws LoanServiceSOAPFault {
+        if (loanID == 0) {
             Throwable t = new IllegalArgumentException("Invalid memberID");
-            throw new LoanServiceSOAPFault("Error in deleteBookLoan()",t);
+            throw new LoanServiceSOAPFault("Error in deleteBookLoan()", t);
         }
         try {
             loanManager.deleteBookLoan(loanID);
+            ConcurrentHashMap<Integer, Loan> loansMap = loanManager.getLoansMap();
+            String loanResult = "";
+            for (Map.Entry<Integer, Loan> loan : loansMap.entrySet()) {
+                loanResult += loan.toString() + "\n";
+
+            }
+            return loanResult;
         } catch (LoanException ex) {
             Logger.getLogger(LoanServiceLoanManagerImpl1.class.getName()).log(Level.SEVERE, null, ex);
             throw new LoanServiceSOAPFault(ex.getLoanErrorMessage());

@@ -5783,3 +5783,904 @@
 		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 		at java.lang.Thread.run(Thread.java:748)
+26-Mar-2020 14:30:59.524 INFOS [http-nio-8080-exec-39] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A2-LoanService] a démarré
+26-Mar-2020 14:30:59.551 INFOS [http-nio-8080-exec-39] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+26-Mar-2020 14:30:59.598 INFOS [http-nio-8080-exec-39] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+26-Mar-2020 14:30:59.602 INFOS [http-nio-8080-exec-39] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+26-Mar-2020 14:30:59.604 INFOS [http-nio-8080-exec-39] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+26-Mar-2020 14:30:59.606 INFOS [http-nio-8080-exec-39] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+26-Mar-2020 14:31:11.141 INFOS [http-nio-8080-exec-39] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+26-Mar-2020 14:31:12.216 INFOS [http-nio-8080-exec-39] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+26-Mar-2020 14:31:12.265 INFOS [http-nio-8080-exec-39] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+26-Mar-2020 14:31:12.321 INFOS [http-nio-8080-exec-39] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+26-Mar-2020 14:31:12.322 INFOS [http-nio-8080-exec-39] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+26-Mar-2020 14:31:12.323 INFOS [http-nio-8080-exec-39] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+26-Mar-2020 14:31:12.332 INFOS [http-nio-8080-exec-39] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+26-Mar-2020 14:31:12.370 INFOS [http-nio-8080-exec-42] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+26-Mar-2020 14:31:12.386 INFOS [http-nio-8080-exec-42] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+26-Mar-2020 14:31:12.390 INFOS [http-nio-8080-exec-42] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+26-Mar-2020 14:31:12.392 INFOS [http-nio-8080-exec-42] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+26-Mar-2020 14:31:12.392 INFOS [http-nio-8080-exec-42] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+26-Mar-2020 14:31:12.918 INFOS [http-nio-8080-exec-42] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/A2-LoanService]
+26-Mar-2020 14:31:39.915 INFOS [http-nio-8080-exec-46] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanService.xml]
+26-Mar-2020 14:31:39.916 AVERTISSEMENT [http-nio-8080-exec-46] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/A2-LoanService] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanService.xml] a été ignoré
+26-Mar-2020 14:31:50.036 INFOS [http-nio-8080-exec-46] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+26-Mar-2020 14:31:50.964 INFOS [http-nio-8080-exec-46] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+26-Mar-2020 14:31:51.016 INFOS [http-nio-8080-exec-46] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+26-Mar-2020 14:31:51.099 INFOS [http-nio-8080-exec-46] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+26-Mar-2020 14:31:51.100 INFOS [http-nio-8080-exec-46] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+26-Mar-2020 14:31:51.100 INFOS [http-nio-8080-exec-46] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+26-Mar-2020 14:31:51.108 INFOS [http-nio-8080-exec-46] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanService.xml] a pris [11 194] ms
+26-Mar-2020 14:31:51.166 INFOS [http-nio-8080-exec-48] org.apache.catalina.util.LifecycleBase.start La méthode start() a été appelée sur le composant [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/A2-LoanService]] après que start() ait déjà été appelé, le deuxième appel sera ignoré
+26-Mar-2020 14:38:00.117 INFOS [http-nio-8080-exec-54] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A2-LoanService] a démarré
+26-Mar-2020 14:38:00.135 INFOS [http-nio-8080-exec-54] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+26-Mar-2020 14:38:00.172 INFOS [http-nio-8080-exec-54] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+26-Mar-2020 14:38:00.174 INFOS [http-nio-8080-exec-54] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+26-Mar-2020 14:38:00.174 INFOS [http-nio-8080-exec-54] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+26-Mar-2020 14:38:00.175 INFOS [http-nio-8080-exec-54] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+26-Mar-2020 14:38:05.679 GRAVE [http-nio-8080-exec-54] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.parseAdaptersAndCreateDelegate WSSERVLET11 : échec de l'analyse du descripteur d'exécution : java.lang.ExceptionInInitializerError
+	java.lang.ExceptionInInitializerError
+		at java.lang.Class.forName0(Native Method)
+		at java.lang.Class.forName(Class.java:348)
+		at com.sun.xml.ws.transport.http.DeploymentDescriptorParser.getImplementorClass(DeploymentDescriptorParser.java:556)
+		at com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parseAdapters(DeploymentDescriptorParser.java:229)
+		at com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parse(DeploymentDescriptorParser.java:153)
+		at com.sun.xml.ws.transport.http.servlet.WSServletContextListener.parseAdaptersAndCreateDelegate(WSServletContextListener.java:131)
+		at com.sun.xml.ws.transport.http.servlet.WSServletContainerInitializer.onStartup(WSServletContainerInitializer.java:65)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5135)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3758)
+		at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:1121)
+		at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:365)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:666)
+		at org.apache.catalina.valves.RequestFilterValve.process(RequestFilterValve.java:348)
+		at org.apache.catalina.valves.RemoteAddrValve.invoke(RemoteAddrValve.java:53)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Thread.java:748)
+	Caused by: java.lang.RuntimeException: Uncompilable source code - a2.loanservice.LoanServiceLoanManagerImpl1 is not abstract and does not override abstract method deleteBookLoan(int) in a2.loanservice.LoanServiceLoanManager1
+		at a2.loanservice.LoanServiceLoanManagerImpl1.<clinit>(LoanServiceLoanManagerImpl1.java:20)
+		... 38 more
+26-Mar-2020 14:38:05.683 GRAVE [http-nio-8080-exec-54] org.apache.catalina.core.StandardContext.startInternal Erreur lors du traitement de ServletContainerInitializer
+	javax.servlet.ServletException: com.sun.xml.ws.transport.http.servlet.WSServletException: WSSERVLET11 : échec de l'analyse du descripteur d'exécution : java.lang.ExceptionInInitializerError
+		at com.sun.xml.ws.transport.http.servlet.WSServletContainerInitializer.onStartup(WSServletContainerInitializer.java:70)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5135)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3758)
+		at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:1121)
+		at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:365)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:666)
+		at org.apache.catalina.valves.RequestFilterValve.process(RequestFilterValve.java:348)
+		at org.apache.catalina.valves.RemoteAddrValve.invoke(RemoteAddrValve.java:53)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Thread.java:748)
+	Caused by: com.sun.xml.ws.transport.http.servlet.WSServletException: WSSERVLET11 : échec de l'analyse du descripteur d'exécution : java.lang.ExceptionInInitializerError
+		at com.sun.xml.ws.transport.http.servlet.WSServletContextListener.parseAdaptersAndCreateDelegate(WSServletContextListener.java:141)
+		at com.sun.xml.ws.transport.http.servlet.WSServletContainerInitializer.onStartup(WSServletContainerInitializer.java:65)
+		... 31 more
+	Caused by: java.lang.ExceptionInInitializerError
+		at java.lang.Class.forName0(Native Method)
+		at java.lang.Class.forName(Class.java:348)
+		at com.sun.xml.ws.transport.http.DeploymentDescriptorParser.getImplementorClass(DeploymentDescriptorParser.java:556)
+		at com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parseAdapters(DeploymentDescriptorParser.java:229)
+		at com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parse(DeploymentDescriptorParser.java:153)
+		at com.sun.xml.ws.transport.http.servlet.WSServletContextListener.parseAdaptersAndCreateDelegate(WSServletContextListener.java:131)
+		... 32 more
+	Caused by: java.lang.RuntimeException: Uncompilable source code - a2.loanservice.LoanServiceLoanManagerImpl1 is not abstract and does not override abstract method deleteBookLoan(int) in a2.loanservice.LoanServiceLoanManager1
+		at a2.loanservice.LoanServiceLoanManagerImpl1.<clinit>(LoanServiceLoanManagerImpl1.java:20)
+		... 38 more
+26-Mar-2020 14:38:05.689 GRAVE [http-nio-8080-exec-54] org.apache.catalina.core.StandardContext.startInternal Erreur de démarrage du contexte [/A2-LoanService] suite aux erreurs précédentes
+26-Mar-2020 14:38:05.697 INFOS [http-nio-8080-exec-54] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+26-Mar-2020 14:38:09.548 INFOS [http-nio-8080-exec-50] org.apache.catalina.util.LifecycleBase.stop La méthode stop() a été appelée sur le composant [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/A2-LoanService]] après que stop() ait déjà été appelé, le deuxième appel sera ignoré
+26-Mar-2020 14:38:10.049 INFOS [http-nio-8080-exec-50] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/A2-LoanService]
+26-Mar-2020 14:38:10.078 INFOS [http-nio-8080-exec-45] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanService.xml]
+26-Mar-2020 14:38:10.080 AVERTISSEMENT [http-nio-8080-exec-45] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/A2-LoanService] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanService.xml] a été ignoré
+26-Mar-2020 14:38:12.969 GRAVE [http-nio-8080-exec-45] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.parseAdaptersAndCreateDelegate WSSERVLET11 : échec de l'analyse du descripteur d'exécution : java.lang.ExceptionInInitializerError
+	java.lang.ExceptionInInitializerError
+		at java.lang.Class.forName0(Native Method)
+		at java.lang.Class.forName(Class.java:348)
+		at com.sun.xml.ws.transport.http.DeploymentDescriptorParser.getImplementorClass(DeploymentDescriptorParser.java:556)
+		at com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parseAdapters(DeploymentDescriptorParser.java:229)
+		at com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parse(DeploymentDescriptorParser.java:153)
+		at com.sun.xml.ws.transport.http.servlet.WSServletContextListener.parseAdaptersAndCreateDelegate(WSServletContextListener.java:131)
+		at com.sun.xml.ws.transport.http.servlet.WSServletContainerInitializer.onStartup(WSServletContainerInitializer.java:65)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5135)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:717)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:690)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:705)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:631)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:487)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1642)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.tomcat.util.modeler.BaseModelMBean.invoke(BaseModelMBean.java:289)
+		at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
+		at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+		at org.apache.catalina.manager.ManagerServlet.check(ManagerServlet.java:1590)
+		at org.apache.catalina.manager.ManagerServlet.deploy(ManagerServlet.java:1019)
+		at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:355)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:666)
+		at org.apache.catalina.valves.RequestFilterValve.process(RequestFilterValve.java:348)
+		at org.apache.catalina.valves.RemoteAddrValve.invoke(RemoteAddrValve.java:53)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Thread.java:748)
+	Caused by: java.lang.RuntimeException: Uncompilable source code - a2.loanservice.LoanServiceLoanManagerImpl1 is not abstract and does not override abstract method deleteBookLoan(int) in a2.loanservice.LoanServiceLoanManager1
+		at a2.loanservice.LoanServiceLoanManagerImpl1.<clinit>(LoanServiceLoanManagerImpl1.java:20)
+		... 51 more
+26-Mar-2020 14:38:12.974 GRAVE [http-nio-8080-exec-45] org.apache.catalina.core.StandardContext.startInternal Erreur lors du traitement de ServletContainerInitializer
+	javax.servlet.ServletException: com.sun.xml.ws.transport.http.servlet.WSServletException: WSSERVLET11 : échec de l'analyse du descripteur d'exécution : java.lang.ExceptionInInitializerError
+		at com.sun.xml.ws.transport.http.servlet.WSServletContainerInitializer.onStartup(WSServletContainerInitializer.java:70)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5135)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:717)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:690)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:705)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:631)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:487)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1642)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.tomcat.util.modeler.BaseModelMBean.invoke(BaseModelMBean.java:289)
+		at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
+		at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+		at org.apache.catalina.manager.ManagerServlet.check(ManagerServlet.java:1590)
+		at org.apache.catalina.manager.ManagerServlet.deploy(ManagerServlet.java:1019)
+		at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:355)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:666)
+		at org.apache.catalina.valves.RequestFilterValve.process(RequestFilterValve.java:348)
+		at org.apache.catalina.valves.RemoteAddrValve.invoke(RemoteAddrValve.java:53)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Thread.java:748)
+	Caused by: com.sun.xml.ws.transport.http.servlet.WSServletException: WSSERVLET11 : échec de l'analyse du descripteur d'exécution : java.lang.ExceptionInInitializerError
+		at com.sun.xml.ws.transport.http.servlet.WSServletContextListener.parseAdaptersAndCreateDelegate(WSServletContextListener.java:141)
+		at com.sun.xml.ws.transport.http.servlet.WSServletContainerInitializer.onStartup(WSServletContainerInitializer.java:65)
+		... 44 more
+	Caused by: java.lang.ExceptionInInitializerError
+		at java.lang.Class.forName0(Native Method)
+		at java.lang.Class.forName(Class.java:348)
+		at com.sun.xml.ws.transport.http.DeploymentDescriptorParser.getImplementorClass(DeploymentDescriptorParser.java:556)
+		at com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parseAdapters(DeploymentDescriptorParser.java:229)
+		at com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parse(DeploymentDescriptorParser.java:153)
+		at com.sun.xml.ws.transport.http.servlet.WSServletContextListener.parseAdaptersAndCreateDelegate(WSServletContextListener.java:131)
+		... 45 more
+	Caused by: java.lang.RuntimeException: Uncompilable source code - a2.loanservice.LoanServiceLoanManagerImpl1 is not abstract and does not override abstract method deleteBookLoan(int) in a2.loanservice.LoanServiceLoanManager1
+		at a2.loanservice.LoanServiceLoanManagerImpl1.<clinit>(LoanServiceLoanManagerImpl1.java:20)
+		... 51 more
+26-Mar-2020 14:38:12.978 GRAVE [http-nio-8080-exec-45] org.apache.catalina.core.StandardContext.startInternal Erreur de démarrage du contexte [/A2-LoanService] suite aux erreurs précédentes
+26-Mar-2020 14:38:12.987 INFOS [http-nio-8080-exec-45] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanService.xml] a pris [2 909] ms
+26-Mar-2020 14:38:31.601 INFOS [http-nio-8080-exec-57] org.apache.catalina.util.LifecycleBase.stop La méthode stop() a été appelée sur le composant [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/A2-LoanService]] après que stop() ait déjà été appelé, le deuxième appel sera ignoré
+26-Mar-2020 14:38:32.105 INFOS [http-nio-8080-exec-57] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/A2-LoanService]
+26-Mar-2020 14:38:32.161 INFOS [http-nio-8080-exec-58] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanService.xml]
+26-Mar-2020 14:38:32.162 AVERTISSEMENT [http-nio-8080-exec-58] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/A2-LoanService] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanService.xml] a été ignoré
+26-Mar-2020 14:38:35.975 GRAVE [http-nio-8080-exec-58] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.parseAdaptersAndCreateDelegate WSSERVLET11 : échec de l'analyse du descripteur d'exécution : java.lang.ExceptionInInitializerError
+	java.lang.ExceptionInInitializerError
+		at java.lang.Class.forName0(Native Method)
+		at java.lang.Class.forName(Class.java:348)
+		at com.sun.xml.ws.transport.http.DeploymentDescriptorParser.getImplementorClass(DeploymentDescriptorParser.java:556)
+		at com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parseAdapters(DeploymentDescriptorParser.java:229)
+		at com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parse(DeploymentDescriptorParser.java:153)
+		at com.sun.xml.ws.transport.http.servlet.WSServletContextListener.parseAdaptersAndCreateDelegate(WSServletContextListener.java:131)
+		at com.sun.xml.ws.transport.http.servlet.WSServletContainerInitializer.onStartup(WSServletContainerInitializer.java:65)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5135)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:717)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:690)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:705)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:631)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:487)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1642)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.tomcat.util.modeler.BaseModelMBean.invoke(BaseModelMBean.java:289)
+		at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
+		at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+		at org.apache.catalina.manager.ManagerServlet.check(ManagerServlet.java:1590)
+		at org.apache.catalina.manager.ManagerServlet.deploy(ManagerServlet.java:1019)
+		at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:355)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:666)
+		at org.apache.catalina.valves.RequestFilterValve.process(RequestFilterValve.java:348)
+		at org.apache.catalina.valves.RemoteAddrValve.invoke(RemoteAddrValve.java:53)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Thread.java:748)
+	Caused by: java.lang.RuntimeException: Uncompilable source code - a2.loanservice.LoanServiceLoanManagerImpl1 is not abstract and does not override abstract method deleteBookLoan(int) in a2.loanservice.LoanServiceLoanManager1
+		at a2.loanservice.LoanServiceLoanManagerImpl1.<clinit>(LoanServiceLoanManagerImpl1.java:20)
+		... 51 more
+26-Mar-2020 14:38:35.980 GRAVE [http-nio-8080-exec-58] org.apache.catalina.core.StandardContext.startInternal Erreur lors du traitement de ServletContainerInitializer
+	javax.servlet.ServletException: com.sun.xml.ws.transport.http.servlet.WSServletException: WSSERVLET11 : échec de l'analyse du descripteur d'exécution : java.lang.ExceptionInInitializerError
+		at com.sun.xml.ws.transport.http.servlet.WSServletContainerInitializer.onStartup(WSServletContainerInitializer.java:70)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5135)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:717)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:690)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:705)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:631)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:487)
+		at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1642)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.tomcat.util.modeler.BaseModelMBean.invoke(BaseModelMBean.java:289)
+		at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
+		at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+		at org.apache.catalina.manager.ManagerServlet.check(ManagerServlet.java:1590)
+		at org.apache.catalina.manager.ManagerServlet.deploy(ManagerServlet.java:1019)
+		at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:355)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:666)
+		at org.apache.catalina.valves.RequestFilterValve.process(RequestFilterValve.java:348)
+		at org.apache.catalina.valves.RemoteAddrValve.invoke(RemoteAddrValve.java:53)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Thread.java:748)
+	Caused by: com.sun.xml.ws.transport.http.servlet.WSServletException: WSSERVLET11 : échec de l'analyse du descripteur d'exécution : java.lang.ExceptionInInitializerError
+		at com.sun.xml.ws.transport.http.servlet.WSServletContextListener.parseAdaptersAndCreateDelegate(WSServletContextListener.java:141)
+		at com.sun.xml.ws.transport.http.servlet.WSServletContainerInitializer.onStartup(WSServletContainerInitializer.java:65)
+		... 44 more
+	Caused by: java.lang.ExceptionInInitializerError
+		at java.lang.Class.forName0(Native Method)
+		at java.lang.Class.forName(Class.java:348)
+		at com.sun.xml.ws.transport.http.DeploymentDescriptorParser.getImplementorClass(DeploymentDescriptorParser.java:556)
+		at com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parseAdapters(DeploymentDescriptorParser.java:229)
+		at com.sun.xml.ws.transport.http.DeploymentDescriptorParser.parse(DeploymentDescriptorParser.java:153)
+		at com.sun.xml.ws.transport.http.servlet.WSServletContextListener.parseAdaptersAndCreateDelegate(WSServletContextListener.java:131)
+		... 45 more
+	Caused by: java.lang.RuntimeException: Uncompilable source code - a2.loanservice.LoanServiceLoanManagerImpl1 is not abstract and does not override abstract method deleteBookLoan(int) in a2.loanservice.LoanServiceLoanManager1
+		at a2.loanservice.LoanServiceLoanManagerImpl1.<clinit>(LoanServiceLoanManagerImpl1.java:20)
+		... 51 more
+26-Mar-2020 14:38:35.985 GRAVE [http-nio-8080-exec-58] org.apache.catalina.core.StandardContext.startInternal Erreur de démarrage du contexte [/A2-LoanService] suite aux erreurs précédentes
+26-Mar-2020 14:38:35.995 INFOS [http-nio-8080-exec-58] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanService.xml] a pris [3 834] ms
+26-Mar-2020 14:38:58.946 INFOS [http-nio-8080-exec-60] org.apache.catalina.util.LifecycleBase.stop La méthode stop() a été appelée sur le composant [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/A2-LoanService]] après que stop() ait déjà été appelé, le deuxième appel sera ignoré
+26-Mar-2020 14:38:59.453 INFOS [http-nio-8080-exec-60] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/A2-LoanService]
+26-Mar-2020 14:38:59.481 INFOS [http-nio-8080-exec-61] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanService.xml]
+26-Mar-2020 14:38:59.483 AVERTISSEMENT [http-nio-8080-exec-61] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/A2-LoanService] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanService.xml] a été ignoré
+26-Mar-2020 14:39:08.686 INFOS [http-nio-8080-exec-61] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+26-Mar-2020 14:39:10.042 INFOS [http-nio-8080-exec-61] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+26-Mar-2020 14:39:10.101 INFOS [http-nio-8080-exec-61] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+26-Mar-2020 14:39:10.140 INFOS [http-nio-8080-exec-61] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+26-Mar-2020 14:39:10.141 INFOS [http-nio-8080-exec-61] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+26-Mar-2020 14:39:10.141 INFOS [http-nio-8080-exec-61] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+26-Mar-2020 14:39:10.149 INFOS [http-nio-8080-exec-61] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanService.xml] a pris [10 667] ms
+26-Mar-2020 14:39:10.213 INFOS [http-nio-8080-exec-62] org.apache.catalina.util.LifecycleBase.start La méthode start() a été appelée sur le composant [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/A2-LoanService]] après que start() ait déjà été appelé, le deuxième appel sera ignoré
+26-Mar-2020 14:39:18.559 INFOS [http-nio-8080-exec-56] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+26-Mar-2020 14:39:18.568 INFOS [http-nio-8080-exec-56] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+26-Mar-2020 14:39:18.570 INFOS [http-nio-8080-exec-56] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+26-Mar-2020 14:39:18.571 INFOS [http-nio-8080-exec-56] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+26-Mar-2020 14:39:18.572 INFOS [http-nio-8080-exec-56] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+26-Mar-2020 14:39:19.085 INFOS [http-nio-8080-exec-56] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/A2-LoanService]
+26-Mar-2020 14:39:47.230 INFOS [http-nio-8080-exec-60] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanService.xml]
+26-Mar-2020 14:39:47.230 AVERTISSEMENT [http-nio-8080-exec-60] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/A2-LoanService] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanService.xml] a été ignoré
+26-Mar-2020 14:39:54.195 INFOS [http-nio-8080-exec-60] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+26-Mar-2020 14:39:55.555 INFOS [http-nio-8080-exec-60] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+26-Mar-2020 14:39:55.601 INFOS [http-nio-8080-exec-60] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+26-Mar-2020 14:39:55.665 INFOS [http-nio-8080-exec-60] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+26-Mar-2020 14:39:55.665 INFOS [http-nio-8080-exec-60] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+26-Mar-2020 14:39:55.665 INFOS [http-nio-8080-exec-60] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+26-Mar-2020 14:39:55.669 INFOS [http-nio-8080-exec-60] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanService.xml] a pris [8 439] ms
+26-Mar-2020 14:39:55.733 INFOS [http-nio-8080-exec-67] org.apache.catalina.util.LifecycleBase.start La méthode start() a été appelée sur le composant [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/A2-LoanService]] après que start() ait déjà été appelé, le deuxième appel sera ignoré
+26-Mar-2020 14:42:21.839 INFOS [http-nio-8080-exec-67] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A2-LoanService] a démarré
+26-Mar-2020 14:42:21.851 INFOS [http-nio-8080-exec-67] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+26-Mar-2020 14:42:21.880 INFOS [http-nio-8080-exec-67] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+26-Mar-2020 14:42:21.882 INFOS [http-nio-8080-exec-67] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+26-Mar-2020 14:42:21.883 INFOS [http-nio-8080-exec-67] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+26-Mar-2020 14:42:21.885 INFOS [http-nio-8080-exec-67] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+26-Mar-2020 14:42:37.512 INFOS [http-nio-8080-exec-67] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+26-Mar-2020 14:42:38.305 INFOS [http-nio-8080-exec-67] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+26-Mar-2020 14:42:38.343 INFOS [http-nio-8080-exec-67] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+26-Mar-2020 14:42:38.375 INFOS [http-nio-8080-exec-67] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+26-Mar-2020 14:42:38.376 INFOS [http-nio-8080-exec-67] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+26-Mar-2020 14:42:38.376 INFOS [http-nio-8080-exec-67] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+26-Mar-2020 14:42:38.379 INFOS [http-nio-8080-exec-67] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+26-Mar-2020 14:42:38.491 INFOS [http-nio-8080-exec-74] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A2-LoanService] a démarré
+26-Mar-2020 14:42:38.501 INFOS [http-nio-8080-exec-74] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+26-Mar-2020 14:42:38.511 INFOS [http-nio-8080-exec-74] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+26-Mar-2020 14:42:38.512 INFOS [http-nio-8080-exec-74] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+26-Mar-2020 14:42:38.512 INFOS [http-nio-8080-exec-74] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+26-Mar-2020 14:42:38.513 INFOS [http-nio-8080-exec-74] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+26-Mar-2020 14:42:44.557 INFOS [http-nio-8080-exec-74] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+26-Mar-2020 14:42:45.194 INFOS [http-nio-8080-exec-74] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+26-Mar-2020 14:42:45.229 INFOS [http-nio-8080-exec-74] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+26-Mar-2020 14:42:45.265 INFOS [http-nio-8080-exec-74] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+26-Mar-2020 14:42:45.266 INFOS [http-nio-8080-exec-74] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+26-Mar-2020 14:42:45.266 INFOS [http-nio-8080-exec-74] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+26-Mar-2020 14:42:45.269 INFOS [http-nio-8080-exec-74] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+26-Mar-2020 14:48:40.702 INFOS [http-nio-8080-exec-76] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A2-LoanService] a démarré
+26-Mar-2020 14:48:40.713 INFOS [http-nio-8080-exec-76] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+26-Mar-2020 14:48:40.760 INFOS [http-nio-8080-exec-76] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+26-Mar-2020 14:48:40.763 INFOS [http-nio-8080-exec-76] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+26-Mar-2020 14:48:40.769 INFOS [http-nio-8080-exec-76] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+26-Mar-2020 14:48:40.771 INFOS [http-nio-8080-exec-76] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+26-Mar-2020 14:48:45.568 GRAVE [http-nio-8080-exec-76] org.apache.catalina.core.StandardContext.reload Exception lors du démarrage du contexte [/A2-LoanService]
+	org.apache.catalina.LifecycleException: Echec de démarrage du composant [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/A2-LoanService]]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:440)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:198)
+		at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3758)
+		at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:1121)
+		at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:365)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:666)
+		at org.apache.catalina.valves.RequestFilterValve.process(RequestFilterValve.java:348)
+		at org.apache.catalina.valves.RemoteAddrValve.invoke(RemoteAddrValve.java:53)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Thread.java:748)
+	Caused by: java.lang.NoClassDefFoundError: a2/loanservice/loanmanager/client/LoanServiceSOAPFault_Exception
+		at java.lang.Class.getDeclaredMethods0(Native Method)
+		at java.lang.Class.privateGetDeclaredMethods(Class.java:2701)
+		at java.lang.Class.getDeclaredMethods(Class.java:1975)
+		at org.apache.catalina.util.Introspection.getDeclaredMethods(Introspection.java:133)
+		at org.apache.catalina.startup.WebAnnotationSet.loadMethodsAnnotation(WebAnnotationSet.java:285)
+		at org.apache.catalina.startup.WebAnnotationSet.loadApplicationServletAnnotations(WebAnnotationSet.java:138)
+		at org.apache.catalina.startup.WebAnnotationSet.loadApplicationAnnotations(WebAnnotationSet.java:69)
+		at org.apache.catalina.startup.ContextConfig.applicationAnnotationsConfig(ContextConfig.java:330)
+		at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:777)
+		at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:301)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:123)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5051)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+		... 29 more
+	Caused by: java.lang.ClassNotFoundException: a2.loanservice.loanmanager.client.LoanServiceSOAPFault_Exception
+		at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1365)
+		at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1188)
+		... 42 more
+26-Mar-2020 14:48:45.574 INFOS [http-nio-8080-exec-76] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+26-Mar-2020 14:49:37.382 INFOS [http-nio-8080-exec-80] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/A2-LoanService]
+26-Mar-2020 14:52:29.076 INFOS [http-nio-8080-exec-89] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanService.xml]
+26-Mar-2020 14:52:29.076 AVERTISSEMENT [http-nio-8080-exec-89] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/A2-LoanService] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanService.xml] a été ignoré
+26-Mar-2020 14:52:35.413 INFOS [http-nio-8080-exec-89] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+26-Mar-2020 14:52:36.363 INFOS [http-nio-8080-exec-89] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+26-Mar-2020 14:52:36.415 INFOS [http-nio-8080-exec-89] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+26-Mar-2020 14:52:36.454 INFOS [http-nio-8080-exec-89] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+26-Mar-2020 14:52:36.457 INFOS [http-nio-8080-exec-89] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+26-Mar-2020 14:52:36.457 INFOS [http-nio-8080-exec-89] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+26-Mar-2020 14:52:36.468 INFOS [http-nio-8080-exec-89] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanService.xml] a pris [7 392] ms
+26-Mar-2020 14:52:36.518 INFOS [http-nio-8080-exec-96] org.apache.catalina.util.LifecycleBase.start La méthode start() a été appelée sur le composant [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/A2-LoanService]] après que start() ait déjà été appelé, le deuxième appel sera ignoré
+26-Mar-2020 14:53:12.811 INFOS [http-nio-8080-exec-99] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+26-Mar-2020 14:53:12.816 INFOS [http-nio-8080-exec-99] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+26-Mar-2020 14:53:12.817 INFOS [http-nio-8080-exec-99] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+26-Mar-2020 14:53:12.818 INFOS [http-nio-8080-exec-99] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+26-Mar-2020 14:53:12.818 INFOS [http-nio-8080-exec-99] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+26-Mar-2020 14:53:13.325 INFOS [http-nio-8080-exec-99] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/A2-LoanService]
+26-Mar-2020 14:53:13.338 INFOS [http-nio-8080-exec-91] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanService.xml]
+26-Mar-2020 14:53:13.339 AVERTISSEMENT [http-nio-8080-exec-91] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/A2-LoanService] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanService.xml] a été ignoré
+26-Mar-2020 14:53:23.881 INFOS [http-nio-8080-exec-91] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+26-Mar-2020 14:53:24.599 INFOS [http-nio-8080-exec-91] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+26-Mar-2020 14:53:24.692 INFOS [http-nio-8080-exec-91] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+26-Mar-2020 14:53:24.730 INFOS [http-nio-8080-exec-91] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+26-Mar-2020 14:53:24.731 INFOS [http-nio-8080-exec-91] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+26-Mar-2020 14:53:24.731 INFOS [http-nio-8080-exec-91] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+26-Mar-2020 14:53:24.735 INFOS [http-nio-8080-exec-91] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanService.xml] a pris [11 397] ms
+26-Mar-2020 14:53:24.776 INFOS [http-nio-8080-exec-93] org.apache.catalina.util.LifecycleBase.start La méthode start() a été appelée sur le composant [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/A2-LoanService]] après que start() ait déjà été appelé, le deuxième appel sera ignoré
+26-Mar-2020 14:56:09.465 INFOS [http-nio-8080-exec-105] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A2-LoanService] a démarré
+26-Mar-2020 14:56:09.477 INFOS [http-nio-8080-exec-105] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+26-Mar-2020 14:56:09.482 INFOS [http-nio-8080-exec-105] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+26-Mar-2020 14:56:09.483 INFOS [http-nio-8080-exec-105] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+26-Mar-2020 14:56:09.484 INFOS [http-nio-8080-exec-105] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+26-Mar-2020 14:56:09.484 INFOS [http-nio-8080-exec-105] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+26-Mar-2020 14:56:20.873 INFOS [http-nio-8080-exec-105] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+26-Mar-2020 14:56:21.853 INFOS [http-nio-8080-exec-105] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+26-Mar-2020 14:56:21.894 INFOS [http-nio-8080-exec-105] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+26-Mar-2020 14:56:21.938 INFOS [http-nio-8080-exec-105] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+26-Mar-2020 14:56:21.941 INFOS [http-nio-8080-exec-105] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+26-Mar-2020 14:56:21.941 INFOS [http-nio-8080-exec-105] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+26-Mar-2020 14:56:21.948 INFOS [http-nio-8080-exec-105] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+26-Mar-2020 14:56:23.087 INFOS [http-nio-8080-exec-98] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A2-LoanService] a démarré
+26-Mar-2020 14:56:23.097 INFOS [http-nio-8080-exec-98] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+26-Mar-2020 14:56:23.106 INFOS [http-nio-8080-exec-98] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+26-Mar-2020 14:56:23.108 INFOS [http-nio-8080-exec-98] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+26-Mar-2020 14:56:23.109 INFOS [http-nio-8080-exec-98] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+26-Mar-2020 14:56:23.110 INFOS [http-nio-8080-exec-98] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+26-Mar-2020 14:56:39.059 INFOS [http-nio-8080-exec-98] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+26-Mar-2020 14:56:41.201 INFOS [http-nio-8080-exec-98] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+26-Mar-2020 14:56:41.280 INFOS [http-nio-8080-exec-98] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+26-Mar-2020 14:56:41.396 INFOS [http-nio-8080-exec-98] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+26-Mar-2020 14:56:41.399 INFOS [http-nio-8080-exec-98] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+26-Mar-2020 14:56:41.400 INFOS [http-nio-8080-exec-98] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+26-Mar-2020 14:56:41.409 INFOS [http-nio-8080-exec-98] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+26-Mar-2020 14:57:04.936 INFOS [http-nio-8080-exec-103] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A2-LoanService] a démarré
+26-Mar-2020 14:57:04.945 INFOS [http-nio-8080-exec-103] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+26-Mar-2020 14:57:04.954 INFOS [http-nio-8080-exec-103] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+26-Mar-2020 14:57:04.955 INFOS [http-nio-8080-exec-103] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+26-Mar-2020 14:57:04.955 INFOS [http-nio-8080-exec-103] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+26-Mar-2020 14:57:04.955 INFOS [http-nio-8080-exec-103] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+26-Mar-2020 14:57:16.009 INFOS [http-nio-8080-exec-103] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+26-Mar-2020 14:57:17.365 INFOS [http-nio-8080-exec-103] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+26-Mar-2020 14:57:17.431 INFOS [http-nio-8080-exec-103] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+26-Mar-2020 14:57:17.512 INFOS [http-nio-8080-exec-103] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+26-Mar-2020 14:57:17.513 INFOS [http-nio-8080-exec-103] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+26-Mar-2020 14:57:17.515 INFOS [http-nio-8080-exec-103] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+26-Mar-2020 14:57:17.533 INFOS [http-nio-8080-exec-103] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+26-Mar-2020 14:57:17.648 INFOS [http-nio-8080-exec-96] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A2-LoanService] a démarré
+26-Mar-2020 14:57:17.672 INFOS [http-nio-8080-exec-96] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+26-Mar-2020 14:57:17.682 INFOS [http-nio-8080-exec-96] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+26-Mar-2020 14:57:17.685 INFOS [http-nio-8080-exec-96] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+26-Mar-2020 14:57:17.686 INFOS [http-nio-8080-exec-96] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+26-Mar-2020 14:57:17.688 INFOS [http-nio-8080-exec-96] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+26-Mar-2020 14:57:30.168 INFOS [http-nio-8080-exec-96] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+26-Mar-2020 14:57:31.570 INFOS [http-nio-8080-exec-96] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+26-Mar-2020 14:57:31.693 INFOS [http-nio-8080-exec-96] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+26-Mar-2020 14:57:31.777 INFOS [http-nio-8080-exec-96] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+26-Mar-2020 14:57:31.778 INFOS [http-nio-8080-exec-96] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+26-Mar-2020 14:57:31.779 INFOS [http-nio-8080-exec-96] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+26-Mar-2020 14:57:31.791 INFOS [http-nio-8080-exec-96] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+26-Mar-2020 14:57:37.285 INFOS [http-nio-8080-exec-112] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A2-LoanService] a démarré
+26-Mar-2020 14:57:37.291 INFOS [http-nio-8080-exec-112] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+26-Mar-2020 14:57:37.295 INFOS [http-nio-8080-exec-112] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+26-Mar-2020 14:57:37.296 INFOS [http-nio-8080-exec-112] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+26-Mar-2020 14:57:37.296 INFOS [http-nio-8080-exec-112] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+26-Mar-2020 14:57:37.297 INFOS [http-nio-8080-exec-112] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+26-Mar-2020 14:57:42.949 INFOS [http-nio-8080-exec-112] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+26-Mar-2020 14:57:43.717 INFOS [http-nio-8080-exec-112] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+26-Mar-2020 14:57:43.761 INFOS [http-nio-8080-exec-112] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+26-Mar-2020 14:57:43.793 INFOS [185] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+26-Mar-2020 14:57:43.794 INFOS [185] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+26-Mar-2020 14:57:43.794 INFOS [185] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+26-Mar-2020 14:57:43.798 INFOS [185] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+26-Mar-2020 14:58:06.054 INFOS [http-nio-8080-exec-114] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A2-LoanService] a démarré
+26-Mar-2020 14:58:06.061 INFOS [http-nio-8080-exec-114] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+26-Mar-2020 14:58:06.074 INFOS [http-nio-8080-exec-114] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+26-Mar-2020 14:58:06.080 INFOS [http-nio-8080-exec-114] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+26-Mar-2020 14:58:06.081 INFOS [http-nio-8080-exec-114] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+26-Mar-2020 14:58:06.081 INFOS [http-nio-8080-exec-114] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+26-Mar-2020 14:58:15.919 INFOS [http-nio-8080-exec-114] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+26-Mar-2020 14:58:17.451 INFOS [http-nio-8080-exec-114] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+26-Mar-2020 14:58:17.523 INFOS [http-nio-8080-exec-114] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+26-Mar-2020 14:58:17.567 INFOS [http-nio-8080-exec-114] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+26-Mar-2020 14:58:17.570 INFOS [http-nio-8080-exec-114] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+26-Mar-2020 14:58:17.570 INFOS [http-nio-8080-exec-114] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+26-Mar-2020 14:58:17.579 INFOS [http-nio-8080-exec-114] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+26-Mar-2020 14:58:24.849 INFOS [http-nio-8080-exec-102] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A2-LoanService] a démarré
+26-Mar-2020 14:58:24.857 INFOS [http-nio-8080-exec-102] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+26-Mar-2020 14:58:24.863 INFOS [http-nio-8080-exec-102] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+26-Mar-2020 14:58:24.866 INFOS [http-nio-8080-exec-102] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+26-Mar-2020 14:58:24.867 INFOS [http-nio-8080-exec-102] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+26-Mar-2020 14:58:24.868 INFOS [http-nio-8080-exec-102] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+26-Mar-2020 14:58:34.127 INFOS [http-nio-8080-exec-102] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+26-Mar-2020 14:58:35.388 INFOS [http-nio-8080-exec-102] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+26-Mar-2020 14:58:35.447 INFOS [http-nio-8080-exec-102] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+26-Mar-2020 14:58:35.540 INFOS [http-nio-8080-exec-102] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+26-Mar-2020 14:58:35.541 INFOS [http-nio-8080-exec-102] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+26-Mar-2020 14:58:35.541 INFOS [http-nio-8080-exec-102] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+26-Mar-2020 14:58:35.547 INFOS [http-nio-8080-exec-102] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+26-Mar-2020 14:58:38.730 INFOS [http-nio-8080-exec-111] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A2-LoanService] a démarré
+26-Mar-2020 14:58:38.736 INFOS [http-nio-8080-exec-111] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+26-Mar-2020 14:58:38.746 INFOS [http-nio-8080-exec-111] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+26-Mar-2020 14:58:38.749 INFOS [http-nio-8080-exec-111] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+26-Mar-2020 14:58:38.750 INFOS [http-nio-8080-exec-111] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+26-Mar-2020 14:58:38.751 INFOS [http-nio-8080-exec-111] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+26-Mar-2020 14:58:45.451 INFOS [http-nio-8080-exec-111] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+26-Mar-2020 14:58:46.283 INFOS [http-nio-8080-exec-111] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+26-Mar-2020 14:58:46.326 INFOS [http-nio-8080-exec-111] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+26-Mar-2020 14:58:46.359 INFOS [http-nio-8080-exec-111] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+26-Mar-2020 14:58:46.360 INFOS [http-nio-8080-exec-111] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+26-Mar-2020 14:58:46.360 INFOS [http-nio-8080-exec-111] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+26-Mar-2020 14:58:46.362 INFOS [http-nio-8080-exec-111] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé
+26-Mar-2020 14:58:50.172 INFOS [http-nio-8080-exec-113] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+26-Mar-2020 14:58:50.180 INFOS [http-nio-8080-exec-113] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+26-Mar-2020 14:58:50.183 INFOS [http-nio-8080-exec-113] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+26-Mar-2020 14:58:50.184 INFOS [http-nio-8080-exec-113] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+26-Mar-2020 14:58:50.184 INFOS [http-nio-8080-exec-113] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+26-Mar-2020 14:58:50.691 INFOS [http-nio-8080-exec-113] org.apache.catalina.startup.HostConfig.undeploy Retrait de l'application web ayant pour chemin de contexte [/A2-LoanService]
+26-Mar-2020 14:59:15.005 INFOS [http-nio-8080-exec-126] org.apache.catalina.startup.HostConfig.deployDescriptor Déploiement du descripteur de configuration [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanService.xml]
+26-Mar-2020 14:59:15.006 AVERTISSEMENT [http-nio-8080-exec-126] org.apache.catalina.startup.HostConfig.deployDescriptor L'attribut path avec la valeur [/A2-LoanService] dans le descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanService.xml] a été ignoré
+26-Mar-2020 14:59:21.231 INFOS [http-nio-8080-exec-126] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+26-Mar-2020 14:59:22.046 INFOS [http-nio-8080-exec-126] com.sun.xml.ws.server.MonitorBase.createRoot Metro monitoring rootname successfully set to: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+26-Mar-2020 14:59:22.088 INFOS [http-nio-8080-exec-126] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.<init> WSSERVLET14 : initialisation du servlet JAX-WS
+26-Mar-2020 14:59:22.149 INFOS [http-nio-8080-exec-126] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+26-Mar-2020 14:59:22.149 INFOS [http-nio-8080-exec-126] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+26-Mar-2020 14:59:22.150 INFOS [http-nio-8080-exec-126] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextInitialized WSSERVLET12 : initialisation du processus découte de contexte JAX-WS
+26-Mar-2020 14:59:22.153 INFOS [http-nio-8080-exec-126] org.apache.catalina.startup.HostConfig.deployDescriptor Le traitement du descripteur de déploiement [/Users/Airi/Documents/SOEN487-Projects/Tutorial/apache-tomcat-9.0.30/conf/Catalina/localhost/A2-LoanService.xml] a pris [7 148] ms
+26-Mar-2020 14:59:22.192 INFOS [http-nio-8080-exec-101] org.apache.catalina.util.LifecycleBase.start La méthode start() a été appelée sur le composant [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/A2-LoanService]] après que start() ait déjà été appelé, le deuxième appel sera ignoré
+26-Mar-2020 14:59:52.832 GRAVE [http-nio-8080-exec-125] a2.loanservice.LoanServiceLoanManagerImpl1.borrowBook null
+	a2.loansystem.LoanException
+		at a2.loansystem.LoanManagerImpl.borrowBook(LoanManagerImpl.java:132)
+		at a2.loanservice.LoanServiceLoanManagerImpl1.borrowBook(LoanServiceLoanManagerImpl1.java:82)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at com.sun.xml.ws.api.server.InstanceResolver$1.invoke(InstanceResolver.java:250)
+		at com.sun.xml.ws.server.InvokerTube$2.invoke(InvokerTube.java:149)
+		at com.sun.xml.ws.server.sei.SEIInvokerTube.processRequest(SEIInvokerTube.java:94)
+		at com.sun.xml.ws.api.pipe.Fiber.__doRun(Fiber.java:961)
+		at com.sun.xml.ws.api.pipe.Fiber._doRun(Fiber.java:910)
+		at com.sun.xml.ws.api.pipe.Fiber.doRun(Fiber.java:873)
+		at com.sun.xml.ws.api.pipe.Fiber.runSync(Fiber.java:775)
+		at com.sun.xml.ws.server.WSEndpointImpl$2.process(WSEndpointImpl.java:386)
+		at com.sun.xml.ws.transport.http.HttpAdapter$HttpToolkit.handle(HttpAdapter.java:640)
+		at com.sun.xml.ws.transport.http.HttpAdapter.handle(HttpAdapter.java:263)
+		at com.sun.xml.ws.transport.http.servlet.ServletAdapter.invokeAsync(ServletAdapter.java:218)
+		at com.sun.xml.ws.transport.http.servlet.WSServletDelegate.doGet(WSServletDelegate.java:159)
+		at com.sun.xml.ws.transport.http.servlet.WSServletDelegate.doPost(WSServletDelegate.java:194)
+		at com.sun.xml.ws.transport.http.servlet.WSServlet.doPost(WSServlet.java:80)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Thread.java:748)
+26-Mar-2020 14:59:52.883 GRAVE [http-nio-8080-exec-120] LoanServiceServlets.LoanManagerController.doPost null
+	a2.loanservice.loanmanager.client.LoanServiceSOAPFault_Exception: Book not available
+		at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+		at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+		at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+		at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+		at com.sun.xml.ws.fault.SOAPFaultBuilder.createException(SOAPFaultBuilder.java:145)
+		at com.sun.xml.ws.client.sei.StubHandler.readResponse(StubHandler.java:247)
+		at com.sun.xml.ws.db.DatabindingImpl.deserializeResponse(DatabindingImpl.java:177)
+		at com.sun.xml.ws.db.DatabindingImpl.deserializeResponse(DatabindingImpl.java:256)
+		at com.sun.xml.ws.client.sei.SyncMethodHandler.invoke(SyncMethodHandler.java:128)
+		at com.sun.xml.ws.client.sei.SyncMethodHandler.invoke(SyncMethodHandler.java:102)
+		at com.sun.xml.ws.client.sei.SEIStub.invoke(SEIStub.java:151)
+		at com.sun.proxy.$Proxy1157.borrowBook(Unknown Source)
+		at LoanServiceServlets.LoanManagerController.borrowBook(LoanManagerController.java:256)
+		at LoanServiceServlets.LoanManagerController.doPost(LoanManagerController.java:166)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Thread.java:748)
+26-Mar-2020 14:59:57.031 GRAVE [http-nio-8080-exec-128] a2.loanservice.LoanServiceLoanManagerImpl1.borrowBook null
+	a2.loansystem.LoanException
+		at a2.loansystem.LoanManagerImpl.borrowBook(LoanManagerImpl.java:95)
+		at a2.loanservice.LoanServiceLoanManagerImpl1.borrowBook(LoanServiceLoanManagerImpl1.java:82)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at com.sun.xml.ws.api.server.InstanceResolver$1.invoke(InstanceResolver.java:250)
+		at com.sun.xml.ws.server.InvokerTube$2.invoke(InvokerTube.java:149)
+		at com.sun.xml.ws.server.sei.SEIInvokerTube.processRequest(SEIInvokerTube.java:94)
+		at com.sun.xml.ws.api.pipe.Fiber.__doRun(Fiber.java:961)
+		at com.sun.xml.ws.api.pipe.Fiber._doRun(Fiber.java:910)
+		at com.sun.xml.ws.api.pipe.Fiber.doRun(Fiber.java:873)
+		at com.sun.xml.ws.api.pipe.Fiber.runSync(Fiber.java:775)
+		at com.sun.xml.ws.server.WSEndpointImpl$2.process(WSEndpointImpl.java:386)
+		at com.sun.xml.ws.transport.http.HttpAdapter$HttpToolkit.handle(HttpAdapter.java:640)
+		at com.sun.xml.ws.transport.http.HttpAdapter.handle(HttpAdapter.java:263)
+		at com.sun.xml.ws.transport.http.servlet.ServletAdapter.invokeAsync(ServletAdapter.java:218)
+		at com.sun.xml.ws.transport.http.servlet.WSServletDelegate.doGet(WSServletDelegate.java:159)
+		at com.sun.xml.ws.transport.http.servlet.WSServletDelegate.doPost(WSServletDelegate.java:194)
+		at com.sun.xml.ws.transport.http.servlet.WSServlet.doPost(WSServlet.java:80)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Thread.java:748)
+26-Mar-2020 14:59:57.037 GRAVE [http-nio-8080-exec-124] LoanServiceServlets.LoanManagerController.doPost null
+	a2.loanservice.loanmanager.client.LoanServiceSOAPFault_Exception: Loan Manager - Book's Call Number does not exist!
+		at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+		at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+		at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+		at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+		at com.sun.xml.ws.fault.SOAPFaultBuilder.createException(SOAPFaultBuilder.java:145)
+		at com.sun.xml.ws.client.sei.StubHandler.readResponse(StubHandler.java:247)
+		at com.sun.xml.ws.db.DatabindingImpl.deserializeResponse(DatabindingImpl.java:177)
+		at com.sun.xml.ws.db.DatabindingImpl.deserializeResponse(DatabindingImpl.java:256)
+		at com.sun.xml.ws.client.sei.SyncMethodHandler.invoke(SyncMethodHandler.java:128)
+		at com.sun.xml.ws.client.sei.SyncMethodHandler.invoke(SyncMethodHandler.java:102)
+		at com.sun.xml.ws.client.sei.SEIStub.invoke(SEIStub.java:151)
+		at com.sun.proxy.$Proxy1160.borrowBook(Unknown Source)
+		at LoanServiceServlets.LoanManagerController.borrowBook(LoanManagerController.java:256)
+		at LoanServiceServlets.LoanManagerController.doPost(LoanManagerController.java:166)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Thread.java:748)
+26-Mar-2020 15:00:08.940 GRAVE [http-nio-8080-exec-133] a2.loanservice.LoanServiceLoanManagerImpl1.returnBookLoan null
+	a2.loansystem.LoanException
+		at a2.loansystem.LoanManagerImpl.returnBookLoan(LoanManagerImpl.java:172)
+		at a2.loanservice.LoanServiceLoanManagerImpl1.returnBookLoan(LoanServiceLoanManagerImpl1.java:126)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at com.sun.xml.ws.api.server.InstanceResolver$1.invoke(InstanceResolver.java:250)
+		at com.sun.xml.ws.server.InvokerTube$2.invoke(InvokerTube.java:149)
+		at com.sun.xml.ws.server.sei.SEIInvokerTube.processRequest(SEIInvokerTube.java:94)
+		at com.sun.xml.ws.api.pipe.Fiber.__doRun(Fiber.java:961)
+		at com.sun.xml.ws.api.pipe.Fiber._doRun(Fiber.java:910)
+		at com.sun.xml.ws.api.pipe.Fiber.doRun(Fiber.java:873)
+		at com.sun.xml.ws.api.pipe.Fiber.runSync(Fiber.java:775)
+		at com.sun.xml.ws.server.WSEndpointImpl$2.process(WSEndpointImpl.java:386)
+		at com.sun.xml.ws.transport.http.HttpAdapter$HttpToolkit.handle(HttpAdapter.java:640)
+		at com.sun.xml.ws.transport.http.HttpAdapter.handle(HttpAdapter.java:263)
+		at com.sun.xml.ws.transport.http.servlet.ServletAdapter.invokeAsync(ServletAdapter.java:218)
+		at com.sun.xml.ws.transport.http.servlet.WSServletDelegate.doGet(WSServletDelegate.java:159)
+		at com.sun.xml.ws.transport.http.servlet.WSServletDelegate.doPost(WSServletDelegate.java:194)
+		at com.sun.xml.ws.transport.http.servlet.WSServlet.doPost(WSServlet.java:80)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Thread.java:748)
+26-Mar-2020 15:00:08.950 GRAVE [http-nio-8080-exec-130] LoanServiceServlets.LoanManagerController.doPost null
+	a2.loanservice.loanmanager.client.LoanServiceSOAPFault_Exception: Loan Manager - Loan does not exist!
+		at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+		at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+		at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+		at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+		at com.sun.xml.ws.fault.SOAPFaultBuilder.createException(SOAPFaultBuilder.java:145)
+		at com.sun.xml.ws.client.sei.StubHandler.readResponse(StubHandler.java:247)
+		at com.sun.xml.ws.db.DatabindingImpl.deserializeResponse(DatabindingImpl.java:177)
+		at com.sun.xml.ws.db.DatabindingImpl.deserializeResponse(DatabindingImpl.java:256)
+		at com.sun.xml.ws.client.sei.SyncMethodHandler.invoke(SyncMethodHandler.java:128)
+		at com.sun.xml.ws.client.sei.SyncMethodHandler.invoke(SyncMethodHandler.java:102)
+		at com.sun.xml.ws.client.sei.SEIStub.invoke(SEIStub.java:151)
+		at com.sun.proxy.$Proxy1162.returnBookLoan(Unknown Source)
+		at LoanServiceServlets.LoanManagerController.returnBookLoan(LoanManagerController.java:274)
+		at LoanServiceServlets.LoanManagerController.doPost(LoanManagerController.java:208)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+		at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+		at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+		at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+		at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+		at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+		at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+		at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+		at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+		at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:678)
+		at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+		at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+		at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+		at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+		at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:860)
+		at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1598)
+		at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+		at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+		at java.lang.Thread.run(Thread.java:748)
+26-Mar-2020 15:00:20.520 INFOS [http-nio-8080-exec-129] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A2-LoanService] a démarré
+26-Mar-2020 15:00:20.543 INFOS [http-nio-8080-exec-129] com.sun.xml.ws.transport.http.servlet.WSServletDelegate.destroy WSSERVLET15 : servlet AX-WS détruit
+26-Mar-2020 15:00:20.552 INFOS [http-nio-8080-exec-129] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceLoanManagerImpl1Service-LoanServiceLoanManagerImpl1Port
+26-Mar-2020 15:00:20.553 INFOS [http-nio-8080-exec-129] com.sun.xml.ws.server.MonitorBase.closeMOM Closing Metro monitoring root: com.sun.metro:pp=/,type=WSEndpoint,name=/A2-LoanService-LoanServiceMemberManagerImplService-LoanServiceMemberManagerImplPort
+26-Mar-2020 15:00:20.553 INFOS [http-nio-8080-exec-129] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit
+26-Mar-2020 15:00:20.554 INFOS [http-nio-8080-exec-129] com.sun.xml.ws.transport.http.servlet.WSServletContextListener.contextDestroyed WSSERVLET13 : processus découte de contexte JAX-WS détruit

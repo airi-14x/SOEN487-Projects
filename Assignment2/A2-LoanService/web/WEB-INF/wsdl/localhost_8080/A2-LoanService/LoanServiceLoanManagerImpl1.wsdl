@@ -4,10 +4,6 @@
 <xsd:import namespace="http://loanservice.a2/" schemaLocation="http://localhost:8080/A2-LoanService/LoanServiceLoanManagerImpl1?xsd=1"/>
 </xsd:schema>
 </types>
-<message name="getLoansMap"/>
-<message name="getLoansMapResponse">
-<part name="return" type="xsd:string"/>
-</message>
 <message name="listLoan">
 <part name="arg0" type="xsd:string"/>
 </message>
@@ -29,26 +25,30 @@
 <part name="arg2" type="xsd:string"/>
 <part name="arg3" type="xsd:string"/>
 </message>
-<message name="borrowBookResponse"/>
+<message name="borrowBookResponse">
+<part name="return" type="xsd:string"/>
+</message>
 <message name="editBookLoan">
 <part name="arg0" type="xsd:int"/>
 <part name="arg1" type="xsd:string"/>
 <part name="arg2" type="xsd:string"/>
 </message>
-<message name="editBookLoanResponse"/>
+<message name="editBookLoanResponse">
+<part name="return" type="xsd:string"/>
+</message>
 <message name="returnBookLoan">
 <part name="arg0" type="xsd:int"/>
 </message>
-<message name="returnBookLoanResponse"/>
+<message name="returnBookLoanResponse">
+<part name="return" type="xsd:string"/>
+</message>
 <message name="deleteBookLoan">
 <part name="arg0" type="xsd:int"/>
 </message>
-<message name="deleteBookLoanResponse"/>
+<message name="deleteBookLoanResponse">
+<part name="return" type="xsd:string"/>
+</message>
 <portType name="LoanServiceLoanManager1">
-<operation name="getLoansMap">
-<input wsam:Action="http://loanservice.a2/LoanServiceLoanManager1/getLoansMapRequest" message="tns:getLoansMap"/>
-<output wsam:Action="http://loanservice.a2/LoanServiceLoanManager1/getLoansMapResponse" message="tns:getLoansMapResponse"/>
-</operation>
 <operation name="listLoan">
 <input wsam:Action="http://loanservice.a2/LoanServiceLoanManager1/listLoanRequest" message="tns:listLoan"/>
 <output wsam:Action="http://loanservice.a2/LoanServiceLoanManager1/listLoanResponse" message="tns:listLoanResponse"/>
@@ -82,15 +82,6 @@
 </portType>
 <binding name="LoanServiceLoanManagerImpl1PortBinding" type="tns:LoanServiceLoanManager1">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc"/>
-<operation name="getLoansMap">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal" namespace="http://loanservice.a2/"/>
-</input>
-<output>
-<soap:body use="literal" namespace="http://loanservice.a2/"/>
-</output>
-</operation>
 <operation name="listLoan">
 <soap:operation soapAction=""/>
 <input>
