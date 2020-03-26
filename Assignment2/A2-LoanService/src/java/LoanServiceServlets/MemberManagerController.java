@@ -6,6 +6,7 @@
 package LoanServiceServlets;
 
 //import a2.loanservice.client.LoanException_Exception;
+//import a2.loanservice.membermanager.client.LoanException_Exception;
 import a2.loanservice.membermanager.client.LoanException_Exception;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -107,7 +108,7 @@ public class MemberManagerController extends HttpServlet {
         rd.forward(request, response);
         //processRequest(request, response);
     }
-
+    
     /**
      * Handles the HTTP <code>POST</code> method.
      *
@@ -194,6 +195,5 @@ public class MemberManagerController extends HttpServlet {
         a2.loanservice.membermanager.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
         return port.deleteMember(arg0);
     }
-    
     
 }
