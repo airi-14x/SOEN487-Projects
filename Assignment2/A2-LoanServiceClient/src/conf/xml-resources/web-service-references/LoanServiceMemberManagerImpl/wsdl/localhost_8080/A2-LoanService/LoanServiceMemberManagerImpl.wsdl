@@ -21,8 +21,8 @@
 <message name="addMemberResponse">
 <part name="return" type="xsd:string"/>
 </message>
-<message name="LoanException">
-<part name="fault" element="tns:LoanException"/>
+<message name="LoanServiceSOAPFault">
+<part name="fault" element="tns:LoanServiceSOAPFault"/>
 </message>
 <message name="updateMember">
 <part name="arg0" type="xsd:int"/>
@@ -50,17 +50,17 @@
 <operation name="addMember" parameterOrder="arg0 arg1">
 <input wsam:Action="http://loanservice.a2/LoanServiceMemberManager/addMemberRequest" message="tns:addMember"/>
 <output wsam:Action="http://loanservice.a2/LoanServiceMemberManager/addMemberResponse" message="tns:addMemberResponse"/>
-<fault message="tns:LoanException" name="LoanException" wsam:Action="http://loanservice.a2/LoanServiceMemberManager/addMember/Fault/LoanException"/>
+<fault message="tns:LoanServiceSOAPFault" name="LoanServiceSOAPFault" wsam:Action="http://loanservice.a2/LoanServiceMemberManager/addMember/Fault/LoanServiceSOAPFault"/>
 </operation>
 <operation name="updateMember" parameterOrder="arg0 arg1 arg2">
 <input wsam:Action="http://loanservice.a2/LoanServiceMemberManager/updateMemberRequest" message="tns:updateMember"/>
 <output wsam:Action="http://loanservice.a2/LoanServiceMemberManager/updateMemberResponse" message="tns:updateMemberResponse"/>
-<fault message="tns:LoanException" name="LoanException" wsam:Action="http://loanservice.a2/LoanServiceMemberManager/updateMember/Fault/LoanException"/>
+<fault message="tns:LoanServiceSOAPFault" name="LoanServiceSOAPFault" wsam:Action="http://loanservice.a2/LoanServiceMemberManager/updateMember/Fault/LoanServiceSOAPFault"/>
 </operation>
 <operation name="deleteMember">
 <input wsam:Action="http://loanservice.a2/LoanServiceMemberManager/deleteMemberRequest" message="tns:deleteMember"/>
 <output wsam:Action="http://loanservice.a2/LoanServiceMemberManager/deleteMemberResponse" message="tns:deleteMemberResponse"/>
-<fault message="tns:LoanException" name="LoanException" wsam:Action="http://loanservice.a2/LoanServiceMemberManager/deleteMember/Fault/LoanException"/>
+<fault message="tns:LoanServiceSOAPFault" name="LoanServiceSOAPFault" wsam:Action="http://loanservice.a2/LoanServiceMemberManager/deleteMember/Fault/LoanServiceSOAPFault"/>
 </operation>
 </portType>
 <binding name="LoanServiceMemberManagerImplPortBinding" type="tns:LoanServiceMemberManager">
@@ -91,8 +91,8 @@
 <output>
 <soap:body use="literal" namespace="http://loanservice.a2/"/>
 </output>
-<fault name="LoanException">
-<soap:fault name="LoanException" use="literal"/>
+<fault name="LoanServiceSOAPFault">
+<soap:fault name="LoanServiceSOAPFault" use="literal"/>
 </fault>
 </operation>
 <operation name="updateMember">
@@ -103,8 +103,8 @@
 <output>
 <soap:body use="literal" namespace="http://loanservice.a2/"/>
 </output>
-<fault name="LoanException">
-<soap:fault name="LoanException" use="literal"/>
+<fault name="LoanServiceSOAPFault">
+<soap:fault name="LoanServiceSOAPFault" use="literal"/>
 </fault>
 </operation>
 <operation name="deleteMember">
@@ -115,8 +115,8 @@
 <output>
 <soap:body use="literal" namespace="http://loanservice.a2/"/>
 </output>
-<fault name="LoanException">
-<soap:fault name="LoanException" use="literal"/>
+<fault name="LoanServiceSOAPFault">
+<soap:fault name="LoanServiceSOAPFault" use="literal"/>
 </fault>
 </operation>
 </binding>

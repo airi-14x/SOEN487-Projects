@@ -5,6 +5,7 @@
  */
 package a2.loanservice;
 
+import javax.xml.soap.SOAPException;
 import javax.xml.ws.WebFault;
 
 /**
@@ -12,7 +13,7 @@ import javax.xml.ws.WebFault;
  * @author Airi
  */
 @WebFault(name="LoanServiceSOAPFault")
-public class LoanServiceSOAPFault extends Exception {
+public class LoanServiceSOAPFault extends SOAPException {
 
     /**
      * Constructs an instance of <code>SOAPFault</code> with the specified

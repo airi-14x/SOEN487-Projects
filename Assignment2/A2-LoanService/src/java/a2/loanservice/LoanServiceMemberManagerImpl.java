@@ -8,6 +8,8 @@ package a2.loanservice;
 import a2.loansystem.LoanException;
 import a2.loansystem.MemberManagerImpl;
 import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.jws.WebService;
 
 // http://localhost:8080/A2-LoanService/LoanServiceMemberManagerImpl?wsdl
@@ -31,20 +33,35 @@ public class LoanServiceMemberManagerImpl implements LoanServiceMemberManager {
     }
 
     @Override
-    public String addMember(String memberName, String memberContact) throws LoanException {
-        memberManager.addMember(memberName, memberContact);
+    public String addMember(String memberName, String memberContact) throws LoanServiceSOAPFault {
+        try {
+            memberManager.addMember(memberName, memberContact);
+        } catch (LoanException ex) {
+            Logger.getLogger(LoanServiceMemberManagerImpl.class.getName()).log(Level.SEVERE, null, ex);
+            throw new LoanServiceSOAPFault(ex.getLoanErrorMessage());
+        }
         return memberManager.getMembers();
     }
 
     @Override
-    public String updateMember(int memberID, String memberName, String memberContact) throws LoanException{
-        memberManager.updateMember(memberID, memberName, memberContact);
+    public String updateMember(int memberID, String memberName, String memberContact) throws LoanServiceSOAPFault{
+        try {
+            memberManager.updateMember(memberID, memberName, memberContact);
+        } catch (LoanException ex) {
+            Logger.getLogger(LoanServiceMemberManagerImpl.class.getName()).log(Level.SEVERE, null, ex);
+            throw new LoanServiceSOAPFault(ex.getLoanErrorMessage());
+        }
         return memberManager.getMembers();
     }
 
     @Override
-    public String deleteMember(int memberID) throws LoanException{
-        memberManager.deleteMember(memberID);
+    public String deleteMember(int memberID) throws LoanServiceSOAPFault{
+        try {
+            memberManager.deleteMember(memberID);
+        } catch (LoanException ex) {
+            Logger.getLogger(LoanServiceMemberManagerImpl.class.getName()).log(Level.SEVERE, null, ex);
+            throw new LoanServiceSOAPFault(ex.getLoanErrorMessage());
+        }
         return memberManager.getMembers();
     }
 }
