@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package LoanServiceServlets;
 
 import a2.librarysystem.Library;
 import a2.librarysystem.LibraryException;

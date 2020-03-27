@@ -38,7 +38,7 @@
 
         <h3>Update Book in Library </h3>
         <form action="LibrarySystemController" method="POST">
-            Book ID <input type="text" name="bookID"><br>
+            Book ID <input type="text" name="updateBookID"><br>
             Title <input type="text" name="title"><br>
             Description <input type="text" name="description"><br>
             ISBN <input type="text" name="isbn"><br>
