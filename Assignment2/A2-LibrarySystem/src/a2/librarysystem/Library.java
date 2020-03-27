@@ -31,19 +31,20 @@ public class Library {
     }
 
     // SINGLETON    
-    public static Library getInstance() throws LibraryException, IOException {
+    public synchronized static Library getInstance() throws LibraryException, IOException {
         if (libraryConnectionInstance == null) {
             libraryConnectionInstance = new Library();
             System.out.println("Library - Instance has been created!");
         }
+        System.out.println("Returning current Library instance");
         return libraryConnectionInstance;
     }
 
-    public ConcurrentHashMap<Integer, Book> getBooksMap() {
+    public synchronized ConcurrentHashMap<Integer, Book> getBooksMap() {
         return books;
     }
 
-    public ConcurrentHashMap<String, Book> getCallNumbersMap() {
+    public synchronized ConcurrentHashMap<String, Book> getCallNumbersMap() {
         return callNumbers;
     }
 

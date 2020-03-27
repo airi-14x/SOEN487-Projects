@@ -84,9 +84,24 @@ public class LoanManagerImpl implements LoanManager {
 
     // Borrow a book --> Create loan
     @Override
-    public void borrowBook(String callNumber, int memberID, String borrowDate, String returnDate) throws LoanException {
+    public synchronized void borrowBook(String callNumber, int memberID, String borrowDate, String returnDate) throws LoanException {
         ConcurrentHashMap<Integer, Member> memberMap = memberManagerConnectionInstance.getMembersMap();
         ConcurrentHashMap<String, Book> callNumberMap = libraryConnectionInstance.getCallNumbersMap();
+        
+        String memberMapResult = "";
+        for (Map.Entry<Integer, Member> memberResultID : memberMap.entrySet()) {
+                memberMapResult += memberResultID.toString() + "\n";
+
+        }
+        System.out.println("Current MemberMap: " + memberMapResult);
+        
+        String callNumberResult = "";
+        for (Map.Entry<String, Book> callNumberID : callNumberMap.entrySet()) {
+                callNumberResult += callNumberID.toString() + "\n";
+
+        }
+        
+        System.out.println("Current CallNumber Map: " + callNumberResult);
         //Get current member with memberID
         if (!memberMap.containsKey(memberID)) {
             throw new LoanException("Loan Manager - Member does not exist!");
@@ -149,7 +164,7 @@ public class LoanManagerImpl implements LoanManager {
 
     // Edit a Book Loan --> Just for editing borrowDate, returnDate. It will mess up if you edit bookTitle
     @Override
-    public void editBookLoan(int loanID, String borrowDate, String returnDate) throws LoanException {
+    public synchronized void editBookLoan(int loanID, String borrowDate, String returnDate) throws LoanException {
         if (!loans.containsKey(loanID)) {
             throw new LoanException("Loan Manager - Loan does not exist!");
         } else {
@@ -167,7 +182,7 @@ public class LoanManagerImpl implements LoanManager {
     // Return Book
     // Set memberID and all attributes expect book to null
     @Override
-    public void returnBookLoan(int loanID) throws LoanException {
+    public synchronized void returnBookLoan(int loanID) throws LoanException {
         if (!loans.containsKey(loanID)) {
             throw new LoanException("Loan Manager - Loan does not exist!");
         } else {
@@ -183,7 +198,7 @@ public class LoanManagerImpl implements LoanManager {
 
     // Delete a Book Loan
     @Override
-    public void deleteBookLoan(int loanID) throws LoanException {
+    public synchronized void deleteBookLoan(int loanID) throws LoanException {
         if (!loans.containsKey(loanID)) {
             throw new LoanException("Loan Manager - Loan does not exist!");
         } else {
