@@ -5,7 +5,6 @@
  */
 package a2.loanservice;
 
-import a2.loansystem.LoanException;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
@@ -21,7 +20,7 @@ import javax.jws.soap.SOAPBinding.Style;
 public interface LoanServiceMemberManager {
     @WebMethod public String getMembers();
     @WebMethod public String getMemberInfo(int memberID);
-    @WebMethod public String addMember(String memberName, String memberContact) throws LoanException;
-    @WebMethod public String updateMember(int memberID, String memberName, String memberContact)  throws LoanException;
-    @WebMethod public String deleteMember(int memberID) throws LoanException;
+    @WebMethod public String addMember(String memberName, String memberContact) throws LoanServiceSOAPFault;
+    @WebMethod public String updateMember(int memberID, String memberName, String memberContact)  throws LoanServiceSOAPFault;
+    @WebMethod public String deleteMember(int memberID) throws LoanServiceSOAPFault;
 }
