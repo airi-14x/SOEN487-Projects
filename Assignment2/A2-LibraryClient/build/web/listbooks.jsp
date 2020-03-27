@@ -12,6 +12,18 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>List Books Plain</title>
     </head>
+    <%
+        try {
+            if (session != null) {
+                if(!session.getAttribute("username").equals("jasmine"))
+                response.sendRedirect("login.jsp");
+            }
+        }
+        catch(Exception e){
+            response.sendRedirect("login.jsp");
+        }
+     
+    %>
     <body>
         <h1>List of current books</h1>
         <h3>Text/plain format</h3>
@@ -26,6 +38,6 @@
         <h3>HTML format</h3>
         ${booksHtml}
         <br/>
-        <a href="index.html">Back to the main page</a>
+        <a href="index.jsp">Back to the main page</a>
     </body>
 </html>

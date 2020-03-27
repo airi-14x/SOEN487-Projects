@@ -11,11 +11,23 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Success</title>
     </head>
+    <%
+        try {
+            if (session != null) {
+                if(!session.getAttribute("username").equals("jasmine"))
+                response.sendRedirect("login.jsp");
+            }
+        }
+        catch(Exception e){
+            response.sendRedirect("login.jsp");
+        }
+     
+    %>
     <body>
         <p>${resMessage}</p>
         <br/>
         <p>${successMessage}</p>
         <br/>
-        <a href="index.html">Back to the main page</a>
+        <a href="index.jsp">Back to the main page</a>
     </body>
 </html>

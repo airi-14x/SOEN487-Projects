@@ -12,6 +12,18 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>View requested book</title>
     </head>
+    <%
+        try {
+            if (session != null) {
+                if(!session.getAttribute("username").equals("jasmine"))
+                response.sendRedirect("login.jsp");
+            }
+        }
+        catch(Exception e){
+            response.sendRedirect("login.jsp");
+        }
+     
+    %>
     <body>
         <h1>View requested book</h1>
         <h2>Plain text format</h2>
@@ -22,5 +34,7 @@
         <c:out value="${bookXml}"/>
         <h2>HTML format</h2>
         ${bookHtml}
+        <br/>
+        <a href="index.jsp">Back to the main page</a>
     </body>
 </html>
