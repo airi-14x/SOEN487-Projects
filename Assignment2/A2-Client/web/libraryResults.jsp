@@ -11,6 +11,18 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Library Results</title>
     </head>
+    <%
+        try {
+            if (session != null) {
+                if(!session.getAttribute("username").equals("jasmine"))
+                response.sendRedirect("login.jsp");
+            }
+        }
+        catch(Exception e){
+            response.sendRedirect("login.jsp");
+        }
+     
+    %>
     <body>
         <h3>Library System Message:</h3>
         ${message}        
