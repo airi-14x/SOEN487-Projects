@@ -1,7 +1,7 @@
 <%-- 
-    Document   : loanResults
-    Created on : 25 mars 2020, 10:35:19
-    Author     : Airi
+    Document   : error
+    Created on : 2020-03-22, 17:43:00
+    Author     : jasminelatendresse
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -9,7 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Loan Results</title>
+        <title>Error</title>
     </head>
     <%
         try {
@@ -24,11 +24,7 @@
      
     %>
     <body>
-        <h3>Loan System Message:</h3>
-        ${message}
-        <h3>Current Loan Results:</h3>
-        ${results}
-        <h4><a href="./index.jsp">Back to LoanService homepage</a></h4>
-        <h4><a href="./librarySystem.jsp">Back to Library System</a></h4>
+        <h1>${message}</h1>
+        <a href="lib_index.jsp">Back to the main page</a>
     </body>
 </html>

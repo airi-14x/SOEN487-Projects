@@ -11,12 +11,25 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Loan Service Client JSP</title>
     </head>
+    <%
+        try {
+            if (session != null) {
+                if(!session.getAttribute("username").equals("jasmine"))
+                response.sendRedirect("login.jsp");
+            }
+        }
+        catch(Exception e){
+            response.sendRedirect("login.jsp");
+        }
+     
+    %>
     <body>
         <h3>Generating LoanService WSDL file</h3>
         <p>Check if this exists:</p>
         <p><a href="http://localhost:8080/A2-LoanService/LoanServiceMemberManagerImpl?wsdl">MemberManager WSDL</a></p>
         <p><a href="http://localhost:8080/A2-LoanService/LoanServiceLoanManagerImpl1?wsdl">LoanManager WSDL</a></p>
-
+        <p><a href="home.jsp">Available Services</a></p>
+        <p><a href="Logout">Logout</a></p>
         <h4>Link to: <a href="./librarySystem.jsp">Library System</a></h4>
 
         <h2>Member Manager</h2>
