@@ -16,6 +16,7 @@
         <p>Check if this exists:</p>
         <p><a href="http://localhost:8080/A2-LoanService/LoanServiceMemberManagerImpl?wsdl">MemberManager WSDL</a></p>
         <p><a href="http://localhost:8080/A2-LoanService/LoanServiceLoanManagerImpl1?wsdl">LoanManager WSDL</a></p>
+        <p><a href="http://localhost:8080/A2-LoanService/LoanServiceLibraryManagerImpl?wsdl">LibraryManager WSDL</a></p>
 
         <h4>Link to: <a href="./librarySystem.jsp">Library System</a></h4>
 
