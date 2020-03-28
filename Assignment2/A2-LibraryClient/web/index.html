@@ -6,31 +6,18 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Welcome page</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div>
-            <h1>Welcome to RESTful Library Service.</h1>
-            <ul>
-                <li><a href="ListBooks">View all books</a></li>
-                <li><a href="addbook.jsp">Add a book</a></li>
-                <li><a href="updatebook.jsp">Update a book</a></li>
-            </ul>
-            <hr/>
-            <h3>View book</h3>
-            <form action="ViewBook" method="POST">
-                <label for="id">Book id</label>
-                <input name="id" required />
-                <input type="submit" value="Submit" />
-            </form>
-            <h3>Delete a book</h3>
-            <form action="DeleteBook" method="POST">
-                <label for="id">Book id</label>
-                <input name="id" required />
-                <input type="submit" value="Submit" />
-            </form>
-        </div>
+        <h1>Login</h1>
+        <form action="Login" method="POST">
+            <label for="username">Username</label>
+            <input type="text" name="username" required />
+            <label for="password">Password</label>
+            <input type="password" name="password" required />
+            <input type="submit" value="Login" />
+        </form>
     </body>
 </html>
