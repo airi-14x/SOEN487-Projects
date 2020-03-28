@@ -5,21 +5,40 @@
  */
 package a2.loanservice;
 
+import a2.librarycore.Book;
 import a2.librarysystem.Library;
 import a2.librarysystem.LibraryException;
 import java.io.IOException;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.jws.WebService;
 
-@WebService(endpointInterface="a2.loanservice.LoanServiceLibraryManager")
+@WebService(endpointInterface = "a2.loanservice.LoanServiceLibraryManager")
 public class LoanServiceLibraryManagerImpl implements LoanServiceLibraryManager {
+
     private static Library LibraryManager;
-    
-    public LoanServiceLibraryManagerImpl() throws LibraryException, IOException{
+
+    public LoanServiceLibraryManagerImpl() throws LibraryException, IOException {
         System.out.println("Created an instance of LoanService - LibrarySystem");
         LibraryManager = Library.getInstance();
     }
+
+    @Override
+    public String displayCallNumberMap() {
+        ConcurrentHashMap<String, Book> callNumberMap = LibraryManager.getCallNumbersMap();
+        String callNumberResult = "";
+
+        for (Map.Entry<String, Book> callNumber : callNumberMap.entrySet()) {
+
+            callNumberResult += callNumber.toString() + "\n";
+
+        }
+        return callNumberResult;
+
+    }
+
     @Override
     public String displayBooks() {
         return LibraryManager.displayBooks();
@@ -62,5 +81,5 @@ public class LoanServiceLibraryManagerImpl implements LoanServiceLibraryManager 
         }
         return LibraryManager.displayBooks();
     }
-    
+
 }

@@ -4,6 +4,10 @@
 <xsd:import namespace="http://loanservice.a2/" schemaLocation="http://localhost:8080/A2-LoanService/LoanServiceLibraryManagerImpl?xsd=1"/>
 </xsd:schema>
 </types>
+<message name="displayCallNumberMap"/>
+<message name="displayCallNumberMapResponse">
+<part name="return" type="xsd:string"/>
+</message>
 <message name="addBook">
 <part name="arg0" type="xsd:string"/>
 <part name="arg1" type="xsd:string"/>
@@ -47,6 +51,10 @@
 <part name="return" type="xsd:string"/>
 </message>
 <portType name="LoanServiceLibraryManager">
+<operation name="displayCallNumberMap">
+<input wsam:Action="http://loanservice.a2/LoanServiceLibraryManager/displayCallNumberMapRequest" message="tns:displayCallNumberMap"/>
+<output wsam:Action="http://loanservice.a2/LoanServiceLibraryManager/displayCallNumberMapResponse" message="tns:displayCallNumberMapResponse"/>
+</operation>
 <operation name="addBook" parameterOrder="arg0 arg1 arg2 arg3 arg4 arg5">
 <input wsam:Action="http://loanservice.a2/LoanServiceLibraryManager/addBookRequest" message="tns:addBook"/>
 <output wsam:Action="http://loanservice.a2/LoanServiceLibraryManager/addBookResponse" message="tns:addBookResponse"/>
@@ -73,6 +81,15 @@
 </portType>
 <binding name="LoanServiceLibraryManagerImplPortBinding" type="tns:LoanServiceLibraryManager">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc"/>
+<operation name="displayCallNumberMap">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal" namespace="http://loanservice.a2/"/>
+</input>
+<output>
+<soap:body use="literal" namespace="http://loanservice.a2/"/>
+</output>
+</operation>
 <operation name="addBook">
 <soap:operation soapAction=""/>
 <input>

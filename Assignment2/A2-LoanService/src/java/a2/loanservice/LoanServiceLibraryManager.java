@@ -17,6 +17,7 @@ import javax.jws.soap.SOAPBinding;
 @WebService
 @SOAPBinding(style = SOAPBinding.Style.RPC)
 public interface LoanServiceLibraryManager {
+    @WebMethod public String displayCallNumberMap();
     @WebMethod public String displayBooks();
     @WebMethod public String getBook(int id);
     @WebMethod public String addBook(String title, String description, String isbn, String author, String publisher, String callNumber) throws LoanServiceSOAPFault;

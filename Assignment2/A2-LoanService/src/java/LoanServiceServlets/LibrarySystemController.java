@@ -5,8 +5,7 @@
  */
 package LoanServiceServlets;
 
-import a2.librarysystem.Library;
-import a2.librarysystem.LibraryException;
+import a2.loanservice.librarymanager.client.LoanServiceSOAPFault_Exception;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.Level;
@@ -63,14 +62,14 @@ public class LibrarySystemController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        Library library;
+        //Library library;
         try {
-            library = Library.getInstance();
+            //library = Library.getInstance();
             switch (request.getParameter("library")) {
                 case "displayAll":
                     request.setAttribute("message", "Displaying all books!");
-                    request.setAttribute("results", library.displayBooks());
-                    request.setAttribute("callNumberResults", library.getCallNumbersMap());
+                    request.setAttribute("results", displayBooks());
+                    request.setAttribute("callNumberResults", displayCallNumberMap());
                     break;
                 case "displayBook":
                     if (!request.getParameter("viewBookID").equals("")) {
@@ -79,7 +78,7 @@ public class LibrarySystemController extends HttpServlet {
                         try {
                             bookIDValue = Integer.parseInt(bookID);
                             request.setAttribute("message", "Displaying book with ID:" + bookID);
-                            request.setAttribute("results", library.getBook(bookIDValue));
+                            request.setAttribute("results", getBook(bookIDValue));
                             request.setAttribute("callNumberResults", "");
                         } catch (NumberFormatException e) {
                             request.setAttribute("results", "Error: Invalid Input!");
@@ -96,9 +95,9 @@ public class LibrarySystemController extends HttpServlet {
                         try {
                             bookIDValue = Integer.parseInt(bookID);
                             request.setAttribute("message", "Delete book with ID:" + bookID);
-                            library.removeBook(bookIDValue);
-                            request.setAttribute("results", library.getBooksMap());
-                            request.setAttribute("callNumberResults", library.getCallNumbersMap());
+
+                            request.setAttribute("results", removeBook(bookIDValue));
+                            request.setAttribute("callNumberResults", displayCallNumberMap());
                         } catch (NumberFormatException e) {
                             request.setAttribute("results", "Error: Invalid Input!");
                         }
@@ -110,15 +109,14 @@ public class LibrarySystemController extends HttpServlet {
                 default:
                     break;
             }
-            RequestDispatcher rd = request.getRequestDispatcher("/libraryResults.jsp");
-            rd.forward(request, response);
-            //processRequest(request, response);
-        } catch (LibraryException ex) {
+        } catch (LoanServiceSOAPFault_Exception ex) {
             Logger.getLogger(LibrarySystemController.class.getName()).log(Level.SEVERE, null, ex);
-            request.setAttribute("message", ex.getLibraryErrorMessage());
+            request.setAttribute("message", ex.getFaultInfo().getMessage());
             request.setAttribute("results", "");
             request.setAttribute("callNumberResults", "");
         }
+        RequestDispatcher rd = request.getRequestDispatcher("/libraryResults.jsp");
+        rd.forward(request, response);
     }
 
     /**
@@ -132,9 +130,9 @@ public class LibrarySystemController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        Library library;
+        //Library library;
         try {
-            library = Library.getInstance();
+            //library = Library.getInstance();
             String title = request.getParameter("title");
             String isbn = request.getParameter("isbn");
             String description = request.getParameter("description");
@@ -144,32 +142,33 @@ public class LibrarySystemController extends HttpServlet {
 
             if (request.getParameter("library").equals("addBook")) {
 
-                library.addBook(title, description, isbn, author, publisher, callNumber);
                 request.setAttribute("message", "Added Book to Library");
-                request.setAttribute("results", library.getBooksMap());
-                request.setAttribute("callNumberResults", library.getCallNumbersMap());
+                request.setAttribute("results", addBook(title, description, isbn, author, publisher, callNumber));
+                request.setAttribute("callNumberResults", displayCallNumberMap());
             } else if (request.getParameter("library").equals("updateBook")) {
                 if (!request.getParameter("updateBookID").equals("")) {
                     String updateBookID = request.getParameter("updateBookID");
                     int bookIDValue;
                     try {
                         bookIDValue = Integer.parseInt(updateBookID);
-                        library.updateBook(bookIDValue, title, description, isbn, author, publisher, callNumber);
+                        ;
                         request.setAttribute("message", "Updated book!");
-                        request.setAttribute("results", library.getBooksMap());
-                        request.setAttribute("callNumberResults", library.getCallNumbersMap());
+                        request.setAttribute("results", updateBook(bookIDValue, title, description, isbn, author, publisher, callNumber));
+                        request.setAttribute("callNumberResults", displayCallNumberMap());
                     } catch (NumberFormatException e) {
                         request.setAttribute("message", "Error: Invalid Input!");
                         request.setAttribute("results", "");
                         request.setAttribute("callNumberResults", "");
                     }
                 } else {
-                    request.setAttribute("results", "Error: Empty Input!");
+                    request.setAttribute("message", "Error: Empty Input!");
+                    request.setAttribute("results", "");
+                    request.setAttribute("callNumberResults", "");
                 }
             }
-        } catch (LibraryException ex) {
+        } catch (LoanServiceSOAPFault_Exception ex) {
             Logger.getLogger(LibrarySystemController.class.getName()).log(Level.SEVERE, null, ex);
-            request.setAttribute("message", ex.getLibraryErrorMessage());
+            request.setAttribute("message", ex.getFaultInfo().getMessage());
             request.setAttribute("results", "");
             request.setAttribute("callNumberResults", "");
         }
@@ -187,5 +186,41 @@ public class LibrarySystemController extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+
+    private static String addBook(java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3, java.lang.String arg4, java.lang.String arg5) throws LoanServiceSOAPFault_Exception {
+        a2.loanservice.librarymanager.client.LoanServiceLibraryManagerImplService service = new a2.loanservice.librarymanager.client.LoanServiceLibraryManagerImplService();
+        a2.loanservice.librarymanager.client.LoanServiceLibraryManager port = service.getLoanServiceLibraryManagerImplPort();
+        return port.addBook(arg0, arg1, arg2, arg3, arg4, arg5);
+    }
+
+    private static String displayBooks() {
+        a2.loanservice.librarymanager.client.LoanServiceLibraryManagerImplService service = new a2.loanservice.librarymanager.client.LoanServiceLibraryManagerImplService();
+        a2.loanservice.librarymanager.client.LoanServiceLibraryManager port = service.getLoanServiceLibraryManagerImplPort();
+        return port.displayBooks();
+    }
+
+    private static String getBook(int arg0) {
+        a2.loanservice.librarymanager.client.LoanServiceLibraryManagerImplService service = new a2.loanservice.librarymanager.client.LoanServiceLibraryManagerImplService();
+        a2.loanservice.librarymanager.client.LoanServiceLibraryManager port = service.getLoanServiceLibraryManagerImplPort();
+        return port.getBook(arg0);
+    }
+
+    private static String removeBook(int arg0) throws LoanServiceSOAPFault_Exception {
+        a2.loanservice.librarymanager.client.LoanServiceLibraryManagerImplService service = new a2.loanservice.librarymanager.client.LoanServiceLibraryManagerImplService();
+        a2.loanservice.librarymanager.client.LoanServiceLibraryManager port = service.getLoanServiceLibraryManagerImplPort();
+        return port.removeBook(arg0);
+    }
+
+    private static String updateBook(int arg0, java.lang.String arg1, java.lang.String arg2, java.lang.String arg3, java.lang.String arg4, java.lang.String arg5, java.lang.String arg6) throws LoanServiceSOAPFault_Exception {
+        a2.loanservice.librarymanager.client.LoanServiceLibraryManagerImplService service = new a2.loanservice.librarymanager.client.LoanServiceLibraryManagerImplService();
+        a2.loanservice.librarymanager.client.LoanServiceLibraryManager port = service.getLoanServiceLibraryManagerImplPort();
+        return port.updateBook(arg0, arg1, arg2, arg3, arg4, arg5, arg6);
+    }
+
+    private static String displayCallNumberMap() {
+        a2.loanservice.librarymanager.client.LoanServiceLibraryManagerImplService service = new a2.loanservice.librarymanager.client.LoanServiceLibraryManagerImplService();
+        a2.loanservice.librarymanager.client.LoanServiceLibraryManager port = service.getLoanServiceLibraryManagerImplPort();
+        return port.displayCallNumberMap();
+    }
 
 }
