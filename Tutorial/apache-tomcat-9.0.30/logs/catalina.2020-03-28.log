@@ -4298,3 +4298,6 @@
 		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 		at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 		at java.lang.Thread.run(Thread.java:748)
+28-Mar-2020 15:50:01.106 INFOS [http-nio-8080-exec-203] org.apache.catalina.core.StandardContext.reload Le rechargement du contexte [/A2-Client] a démarré
+28-Mar-2020 15:50:07.752 INFOS [http-nio-8080-exec-203] org.apache.jasper.servlet.TldScanner.scanJars Au moins un fichier JAR a été analysé pour trouver des TLDs mais il n'en contenait pas, le mode "debug" du journal peut être activé pour obtenir une liste complète de JAR scannés sans succès; éviter d'analyser des JARs inutilement peut améliorer sensiblement le temps de démarrage et le temps de compilation des JSPs
+28-Mar-2020 15:50:07.758 INFOS [http-nio-8080-exec-203] org.apache.catalina.core.StandardContext.reload Le rechargement de ce contexte est terminé

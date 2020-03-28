@@ -38,7 +38,7 @@ public class Services extends HttpServlet {
             request.getRequestDispatcher("lib_index.jsp").forward(request, response);
         }
         else if(service.equals("soap")) {
-            request.getRequestDispatcher("index.jsp").forward(request, response);
+            request.getRequestDispatcher("loans_index.jsp").forward(request, response);
         }
         
     }
