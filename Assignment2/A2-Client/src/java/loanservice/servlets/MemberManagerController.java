@@ -1,3 +1,5 @@
+package loanservice.servlets;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -5,7 +7,6 @@
  */
 
 
-import a2.loanservice.membermanager1.client.LoanServiceSOAPFault_Exception;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.Level;
@@ -16,6 +17,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import loanserviceclient.membermanager.LoanServiceSOAPFault_Exception;
 
 /**
  *
@@ -167,33 +169,33 @@ public class MemberManagerController extends HttpServlet {
     }// </editor-fold>
 
     private static String addMember(java.lang.String arg0, java.lang.String arg1) throws LoanServiceSOAPFault_Exception {
-        a2.loanservice.membermanager1.client.LoanServiceMemberManagerImplService service = new a2.loanservice.membermanager1.client.LoanServiceMemberManagerImplService();
-        a2.loanservice.membermanager1.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+        loanserviceclient.membermanager.LoanServiceMemberManagerImplService service = new loanserviceclient.membermanager.LoanServiceMemberManagerImplService();
+        loanserviceclient.membermanager.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
         return port.addMember(arg0, arg1);
     }
 
     private static String deleteMember(int arg0) throws LoanServiceSOAPFault_Exception {
-        a2.loanservice.membermanager1.client.LoanServiceMemberManagerImplService service = new a2.loanservice.membermanager1.client.LoanServiceMemberManagerImplService();
-        a2.loanservice.membermanager1.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+        loanserviceclient.membermanager.LoanServiceMemberManagerImplService service = new loanserviceclient.membermanager.LoanServiceMemberManagerImplService();
+        loanserviceclient.membermanager.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
         return port.deleteMember(arg0);
     }
 
     private static String getMemberInfo(int arg0) {
-        a2.loanservice.membermanager1.client.LoanServiceMemberManagerImplService service = new a2.loanservice.membermanager1.client.LoanServiceMemberManagerImplService();
-        a2.loanservice.membermanager1.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+        loanserviceclient.membermanager.LoanServiceMemberManagerImplService service = new loanserviceclient.membermanager.LoanServiceMemberManagerImplService();
+        loanserviceclient.membermanager.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
         return port.getMemberInfo(arg0);
     }
 
     private static String getMembers() {
-        a2.loanservice.membermanager1.client.LoanServiceMemberManagerImplService service = new a2.loanservice.membermanager1.client.LoanServiceMemberManagerImplService();
-        a2.loanservice.membermanager1.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+        loanserviceclient.membermanager.LoanServiceMemberManagerImplService service = new loanserviceclient.membermanager.LoanServiceMemberManagerImplService();
+        loanserviceclient.membermanager.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
         return port.getMembers();
     }
 
     private static String updateMember(int arg0, java.lang.String arg1, java.lang.String arg2) throws LoanServiceSOAPFault_Exception {
-        a2.loanservice.membermanager1.client.LoanServiceMemberManagerImplService service = new a2.loanservice.membermanager1.client.LoanServiceMemberManagerImplService();
-        a2.loanservice.membermanager1.client.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
+        loanserviceclient.membermanager.LoanServiceMemberManagerImplService service = new loanserviceclient.membermanager.LoanServiceMemberManagerImplService();
+        loanserviceclient.membermanager.LoanServiceMemberManager port = service.getLoanServiceMemberManagerImplPort();
         return port.updateMember(arg0, arg1, arg2);
     }
-    
+
 }

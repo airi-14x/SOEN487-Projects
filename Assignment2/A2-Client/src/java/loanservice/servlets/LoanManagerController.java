@@ -1,11 +1,11 @@
+package loanservice.servlets;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 
-
-import a2.loanservice.loanmanager1.client.LoanServiceSOAPFault_Exception;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.logging.Level;
@@ -16,6 +16,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import loanserviceclient.loanmanager.LoanServiceSOAPFault_Exception;
 
 /**
  *
@@ -234,38 +235,38 @@ public class LoanManagerController extends HttpServlet {
     }// </editor-fold>
 
     private static String borrowBook(java.lang.String arg0, int arg1, java.lang.String arg2, java.lang.String arg3) throws LoanServiceSOAPFault_Exception {
-        a2.loanservice.loanmanager1.client.LoanServiceLoanManagerImpl1Service service = new a2.loanservice.loanmanager1.client.LoanServiceLoanManagerImpl1Service();
-        a2.loanservice.loanmanager1.client.LoanServiceLoanManager1 port = service.getLoanServiceLoanManagerImpl1Port();
+        loanserviceclient.loanmanager.LoanServiceLoanManagerImpl1Service service = new loanserviceclient.loanmanager.LoanServiceLoanManagerImpl1Service();
+        loanserviceclient.loanmanager.LoanServiceLoanManager1 port = service.getLoanServiceLoanManagerImpl1Port();
         return port.borrowBook(arg0, arg1, arg2, arg3);
     }
 
     private static String deleteBookLoan(int arg0) throws LoanServiceSOAPFault_Exception {
-        a2.loanservice.loanmanager1.client.LoanServiceLoanManagerImpl1Service service = new a2.loanservice.loanmanager1.client.LoanServiceLoanManagerImpl1Service();
-        a2.loanservice.loanmanager1.client.LoanServiceLoanManager1 port = service.getLoanServiceLoanManagerImpl1Port();
+        loanserviceclient.loanmanager.LoanServiceLoanManagerImpl1Service service = new loanserviceclient.loanmanager.LoanServiceLoanManagerImpl1Service();
+        loanserviceclient.loanmanager.LoanServiceLoanManager1 port = service.getLoanServiceLoanManagerImpl1Port();
         return port.deleteBookLoan(arg0);
     }
 
     private static String editBookLoan(int arg0, java.lang.String arg1, java.lang.String arg2) throws LoanServiceSOAPFault_Exception {
-        a2.loanservice.loanmanager1.client.LoanServiceLoanManagerImpl1Service service = new a2.loanservice.loanmanager1.client.LoanServiceLoanManagerImpl1Service();
-        a2.loanservice.loanmanager1.client.LoanServiceLoanManager1 port = service.getLoanServiceLoanManagerImpl1Port();
+        loanserviceclient.loanmanager.LoanServiceLoanManagerImpl1Service service = new loanserviceclient.loanmanager.LoanServiceLoanManagerImpl1Service();
+        loanserviceclient.loanmanager.LoanServiceLoanManager1 port = service.getLoanServiceLoanManagerImpl1Port();
         return port.editBookLoan(arg0, arg1, arg2);
     }
 
     private static String listLoan(java.lang.String arg0) throws LoanServiceSOAPFault_Exception {
-        a2.loanservice.loanmanager1.client.LoanServiceLoanManagerImpl1Service service = new a2.loanservice.loanmanager1.client.LoanServiceLoanManagerImpl1Service();
-        a2.loanservice.loanmanager1.client.LoanServiceLoanManager1 port = service.getLoanServiceLoanManagerImpl1Port();
+        loanserviceclient.loanmanager.LoanServiceLoanManagerImpl1Service service = new loanserviceclient.loanmanager.LoanServiceLoanManagerImpl1Service();
+        loanserviceclient.loanmanager.LoanServiceLoanManager1 port = service.getLoanServiceLoanManagerImpl1Port();
         return port.listLoan(arg0);
     }
 
     private static String listLoanID(int arg0) throws LoanServiceSOAPFault_Exception {
-        a2.loanservice.loanmanager1.client.LoanServiceLoanManagerImpl1Service service = new a2.loanservice.loanmanager1.client.LoanServiceLoanManagerImpl1Service();
-        a2.loanservice.loanmanager1.client.LoanServiceLoanManager1 port = service.getLoanServiceLoanManagerImpl1Port();
+        loanserviceclient.loanmanager.LoanServiceLoanManagerImpl1Service service = new loanserviceclient.loanmanager.LoanServiceLoanManagerImpl1Service();
+        loanserviceclient.loanmanager.LoanServiceLoanManager1 port = service.getLoanServiceLoanManagerImpl1Port();
         return port.listLoanID(arg0);
     }
 
     private static String returnBookLoan(int arg0) throws LoanServiceSOAPFault_Exception {
-        a2.loanservice.loanmanager1.client.LoanServiceLoanManagerImpl1Service service = new a2.loanservice.loanmanager1.client.LoanServiceLoanManagerImpl1Service();
-        a2.loanservice.loanmanager1.client.LoanServiceLoanManager1 port = service.getLoanServiceLoanManagerImpl1Port();
+        loanserviceclient.loanmanager.LoanServiceLoanManagerImpl1Service service = new loanserviceclient.loanmanager.LoanServiceLoanManagerImpl1Service();
+        loanserviceclient.loanmanager.LoanServiceLoanManager1 port = service.getLoanServiceLoanManagerImpl1Port();
         return port.returnBookLoan(arg0);
     }
 

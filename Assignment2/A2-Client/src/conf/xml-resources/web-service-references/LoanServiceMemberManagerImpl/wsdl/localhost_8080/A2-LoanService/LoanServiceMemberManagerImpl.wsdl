@@ -8,10 +8,27 @@
 <message name="getMembersResponse">
 <part name="return" type="xsd:string"/>
 </message>
+<message name="updateMember">
+<part name="arg0" type="xsd:int"/>
+<part name="arg1" type="xsd:string"/>
+<part name="arg2" type="xsd:string"/>
+</message>
+<message name="updateMemberResponse">
+<part name="return" type="xsd:string"/>
+</message>
+<message name="LoanServiceSOAPFault">
+<part name="fault" element="tns:LoanServiceSOAPFault"/>
+</message>
 <message name="getMemberInfo">
 <part name="arg0" type="xsd:int"/>
 </message>
 <message name="getMemberInfoResponse">
+<part name="return" type="xsd:string"/>
+</message>
+<message name="deleteMember">
+<part name="arg0" type="xsd:int"/>
+</message>
+<message name="deleteMemberResponse">
 <part name="return" type="xsd:string"/>
 </message>
 <message name="addMember">
@@ -21,46 +38,29 @@
 <message name="addMemberResponse">
 <part name="return" type="xsd:string"/>
 </message>
-<message name="LoanServiceSOAPFault">
-<part name="fault" element="tns:LoanServiceSOAPFault"/>
-</message>
-<message name="updateMember">
-<part name="arg0" type="xsd:int"/>
-<part name="arg1" type="xsd:string"/>
-<part name="arg2" type="xsd:string"/>
-</message>
-<message name="updateMemberResponse">
-<part name="return" type="xsd:string"/>
-</message>
-<message name="deleteMember">
-<part name="arg0" type="xsd:int"/>
-</message>
-<message name="deleteMemberResponse">
-<part name="return" type="xsd:string"/>
-</message>
 <portType name="LoanServiceMemberManager">
 <operation name="getMembers">
 <input wsam:Action="http://loanservice.a2/LoanServiceMemberManager/getMembersRequest" message="tns:getMembers"/>
 <output wsam:Action="http://loanservice.a2/LoanServiceMemberManager/getMembersResponse" message="tns:getMembersResponse"/>
-</operation>
-<operation name="getMemberInfo">
-<input wsam:Action="http://loanservice.a2/LoanServiceMemberManager/getMemberInfoRequest" message="tns:getMemberInfo"/>
-<output wsam:Action="http://loanservice.a2/LoanServiceMemberManager/getMemberInfoResponse" message="tns:getMemberInfoResponse"/>
-</operation>
-<operation name="addMember" parameterOrder="arg0 arg1">
-<input wsam:Action="http://loanservice.a2/LoanServiceMemberManager/addMemberRequest" message="tns:addMember"/>
-<output wsam:Action="http://loanservice.a2/LoanServiceMemberManager/addMemberResponse" message="tns:addMemberResponse"/>
-<fault message="tns:LoanServiceSOAPFault" name="LoanServiceSOAPFault" wsam:Action="http://loanservice.a2/LoanServiceMemberManager/addMember/Fault/LoanServiceSOAPFault"/>
 </operation>
 <operation name="updateMember" parameterOrder="arg0 arg1 arg2">
 <input wsam:Action="http://loanservice.a2/LoanServiceMemberManager/updateMemberRequest" message="tns:updateMember"/>
 <output wsam:Action="http://loanservice.a2/LoanServiceMemberManager/updateMemberResponse" message="tns:updateMemberResponse"/>
 <fault message="tns:LoanServiceSOAPFault" name="LoanServiceSOAPFault" wsam:Action="http://loanservice.a2/LoanServiceMemberManager/updateMember/Fault/LoanServiceSOAPFault"/>
 </operation>
+<operation name="getMemberInfo">
+<input wsam:Action="http://loanservice.a2/LoanServiceMemberManager/getMemberInfoRequest" message="tns:getMemberInfo"/>
+<output wsam:Action="http://loanservice.a2/LoanServiceMemberManager/getMemberInfoResponse" message="tns:getMemberInfoResponse"/>
+</operation>
 <operation name="deleteMember">
 <input wsam:Action="http://loanservice.a2/LoanServiceMemberManager/deleteMemberRequest" message="tns:deleteMember"/>
 <output wsam:Action="http://loanservice.a2/LoanServiceMemberManager/deleteMemberResponse" message="tns:deleteMemberResponse"/>
 <fault message="tns:LoanServiceSOAPFault" name="LoanServiceSOAPFault" wsam:Action="http://loanservice.a2/LoanServiceMemberManager/deleteMember/Fault/LoanServiceSOAPFault"/>
+</operation>
+<operation name="addMember" parameterOrder="arg0 arg1">
+<input wsam:Action="http://loanservice.a2/LoanServiceMemberManager/addMemberRequest" message="tns:addMember"/>
+<output wsam:Action="http://loanservice.a2/LoanServiceMemberManager/addMemberResponse" message="tns:addMemberResponse"/>
+<fault message="tns:LoanServiceSOAPFault" name="LoanServiceSOAPFault" wsam:Action="http://loanservice.a2/LoanServiceMemberManager/addMember/Fault/LoanServiceSOAPFault"/>
 </operation>
 </portType>
 <binding name="LoanServiceMemberManagerImplPortBinding" type="tns:LoanServiceMemberManager">
@@ -74,27 +74,6 @@
 <soap:body use="literal" namespace="http://loanservice.a2/"/>
 </output>
 </operation>
-<operation name="getMemberInfo">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal" namespace="http://loanservice.a2/"/>
-</input>
-<output>
-<soap:body use="literal" namespace="http://loanservice.a2/"/>
-</output>
-</operation>
-<operation name="addMember">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal" namespace="http://loanservice.a2/"/>
-</input>
-<output>
-<soap:body use="literal" namespace="http://loanservice.a2/"/>
-</output>
-<fault name="LoanServiceSOAPFault">
-<soap:fault name="LoanServiceSOAPFault" use="literal"/>
-</fault>
-</operation>
 <operation name="updateMember">
 <soap:operation soapAction=""/>
 <input>
@@ -107,7 +86,28 @@
 <soap:fault name="LoanServiceSOAPFault" use="literal"/>
 </fault>
 </operation>
+<operation name="getMemberInfo">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal" namespace="http://loanservice.a2/"/>
+</input>
+<output>
+<soap:body use="literal" namespace="http://loanservice.a2/"/>
+</output>
+</operation>
 <operation name="deleteMember">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal" namespace="http://loanservice.a2/"/>
+</input>
+<output>
+<soap:body use="literal" namespace="http://loanservice.a2/"/>
+</output>
+<fault name="LoanServiceSOAPFault">
+<soap:fault name="LoanServiceSOAPFault" use="literal"/>
+</fault>
+</operation>
+<operation name="addMember">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal" namespace="http://loanservice.a2/"/>
