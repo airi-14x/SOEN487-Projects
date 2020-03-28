@@ -7,4 +7,6 @@
     <system systemId="http://localhost:8080/A2-LoanService/LoanServiceLoanManagerImpl1?xsd=1" uri="src/conf/xml-resources/web-service-references/LoanServiceLoanManagerImpl1/wsdl/localhost_8080/A2-LoanService/LoanServiceLoanManagerImpl1.xsd_1.xsd"/>
     <system systemId="http://localhost:8080/A2-LoanService/LoanServiceMemberManagerImpl?wsdl" uri="src/conf/xml-resources/web-service-references/LoanServiceMemberManagerImpl/wsdl/localhost_8080/A2-LoanService/LoanServiceMemberManagerImpl.wsdl"/>
     <system systemId="http://localhost:8080/A2-LoanService/LoanServiceMemberManagerImpl?xsd=1" uri="src/conf/xml-resources/web-service-references/LoanServiceMemberManagerImpl/wsdl/localhost_8080/A2-LoanService/LoanServiceMemberManagerImpl.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/A2-LoanService/LoanServiceLibraryManagerImpl?wsdl" uri="src/conf/xml-resources/web-service-references/LoanServiceLibraryManagerImpl/wsdl/localhost_8080/A2-LoanService/LoanServiceLibraryManagerImpl.wsdl"/>
+    <system systemId="http://localhost:8080/A2-LoanService/LoanServiceLibraryManagerImpl?xsd=1" uri="src/conf/xml-resources/web-service-references/LoanServiceLibraryManagerImpl/wsdl/localhost_8080/A2-LoanService/LoanServiceLibraryManagerImpl.xsd_1.xsd"/>
 </catalog>
