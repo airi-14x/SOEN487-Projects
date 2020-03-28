@@ -11,6 +11,18 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Library System JSP</title>
     </head>
+    <%
+        try {
+            if (session != null) {
+                if(!session.getAttribute("username").equals("jasmine"))
+                response.sendRedirect("login.jsp");
+            }
+        }
+        catch(Exception e){
+            response.sendRedirect("login.jsp");
+        }
+     
+    %>
     <body>
         <h4>Link to: <a href="./index.jsp">Loan System</a></h4>
         
