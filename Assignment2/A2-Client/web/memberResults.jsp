@@ -26,6 +26,6 @@
     <body>
         <h3>Member Manager Message:</h3>
         ${results}
-        <p><a href="./index.jsp">Back to LoanService homepage</a></p>
+        <p><a href="./loans_index.jsp">Back to LoanService homepage</a></p>
     </body>
 </html>
