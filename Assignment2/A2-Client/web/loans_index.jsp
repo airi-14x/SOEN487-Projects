@@ -24,13 +24,8 @@
      
     %>
     <body>
-        <p><a href="home.jsp">Available Services</a></p>
-        <p><a href="Logout">Logout</a></p>
-        
-        <p>Check if the WSDLs exists:</p>
-        <p><a href="http://localhost:8080/A2-LoanService/LoanServiceMemberManagerImpl?wsdl">MemberManager WSDL</a></p>
-        <p><a href="http://localhost:8080/A2-LoanService/LoanServiceLoanManagerImpl1?wsdl">LoanManager WSDL</a></p>
-        <p><a href="http://localhost:8080/A2-LoanService/LoanServiceLibraryManagerImpl?wsdl">LibraryManager WSDL</a></p>
+        <h3><a href="home.jsp">Available Services</a></h3>
+        <h3><a href="Logout">Logout</a></h3>
         
         <h4>Link to: <a href="./librarySystem.jsp">Library System</a></h4>
 
@@ -106,6 +101,11 @@
             Book Title: <input type="text" name="listLoanBook"/>
             <input type="submit" name="loans" value="listLoan2"/><br>
         </form>
+        
+        <p>Check if the WSDLs exists:</p>
+        <p><a href="http://localhost:8080/A2-LoanService/LoanServiceMemberManagerImpl?wsdl">MemberManager WSDL</a></p>
+        <p><a href="http://localhost:8080/A2-LoanService/LoanServiceLoanManagerImpl1?wsdl">LoanManager WSDL</a></p>
+        <p><a href="http://localhost:8080/A2-LoanService/LoanServiceLibraryManagerImpl?wsdl">LibraryManager WSDL</a></p>
     </body>  
 
 </html>
