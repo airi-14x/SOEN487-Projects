@@ -22,7 +22,7 @@ public class LoanServiceLoanManagerImpl1 implements LoanServiceLoanManager1 {
     private static LoanManagerImpl loanManager;
 
     public LoanServiceLoanManagerImpl1() throws LoanException, IOException, LibraryException {
-        System.out.println("Created an instance of LoanService - LoanManager");
+        //System.out.println("Created an instance of LoanService - LoanManager");
         loanManager = loanManager.getInstance();
     }
 

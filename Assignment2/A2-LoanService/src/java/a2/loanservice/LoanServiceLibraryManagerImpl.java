@@ -21,7 +21,7 @@ public class LoanServiceLibraryManagerImpl implements LoanServiceLibraryManager 
     private static Library LibraryManager;
 
     public LoanServiceLibraryManagerImpl() throws LibraryException, IOException {
-        System.out.println("Created an instance of LoanService - LibrarySystem");
+        //System.out.println("Created an instance of LoanService - LibrarySystem");
         LibraryManager = Library.getInstance();
     }
 
@@ -51,6 +51,11 @@ public class LoanServiceLibraryManagerImpl implements LoanServiceLibraryManager 
 
     @Override
     public String addBook(String title, String description, String isbn, String author, String publisher, String callNumber) throws LoanServiceSOAPFault {
+        if (title.isEmpty() || description.isEmpty() || isbn.isEmpty() || author.isEmpty() || publisher.isEmpty() || callNumber.isEmpty()) {
+            Throwable t = new IllegalArgumentException("Invalid parameters in addBook()");
+            throw new LoanServiceSOAPFault("Error in addBook() - Invalid parameters in addBook()", t);
+        }
+        
         try {
             LibraryManager.addBook(title, description, isbn, author, publisher, callNumber);
         } catch (LibraryException ex) {
@@ -62,6 +67,10 @@ public class LoanServiceLibraryManagerImpl implements LoanServiceLibraryManager 
 
     @Override
     public String updateBook(int id, String title, String description, String isbn, String author, String publisher, String callNumber) throws LoanServiceSOAPFault {
+        if (id == 0 || title.isEmpty() || description.isEmpty() || isbn.isEmpty() || author.isEmpty() || publisher.isEmpty() || callNumber.isEmpty()) {
+            Throwable t = new IllegalArgumentException("Invalid parameters in updateBook()");
+            throw new LoanServiceSOAPFault("Error in updateBook() - Invalid parameters in updateBook()", t);
+        }
         try {
             LibraryManager.updateBook(id, title, description, isbn, author, publisher, callNumber);
         } catch (LibraryException ex) {
@@ -73,6 +82,11 @@ public class LoanServiceLibraryManagerImpl implements LoanServiceLibraryManager 
 
     @Override
     public String removeBook(int id) throws LoanServiceSOAPFault {
+        if (id == 0) {
+            Throwable t = new IllegalArgumentException("Invalid bookID");
+            throw new LoanServiceSOAPFault("Error in returnBook() - Invalid bookID", t);
+        }
+        
         try {
             LibraryManager.removeBook(id);
         } catch (LibraryException ex) {
