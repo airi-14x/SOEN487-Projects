@@ -11,13 +11,13 @@ Airi Chow (#40003396)
 - Library Core: Contains "Book" class which is used by the other classes.
 - Library System: Uses the Library Core and stores the Book objects. The basic CRUD operations are implemented here.
 - Library Service: A Web App that implements REST methods for the CRUD operations from Library System. Annotations are used to call the appropriate methods(e.g. @GET).
-- Client: A web app that calls a REST Client that will use the Library Service via WADL.
+- Client: A Web App that calls a REST Client that will use the Library Service via WADL.
 
 ## Loan SOAP Service
 - Loan Core: Contains "Member" and "Loan" class which is used by the "Loan" classes.
-- Loan System: Uses Loan Core, Library Core and Library System to store members and loan-related information. The basic CRUD operations are implemented for LoanManager and MemberManager. The "Book" are retrieved using the callNumber hashmap where the keys are callNumber and the values are Books. In the case of exceptions, LoanException will be thrown.
-- Loan Service: A Web App that implements a RPC-Style SOAP service. The Loan Service uses Loan System and implements two additional methods on top of this system. Exceptions are caught and thrown as "SOAP Faults". When this layer is run, WSDL files are generated for interfaces.
-- Client: A web app that auto-generates the SOAP clients to use the Loan Service via WSDL files.
+- Loan System: Uses the Loan Core, Library Core and Library System to store members and loan-related information. The basic CRUD operations are implemented for LoanManager and MemberManager. The "Book" is retrieved using the callNumber hashmap where the keys are callNumbers and the values are Books. In the case of exceptions, LoanException will be thrown.
+- Loan Service: A Web App that implements a RPC-Style SOAP service. The Loan Service uses Loan System and implements two additional methods on top of this system. Exceptions are caught and thrown as "SOAP Faults". When this layer is run, the WSDL files are generated for interfaces.
+- Client: A Web App that auto-generates the SOAP clients to use the Loan Service via WSDL files.
 
 ### Tasks
 - Jasmine: Worked on Library REST Service
