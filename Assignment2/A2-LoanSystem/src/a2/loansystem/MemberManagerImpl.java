@@ -21,7 +21,7 @@ public class MemberManagerImpl implements MemberManager {
     private static MemberManagerImpl memberManagerConnectionInstance;
 
     public MemberManagerImpl() {
-        System.out.println("Created an instance of MemberSystem()");
+        //System.out.println("Created an instance of MemberSystem()");
     }
 
     @Override
@@ -39,7 +39,7 @@ public class MemberManagerImpl implements MemberManager {
     public static MemberManagerImpl getInstance() throws LoanException, IOException {
         if (memberManagerConnectionInstance == null) {
             memberManagerConnectionInstance = new MemberManagerImpl();
-            System.out.println("MemberManager - Instance has been created!");
+            //System.out.println("MemberManager - Instance has been created!");
         }
         return memberManagerConnectionInstance;
     }

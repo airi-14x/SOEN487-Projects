@@ -27,16 +27,16 @@ public class Library {
 
     // Cannot be private
     public Library() {
-        System.out.println("Created an instance of Library");
+        //System.out.println("Created an instance of Library");
     }
 
     // SINGLETON    
     public synchronized static Library getInstance() throws LibraryException, IOException {
         if (libraryConnectionInstance == null) {
             libraryConnectionInstance = new Library();
-            System.out.println("Library - Instance has been created!");
+            //System.out.println("Library - Instance has been created!");
         }
-        System.out.println("Returning current Library instance");
+        //System.out.println("Returning current Library instance");
         return libraryConnectionInstance;
     }
 
@@ -59,7 +59,7 @@ public class Library {
 
     //GET
     public synchronized String getBook(int id) {
-        if (!books.containsKey(id)) {
+        if ( id == 0 || !books.containsKey(id)) {
             return "Book doesn't exist";
         } else {
             Book currentBook = books.get(id);

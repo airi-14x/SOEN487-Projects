@@ -12,13 +12,13 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.jws.WebService;
 
-// http://localhost:8080/A2-LoanService/LoanServiceMemberManagerImpl?wsdl
+
 @WebService(endpointInterface="a2.loanservice.LoanServiceMemberManager")
 public class LoanServiceMemberManagerImpl implements LoanServiceMemberManager {
     private static MemberManagerImpl memberManager;
     
     public LoanServiceMemberManagerImpl() throws LoanException, IOException {
-        System.out.println("Created an instance of LoanService - MemberSystem");
+        //System.out.println("Created an instance of LoanService - MemberSystem");
         memberManager = memberManager.getInstance();
     }
     
