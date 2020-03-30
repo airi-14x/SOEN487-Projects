@@ -490,3 +490,9 @@
 0:0:0:0:0:0:0:1 - - [30/Mar/2020:10:29:20 -0400] "GET /A2-Client/LoanManagerController?deleteLoanID=1&loans=deleteBookLoan HTTP/1.1" 200 463
 0:0:0:0:0:0:0:1 - - [30/Mar/2020:10:29:25 -0400] "GET /A2-Client/Logout HTTP/1.1" 200 811
 0:0:0:0:0:0:0:1 - - [30/Mar/2020:10:29:25 -0400] "GET /favicon.ico HTTP/1.1" 404 635
+127.0.0.1 - - [30/Mar/2020:10:57:48 -0400] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - airi14x [30/Mar/2020:10:57:48 -0400] "GET /manager/text/ HTTP/1.1" 200 41
+127.0.0.1 - - [30/Mar/2020:10:57:48 -0400] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - airi14x [30/Mar/2020:10:57:48 -0400] "GET /manager/text/ HTTP/1.1" 200 41
+127.0.0.1 - - [30/Mar/2020:10:57:48 -0400] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - airi14x [30/Mar/2020:10:57:48 -0400] "GET /manager/text/ HTTP/1.1" 200 41
