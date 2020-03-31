@@ -42,6 +42,6 @@ All Projects: JDK 1.8
 3. Run the loan service layer
 4. Run the client
 
-**Persistency was not implemented, everything runs in memory***
-** If things fail, clean build Library Service then re-run Library Client's console.**
-** If SOAP clients are not building, make sure that the WSDL files have been generated. Clean and build: Loan Service and click on the WSDL hyperlinks on the JSP page**
+- **Persistency was not implemented, everything runs in memory**
+- **If things fail, clean build Library Service then re-run Library Client's console.**
+- **If SOAP clients are not building, make sure that the WSDL files have been generated. Clean and build: Loan Service and click on the WSDL hyperlinks on the JSP page**
