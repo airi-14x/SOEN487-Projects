@@ -1,0 +1,41 @@
+{
+  "coord": {
+    "lon": -73.59,
+    "lat": 45.51
+  },
+  "weather": [{
+    "id": 804,
+    "main": "Clouds",
+    "description": "overcast clouds",
+    "icon": "04d"
+  }],
+  "base": "stations",
+  "main": {
+    "temp": 4.63,
+    "feels_like": -1.92,
+    "temp_min": 1.67,
+    "temp_max": 8.33,
+    "pressure": 992,
+    "humidity": 64
+  },
+  "visibility": 24140,
+  "wind": {
+    "speed": 6.2,
+    "deg": 40
+  },
+  "clouds": {
+    "all": 90
+  },
+  "dt": 1586443247,
+  "sys": {
+    "type": 1,
+    "id": 943,
+    "country": "CA",
+    "sunrise": 1586427514,
+    "sunset": 1586475154
+  },
+  "timezone": -14400,
+  "id": 6077243,
+  "name": "Montreal",
+  "cod": 200
+}
