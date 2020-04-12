@@ -5,7 +5,7 @@ import requests
 
 # 1) City Name Version --> Montreal // Celsius #
 # --- System Core --- #
-response = requests.get("http://api.openweathermap.org/data/2.5/weather?q=montreal&units=metric&appid=77dde4d032c4ec1284a674d90b1351e3")
+response = requests.get("https://api.openweathermap.org/data/2.5/weather?q=montreal&units=metric&appid=77dde4d032c4ec1284a674d90b1351e3")
 print("City Version:")
 print("City Version - JSON Response")
 print(response.json())
@@ -23,7 +23,7 @@ current_weather = response_json['weather'][0]
 weather_main = current_weather['main']
 weather_description = current_weather['description']
 
-print("weather_main: " + str(weather_main))
+print("weather_overview: " + str(weather_main))
 print("weather_description: " + str(weather_description))
 
 temperature_main = response_json['main']
