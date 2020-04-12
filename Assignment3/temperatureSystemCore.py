@@ -1,6 +1,5 @@
 import requests
 
-
 class Temperature:
 
     # Default: Montreal and Metric: Celsius
@@ -18,17 +17,24 @@ class Temperature:
         self.units = "metric"
         self.base_url = "https://api.openweathermap.org/data/2.5/weather?appid=77dde4d032c4ec1284a674d90b1351e3"
         self.formatted_url = ""
+        self.response = ""
 
     def get_current_weather_default(self):
         self.formatted_url = self.base_url + "&q=" + self.current_city + "&units="+ self.units
         print("formatted_url: " + self.formatted_url)
-        response = requests.get(self.formatted_url)
-        print("City Version:")
-        print("City Version - JSON Response")
-        print(response.json())
-        print("")
-        response_json = response.json()
+        self.response = requests.get(self.formatted_url)
 
+        if self.response.status_code == 200:
+            print("City Version:")
+            print("City Version - JSON Response")
+            print(self.response.json())
+            print("")
+            response_json = self.response.json()
+            import temperatureServiceAPI as service
+            service.ServiceAPI().format_temperature_object(response_json)
+
+        else:
+            print(self.response.raise_for_status())
 
 t = Temperature()
 t.get_current_weather_default()
