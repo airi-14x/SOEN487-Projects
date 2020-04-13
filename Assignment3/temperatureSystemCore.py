@@ -15,12 +15,12 @@ class Temperature:
         self.current_time = ""
         self.current_city = "Montreal"
         self.units = "metric"
-        self.base_url = "https://api.openweathermap.org/data/2.5/weather?appid=77dde4d032c4ec1284a674d90b1351e3"
+        #self.base_url = "https://api.openweathermap.org/data/2.5/weather?appid=77dde4d032c4ec1284a674d90b1351e3"
         self.formatted_url = ""
         self.response = ""
 
     def get_current_weather_default(self):
-        self.formatted_url = self.base_url + "&q=" + self.current_city + "&units="+ self.units
+        #self.formatted_url = self.base_url + "&q=" + self.current_city + "&units="+ self.units
         #print("formatted_url: " + self.formatted_url)
         self.response = requests.get(self.formatted_url)
 
@@ -32,7 +32,7 @@ class Temperature:
             import temperatureServiceAPI as service
             current_service_instance = service.ServiceAPI()
             current_service_instance.format_temperature_object(response_json)
-            current_service_instance.format_time()
+            current_service_instance.format_time() #What will be used by UI
 
         else:
             print(self.response.raise_for_status())

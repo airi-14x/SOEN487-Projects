@@ -1,24 +1,24 @@
-import requests
 class ServiceAPI:
 
     def __init__(self):
         self.formatted_temperature_object = ""
         self.base_url = "https://api.openweathermap.org/data/2.5/weather?appid=77dde4d032c4ec1284a674d90b1351e3"
-        self.formatted_url = ""
+        #self.formatted_url = ""
 
     # UI --> ServiceAPI: Pass desired parameters to format URL for System Core
-    def format_url(self):
+    # Default: Montreal and Metric: Celsius
+    def format_url_default(self):
         import temperatureSystemCore as temperature
         current_temperature_instance = temperature.Temperature()
-        self.formatted_url = self.base_url + "&q=" + current_temperature_instance.current_city + "&units=" + current_temperature_instance.units
-        response = requests.get(self.formatted_url)
-        print(response.json())
+        #self.formatted_url = self.base_url + "&q=" + current_temperature_instance.current_city + "&units=" + current_temperature_instance.units
+        current_temperature_instance.formatted_url = self.base_url + "&q=" + current_temperature_instance.current_city + "&units=" + current_temperature_instance.units
+        current_temperature_instance.get_current_weather_default()
 
 
     # SystemCore --> ServiceAPI: Format temperature object for UI
     def format_temperature_object(self,temperature_json):
-        #print(temperature_json)
-        print("In temperatureServiceAPI - format_temperature_object")
+        print(temperature_json)
+        #print("In temperatureServiceAPI - format_temperature_object")
 
         import temperatureSystemCore as temperature
         current_temperature_instance = temperature.Temperature()
@@ -50,4 +50,4 @@ class ServiceAPI:
         print("")
 
 service = ServiceAPI()
-service.format_url()
+service.format_url_default()
