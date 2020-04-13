@@ -1,6 +1,7 @@
-from flask import Flask, send_from_directory, request, render_template, redirect, url_for
+from flask import Flask, send_from_directory, request, render_template, redirect, url_for, session
 import requests
 import json
+from django.contrib.auth.decorators import login_required
 
 app = Flask(__name__, static_url_path='')
 
@@ -12,7 +13,10 @@ def welcome():
 # Index page where weather is displayed
 @app.route('/index')
 def index():
-    return render_template('index.html')
+    if 'admin' not in session:
+        return redirect(url_for('login'))
+    else: 
+        return render_template('index.html')
 
 # Get location
 @app.route('/location')
@@ -56,9 +60,10 @@ def login():
         if request.form['username'] != username or request.form['password'] != password:
             error = 'Invalid Credentials. Please try again.'
         else:
+            session[username] = request.form['username']
             return redirect(url_for('index'))
     return render_template('login.html', error=error)
 
-
 if __name__ == "__main__":
+    app.secret_key = b'-djoi3#039@@89!jd__/'
     app.run()
