@@ -23,7 +23,7 @@ def search_location():
     location = request.args.get('q')
 
     # MAKE THE CALL TO OUR SERVICE
-    url = f'http://127.0.0.1:5000/templates/index.html?location={location}&APPID={API_KEY}'
+    url = f'http://127.0.0.1:5000/index?location={location}&APPID={API_KEY}'
 
     # THE RESPONSE
     response = request.get(url).json()
