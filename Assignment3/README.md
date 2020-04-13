@@ -1,14 +1,13 @@
 # Weather App
 
-A simple Flask application that uses Openweathermap API to show weather.
+A simple Flask application that uses Openweathermap API to show weather. 
 
 ## Requirements
 
-- pip install Flask
 - Python 3.6
+- pip3 install Flask
 
 ## Executing the app
 
-- cd WebClient
 - pyton3 app.py
-- Navigate to http://127.0.0.1:5000/templates/index.html
+- Navigate to http://127.0.0.1:5000/index

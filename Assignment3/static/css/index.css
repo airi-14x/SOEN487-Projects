@@ -77,4 +77,9 @@
   form {
     margin-top: 50%;
   }
+
+  #logout {
+    float: right;
+    margin-top: 40%;
+  }
   
