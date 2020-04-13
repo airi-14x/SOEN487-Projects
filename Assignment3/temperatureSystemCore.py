@@ -21,13 +21,13 @@ class Temperature:
 
     def get_current_weather_default(self):
         self.formatted_url = self.base_url + "&q=" + self.current_city + "&units="+ self.units
-        print("formatted_url: " + self.formatted_url)
+        #print("formatted_url: " + self.formatted_url)
         self.response = requests.get(self.formatted_url)
 
         if self.response.status_code == 200:
-            print("City Version - JSON Response")
-            print(self.response.json())
-            print("")
+            #print("City Version - JSON Response")
+            #print(self.response.json())
+            #print("")
             response_json = self.response.json()
             import temperatureServiceAPI as service
             current_service_instance = service.ServiceAPI()
@@ -37,5 +37,5 @@ class Temperature:
         else:
             print(self.response.raise_for_status())
 
-t = Temperature()
-t.get_current_weather_default()
+#t = Temperature()
+#t.get_current_weather_default()

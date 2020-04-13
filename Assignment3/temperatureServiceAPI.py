@@ -1,3 +1,4 @@
+import requests
 class ServiceAPI:
 
     def __init__(self):
@@ -6,11 +7,12 @@ class ServiceAPI:
         self.formatted_url = ""
 
     # UI --> ServiceAPI: Pass desired parameters to format URL for System Core
-    #def format_url(self,url_parameters):
-    #    import temperatureSystemCore as temperature
-    #    currentTemperatureInstance = temperature.Temperature()
-    #    self.formatted_url = self.base_url + "&q=" + formatted_url
-
+    def format_url(self):
+        import temperatureSystemCore as temperature
+        current_temperature_instance = temperature.Temperature()
+        self.formatted_url = self.base_url + "&q=" + current_temperature_instance.current_city + "&units=" + current_temperature_instance.units
+        response = requests.get(self.formatted_url)
+        print(response.json())
 
 
     # SystemCore --> ServiceAPI: Format temperature object for UI
@@ -46,3 +48,6 @@ class ServiceAPI:
         print(self.formatted_temperature_object.current_time)
         print(datetime.fromtimestamp(self.formatted_temperature_object.current_time))
         print("")
+
+service = ServiceAPI()
+service.format_url()
