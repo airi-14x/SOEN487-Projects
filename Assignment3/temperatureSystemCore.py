@@ -31,7 +31,8 @@ class Temperature:
             print("")
             response_json = self.response.json()
             import temperatureServiceAPI as service
-            service.ServiceAPI().format_temperature_object(response_json)
+            formatted_temperature_object = service.ServiceAPI().format_temperature_object(response_json)
+            service.ServiceAPI().set_object(formatted_temperature_object)
 
         else:
             print(self.response.raise_for_status())
