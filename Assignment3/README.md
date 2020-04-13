@@ -6,7 +6,6 @@ A simple Flask application that uses Openweathermap API to show weather.
 
 - Python 3.6
 - pip3 install Flask
-- pip3 install django
 - pip3 install requests
 
 ## Executing the app

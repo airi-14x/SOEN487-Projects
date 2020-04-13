@@ -1,7 +1,5 @@
 from flask import Flask, send_from_directory, request, render_template, redirect, url_for, session
-import requests
 import json
-from django.contrib.auth.decorators import login_required
 
 app = Flask(__name__, static_url_path='')
 
@@ -63,6 +61,12 @@ def login():
             session[username] = request.form['username']
             return redirect(url_for('index'))
     return render_template('login.html', error=error)
+
+# Logout
+@app.route('/logout', methods=['GET', 'POST'])
+def logout():
+    session.pop('admin', None)
+    return redirect('login')
 
 if __name__ == "__main__":
     app.secret_key = b'-djoi3#039@@89!jd__/'
