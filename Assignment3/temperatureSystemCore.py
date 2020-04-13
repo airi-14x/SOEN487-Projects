@@ -25,14 +25,14 @@ class Temperature:
         self.response = requests.get(self.formatted_url)
 
         if self.response.status_code == 200:
-            print("City Version:")
             print("City Version - JSON Response")
             print(self.response.json())
             print("")
             response_json = self.response.json()
             import temperatureServiceAPI as service
-            formatted_temperature_object = service.ServiceAPI().format_temperature_object(response_json)
-            service.ServiceAPI().set_object(formatted_temperature_object)
+            currentServiceInstance = service.ServiceAPI()
+            currentServiceInstance.format_temperature_object(response_json)
+            currentServiceInstance.format_time()
 
         else:
             print(self.response.raise_for_status())
