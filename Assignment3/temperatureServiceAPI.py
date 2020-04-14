@@ -1,4 +1,5 @@
 import temperatureSystemCore as temperature
+import json
 
 
 class ServiceAPI:
@@ -10,7 +11,6 @@ class ServiceAPI:
     # UI --> ServiceAPI: default parameters to format URL for System Core
     # Default: Montreal and Metric: Celsius
     def format_url_default(self, city):
-        #import temperatureSystemCore as temperature
         current_temperature_instance = temperature.Temperature()
         current_temperature_instance.formatted_url = self.base_url + "&q=" + \
             city + \
@@ -20,7 +20,7 @@ class ServiceAPI:
     # UI --> ServiceAPI: Pass desired parameters to format URL for System Core
     # For Example: Metric - Imperial(Fahrenheit)
     def format_url_with_parameters(self, city, unit_format):
-        i  # mport temperatureSystemCore as temperature
+
         current_temperature_instance = temperature.Temperature()
         current_temperature_instance.formatted_url = self.base_url + "&q=" + \
             city + \
@@ -33,7 +33,6 @@ class ServiceAPI:
         print(temperature_json)
         #print("In temperatureServiceAPI - format_temperature_object")
 
-        #import temperatureSystemCore as temperature
         current_temperature_instance = temperature.Temperature()
         current_temperature_instance.longtitude = temperature_json['coord']['lon']
         current_temperature_instance.latitude = temperature_json['coord']['lat']
@@ -56,13 +55,18 @@ class ServiceAPI:
         # -------- Set final Temperature Object for UI ------ #
         # ServiceAPI --> UI: Use this object to display
         # @UI level -  Calling attributes as: formatted_temperature_object.(*insert attributes*); formatted_temperature_object.longtitude
-        print("Current MAX1")
-        print(current_temperature_instance.current_max)
+        #print("Current MAX1")
+        #print(current_temperature_instance.current_max)
+
         self.formatted_temperature_object = current_temperature_instance
-        print("Current MAX2")
-        print(str(self.formatted_temperature_object.current_max))
-        print(current_temperature_instance)
-        #return current_temperature_instance
+        json_obj = json.dumps(self.formatted_temperature_object.__dict__)
+        print("")
+        print("json_obj: " + json_obj)
+        return json_obj
+        #print("Current MAX2")
+        #print(str(self.formatted_temperature_object.current_max))
+        #print(current_temperature_instance)
+        #return current_temperature_instance --> Need data persistency
 
     # Montreal time when the results were last updated.
     def format_time(self):
