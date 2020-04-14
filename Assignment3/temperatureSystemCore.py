@@ -1,8 +1,7 @@
 import requests
-
+import temperatureServiceAPI as service
 
 class Temperature:
-
     def __init__(self):
         self.longtitude = -73.59
         self.latitude = 45.51
@@ -28,7 +27,7 @@ class Temperature:
             # print(self.response.json())
             # print("")
             response_json = self.response.json()
-            import temperatureServiceAPI as service
+            #import temperatureServiceAPI as service
             current_service_instance = service.ServiceAPI()
             current_service_instance.format_temperature_object(
                 response_json)  # Send response to temperatureServiceAPI
@@ -43,6 +42,3 @@ class Temperature:
 
         else:
             print(self.response.raise_for_status())
-
-#t = Temperature()
-# t.get_current_weather_default()

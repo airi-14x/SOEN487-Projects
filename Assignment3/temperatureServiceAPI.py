@@ -1,3 +1,6 @@
+import temperatureSystemCore as temperature
+
+
 class ServiceAPI:
 
     def __init__(self):
@@ -6,31 +9,31 @@ class ServiceAPI:
 
     # UI --> ServiceAPI: default parameters to format URL for System Core
     # Default: Montreal and Metric: Celsius
-    def format_url_default(self):
-        import temperatureSystemCore as temperature
+    def format_url_default(self, city):
+        #import temperatureSystemCore as temperature
         current_temperature_instance = temperature.Temperature()
         current_temperature_instance.formatted_url = self.base_url + "&q=" + \
-            current_temperature_instance.current_city + \
+            city + \
             "&units=" + current_temperature_instance.units
         current_temperature_instance.get_current_weather_default()
 
     # UI --> ServiceAPI: Pass desired parameters to format URL for System Core
     # For Example: Metric - Imperial(Fahrenheit)
     def format_url_with_parameters(self, city, unit_format):
-        import temperatureSystemCore as temperature
+        i  # mport temperatureSystemCore as temperature
         current_temperature_instance = temperature.Temperature()
         current_temperature_instance.formatted_url = self.base_url + "&q=" + \
             city + \
             "&units=" + unit_format
         current_temperature_instance.get_current_weather_default()
-        
+
     # SystemCore --> ServiceAPI: Format temperature object for UI
     # Call Functions within to format appropriate (e.g. Want to convert/additional information...)
     def format_temperature_object(self, temperature_json):
         print(temperature_json)
         #print("In temperatureServiceAPI - format_temperature_object")
 
-        import temperatureSystemCore as temperature
+        #import temperatureSystemCore as temperature
         current_temperature_instance = temperature.Temperature()
         current_temperature_instance.longtitude = temperature_json['coord']['lon']
         current_temperature_instance.latitude = temperature_json['coord']['lat']
@@ -48,13 +51,18 @@ class ServiceAPI:
         current_temperature_instance.current_max = temperature_main['temp_max']
 
         current_temperature_instance.current_time = temperature_json['dt']
-        #print("current_time: " + str(formatted_obj.current_time))
         current_temperature_instance.current_city = temperature_json['name']
 
         # -------- Set final Temperature Object for UI ------ #
         # ServiceAPI --> UI: Use this object to display
         # @UI level -  Calling attributes as: formatted_temperature_object.(*insert attributes*); formatted_temperature_object.longtitude
+        print("Current MAX1")
+        print(current_temperature_instance.current_max)
         self.formatted_temperature_object = current_temperature_instance
+        print("Current MAX2")
+        print(str(self.formatted_temperature_object.current_max))
+        print(current_temperature_instance)
+        #return current_temperature_instance
 
     # Montreal time when the results were last updated.
     def format_time(self):
@@ -66,7 +74,6 @@ class ServiceAPI:
             self.formatted_temperature_object.current_time))
         print("")
 
-
-service = ServiceAPI()
-service.format_url_default()
-service.format_url_with_parameters("london", "imperial")
+#service = ServiceAPI()
+# service.format_url_default("montreal")
+#service.format_url_with_parameters("london", "imperial")
