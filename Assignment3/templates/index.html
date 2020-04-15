@@ -3,11 +3,14 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/index.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 </head>
 
 <body>
     <header>
-        <h2>Current Date and Time</h2>
+        <h2>Current Weather</h2>
     </header>
     <div id="content">
         <section>
@@ -15,18 +18,45 @@
                 <form method="get" action="/location">
                     <label for="search"><b>Search</b></label>
                     <input type="text" placeholder="Enter Location" name="location" required>
-                    <button type="submit" class="search-btn">Search</button><br/>
+                    <button type="submit" class="search-btn">Search</button><br />
                 </form>
                 <p>{{ message }}</p>
                 <a id="logout" href="/login">Logout</a>
             </div>
-            <article>
-                <h3>Current location: {{ current_city }}
-                <p>Current temperature: {{ current_temperature }}</p><br/>
-                <p>Feels like: {{ current_feels_like }}</p><br/>
-                <p>Maximum today: {{ current_max }}</p><br/>
-                <p>Minimum today: {{ current_min }}</p><br/>
-                <p>{{ weather_description }}</p>
+            <article class="w3-right">
+                <div class="w3-card-4 w3-margin card" style="width:50%">
+                    <div class="w3-display-container w3-text-white">
+                        {% if sun %}
+                        <img src="{{ url_for('static',filename='images/sunny.jpg') }}" alt="sun" style="width:100%">
+                        {% endif %}
+                        {% if rain %}
+                        <img src="{{ url_for('static',filename='images/rainy.jpg') }}" alt="sun" style="width:100%">
+                        {% endif %}
+                        {% if default %}
+                        <img src="{{ url_for('static',filename='images/default.jpg') }}" alt="sun" style="width:100%">
+                        {% endif %}
+                        <div class="w3-xlarge w3-display-bottomleft w3-padding">{{ current_city }} &nbsp;
+                            {{ current_temperature }} {{ symbol }}
+                        </div>
+                        <div class="w3-xlarge w3-display-bottomright w3-padding">
+                            {{ weather_description }}
+                        </div>
+                    </div>
+                    <div class="w3-row">
+                        <div class="w3-third w3-center">
+                            <h3>FEELS LIKE</h3>
+                            <p>{{ current_feels_like }}{{ symbol }}</p>
+                        </div>
+                        <div class="w3-third w3-center">
+                            <h3>MAX</h3>
+                            <p>{{ current_max }}{{ symbol }}</p>
+                        </div>
+                        <div class="w3-third w3-center w3-margin-bottom">
+                            <h3>MIN</h3>
+                            <p>{{ current_min }}{{ symbol }}</p>
+                        </div>
+                    </div>
+                </div>
             </article>
         </section>
     </div>
