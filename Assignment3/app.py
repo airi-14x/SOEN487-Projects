@@ -2,6 +2,8 @@ from flask import Flask, send_from_directory, request, render_template, redirect
 import json
 import temperatureServiceAPI as service
 import temperatureSystemCore as temperature
+from datetime import datetime
+from pytz import timezone
 
 app = Flask(__name__, static_url_path='')
 
@@ -37,8 +39,12 @@ def index():
                 current_max = data['current_max']
                 current_min = data['current_min']
                 weather_description = data['weather_description']
-                symbol = '°C'
+                unix_time = data['current_time']
                 
+                symbol = '°C'
+                date = datetime.fromtimestamp(unix_time)
+                formatted_date = f"{date:%Y-%m-%d %H:%M}"
+
         if 'clear' in weather_description:
             rain = False
             sun = True
@@ -53,7 +59,7 @@ def index():
             sun = False
 
         return render_template('index.html', current_city=current_city, current_temperature=current_temperature,
-                               current_feels_like=current_feels_like, current_max=current_max, current_min=current_min, weather_description=weather_description, symbol=symbol, sun=sun, rain=rain, default=default)
+                               current_feels_like=current_feels_like, current_max=current_max, current_min=current_min, weather_description=weather_description, symbol=symbol, sun=sun, rain=rain, default=default, date=formatted_date)
 
 
 # Get location, display weather for requested location
@@ -94,6 +100,11 @@ def search_location():
         current_max = data['current_max']
         current_min = data['current_min']
         weather_description = data['weather_description']
+        unix_time = data['current_time']
+                
+        symbol = '°C'
+        date = datetime.fromtimestamp(unix_time)
+        formatted_date = f"{date:%Y-%m-%d %H:%M}"
 
         if unit == 'metric':
             symbol = '°C'
@@ -114,7 +125,7 @@ def search_location():
             sun = False
 
     return render_template('index.html', current_city=current_city, current_temperature=current_temperature,
-                           current_feels_like=current_feels_like, current_max=current_max, current_min=current_min, weather_description=weather_description, symbol=symbol, sun=sun, rain=rain, default=default)
+                           current_feels_like=current_feels_like, current_max=current_max, current_min=current_min, weather_description=weather_description, symbol=symbol, sun=sun, rain=rain, default=default, date=formatted_date)
 
 # Login
 @app.route('/login', methods=['GET', 'POST'])
