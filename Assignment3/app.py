@@ -8,7 +8,7 @@ from urllib.parse import parse_qs
 
 app = Flask(__name__, static_url_path='')
 
-# Index page where weather is displayed
+# Index page where weather is displayed, displays weather for Montreal as default
 @app.route('/')
 def index():
     current_city = ""
@@ -40,8 +40,7 @@ def index():
         current_feels_like=current_feels_like, current_max=current_max, current_min=current_min, weather_description=weather_description)
 
 
-# Get from file 
-# Get location
+# Get location, display weather for requested location
 @app.route('/location', methods=['GET'])
 def search_location():
     current_city = ""
@@ -72,7 +71,6 @@ def search_location():
         current_min = data['current_min']
         weather_description = data['weather_description']
         
-    
     return render_template('index.html', current_city=current_city, current_temperature=current_temperature, 
         current_feels_like=current_feels_like, current_max=current_max, current_min=current_min, weather_description=weather_description)
 
