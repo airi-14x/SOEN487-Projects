@@ -13,7 +13,7 @@ def welcome():
 def index():
     if 'admin' not in session:
         return redirect(url_for('login'))
-    else: 
+    else:
         return render_template('index.html')
 
 # Get location
@@ -22,6 +22,12 @@ def search_location():
     API_KEY = 'OUR API KEY'
     location = request.args.get('q')
 
+    #import temperatureServiceAPI as service
+    #current_service_instance = service.ServiceAPI()
+
+    #print(current_service_instance.format_url_default(location))
+
+    return render_template
     # MAKE THE CALL TO OUR SERVICE
     url = f'http://127.0.0.1:5000/index?location={location}&APPID={API_KEY}'
 
