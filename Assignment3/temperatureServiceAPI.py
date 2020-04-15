@@ -74,7 +74,7 @@ class ServiceAPI:
         #print("")
     
     def error(self):
-        return 'An error occured'
+        return 'An error occured, the location could not be found'
 #service = ServiceAPI()
 # service.format_url_default("montreal")
 #service.format_url_with_parameters("london", "imperial")

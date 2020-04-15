@@ -45,7 +45,7 @@ def index():
         else:
             symbol = ''
 
-        if 'sun' in weather_description:
+        if 'clear' in weather_description:
             rain = False
             sun = True
             default = False
