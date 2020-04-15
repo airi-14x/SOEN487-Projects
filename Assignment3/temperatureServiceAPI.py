@@ -61,18 +61,8 @@ class ServiceAPI:
         with open("temperature.json", "w") as outfile:
             outfile.write(json_obj)
 
-    # Montreal time when the results were last updated.
-    #def format_time(self):
-        #from datetime import datetime
-        #print(
-            #"Received at Montreal Time - Current Time Zone [ISO 8601 Time Representation]")
-        #print(self.formatted_temperature_object.current_time)
-        #print(datetime.fromtimestamp(
-            #self.formatted_temperature_object.current_time))
-        #print("")
     
+    # Displaying error message in case response code not 200
     def error(self):
         return 'An error occured, the location could not be found'
-#service = ServiceAPI()
-# service.format_url_default("montreal")
-#service.format_url_with_parameters("london", "imperial")
+
