@@ -5,7 +5,6 @@ import json
 class ServiceAPI:
 
     def __init__(self):
-        self.formatted_temperature_object = ""
         self.base_url = "https://api.openweathermap.org/data/2.5/weather?appid=77dde4d032c4ec1284a674d90b1351e3"
 
     # UI --> ServiceAPI: default parameters to format URL for System Core
@@ -31,7 +30,6 @@ class ServiceAPI:
     # Call Functions within to format appropriate (e.g. Want to convert/additional information...)
     def format_temperature_object(self, temperature_json):
         print(temperature_json)
-        #print("In temperatureServiceAPI - format_temperature_object")
 
         current_temperature_instance = temperature.Temperature()
         current_temperature_instance.longtitude = temperature_json['coord']['lon']
@@ -54,16 +52,12 @@ class ServiceAPI:
 
         # -------- Set final Temperature Object for UI ------ #
         # ServiceAPI --> UI: Use this object to display
-        # @UI level -  Calling attributes as: formatted_temperature_object.(*insert attributes*); formatted_temperature_object.longtitude
-        #print("Current MAX1")
-        #print(current_temperature_instance.current_max)
 
-        self.formatted_temperature_object = current_temperature_instance
-        json_obj = json.dumps(self.formatted_temperature_object.__dict__)
-       
+        json_obj = json.dumps(current_temperature_instance.__dict__)
+
         # Write to json file
-        with open("temperature.json", "w") as outfile: 
-            outfile.write(json_obj) 
+        with open("temperature.json", "w") as outfile:
+            outfile.write(json_obj)
 
     # Montreal time when the results were last updated.
     def format_time(self):
