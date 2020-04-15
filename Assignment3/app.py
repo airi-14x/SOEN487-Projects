@@ -2,9 +2,6 @@ from flask import Flask, send_from_directory, request, render_template, redirect
 import json
 import temperatureServiceAPI as service
 import temperatureSystemCore as temperature
-import urllib.parse as urlparse
-import requests
-from urllib.parse import parse_qs
 
 app = Flask(__name__, static_url_path='')
 
@@ -29,9 +26,7 @@ def index():
         current_service_instance = service.ServiceAPI()
         try:
             current_service_instance.format_url_default('montreal')
-            no_error = True
         except:
-            no_error = False
             message = current_service_instance.error()
             return render_template('index.html', message=message)
         
