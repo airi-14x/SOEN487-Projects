@@ -60,13 +60,7 @@ class ServiceAPI:
 
         self.formatted_temperature_object = current_temperature_instance
         json_obj = json.dumps(self.formatted_temperature_object.__dict__)
-        print("")
-        print("json_obj: " + json_obj)
-        return json_obj
-        #print("Current MAX2")
-        #print(str(self.formatted_temperature_object.current_max))
-        #print(current_temperature_instance)
-        #return current_temperature_instance --> Need data persistency
+
 
     # Montreal time when the results were last updated.
     def format_time(self):
