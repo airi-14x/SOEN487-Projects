@@ -60,7 +60,10 @@ class ServiceAPI:
 
         self.formatted_temperature_object = current_temperature_instance
         json_obj = json.dumps(self.formatted_temperature_object.__dict__)
-
+       
+        # Write to json file
+        with open("temperature.json", "w") as outfile: 
+            outfile.write(json_obj) 
 
     # Montreal time when the results were last updated.
     def format_time(self):
