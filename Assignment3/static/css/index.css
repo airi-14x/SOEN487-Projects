@@ -19,7 +19,7 @@
   #search-location {
     float: left;
     width: 30%;
-    height: 570px;/* only for demonstration, should be removed */
+    height: 667px;
     background: #b3e0ff;
     padding: 20px;
   }
@@ -34,7 +34,7 @@
     float: left;
     padding: 20px;
     width: 70%;
-    height: 570px;
+    height: 600px;
     float:left;
   }
 
@@ -79,7 +79,9 @@
   }
 
   #logout {
-    float: right;
-    margin-top: 40%;
+    float: left;
+    position: relative;
+    margin-top: 20%;
   }
+
   
