@@ -1,5 +1,6 @@
 from flask import Flask, send_from_directory, request, render_template, redirect, url_for, session
 import json
+import temperatureServiceAPI as service
 
 app = Flask(__name__, static_url_path='')
 
@@ -16,20 +17,15 @@ def index():
     else:
         return render_template('index.html')
 
+# Get from file 
 # Get location
 @app.route('/location')
 def search_location():
-    API_KEY = 'OUR API KEY'
     location = request.args.get('q')
-
-    #import temperatureServiceAPI as service
-    #current_service_instance = service.ServiceAPI()
-
-    #print(current_service_instance.format_url_default(location))
-
-    return render_template
     # MAKE THE CALL TO OUR SERVICE
-    url = f'http://127.0.0.1:5000/index?location={location}&APPID={API_KEY}'
+    url = f'http://127.0.0.1:5000/index?location={location}'
+    current_service_instance = service.ServiceAPI()
+    current_service_instance.format_url_default(location)
 
     # THE RESPONSE
     response = request.get(url).json()
@@ -39,14 +35,6 @@ def search_location():
         message = response.get('message', '')
         return f'Error getting temperature for {location.title()}. Error message = {message}'
 
-    # MAYBE NOT USEFUL
-    # get current temperature and convert it into Celsius
-    #current_temperature = response.get('main', {}).get('temp')
-    # if current_temperature:
-        #current_temperature_celsius = round(current_temperature - 273.15, 2)
-        # return f'Current temperature of {location.title()} is {current_temperature_celsius} &#8451;'
-    # else:
-        # return f'Error getting temperature for {location.title()}'
 
 # Login
 @app.route('/login', methods=['GET', 'POST'])
