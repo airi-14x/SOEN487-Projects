@@ -11,4 +11,4 @@ A simple Flask application that uses Openweathermap API to show weather.
 ## Executing the app
 
 - python3 app.py
-- Navigate to http://127.0.0.1:5000/index
+- Navigate to http://127.0.0.1:5000/

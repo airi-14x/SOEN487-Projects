@@ -12,16 +12,21 @@
     <div id="content">
         <section>
             <div id="search-location">
-                <form method="GET">
-                    <label for="email"><b>Search</b></label>
+                <form method="get" action="/location">
+                    <label for="search"><b>Search</b></label>
                     <input type="text" placeholder="Enter Location" name="location" required>
-                    <button type="submit" class="search-btn">Search</button>
-                    <a id="logout" href="/login">Logout</a>
+                    <button type="submit" class="search-btn">Search</button><br/>
                 </form>
+                <p>{{ message }}</p>
+                <a id="logout" href="/login">Logout</a>
             </div>
             <article>
-                <h1>Location</h1>
-                <p>Display weather here</p>
+                <h3>Current location: {{ current_city }}
+                <p>Current temperature: {{ current_temperature }}</p><br/>
+                <p>Feels like: {{ current_feels_like }}</p><br/>
+                <p>Maximum today: {{ current_max }}</p><br/>
+                <p>Minimum today: {{ current_min }}</p><br/>
+                <p>{{ weather_description }}</p>
             </article>
         </section>
     </div>

@@ -14,7 +14,10 @@ class ServiceAPI:
         current_temperature_instance.formatted_url = self.base_url + "&q=" + \
             city + \
             "&units=" + current_temperature_instance.units
+        
         current_temperature_instance.get_current_weather_default()
+        
+  
 
     # UI --> ServiceAPI: Pass desired parameters to format URL for System Core
     # For Example: Metric - Imperial(Fahrenheit)
@@ -49,6 +52,7 @@ class ServiceAPI:
 
         current_temperature_instance.current_time = temperature_json['dt']
         current_temperature_instance.current_city = temperature_json['name']
+        current_temperature_instance.response = temperature_json['cod']
 
         # -------- Set final Temperature Object for UI ------ #
         # ServiceAPI --> UI: Use this object to display
@@ -60,15 +64,17 @@ class ServiceAPI:
             outfile.write(json_obj)
 
     # Montreal time when the results were last updated.
-    def format_time(self):
-        from datetime import datetime
-        print(
-            "Received at Montreal Time - Current Time Zone [ISO 8601 Time Representation]")
-        print(self.formatted_temperature_object.current_time)
-        print(datetime.fromtimestamp(
-            self.formatted_temperature_object.current_time))
-        print("")
-
+    #def format_time(self):
+        #from datetime import datetime
+        #print(
+            #"Received at Montreal Time - Current Time Zone [ISO 8601 Time Representation]")
+        #print(self.formatted_temperature_object.current_time)
+        #print(datetime.fromtimestamp(
+            #self.formatted_temperature_object.current_time))
+        #print("")
+    
+    def error(self):
+        return 'An error occured'
 #service = ServiceAPI()
 # service.format_url_default("montreal")
 #service.format_url_with_parameters("london", "imperial")

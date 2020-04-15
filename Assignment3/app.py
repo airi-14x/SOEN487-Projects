@@ -1,16 +1,15 @@
 from flask import Flask, send_from_directory, request, render_template, redirect, url_for, session
 import json
 import temperatureServiceAPI as service
+import temperatureSystemCore as temperature
+import urllib.parse as urlparse
+import requests
+from urllib.parse import parse_qs
 
 app = Flask(__name__, static_url_path='')
 
-# Welcome page
-@app.route('/')
-def welcome():
-    return '<h1>Welcome to the weather app</h1>'
-
 # Index page where weather is displayed
-@app.route('/index')
+@app.route('/')
 def index():
     if 'admin' not in session:
         return redirect(url_for('login'))
@@ -19,22 +18,39 @@ def index():
 
 # Get from file 
 # Get location
-@app.route('/location')
+@app.route('/location', methods=['GET'])
 def search_location():
-    location = request.args.get('q')
-    # MAKE THE CALL TO OUR SERVICE
-    url = f'http://127.0.0.1:5000/index?location={location}'
+    current_city = ""
+    current_temperature = ""
+    current_feels_like = ""
+    current_max = ""
+    current_min = ""
+    weather_description = ""
+    
+    # Get the location from the request url
+    location = request.args.get('location')
+
+    # Calling our service 
     current_service_instance = service.ServiceAPI()
-    current_service_instance.format_url_default(location)
+    try:
+        current_service_instance.format_url_default(location)
+    except:
+        message = current_service_instance.error()
+        return render_template('index.html', message=message)
 
-    # THE RESPONSE
-    response = request.get(url).json()
-
-    # error like unknown city name, inavalid api key
-    if response.get('cod') != 200:
-        message = response.get('message', '')
-        return f'Error getting temperature for {location.title()}. Error message = {message}'
-
+    # Parsing the response file
+    with open('temperature.json') as json_file:
+        data = json.load(json_file)
+        current_city = data['current_city']
+        current_temperature = data['current_temperature']
+        current_feels_like = data['current_feels_like']
+        current_max = data['current_max']
+        current_min = data['current_min']
+        weather_description = data['weather_description']
+        
+    
+    return render_template('index.html', current_city=current_city, current_temperature=current_temperature, 
+        current_feels_like=current_feels_like, current_max=current_max, current_min=current_min, weather_description=weather_description)
 
 # Login
 @app.route('/login', methods=['GET', 'POST'])
