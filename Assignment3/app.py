@@ -11,10 +11,34 @@ app = Flask(__name__, static_url_path='')
 # Index page where weather is displayed
 @app.route('/')
 def index():
+    current_city = ""
+    current_temperature = ""
+    current_feels_like = ""
+    current_max = ""
+    current_min = ""
+    weather_description = ""
+
     if 'admin' not in session:
         return redirect(url_for('login'))
     else:
-        return render_template('index.html')
+        current_service_instance = service.ServiceAPI()
+        try:
+            current_service_instance.format_url_default('montreal')
+            with open('temperature.json') as json_file:
+                data = json.load(json_file)
+                current_city = data['current_city']
+                current_temperature = data['current_temperature']
+                current_feels_like = data['current_feels_like']
+                current_max = data['current_max']
+                current_min = data['current_min']
+                weather_description = data['weather_description']
+        except:
+            message = current_service_instance.error()
+            return render_template('index.html', message=message)
+        
+        return render_template('index.html', current_city=current_city, current_temperature=current_temperature, 
+        current_feels_like=current_feels_like, current_max=current_max, current_min=current_min, weather_description=weather_description)
+
 
 # Get from file 
 # Get location
