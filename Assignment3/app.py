@@ -1,43 +1,120 @@
 from flask import Flask, send_from_directory, request, render_template, redirect, url_for, session
 import json
-#import temperatureServiceAPI as service
+import temperatureServiceAPI as service
+import temperatureSystemCore as temperature
 
 app = Flask(__name__, static_url_path='')
 
-# Welcome page
+# Index page where weather is displayed, displays weather for Montreal as default
 @app.route('/')
-def welcome():
-    return '<h1>Welcome to the weather app</h1>'
-
-# Index page where weather is displayed
-@app.route('/index')
 def index():
+    current_city = ""
+    current_temperature = ""
+    current_feels_like = ""
+    current_max = ""
+    current_min = ""
+    weather_description = ""
+    symbol = ""
+    rain = False
+    sun = False
+    default = False
+
     if 'admin' not in session:
         return redirect(url_for('login'))
     else:
-        return render_template('index.html')
+        current_service_instance = service.ServiceAPI()
+        try:
+            current_service_instance.format_url_default('montreal')
+        except:
+            message = current_service_instance.error()
+            return render_template('index.html', message=message)
+        
+        with open('temperature.json') as json_file:
+                data = json.load(json_file)
+                current_city = data['current_city']
+                current_temperature = data['current_temperature']
+                current_feels_like = data['current_feels_like']
+                current_max = data['current_max']
+                current_min = data['current_min']
+                weather_description = data['weather_description']
+                symbol = '°C'
+                
+        if 'clear' in weather_description:
+            rain = False
+            sun = True
+            default = False
+        if 'rain' in weather_description:
+            default = False
+            rain = True
+            sun = False
+        else:
+            default = True
+            rain = False
+            sun = False
 
-# Get from file
-# Get location
-@app.route('/location')
+        return render_template('index.html', current_city=current_city, current_temperature=current_temperature,
+                               current_feels_like=current_feels_like, current_max=current_max, current_min=current_min, weather_description=weather_description, symbol=symbol, sun=sun, rain=rain, default=default)
+
+
+# Get location, display weather for requested location
+@app.route('/location', methods=['GET'])
 def search_location():
-    location = request.args.get('q')
+    current_city = ""
+    current_temperature = ""
+    current_feels_like = ""
+    current_max = ""
+    current_min = ""
+    weather_description = ""
+    symbol = ""
+    rain = False
+    sun = False
+    default = False
 
-    # MAKE THE CALL TO OUR SERVICE
-    url = f'http://127.0.0.1:5000/index?location={location}'
-    import temperatureServiceAPI as service
-    import temperatureSystemCore as temperature
+    # Get the location and unit from the request url
+    location = request.args.get('location')
+    unit = request.args.get('unit')
+
+    # Calling our service
     current_service_instance = service.ServiceAPI()
-    current_service_instance.format_url_default(location)
+    try:
+        if unit == '':
+            current_service_instance.format_url_default(location)
+        else:
+            current_service_instance.format_url_with_parameters(location, unit)
+    except:
+        message = current_service_instance.error()
+        return render_template('index.html', message=message)
 
-    # THE RESPONSE
-    response = request.get(url).json()
+    # Parsing the response file
+    with open('temperature.json') as json_file:
+        data = json.load(json_file)
+        current_city = data['current_city']
+        current_temperature = data['current_temperature']
+        current_feels_like = data['current_feels_like']
+        current_max = data['current_max']
+        current_min = data['current_min']
+        weather_description = data['weather_description']
 
-    # error like unknown city name, inavalid api key
-    if response.get('cod') != 200:
-        message = response.get('message', '')
-        return f'Error getting temperature for {location.title()}. Error message = {message}'
+        if unit == 'metric':
+            symbol = '°C'
+        elif unit == 'imperial':
+            symbol = '°F'
 
+        if 'sun' in weather_description:
+            rain = False
+            sun = True
+            default = False
+        if 'rain' in weather_description:
+            default = False
+            rain = True
+            sun = False
+        else:
+            default = True
+            rain = False
+            sun = False
+
+    return render_template('index.html', current_city=current_city, current_temperature=current_temperature,
+                           current_feels_like=current_feels_like, current_max=current_max, current_min=current_min, weather_description=weather_description, symbol=symbol, sun=sun, rain=rain, default=default)
 
 # Login
 @app.route('/login', methods=['GET', 'POST'])
@@ -64,6 +141,7 @@ def login():
 def logout():
     session.pop('admin', None)
     return redirect('login')
+
 
 if __name__ == "__main__":
     app.secret_key = b'-djoi3#039@@89!jd__/'
