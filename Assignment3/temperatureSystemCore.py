@@ -27,13 +27,5 @@ class Temperature:
             current_service_instance.format_temperature_object(
                 response_json)  # Send response to temperatureServiceAPI
 
-            # ------- To Move to UI -------------- #
-            # ServiceAPI --> UI: Use the formatted temperature object
-            # (!) Example of a call used by UI
-            # (1) Need to call a "current_service_instance"
-            # (2) Call appropriate function
-            # ----------------------------------- #
-            #current_service_instance.format_time()
-
         else:
             print(self.response.raise_for_status())
