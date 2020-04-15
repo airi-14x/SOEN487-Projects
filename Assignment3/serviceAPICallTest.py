@@ -2,15 +2,11 @@ import json
 
 
 def format_temperature_to_celsius(file_name):
-    with open(file_name, 'r') as file:
-        json_data = file.read()
-
-    json_obj = json.loads(json_data)
+    json_obj = load_file(file_name)
+    current_units = json_obj['units']
 
     # imperial --> Fahrenheit
     # metric --> Celsius
-    current_units = json_obj['units']
-
     with open("modified_attributes.json", "w") as outfile:
 
         # Fahrenheit --> Celsius
@@ -39,9 +35,29 @@ def format_temperature_to_celsius(file_name):
                        'units': current_units}, outfile, indent=4)
 
 
+def format_time_iso(file_name):
+    json_obj = load_file(file_name)
+
+    current_time_unix = json_obj['current_time']
+
+    from datetime import datetime
+    with open("modified_attributes.json", "w") as outfile:
+        json.dump({'current_time': str(datetime.fromtimestamp(current_time_unix)),
+                   'iso': 'true'}, outfile, indent=4)
+
+
 def fahrenheit_to_celsius(value):
     value = (5.0 / 9.0) * (value - 32)
     return value
 
 
-format_temperature_to_celsius("temperature.json")
+def load_file(file_name):
+    with open(file_name, 'r') as file:
+        json_data = file.read()
+
+    json_obj = json.loads(json_data)
+    return json_obj
+
+
+#format_temperature_to_celsius("temperature.json")
+format_time_iso("temperature.json")
