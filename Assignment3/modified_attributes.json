@@ -1,4 +1,7 @@
 {
-    "current_time": "2020-04-15 11:57:35",
-    "iso": "true"
+    "current_temperature": 17.2,
+    "current_feels_like": 12.6,
+    "current_min": 15.0,
+    "current_max": 19.0,
+    "units": "metric"
 }
