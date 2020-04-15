@@ -14,7 +14,6 @@ def index():
     current_max = ""
     current_min = ""
     weather_description = ""
-    unit = ""
     symbol = ""
     rain = False
     sun = False
@@ -38,13 +37,8 @@ def index():
                 current_max = data['current_max']
                 current_min = data['current_min']
                 weather_description = data['weather_description']
-                unit = data['units']
-        
-        if unit == 'metric':
-            symbol = '°C'
-        else:
-            symbol = ''
-
+                symbol = '°C'
+                
         if 'clear' in weather_description:
             rain = False
             sun = True
@@ -71,19 +65,22 @@ def search_location():
     current_max = ""
     current_min = ""
     weather_description = ""
-    unit = ""
     symbol = ""
     rain = False
     sun = False
     default = False
 
-    # Get the location from the request url
+    # Get the location and unit from the request url
     location = request.args.get('location')
+    unit = request.args.get('unit')
 
     # Calling our service
     current_service_instance = service.ServiceAPI()
     try:
-        current_service_instance.format_url_default(location)
+        if unit == '':
+            current_service_instance.format_url_default(location)
+        else:
+            current_service_instance.format_url_with_parameters(location, unit)
     except:
         message = current_service_instance.error()
         return render_template('index.html', message=message)
@@ -97,12 +94,11 @@ def search_location():
         current_max = data['current_max']
         current_min = data['current_min']
         weather_description = data['weather_description']
-        unit = data['units']
 
         if unit == 'metric':
             symbol = '°C'
-        else:
-            symbol = ''
+        elif unit == 'imperial':
+            symbol = '°F'
 
         if 'sun' in weather_description:
             rain = False
