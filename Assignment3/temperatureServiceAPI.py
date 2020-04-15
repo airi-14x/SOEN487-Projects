@@ -16,8 +16,6 @@ class ServiceAPI:
             "&units=" + current_temperature_instance.units
         
         current_temperature_instance.get_current_weather_default()
-        
-  
 
     # UI --> ServiceAPI: Pass desired parameters to format URL for System Core
     # For Example: Metric - Imperial(Fahrenheit)
