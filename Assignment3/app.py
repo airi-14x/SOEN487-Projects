@@ -1,6 +1,6 @@
 from flask import Flask, send_from_directory, request, render_template, redirect, url_for, session
 import json
-import temperatureServiceAPI as service
+#import temperatureServiceAPI as service
 
 app = Flask(__name__, static_url_path='')
 
@@ -17,13 +17,16 @@ def index():
     else:
         return render_template('index.html')
 
-# Get from file 
+# Get from file
 # Get location
 @app.route('/location')
 def search_location():
     location = request.args.get('q')
+
     # MAKE THE CALL TO OUR SERVICE
     url = f'http://127.0.0.1:5000/index?location={location}'
+    import temperatureServiceAPI as service
+    import temperatureSystemCore as temperature
     current_service_instance = service.ServiceAPI()
     current_service_instance.format_url_default(location)
 

@@ -61,13 +61,15 @@ class ServiceAPI:
 
     # Montreal time when the results were last updated.
     def format_time(self):
-        from datetime import datetime
-        print(
-            "Received at Montreal Time - Current Time Zone [ISO 8601 Time Representation]")
-        print(self.formatted_temperature_object.current_time)
-        print(datetime.fromtimestamp(
-            self.formatted_temperature_object.current_time))
-        print("")
+        pass
+        #from datetime import datetime
+        #print(
+        #    "Received at Montreal Time - Current Time Zone [ISO 8601 Time Representation]")
+        #print(self.formatted_temperature_object.current_time)
+        #print(datetime.fromtimestamp(
+        #    self.formatted_temperature_object.current_time))
+        #print("")
+    
 
 #service = ServiceAPI()
 # service.format_url_default("montreal")
