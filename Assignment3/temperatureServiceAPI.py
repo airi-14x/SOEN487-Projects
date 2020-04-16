@@ -5,30 +5,37 @@ import json
 class ServiceAPI:
 
     def __init__(self):
-        self.base_url = "https://api.openweathermap.org/data/2.5/weather?appid=77dde4d032c4ec1284a674d90b1351e3"
+        pass
 
     # UI --> ServiceAPI: default parameters to format URL for System Core
-    # Default: Montreal and Metric: Celsius
+    # Default: Montreal and Units: Metric (a.k.a Celsius)
     def format_url_default(self, city):
+        base_url = self.loadConfig()
         current_temperature_instance = temperature.Temperature()
-        current_temperature_instance.formatted_url = self.base_url + "&q=" + \
+        current_temperature_instance.formatted_url = base_url + "&q=" + \
             city + \
             "&units=" + current_temperature_instance.units
-        
+
         current_temperature_instance.get_current_weather_default()
 
     # UI --> ServiceAPI: Pass desired parameters to format URL for System Core
-    # For Example: Metric - Imperial(Fahrenheit)
+    # For Example: Units: Imperial (a.k.a. Fahrenheit)
     def format_url_with_parameters(self, city, unit_format):
+        base_url = self.loadConfig()
 
         current_temperature_instance = temperature.Temperature()
-        current_temperature_instance.formatted_url = self.base_url + "&q=" + \
+        current_temperature_instance.formatted_url = base_url + "&q=" + \
             city + \
             "&units=" + unit_format
         current_temperature_instance.get_current_weather_default()
 
+    def format_url_with_coordinates(self, longtitude, latitude, unit_format):
+        base_url = self.loadConfig()
+        current_temperature_instance = temperature.Temperature()
+        #current    
+
     # SystemCore --> ServiceAPI: Format temperature object for UI
-    # Call Functions within to format appropriate (e.g. Want to convert/additional information...)
+    # OUTPUT: temperature.json
     def format_temperature_object(self, temperature_json):
         print(temperature_json)
 
@@ -52,17 +59,19 @@ class ServiceAPI:
         current_temperature_instance.current_city = temperature_json['name']
         current_temperature_instance.response = temperature_json['cod']
 
-        # -------- Set final Temperature Object for UI ------ #
-        # ServiceAPI --> UI: Use this object to display
-
         json_obj = json.dumps(current_temperature_instance.__dict__)
 
+        # -------- Store Temperature Object for UI ------ #
         # Write to json file
         with open("temperature.json", "w") as outfile:
             outfile.write(json_obj)
 
-    
+    def loadConfig(self):
+        with open('serviceAPIConfig.json') as config_json_file:
+            url_info = json.load(config_json_file)
+            base_url = url_info['base_url']
+            return base_url
+
     # Displaying error message in case response code not 200
     def error(self):
         return 'An error occured, the location could not be found'
-

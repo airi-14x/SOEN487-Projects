@@ -30,20 +30,20 @@ def index():
         except:
             message = current_service_instance.error()
             return render_template('index.html', message=message)
-        
+
         with open('temperature.json') as json_file:
-                data = json.load(json_file)
-                current_city = data['current_city']
-                current_temperature = data['current_temperature']
-                current_feels_like = data['current_feels_like']
-                current_max = data['current_max']
-                current_min = data['current_min']
-                weather_description = data['weather_description']
-                unix_time = data['current_time']
-                
-                symbol = '°C'
-                date = datetime.fromtimestamp(unix_time)
-                formatted_date = f"{date:%Y-%m-%d %H:%M}"
+            data = json.load(json_file)
+            current_city = data['current_city']
+            current_temperature = data['current_temperature']
+            current_feels_like = data['current_feels_like']
+            current_max = data['current_max']
+            current_min = data['current_min']
+            weather_description = data['weather_description']
+            unix_time = data['current_time']
+
+            symbol = '°C'
+            date = datetime.fromtimestamp(unix_time)
+            formatted_date = f"{date:%Y-%m-%d %H:%M}"
 
         if 'clear' in weather_description:
             rain = False
@@ -101,7 +101,7 @@ def search_location():
         current_min = data['current_min']
         weather_description = data['weather_description']
         unix_time = data['current_time']
-                
+
         symbol = '°C'
         date = datetime.fromtimestamp(unix_time)
         formatted_date = f"{date:%Y-%m-%d %H:%M}"

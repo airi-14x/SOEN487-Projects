@@ -1,6 +1,7 @@
 import requests
 import temperatureServiceAPI as service
 
+
 class Temperature:
     def __init__(self):
         self.longtitude = -73.59
