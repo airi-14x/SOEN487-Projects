@@ -29,7 +29,7 @@ class ServiceAPI:
             "&units=" + unit_format
         current_temperature_instance.get_current_weather_default()
 
-    # Sample call: service.format_url_with_coordinates(-73.59, 45.51, "metric")    
+    # Sample call: service.format_url_with_coordinates(-73.59, 45.51, "metric")
     def format_url_with_coordinates(self, longtitude, latitude, unit_format):
         base_url = self.loadConfig()
         current_temperature_instance = temperature.Temperature()
@@ -77,4 +77,4 @@ class ServiceAPI:
 
     # Displaying error message in case response code not 200
     def error(self):
-        return 'An error occured, the location could not be found'
+        return 'An error occured, the location could not be found!'

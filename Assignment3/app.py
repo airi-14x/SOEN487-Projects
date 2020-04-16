@@ -59,7 +59,7 @@ def index():
             sun = False
 
         return render_template('index.html', current_city=current_city, current_temperature=current_temperature,
-                               current_feels_like=current_feels_like, current_max=current_max, current_min=current_min, weather_description=weather_description, symbol=symbol, sun=sun, rain=rain, default=default, date=formatted_date)
+                               current_feels_like=current_feels_like, current_max=current_max, current_min=current_min, weather_description=weather_description.title(), symbol=symbol, sun=sun, rain=rain, default=default, date=formatted_date)
 
 
 # Get location, display weather for requested location
@@ -125,7 +125,7 @@ def search_location():
             sun = False
 
     return render_template('index.html', current_city=current_city, current_temperature=current_temperature,
-                           current_feels_like=current_feels_like, current_max=current_max, current_min=current_min, weather_description=weather_description, symbol=symbol, sun=sun, rain=rain, default=default, date=formatted_date)
+                           current_feels_like=current_feels_like, current_max=current_max, current_min=current_min, weather_description=weather_description.title(), symbol=symbol, sun=sun, rain=rain, default=default, date=formatted_date)
 
 # Login
 @app.route('/login', methods=['GET', 'POST'])
