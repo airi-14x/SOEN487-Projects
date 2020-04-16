@@ -9,33 +9,49 @@ class ServiceAPI:
 
     # UI --> ServiceAPI: default parameters to format URL for System Core
     # Default: Montreal and Units: Metric (a.k.a Celsius)
-    def format_url_default(self, city):
+    def format_url_default(self, city, user):
         base_url = self.loadConfig()
         current_temperature_instance = temperature.Temperature()
         current_temperature_instance.formatted_url = base_url + "&q=" + \
             city + \
             "&units=" + current_temperature_instance.units
 
-        current_temperature_instance.get_current_weather_default()
+        print("current user1: " + user)
+        print(type(user))
+        print(user is "admin")
+        print(user is not None)
+        if user is not None:
+            self.user_error()
+        else:
+            current_temperature_instance.get_current_weather_default(user)
 
     # UI --> ServiceAPI: Pass desired parameters to format URL for System Core
     # For Example: Units: Imperial (a.k.a. Fahrenheit)
-    def format_url_with_parameters(self, city, unit_format):
+    def format_url_with_parameters(self, city, unit_format, user):
         base_url = self.loadConfig()
 
         current_temperature_instance = temperature.Temperature()
         current_temperature_instance.formatted_url = base_url + "&q=" + \
             city + \
             "&units=" + unit_format
-        current_temperature_instance.get_current_weather_default()
+        print("current user2: " + user)
+        if user is None:
+            self.user_error()
+        else:
+            current_temperature_instance.get_current_weather_default(user)
 
     # Sample call: service.format_url_with_coordinates(-73.59, 45.51, "metric")
-    def format_url_with_coordinates(self, longtitude, latitude, unit_format):
+    def format_url_with_coordinates(self, longtitude, latitude, unit_format, user):
         base_url = self.loadConfig()
         current_temperature_instance = temperature.Temperature()
         current_temperature_instance.formatted_url = base_url + "&lon=" + \
             str(longtitude) + "&lat=" + str(latitude) + "&units=" + unit_format
-        current_temperature_instance.get_current_weather_default()
+        print("current user3: " + user)
+        print(user is None)
+        if user is None:
+            self.user_error()
+        else:
+            current_temperature_instance.get_current_weather_default(user)
 
     # SystemCore --> ServiceAPI: Format temperature object for UI
     # OUTPUT: temperature.json
@@ -78,3 +94,6 @@ class ServiceAPI:
     # Displaying error message in case response code not 200
     def error(self):
         return 'An error occured, the location could not be found!'
+
+    def user_error(self):
+        return 'Error - Invalid user.'

@@ -26,7 +26,7 @@ def index():
     else:
         current_service_instance = service.ServiceAPI()
         try:
-            current_service_instance.format_url_default('montreal')
+            current_service_instance.format_url_default('montreal', session['admin'])
         except:
             message = current_service_instance.error()
             return render_template('index.html', message=message)
@@ -84,9 +84,9 @@ def search_location():
     current_service_instance = service.ServiceAPI()
     try:
         if unit == '':
-            current_service_instance.format_url_default(location)
+            current_service_instance.format_url_default(location, session['admin'])
         else:
-            current_service_instance.format_url_with_parameters(location, unit)
+            current_service_instance.format_url_with_parameters(location, unit, session['admin'])
     except:
         message = current_service_instance.error()
         return render_template('index.html', message=message)
