@@ -10,8 +10,10 @@
 
 <body>
     <header>
-        <h2>{{ current_city }} time when weather was last updated: </h2>
-        <h2>{{ date }}</h2>
+
+        <h2>{{ current_city }}</h2>
+        <h3> Last Updated: Montreal's time </h3>
+        <h3>{{ date }}</h3>
     </header>
     <div id="content">
         <section>
@@ -20,12 +22,12 @@
                     <label for="search"><b>Search</b></label>
                     <input type="text" placeholder="Enter Location" name="location" required>
                     <input type="radio" id="celsius" name="unit" value="metric" checked>
-                    <label for="celcius">Celsius</label><br>
+                    <label for="celsius">Celsius</label><br>
                     <input type="radio" id="fahrenheit" name="unit" value="imperial">
                     <label for="fahrenheit">Fahrenheit</label><br><br/>
                     <button type="submit" class="search-btn">Search</button><br />
                 </form>
-                <p>{{ message }}</p>
+                <h4>{{ message }}</h4>
                 <a id="logout" href="/login">Logout</a>
             </div>
             <article class="w3-right">

@@ -1,7 +1,7 @@
 from flask import Flask, send_from_directory, request, render_template, redirect, url_for, session
 import json
-import temperatureServiceAPI as service
-import temperatureSystemCore as temperature
+import weatherServiceAPI as service
+import weatherSystemCore as temperature
 from datetime import datetime
 from pytz import timezone
 
@@ -26,24 +26,24 @@ def index():
     else:
         current_service_instance = service.ServiceAPI()
         try:
-            current_service_instance.format_url_default('montreal')
+            current_service_instance.format_url_default('montreal', session['admin'])
         except:
             message = current_service_instance.error()
             return render_template('index.html', message=message)
-        
+
         with open('temperature.json') as json_file:
-                data = json.load(json_file)
-                current_city = data['current_city']
-                current_temperature = data['current_temperature']
-                current_feels_like = data['current_feels_like']
-                current_max = data['current_max']
-                current_min = data['current_min']
-                weather_description = data['weather_description']
-                unix_time = data['current_time']
-                
-                symbol = '°C'
-                date = datetime.fromtimestamp(unix_time)
-                formatted_date = f"{date:%Y-%m-%d %H:%M}"
+            data = json.load(json_file)
+            current_city = data['current_city']
+            current_temperature = data['current_temperature']
+            current_feels_like = data['current_feels_like']
+            current_max = data['current_max']
+            current_min = data['current_min']
+            weather_description = data['weather_description']
+            unix_time = data['current_time']
+
+            symbol = '°C'
+            date = datetime.fromtimestamp(unix_time)
+            formatted_date = f"{date:%Y-%m-%d %H:%M}"
 
         if 'clear' in weather_description:
             rain = False
@@ -59,7 +59,7 @@ def index():
             sun = False
 
         return render_template('index.html', current_city=current_city, current_temperature=current_temperature,
-                               current_feels_like=current_feels_like, current_max=current_max, current_min=current_min, weather_description=weather_description, symbol=symbol, sun=sun, rain=rain, default=default, date=formatted_date)
+                               current_feels_like=current_feels_like, current_max=current_max, current_min=current_min, weather_description=weather_description.title(), symbol=symbol, sun=sun, rain=rain, default=default, date=formatted_date)
 
 
 # Get location, display weather for requested location
@@ -84,9 +84,9 @@ def search_location():
     current_service_instance = service.ServiceAPI()
     try:
         if unit == '':
-            current_service_instance.format_url_default(location)
+            current_service_instance.format_url_default(location, session['admin'])
         else:
-            current_service_instance.format_url_with_parameters(location, unit)
+            current_service_instance.format_url_with_parameters(location, unit, session['admin'])
     except:
         message = current_service_instance.error()
         return render_template('index.html', message=message)
@@ -101,7 +101,7 @@ def search_location():
         current_min = data['current_min']
         weather_description = data['weather_description']
         unix_time = data['current_time']
-                
+
         symbol = '°C'
         date = datetime.fromtimestamp(unix_time)
         formatted_date = f"{date:%Y-%m-%d %H:%M}"
@@ -125,7 +125,7 @@ def search_location():
             sun = False
 
     return render_template('index.html', current_city=current_city, current_temperature=current_temperature,
-                           current_feels_like=current_feels_like, current_max=current_max, current_min=current_min, weather_description=weather_description, symbol=symbol, sun=sun, rain=rain, default=default, date=formatted_date)
+                           current_feels_like=current_feels_like, current_max=current_max, current_min=current_min, weather_description=weather_description.title(), symbol=symbol, sun=sun, rain=rain, default=default, date=formatted_date)
 
 # Login
 @app.route('/login', methods=['GET', 'POST'])
