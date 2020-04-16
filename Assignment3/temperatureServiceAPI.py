@@ -29,10 +29,13 @@ class ServiceAPI:
             "&units=" + unit_format
         current_temperature_instance.get_current_weather_default()
 
+    # Sample call: service.format_url_with_coordinates(-73.59, 45.51, "metric")    
     def format_url_with_coordinates(self, longtitude, latitude, unit_format):
         base_url = self.loadConfig()
         current_temperature_instance = temperature.Temperature()
-        #current    
+        current_temperature_instance.formatted_url = base_url + "&lon=" + \
+            str(longtitude) + "&lat=" + str(latitude) + "&units=" + unit_format
+        current_temperature_instance.get_current_weather_default()
 
     # SystemCore --> ServiceAPI: Format temperature object for UI
     # OUTPUT: temperature.json
