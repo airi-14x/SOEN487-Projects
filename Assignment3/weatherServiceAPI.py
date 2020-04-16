@@ -1,4 +1,4 @@
-import temperatureSystemCore as temperature
+import weatherSystemCore as temperature
 import json
 
 

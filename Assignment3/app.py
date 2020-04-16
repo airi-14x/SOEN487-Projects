@@ -1,7 +1,7 @@
 from flask import Flask, send_from_directory, request, render_template, redirect, url_for, session
 import json
-import temperatureServiceAPI as service
-import temperatureSystemCore as temperature
+import weatherServiceAPI as service
+import weatherSystemCore as temperature
 from datetime import datetime
 from pytz import timezone
 

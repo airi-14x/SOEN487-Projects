@@ -1,5 +1,5 @@
 import requests
-import temperatureServiceAPI as service
+import weatherServiceAPI as service
 
 
 class Temperature:
@@ -25,7 +25,7 @@ class Temperature:
         if self.response.status_code == 200:
             response_json = self.response.json()
             current_service_instance.format_temperature_object(
-                response_json)  # Send response to temperatureServiceAPI
+                response_json)  # Send response to weatherServiceAPI
 
         else:
             print(self.response.raise_for_status())
