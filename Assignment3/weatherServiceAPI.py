@@ -70,7 +70,7 @@ class ServiceAPI:
             outfile.write(json_obj)
 
     def loadConfig(self):
-        with open('serviceAPIConfig.json') as config_json_file:
+        with open('weatherAPIConfig.json') as config_json_file:
             url_info = json.load(config_json_file)
             base_url = url_info['base_url']
             return base_url
