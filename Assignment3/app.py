@@ -28,7 +28,7 @@ def index():
         try:
             current_service_instance.format_url_default(
                 'montreal', session['admin'])
-        except:
+        except ValueError as error:
             current_message = ""
             with open('temperatureError.json') as error_file:
                 error_data = json.load(error_file)
@@ -93,8 +93,8 @@ def search_location():
         else:
             current_service_instance.format_url_with_parameters(
                 location, unit, session['admin'])
-    except:
-        current_message = ""
+    except ValueError as error:
+        current_message = "an error has occurred2"
         with open('temperatureError.json') as error_file:
             error_data = json.load(error_file)
             current_message = error_data['error']

@@ -21,6 +21,7 @@ class ServiceAPI:
             message = self.user_error()
             with open("temperatureError.json", "w") as outfile:
                 json.dump({'error': message}, outfile, indent=4)
+            raise ValueError("User Error", "format_url_default error")
         else:
             current_temperature_instance.get_current_weather_default(user)
 
@@ -39,6 +40,7 @@ class ServiceAPI:
             message = self.user_error()
             with open("temperatureError.json", "w") as outfile:
                 json.dump({'error': message}, outfile, indent=4)
+            raise ValueError("User Error", "format_url_with_parameters error")
         else:
             current_temperature_instance.get_current_weather_default(user)
 
@@ -49,12 +51,13 @@ class ServiceAPI:
         current_temperature_instance.formatted_url = base_url + "&lon=" + \
             str(longtitude) + "&lat=" + str(latitude) + "&units=" + unit_format
         print("current user3: " + user)
-        
+
         if user is None:
             # self.user_error()
             with open("temperatureError.json", "w") as outfile:
                 message = self.user_error()
                 json.dump({'error': message}, outfile, indent=4)
+            raise ValueError("User Error", "format_url_with_coordinates error")
         else:
             current_temperature_instance.get_current_weather_default(user)
 
@@ -67,6 +70,7 @@ class ServiceAPI:
             print(self.user_error())
             with open("temperatureError.json", "w") as outfile:
                 json.dump({'error': self.user_error()}, outfile, indent=4)
+            raise ValueError("User Error", "format_temperature_object error")
 
         elif status_code == 200:
             current_temperature_instance = temperature.Temperature()
@@ -100,6 +104,7 @@ class ServiceAPI:
             with open("temperatureError.json", "w") as outfile:
                 json.dump({'error': self.location_error()},
                           outfile, indent=4)
+            raise ValueError("Location Error", "format_temperature_object error")
 
     def load_config(self):
         with open('weatherAPIConfig.json') as config_json_file:
