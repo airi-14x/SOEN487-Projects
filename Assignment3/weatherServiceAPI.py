@@ -17,10 +17,8 @@ class ServiceAPI:
             "&units=" + current_temperature_instance.units
 
         if user is None:
-            # self.user_error()
-            message = self.user_error()
             with open("temperatureError.json", "w") as outfile:
-                json.dump({'error': message}, outfile, indent=4)
+                json.dump({'error': "403 - User is None! " + self.user_error()}, outfile, indent=4)
             raise ValueError("User Error", "format_url_default error")
         else:
             current_temperature_instance.get_current_weather_default(user)
@@ -34,12 +32,11 @@ class ServiceAPI:
         current_temperature_instance.formatted_url = base_url + "&q=" + \
             city + \
             "&units=" + unit_format
-        print("current user2: " + user)
+
         if user is None:
-            # self.user_error()
             message = self.user_error()
             with open("temperatureError.json", "w") as outfile:
-                json.dump({'error': message}, outfile, indent=4)
+                json.dump({'error': "403 - User is None! " + self.user_error()}, outfile, indent=4)
             raise ValueError("User Error", "format_url_with_parameters error")
         else:
             current_temperature_instance.get_current_weather_default(user)
@@ -50,13 +47,10 @@ class ServiceAPI:
         current_temperature_instance = temperature.Temperature()
         current_temperature_instance.formatted_url = base_url + "&lon=" + \
             str(longtitude) + "&lat=" + str(latitude) + "&units=" + unit_format
-        print("current user3: " + user)
 
         if user is None:
-            # self.user_error()
             with open("temperatureError.json", "w") as outfile:
-                message = self.user_error()
-                json.dump({'error': message}, outfile, indent=4)
+                json.dump({'error': "403 - User is None! " + self.user_error()}, outfile, indent=4)
             raise ValueError("User Error", "format_url_with_coordinates error")
         else:
             current_temperature_instance.get_current_weather_default(user)
@@ -69,7 +63,7 @@ class ServiceAPI:
         if status_code == 403:
             print(self.user_error())
             with open("temperatureError.json", "w") as outfile:
-                json.dump({'error': self.user_error()}, outfile, indent=4)
+                json.dump({'error': str(status_code) + " - " + self.user_error()}, outfile, indent=4)
             raise ValueError("User Error", "format_temperature_object error")
 
         elif status_code == 200:
@@ -102,7 +96,7 @@ class ServiceAPI:
 
         else:
             with open("temperatureError.json", "w") as outfile:
-                json.dump({'error': self.location_error()},
+                json.dump({'error': str(status_code) + " - " + self.location_error()},
                           outfile, indent=4)
             raise ValueError("Location Error", "format_temperature_object error")
 
@@ -112,9 +106,10 @@ class ServiceAPI:
             base_url = url_info['base_url']
             return base_url
 
-    # Displaying error message in case response code not 200
+    # 404 Error
     def location_error(self):
         return 'An error occured, the location could not be found!'
 
+    # 403 - Not Authorised Error
     def user_error(self):
         return 'An error occured, this is an invalid user.'

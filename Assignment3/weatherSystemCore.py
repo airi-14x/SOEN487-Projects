@@ -28,8 +28,6 @@ class Temperature:
 
         current_service_instance = service.ServiceAPI()
         if user != username:
-            print("403 - Forbidden")
-            self.response = 403
             current_service_instance.format_temperature_object(None, 403)
         else:
             self.response = requests.get(self.formatted_url)
@@ -40,5 +38,5 @@ class Temperature:
                     response_json, self.response.status_code)  # Send response to weatherServiceAPI
 
             else:
-                current_service_instance.format_temperature_object(None, self.response.status_code)
-                #print(self.response.raise_for_status())
+                current_service_instance.format_temperature_object(
+                    None, self.response.status_code)
