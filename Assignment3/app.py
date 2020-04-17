@@ -21,15 +21,27 @@ def index():
     sun = False
     default = False
 
-    if 'admin' not in session:
+    if 'username' not in session:
         return redirect(url_for('login'))
-    else:
+    elif 'username' in session:
         current_service_instance = service.ServiceAPI()
         try:
-            current_service_instance.format_url_default('montreal', session['admin'])
-        except:
-            message = current_service_instance.error()
-            return render_template('index.html', message=message)
+            if session.get('username'):
+                current_service_instance.format_url_default(
+                    'montreal', session['username'])
+            else:
+                raise KeyError("User is not login in properly")
+
+        except KeyError as error:
+            current_message = "User is not logged in properly"
+            return render_template('index.html', message=current_message)
+
+        except ValueError as error:
+            current_message = ""
+            with open('temperatureError.json') as error_file:
+                error_data = json.load(error_file)
+                current_message = error_data['error']
+            return render_template('index.html', message=current_message)
 
         with open('temperature.json') as json_file:
             data = json.load(json_file)
@@ -80,16 +92,36 @@ def search_location():
     location = request.args.get('location')
     unit = request.args.get('unit')
 
-    # Calling our service
-    current_service_instance = service.ServiceAPI()
-    try:
-        if unit == '':
-            current_service_instance.format_url_default(location, session['admin'])
-        else:
-            current_service_instance.format_url_with_parameters(location, unit, session['admin'])
-    except:
-        message = current_service_instance.error()
-        return render_template('index.html', message=message)
+    if 'username' not in session:
+        return redirect(url_for('login'))
+
+    elif 'username' in session:
+        # Calling our service
+        current_service_instance = service.ServiceAPI()
+        try:
+            if unit == '':
+                if session.get('username'):
+                    current_service_instance.format_url_default(
+                        location, session['username'])
+                else:
+                    raise KeyError("User is not login properly.")
+            else:
+                if session.get('username'):
+                    current_service_instance.format_url_with_parameters(
+                        location, unit, session['username'])
+                else:
+                    raise KeyError("User is not login properly.")
+
+        except KeyError as error:
+            current_message = "User is not logged in properly."
+            return render_template('index.html', message=current_message)
+
+        except ValueError as error:
+            current_message = ""
+            with open('temperatureError.json') as error_file:
+                error_data = json.load(error_file)
+                current_message = error_data['error']
+                return render_template('index.html', message=current_message)
 
     # Parsing the response file
     with open('temperature.json') as json_file:
@@ -143,15 +175,15 @@ def login():
         if request.form['username'] != username or request.form['password'] != password:
             error = 'Invalid Credentials. Please try again.'
         else:
-            session[username] = request.form['username']
+            session['username'] = request.form['username']
             return redirect(url_for('index'))
     return render_template('login.html', error=error)
 
 # Logout
 @app.route('/logout', methods=['GET', 'POST'])
 def logout():
-    session.pop('admin', None)
-    return redirect('login')
+    session.pop('username', None)
+    return redirect('/')
 
 
 if __name__ == "__main__":
