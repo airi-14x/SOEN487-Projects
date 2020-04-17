@@ -26,10 +26,14 @@ def index():
     else:
         current_service_instance = service.ServiceAPI()
         try:
-            current_service_instance.format_url_default('montreal', session['admin'])
+            current_service_instance.format_url_default(
+                'montreal', session['admin'])
         except:
-            message = current_service_instance.error()
-            return render_template('index.html', message=message)
+            current_message = ""
+            with open('temperatureError.json') as error_file:
+                error_data = json.load(error_file)
+                current_message = error_data['error']
+            return render_template('index.html', message=current_message)
 
         with open('temperature.json') as json_file:
             data = json.load(json_file)
@@ -84,12 +88,17 @@ def search_location():
     current_service_instance = service.ServiceAPI()
     try:
         if unit == '':
-            current_service_instance.format_url_default(location, session['admin'])
+            current_service_instance.format_url_default(
+                location, session['admin'])
         else:
-            current_service_instance.format_url_with_parameters(location, unit, session['admin'])
+            current_service_instance.format_url_with_parameters(
+                location, unit, session['admin'])
     except:
-        message = current_service_instance.error()
-        return render_template('index.html', message=message)
+        current_message = ""
+        with open('temperatureError.json') as error_file:
+            error_data = json.load(error_file)
+            current_message = error_data['error']
+        return render_template('index.html', message=current_message)
 
     # Parsing the response file
     with open('temperature.json') as json_file:
