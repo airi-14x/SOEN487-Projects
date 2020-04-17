@@ -30,7 +30,7 @@ def index():
                 current_service_instance.format_url_default(
                     'montreal', session['username'])
             else:
-                raise KeyError("User is not login as 'admin'")
+                raise KeyError("User is not login in properly")
 
         except KeyError as error:
             current_message = "User is not logged in properly"
@@ -92,32 +92,36 @@ def search_location():
     location = request.args.get('location')
     unit = request.args.get('unit')
 
-    # Calling our service
-    current_service_instance = service.ServiceAPI()
-    try:
-        if unit == '':
-            if session.get('username'):
-                current_service_instance.format_url_default(
-                    location, session['username'])
-            else:
-                raise KeyError("User is not login as 'admin'")
-        else:
-            if session.get('username'):
-                current_service_instance.format_url_with_parameters(
-                    location, unit, session['username'])
-            else:
-                raise KeyError("User is not login as 'admin'")
+    if 'username' not in session:
+        return redirect(url_for('login'))
 
-    except KeyError as error:
-        current_message = "User is not logged in properly"
-        return render_template('index.html', message=current_message)
+    elif 'username' in session:
+        # Calling our service
+        current_service_instance = service.ServiceAPI()
+        try:
+            if unit == '':
+                if session.get('username'):
+                    current_service_instance.format_url_default(
+                        location, session['username'])
+                else:
+                    raise KeyError("User is not login properly.")
+            else:
+                if session.get('username'):
+                    current_service_instance.format_url_with_parameters(
+                        location, unit, session['username'])
+                else:
+                    raise KeyError("User is not login properly.")
 
-    except ValueError as error:
-        current_message = ""
-        with open('temperatureError.json') as error_file:
-            error_data = json.load(error_file)
-            current_message = error_data['error']
-        return render_template('index.html', message=current_message)
+        except KeyError as error:
+            current_message = "User is not logged in properly."
+            return render_template('index.html', message=current_message)
+
+        except ValueError as error:
+            current_message = ""
+            with open('temperatureError.json') as error_file:
+                error_data = json.load(error_file)
+                current_message = error_data['error']
+                return render_template('index.html', message=current_message)
 
     # Parsing the response file
     with open('temperature.json') as json_file:
@@ -178,8 +182,7 @@ def login():
 # Logout
 @app.route('/logout', methods=['GET', 'POST'])
 def logout():
-    #session.pop('username', None)
-    session.clear()
+    session.pop('username', None)
     return redirect('/')
 
 

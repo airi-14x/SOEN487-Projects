@@ -61,7 +61,6 @@ class ServiceAPI:
         print(temperature_json)
 
         if status_code == 403:
-            print(self.user_error())
             with open("temperatureError.json", "w") as outfile:
                 json.dump({'error': str(status_code) + " - " + self.user_error()}, outfile, indent=4)
             raise ValueError("User Error", "format_temperature_object error")
