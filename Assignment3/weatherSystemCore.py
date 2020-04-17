@@ -5,7 +5,7 @@ import json
 
 class Temperature:
     def __init__(self):
-        self.longtitude = -73.59
+        self.longitude = -73.59
         self.latitude = 45.51
         self.weather_overview = ""
         self.weather_description = ""

@@ -42,7 +42,7 @@ class ServiceAPI:
             current_temperature_instance.get_current_weather_default(user)
 
     # Sample call: service.format_url_with_coordinates(-73.59, 45.51, "metric")
-    def format_url_with_coordinates(self, longtitude, latitude, unit_format, user):
+    def format_url_with_coordinates(self, longitude, latitude, unit_format, user):
         base_url = self.load_config()
         current_temperature_instance = temperature.Temperature()
         current_temperature_instance.formatted_url = base_url + "&lon=" + \
@@ -67,7 +67,7 @@ class ServiceAPI:
 
         elif status_code == 200:
             current_temperature_instance = temperature.Temperature()
-            current_temperature_instance.longtitude = temperature_json['coord']['lon']
+            current_temperature_instance.longitude = temperature_json['coord']['lon']
             current_temperature_instance.latitude = temperature_json['coord']['lat']
 
             # Weather #
@@ -107,8 +107,8 @@ class ServiceAPI:
 
     # 404 Error
     def location_error(self):
-        return 'An error occured, the location could not be found!'
+        return 'An error occurred, the location could not be found!'
 
     # 403 - Not Authorised Error
     def user_error(self):
-        return 'An error occured, this is an invalid user.'
+        return 'An error occurred, this is an invalid user.'
