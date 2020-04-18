@@ -51,3 +51,27 @@ This assignment implements a Web Application based on a client that calls a REST
 2. Run the library service layer 
 3. Run the loan service layer
 4. Run the client
+
+### Assignment 3: Deadline - April 20th 2020
+
+The Weather System displays the current weather of a location given the city's location or the geographical coordinates. In addition to the weather details, the time when this information was updated is displayed.
+
+### The layers are: 
+```
+1. Weather System Core
+2. Weather Service API
+3. App - Web Client
+```
+
+### Libraries: 
+```
+- Flask
+- json
+- datetime
+- requests
+```
+
+## Executing the app
+- python3 app.py
+- Navigate to http://127.0.0.1:5000/
+
