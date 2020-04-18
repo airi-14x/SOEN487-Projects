@@ -7,19 +7,17 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 </head>
-
 <body>
     <header>
-
-        <h2>{{ current_city }}</h2>
         <h3> Last Updated: Montreal's time </h3>
         <h3>{{ date }}</h3>
     </header>
     <div id="content">
+        <a id="logout" href="/logout">Logout</a>
         <section>
             <div id="search-location">
-                <form method="get" action="/location">
-                    <label for="search"><b>Search</b></label>
+                <form method="get" action="/location" id="location-form">
+                    <label for="search"><b>Search by location</b></label>
                     <input type="text" placeholder="Enter Location" name="location" required>
                     <input type="radio" id="celsius" name="unit" value="metric" checked>
                     <label for="celsius">Celsius</label><br>
@@ -27,11 +25,20 @@
                     <label for="fahrenheit">Fahrenheit</label><br><br/>
                     <button type="submit" class="search-btn">Search</button><br />
                 </form>
-                <h4>{{ message }}</h4>
-                <a id="logout" href="/logout">Logout</a>
+                <hr>
+                <form method="get" action="/coordinates" id="latitude-form">
+                    <label for="search"><b>Search by longitude/latitude</b></label>
+                    <input type="text" placeholder="Enter Longitude (metric)" name="longitude" required><br>
+                    <input type="text" placeholder="Enter Latitude (metric)" name="latitude" required>
+                    <input type="radio" id="celsius" name="unit" value="metric" checked>
+                    <label for="celsius">Celsius</label><br>
+                    <input type="radio" id="fahrenheit" name="unit" value="imperial">
+                    <label for="fahrenheit">Fahrenheit</label><br><br/>
+                    <button type="submit" class="search-btn">Search</button><br />
+                </form>
             </div>
-            <article class="w3-right">
-                <div class="w3-card-4 w3-margin card" style="width:50%">
+            <article>
+                <div class="w3-card-4 w3-margin" style="width:50%">
                     <div class="w3-display-container w3-text-white">
                         {% if sun %}
                         <img src="{{ url_for('static',filename='images/sunny.jpg') }}" alt="sun" style="width:100%">
@@ -42,7 +49,7 @@
                         {% if default %}
                         <img src="{{ url_for('static',filename='images/default.jpg') }}" alt="sun" style="width:100%">
                         {% endif %}
-                        <div class="w3-xlarge w3-display-bottomleft w3-padding">{{ current_city }} &nbsp;
+                        <div class="w3-xlarge w3-display-bottomleft w3-padding">{{ current_city }} <br>
                             {{ current_temperature }} {{ symbol }}
                         </div>
                         <div class="w3-xlarge w3-display-bottomright w3-padding">
@@ -64,6 +71,7 @@
                         </div>
                     </div>
                 </div>
+                <h4>{{ message }}</h4>
             </article>
         </section>
     </div>
