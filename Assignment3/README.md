@@ -17,4 +17,4 @@ A simple Flask application that uses Openweathermap API to show weather.
 
 ## Diagrams and specifications
 
-Diagrams and specifications can be found in SOEN487-A3_ Weather_System_Specification.pdf
+Diagrams and specifications can be found in SOEN487-A3_Weather_System_Specification.pdf
