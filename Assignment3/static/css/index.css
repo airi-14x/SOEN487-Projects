@@ -4,38 +4,33 @@
 
   body {
     font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
   }
 
   /* Style the header */
   header {
     background-color: #0099ff;
-    padding: 30px;
+    padding: 5px;
     text-align: center;
-    font-size: 35px;
     color: white;
+    min-height:120px;
+    max-height:120px;
   }
 
   /* Create two columns/boxes that floats next to each other */
   #search-location {
     float: left;
     width: 30%;
-    height: 667px;
+    height: 680px;
     background: #b3e0ff;
     padding: 20px;
-  }
-
-  /* Style the list inside the menu */
-  nav ul {
-    list-style-type: none;
-    padding: 0;
   }
 
   article {
     float: left;
     padding: 20px;
     width: 70%;
-    height: 600px;
-    float:left;
+
   }
 
   /* Clear floats after the columns */
@@ -79,7 +74,15 @@
   }
 
   #logout {
-    float: left;
+    float: right;
     position: relative;
-    margin-top: 20%;
+    margin-top:10px;
+  }
+
+  #location-form {
+    margin-top:-2px;
+  }
+
+  #latitude-form {
+    margin-top:-2px;
   }

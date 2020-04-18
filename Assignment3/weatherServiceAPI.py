@@ -46,7 +46,7 @@ class ServiceAPI:
         base_url = self.load_config()
         current_temperature_instance = temperature.Temperature()
         current_temperature_instance.formatted_url = base_url + "&lon=" + \
-            str(longtitude) + "&lat=" + str(latitude) + "&units=" + unit_format
+            str(longitude) + "&lat=" + str(latitude) + "&units=" + unit_format
 
         if user is None:
             with open("temperatureError.json", "w") as outfile:
