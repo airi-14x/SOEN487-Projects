@@ -212,9 +212,14 @@ def search_coordinates():
         formatted_date = f"{date:%Y-%m-%d %H:%M}"
 
         if current_city == '':
-            current_message = "Location could not be found"
-            return render_template('index.html', message=current_message)
-            
+            #current_message = "Location could not be found"
+            #return render_template('index.html', message=current_message)
+            current_message = ""
+            with open('temperatureError.json') as error_file:
+                error_data = json.load(error_file)
+                current_message = error_data['error']
+                return render_template('index.html', message=current_message)
+
         if unit == 'metric':
             symbol = '°C'
         elif unit == 'imperial':
